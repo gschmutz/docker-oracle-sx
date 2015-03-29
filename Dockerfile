@@ -17,7 +17,7 @@
 # (1) fmw_12.1.3.0.0_oep.jar
 #     Download the Generic installer from http://www.oracle.com/technetwork/middleware/weblogic/downloads/wls-for-dev-1703574.html
 #
-# (2) jdk-8u40-linux-x64.rpm
+# (2) jdk-7u75-linux-x64.rpm
 #     Download from http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
 #
 # HOW TO BUILD THIS IMAGE
@@ -35,9 +35,15 @@ FROM oraclelinux:7.0
 # ----------
 MAINTAINER Guido Schmutz <guido.schmutz@trivadis.com>
 
+# Set Working directory
+# ---------------------
+WORKDIR /u01
+
 # Environment variables required for this build (do NOT change)
 ENV JAVA_RPM jdk-7u75-linux-x64.rpm
-ENV SX_PKG  fmw_12.1.3.0.0_oep.jar
+ENV SX_VERSION 12.1.3.0.0
+ENV SX_PKG fmw_12.1.3.0.0_oep.jar
+ENV SX_PATCH 20225179
 
 # WLS Admin Password (you may change)
 # This password is used for:
@@ -45,9 +51,13 @@ ENV SX_PKG  fmw_12.1.3.0.0_oep.jar
 # -----------------------------------
 ENV ADMIN_PASSWORD welcome1
 
+# Install unzip
+# -------------
+RUN apt-get install -y unzip
+
 # Install and configure Oracle JDK 8u25
 # -------------------------------------
-COPY $JAVA_RPM /root/
+COPY stream-explorer/$JAVA_RPM /root/
 RUN rpm -i /root/$JAVA_RPM && \ 
     rm /root/$JAVA_RPM
 ENV JAVA_HOME /usr/java/default
@@ -60,9 +70,11 @@ RUN mkdir /u01 && \
     useradd -b /u01 -m -s /bin/bash oracle && \ 
     echo oracle:$ADMIN_PASSWORD | chpasswd
 
+COPY stream-explorer/*.zip /tmp
+RUN unzip -uo /tmp/ofm_sx_generic_$SX_VERSION_disk1_1of2.zip /u01
+RUN unzip -uo /tmp/ofm_sx_generic_$SX_VERSION_disk1_2of2.zip /u01
+
 # Add files required to build this image
-COPY $SX_PKG /u01/
-COPY patch /u01/
 COPY setup/* /u01/
 COPY user_projects /u01/
 
@@ -72,7 +84,6 @@ RUN  chmod -R a+xr /u01/sx_domain
 RUN chown oracle:oracle -R /u01
 WORKDIR /u01
 USER oracle
-
 
 # Installation of Oracle Event Processing
 RUN mkdir /u01/oracle/.inventory

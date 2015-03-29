@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<domain-template-info 
+   type="Extension Template" 
+   name="Oracle Event Processing" 
+   version="12.1.3.0.0" 
+   author="Oracle Corporation" 
+   description="Create a WLS domain configured to run Oracle OEP" 
+   category="" xmlns="http://xmlns.oracle.com/weblogic/domain-template">
+  <domain-template-ref name="base_domain" version="12.1.3.0.0" symbol=""/>
+</domain-template-info>

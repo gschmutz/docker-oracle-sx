@@ -1,0 +1,143 @@
+<div id="about" data-bind="
+     ojComponent:{
+     component: 'ojDialog',
+     initialVisibility: 'hide',
+     rootAttributes: {
+     'class': 'aboutDialogContent'
+       }
+     }
+     ">
+
+    <div class="oj-dialog-header oj-helper-clearfix" aria-labelledby="dialogTitleId">
+        <span id="dialogTitleId" class="oj-dialog-title">
+
+        <a class="brandingContent" href="javascript:void(0)" tabindex="-1">
+            <img alt="Oracle" src="css/app/images/oracle_logo_lrg.png">
+            <span class="brandTitle" data-i18n="BRAND_TITLE"></span>
+        </a>
+
+        </span>
+    </div>
+
+
+    <div class="oj-dialog-body">
+
+        <div id="aboutToolbar">
+            <table>
+                <tr class="">
+                    <td class="start">
+                        <span class="" data-i18n="About"></span>
+                    </td>
+
+
+                    <td class="end">
+                        <div data-bind="ojComponent: {component:'ojToolbar'}">
+                            <button id="aboutDone" data-i18n="Done"
+                                    data-bind="
+                        ojComponent: {
+                            component: 'ojButton'
+                                   }">
+                            </button>
+
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="aboutContent" class="oj-row">
+
+            <table>
+                <tr>
+                    <td class="logoColumn">
+                        <div class="sxLogo"></div>
+                    </td>
+
+
+                    <td>
+                        <table>
+                            <tr class="">
+                                <td class="keyColumn">
+                                    <label class="oj-label" data-i18n="sxVersion"> </label>
+                                </td>
+                                <td class="valueColumn">
+                                    <span data-bind="text: sxVersion"></span>
+                                </td>
+                            </tr>
+
+
+                            <tr class="">
+                                <td class="keyColumn">
+                                    <label class="oj-label" data-i18n="oepServer"> </label>
+                                </td>
+                                <td class="valueColumn">
+                                    <span data-bind="text: oepServer"></span>
+                                </td>
+                            </tr>
+
+
+                            <!--<tr class="">-->
+                                <!--<td class="keyColumn">-->
+                                    <!--<label class="oj-label" data-i18n="osName"> </label>-->
+                                <!--</td>-->
+                                <!--<td class="valueColumn">-->
+                                    <!--<span data-bind="text: osName"></span>-->
+                                <!--</td>-->
+                            <!--</tr>-->
+
+                            <!--<tr class="">-->
+                                <!--<td class="keyColumn">-->
+                                    <!--<label class="oj-label" data-i18n="osVersion"> </label>-->
+                                <!--</td>-->
+                                <!--<td class="valueColumn">-->
+                                    <!--<span data-bind="text: osVersion"></span>-->
+                                <!--</td>-->
+                            <!--</tr>-->
+
+                            <tr class="">
+                                <td class="keyColumn">
+                                    <label class="oj-label" data-i18n="javaVersion"> </label>
+                                </td>
+                                <td class="valueColumn">
+                                    <span data-bind="text: javaVersion"></span>
+                                </td>
+                            </tr>
+
+                            <!--<tr class="">-->
+                                <!--<td class="keyColumn">-->
+                                    <!--<label class="oj-label" data-i18n="javaVendor"> </label>-->
+                                <!--</td>-->
+                                <!--<td class="valueColumn">-->
+                                    <!--<span data-bind="text: javaVendor"></span>-->
+                                <!--</td>-->
+                            <!--</tr>-->
+
+
+                            <!--<tr class="">-->
+                            <!--<td class="keyColumn">-->
+                            <!--<label class="oj-label" data-i18n="visualizerURL"> </label>-->
+                            <!--</td>-->
+                            <!--<td class="valueColumn">-->
+                            <!--<span data-bind="text: visualizerURL"></span>-->
+                            <!--</td>-->
+                            <!--</tr>-->
+
+
+                        </table>
+                    </td>
+
+                </tr>
+
+            </table>
+
+
+        </div>
+
+    </div>
+
+    <div class="oj-dialog-footer">
+
+    </div>
+
+
+</div>

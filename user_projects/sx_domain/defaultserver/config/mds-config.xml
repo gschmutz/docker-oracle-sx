@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mds-config xmlns="http://xmlns.oracle.com/mds/config">
+    
+    <persistence-config>
+        <metadata-namespaces>
+            <namespace path="/obeam" metadata-store-usage="fileStore"/>
+        </metadata-namespaces>        
+        <metadata-store-usages>
+           <metadata-store-usage id="fileStore">
+                <metadata-store class-name="oracle.mds.persistence.stores.file.FileMetadataStore">
+                    <property name="metadata-path" value="mds-store"/> 
+                </metadata-store>
+           </metadata-store-usage>   
+        </metadata-store-usages>
+    </persistence-config>
+</mds-config>
+

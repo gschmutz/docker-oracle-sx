@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<css-config xmlns="http://xmlns.oracle.com/css" xmlns:sec="http://xmlns.oracle.com/weblogic/security" xmlns:wls="http://xmlns.oracle.com/weblogic/security/wls" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.oracle.com/weblogic/security/providers/authentication/file http://xmlns.oracle.com/weblogic/security/providers/authentication/file/1.0/file.xsd http://xmlns.oracle.com/weblogic/security/xacml http://xmlns.oracle.com/weblogic/security/xacml/1.0/xacml.xsd http://xmlns.oracle.com/weblogic/security/providers/passwordvalidator http://xmlns.oracle.com/weblogic/security/providers/passwordvalidator/1.0/passwordvalidator.xsd http://xmlns.oracle.com/weblogic/security http://xmlns.oracle.com/weblogic/security/1.0/security.xsd http://xmlns.oracle.com/weblogic/security/wls http://xmlns.oracle.com/weblogic/security/wls/1.0/wls.xsd http://xmlns.oracle.com/css http://xmlns.oracle.com/css/1.0/css.xsd">
+  <legacy-domain-info>
+    <domain-name>legacy-domain-name</domain-name>
+    <server-name>legacy-server-name</server-name>
+    <root-directory>legacy-rootdir</root-directory>
+    <domain-credential-encrypted>{AES}nTcMbEMj2C4PX8AcY1wQaf71XEWyP4toQjNs607mVFM=</domain-credential-encrypted>
+  </legacy-domain-info>
+  <realm>
+    <sec:auditor xsi:type="wls:default-auditorType">
+      <sec:name>my-auditor</sec:name>
+      <wls:severity>CUSTOM</wls:severity>
+      <wls:error-audit-severity-enabled>true</wls:error-audit-severity-enabled>
+      <wls:failure-audit-severity-enabled>true</wls:failure-audit-severity-enabled>
+      <wls:rotation-minutes>720</wls:rotation-minutes>
+    </sec:auditor>
+    <sec:authentication-provider xmlns:file="http://xmlns.oracle.com/weblogic/security/providers/authentication/file" xsi:type="file:file-authenticatorType">
+      <sec:name>my-authenticator</sec:name>
+      <file:file-store-path>config/atnstore.txt</file:file-store-path>
+      <file:user-password-style>HASHED</file:user-password-style>
+      <file:file-store-encrypted>false</file:file-store-encrypted>
+      <file:file-store-password-encrypted>{AES}mk/Wemis8TGEglPXJ4ri0/EhdkCRsKoebDYWj7EzbHs=</file:file-store-password-encrypted>
+    </sec:authentication-provider>
+    <sec:role-mapper xmlns:xac="http://xmlns.oracle.com/weblogic/security/xacml" xsi:type="xac:file-based-xacml-role-mapperType">
+      <sec:name>my-role-mapper</sec:name>
+      <xac:file-store-path>rm</xac:file-store-path>
+      <xac:file-store-password-encrypted>{AES}8TFBbnglDvvLzOGAdlX0djDeOntVdyMYbiGQKjuapFo=</xac:file-store-password-encrypted>
+    </sec:role-mapper>
+    <sec:authorizer xmlns:xac="http://xmlns.oracle.com/weblogic/security/xacml" xsi:type="xac:file-based-xacml-authorizerType">
+      <sec:name>my-authorizer</sec:name>
+      <xac:file-store-path>atz</xac:file-store-path>
+      <xac:file-store-password-encrypted>{AES}GXNXGVpsMhOZuRY/7PM5HvgDNe+BQXU1LoFDBtlt1K4=</xac:file-store-password-encrypted>
+    </sec:authorizer>
+    <sec:adjudicator xsi:type="wls:default-adjudicatorType">
+      <sec:name>my-adjudicator</sec:name>
+      <wls:require-unanimous-permit>false</wls:require-unanimous-permit>
+    </sec:adjudicator>
+    <sec:credential-mapper xsi:type="wls:file-based-credential-mapperType">
+      <sec:name>my-credential-mapper</sec:name>
+      <wls:file-store-path>cm</wls:file-store-path>
+      <wls:file-store-password-encrypted>{AES}+BSZkrF3XetjtUkvy2TNaSlVdy7fCHBRrTDQsXSs4ck=</wls:file-store-password-encrypted>
+    </sec:credential-mapper>
+    <sec:name>my-realm</sec:name>
+    <sec:password-validator xmlns:pas="http://xmlns.oracle.com/weblogic/security/providers/passwordvalidator" xsi:type="pas:system-password-validatorType">
+      <sec:name>my-password-validator</sec:name>
+      <pas:reject-equal-or-contain-username>true</pas:reject-equal-or-contain-username>
+      <pas:reject-equal-or-contain-reverse-username>false</pas:reject-equal-or-contain-reverse-username>
+      <pas:max-password-length>50</pas:max-password-length>
+      <pas:min-password-length>6</pas:min-password-length>
+      <pas:max-instances-of-any-character>0</pas:max-instances-of-any-character>
+      <pas:max-consecutive-characters>0</pas:max-consecutive-characters>
+      <pas:min-alphabetic-characters>1</pas:min-alphabetic-characters>
+      <pas:min-numeric-characters>1</pas:min-numeric-characters>
+      <pas:min-lowercase-characters>0</pas:min-lowercase-characters>
+      <pas:min-uppercase-characters>0</pas:min-uppercase-characters>
+      <pas:min-non-alphanumeric-characters>0</pas:min-non-alphanumeric-characters>
+    </sec:password-validator>
+  </realm>
+  <jaxp-factory-service></jaxp-factory-service>
+</css-config>

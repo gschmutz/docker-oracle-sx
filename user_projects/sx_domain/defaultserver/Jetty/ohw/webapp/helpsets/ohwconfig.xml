@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<helpConfiguration
+  version="2.0"
+  xmlns="http://xmlns.oracle.com/help/web/config">
+
+  <!-- Page branding based on ResourceBundle -->
+  <brandings>
+    <branding text="OCEP Help" />
+  </brandings>
+
+  <!-- Different locale setups. -->
+  <locales>
+  
+    <!-- English: -->
+    <locale language="en">
+      <books>
+		<helpSet id="oepvh" location="oepvh_hlpbk.hs" jar="oepvh.jar"/>
+      </books>
+    </locale>	
+     
+	<!-- German: -->
+    <locale language="de">
+      <books>
+		<helpSet id="oepvh" location="oepvh_hlpbk.hs" jar="oepvh_de.jar"/>
+      </books>
+    </locale>
+	
+	<!-- Spanish: -->
+    <locale language="es">
+      <books>
+		<helpSet id="oepvh" location="oepvh_hlpbk.hs" jar="oepvh_es.jar"/>
+      </books>
+    </locale>
+	
+	<!-- French: -->
+    <locale language="fr">
+      <books>
+		<helpSet id="oepvh" location="oepvh_hlpbk.hs" jar="oepvh_fr.jar"/>
+      </books>
+    </locale>
+	
+	<!-- Italy: -->
+    <locale language="it">
+      <books>
+		<helpSet id="oepvh" location="oepvh_hlpbk.hs" jar="oepvh_it.jar"/>
+      </books>
+    </locale>
+	
+	<!-- Japan: -->
+    <locale language="ja">
+      <books>
+		<helpSet id="oepvh" location="oepvh_hlpbk.hs" jar="oepvh_ja.jar"/>
+      </books>
+    </locale>
+	
+	<!-- Korea: -->
+    <locale language="ko">
+      <books>
+		<helpSet id="oepvh" location="oepvh_hlpbk.hs" jar="oepvh_ko.jar"/>
+      </books>
+    </locale>
+	
+	<!-- Portuguese/Brazil: -->
+    <locale language="pt" country="BR">
+      <books>
+		<helpSet id="oepvh" location="oepvh_hlpbk.hs" jar="oepvh_pt_BR.jar"/>
+      </books>
+    </locale>
+	
+	<!-- Chinese: -->
+    <locale language="zh" country="CN">
+      <books>
+		<helpSet id="oepvh" location="oepvh_hlpbk.hs" jar="oepvh_zh_CN.jar"/>
+      </books>
+    </locale>
+	
+	<!-- Chinese Taiwan: -->
+    <locale language="zh" country="TW">
+      <books>
+		<helpSet id="oepvh" location="oepvh_hlpbk.hs" jar="oepvh_zh_TW.jar"/>
+      </books>
+    </locale>    	
+  </locales>
+
+  <!-- Navigator aliases - to allow for legacy navigator names. -->
+  <navigatorAliases>
+
+    <!-- Uncomment for Tree Based TOC Navigator
+    <alias name="oracle.help.navigator.tocNavigator.TOCNavigator" 
+           value="oracle.help.web.navigator.tocNavigator.TOCTreeNavigator" /> -->
+
+  </navigatorAliases>
+
+  <parameters>
+    <combineBooks>false</combineBooks>
+    <useLabelInfo>true</useLabelInfo>
+    
+    <!-- 
+      Number of locales that are kept in memory all the time. 
+      Please see the OHW documentation for more information on
+      this parameter.
+      <cacheSize>3</cacheSize>
+    -->
+  </parameters>
+
+</helpConfiguration>

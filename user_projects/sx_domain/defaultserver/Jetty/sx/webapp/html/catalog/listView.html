@@ -1,0 +1,168 @@
+<div id="list-result" class="list-result"><!--
+    ko foreach: results
+    --><div class="widget" tabindex="0" data-bind="click:goEdit,
+                                                    css: { 'publishedShown': isPublishedShown,
+                                                           'dataSource': entityType === 'dataSource',
+                                                           'stream': entityType === 'stream',
+                                                           'exploration': entityType === 'exploration',
+                                                           'published' : published, 
+                                                           'error': invalid
+                                                    } ">
+        <div class="title list-cell" data-bind="css: { 'published' : published, error: invalid }, attr: { title: invalidTitle}">
+            <div class="statusIcon"></div>
+            <a class="title-name" data-bind="text: displayName" href="javascript:void(0)" ></a>
+            <div class="title-status" >
+                <span data-bind="text: getStatus($data)"></span>
+                <div class="delimeter" data-bind="visible: publishedMetadata"></div>
+                <a class="btnShowPublished" data-bind="visible: publishedMetadata,
+                                                    click: showPublished,
+                                                    clickBubble: false,
+                                                    css: { 'invalid': publishedMetadata && publishedMetadata.invalid}"
+                                                    href="javascript:void(0)"
+                                                    data-i18n="{text:'PUBLISHED', attr:{title: 'SHOW_PUBLISHED'}}"></a>
+            </div>
+            <div class="tags" data-bind="foreach: getTags($data)">
+                <!-- ko if: $index() !==0 --><span class="comma">,</span> <!-- /ko -->
+                <a href="javascript:void(0)" data-bind="text: $data,
+                                                        click: $parent.addTagToFilters,
+                                                        clickBubble: false,
+                                                        attr: { title: $root.getTagToolTip($data), 'aria-label': $root.getTagToolTip($data)}"></a>
+            </div>
+        </div>
+        <div class="description list-cell" data-bind="text: shortDescription, attr: { title: description }, click: function() {}, clickBubble: false">
+        </div>
+        <div class="updatedBy list-cell ">
+                <div>
+                    <a href="javascript:void(0)" data-bind="text: getUpdatedByLabel($data),
+                                          click: addUpdatedByToFilters,
+                                          clickBubble: false,
+                                          attr: { title: $root.getUpdatedByToolTip($data), 'aria-label': $root.getUpdatedByToolTip($data)}">
+                    </a>
+                </div>
+                <div>
+                        <span data-bind="text: getUpdatedAtLabel($data), click: function() {}, clickBubble: false">
+                        </span>
+                </div>
+        </div>
+        <div class="buttons list-cell" data-bind="click: function() {}, clickBubble: false">
+            
+            <input type="button" data-i18n="{attr:{title: 'RESTORE'}}"
+                   class="catalog-icon"
+                   data-bind=" click: goRestore, 
+                                clickBubble: false, 
+                                css: { 'restore-icon': invalid },
+                                visible: invalid" />
+            <input type="button" data-i18n="{attr:{title: 'MARK_FAVORITE'}}"
+                   data-bind="click: changeFavorite, clickBubble: false,
+                                      css: getFavoriteClass($data)" />
+
+            <input type="button" data-i18n="{attr:{title: 'DELETE'}}"
+                   class="delete-icon"
+                   data-bind="click: openDeleteItemConfirmationDialog, clickBubble: false" />
+         </div>
+        
+     </div>
+     <!-- ko if: $data.publishedMetadata --> 
+     <div class="widget publishedResult" tabindex="0" data-bind="  css: { 'exploration': true,
+                                                           'published' : publishedMetadata.published, 
+                                                           'error': publishedMetadata.invalid
+                                                    }, 
+                                                    click: goEditPublished,
+                                                    visible: isPublishedShown">
+         <div class="list-cell title" data-bind="attr: { title: pubInvalidTitle}"><!--div class="title" data-bind="attr: { title: pubInvalidTitle}"-->
+            <div class="statusIcon"></div>
+             <a class="title-name" data-bind="text: publishedMetadata.displayName" href="javascript:void(0)"></a>
+            <div class="title-status" >
+                <span data-bind="text: getStatus($data.publishedMetadata)" class="btnShowPublished"></span>
+            </div>
+            <div class="tags" data-bind="foreach: getTags($data.publishedMetadata)">
+                <!-- ko if: $index() !==0 --><span class="comma">,</span> <!-- /ko -->
+                <a href="javascript:void(0)" data-bind="text: $data,
+                                                        click: $parent.addTagToFilters,
+                                                        clickBubble: false,
+                                                        attr: { title: $root.getTagToolTip($data)}"></a>
+            </div>
+            <!--/div-->
+        </div>
+        <div class="description list-cell" data-bind="text: pubShortDescription,
+                                                      attr: { title: publishedMetadata.description },
+                                                      click: function() {},
+                                                      clickBubble: false">
+        </div>
+        <div class="updatedBy list-cell ">
+                <div>
+                    <a href="javascript: void(0)" data-bind="text: getUpdatedByLabel($data.publishedMetadata),
+                                          click: function() { addUpdatedByToFilters($data.publishedMetadata) },
+                                          clickBubble: false,
+                                          attr: { title: $root.getUpdatedByToolTip($data.publishedMetadata)}">
+                    </a>
+                </div>
+                <div>
+                        <span data-bind="text: getUpdatedAtLabel($data.publishedMetadata)">
+                        </span>
+                </div>
+        </div>
+        <div class="buttons list-cell">
+            <input type="button" data-i18n="{attr:{title: 'RESTORE'}}"
+                   class="catalog-icon"
+                   data-bind=" click: function() { goRestore($data.publishedMetadata) }, 
+                                clickBubble: false, 
+                                css: { 'restore-icon': publishedMetadata.invalid },
+                                visible: publishedMetadata.invalid" />
+        </div>
+     </div>
+     <!-- /ko -->
+    
+    
+    <!--
+    /ko
+     -->
+</div>
+<div class="catalog-no-data-found" data-i18n="NO_ITEMS_FOUND" data-bind="visible: noDataFound"></div>
+<div id="pagination" class="pagination" data-bind="visible: results().length > 0">
+    <div id="set-page-number" class="set-page-number">
+        <div>
+            <label data-i18n="PAGE_LABEL"></label>
+            <input name="page-number" type="number" min="1" class="oj-inputnumber-input page-number-input"
+                   data-i18n="{attr:{title: 'PAGE_NUMBER_INPUT_FIELD'}}"
+                   data-bind="
+                     event: {change: reload},
+                     value: pageNumber,
+                     valueUpdate: 'keyup'
+                    ">
+            <div class="page-label" data-bind="text: numberOfPagesLabel"></div>
+            <div class="page-label" data-bind="text: numberOfItemsLabel"></div>
+        </div>
+    </div>
+    <div id="pagination-controls" class="pagination-controls">
+        <div>
+            <input type="button" class="page-last-icon turn-left" data-bind="click: loadFirstPage, enable: isFirstPageClickable()">
+            <input type="button" class="page-next-icon turn-left" data-bind="click: loadPreviousPage, enable: isFirstPageClickable()">
+            <input name="page-number" type="number" min="1" class="oj-inputnumber-input page-number-input"
+                   data-i18n="{attr:{title: 'PAGE_NUMBER_INPUT_FIELD'}}"
+                data-bind="
+                 event: {change: reload},
+                 value: pageNumber,
+                 valueUpdate: 'keyup'
+                ">
+            <input type="button" class="page-next-icon turn-right" data-bind="click: loadNextPage, enable: isLastPageClickable()">
+            <input type="button" class="page-last-icon turn-right" data-bind="click: loadLastPage, enable: isLastPageClickable()">
+        </div>
+    </div>
+    <div id="set-page-size" class="set-page-size" data-i18n="{attr:{title: 'NUMBER_OF_ITEMS_ON_PAGE'}}">
+        <label data-i18n="SHOW_LABEL"></label>
+        <input name="page-size" type="number" min="1" class="oj-inputnumber-input page-number-input"
+                data-bind="
+                 event: {change: reload},
+                 value: pageSize,
+                 valueUpdate: 'keyup'
+                ">
+        <button id="page-size-button" class="oj-button-text page-size-button"></button>
+        <ul id="page-size-menu" class="page-size-menu">
+            <!-- ko foreach: pageSizeOptions -->
+            <li><a href="javascript:void(0)" data-bind="text: $data"></a></li>
+            <!-- /ko -->
+        </ul>
+    </div>
+    <div class="clear"></div>
+</div>

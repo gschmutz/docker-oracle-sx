@@ -1,0 +1,59 @@
+<div class="resultsBlock favorites search-view">
+    <!-- View more is changed to show list view
+    <a class="viewMore" href="javascript:void(0)" data-bind="
+        click: function() { if (favoritesViewAll()) {
+                                showLess('favorites');
+                            } else {
+                                showMore('favorites');
+                            }
+                },
+        text: (favoritesViewAll() ? viewLessLabel : viewMoreLabel)"></a>-->
+    <a class="viewMore" href="javascript:void(0)" data-bind="
+        click: function() {showListView(sortings.FAVORITE)},
+        text: viewMoreLabel"></a>
+    <h2 data-i18n="FAVORITES_TITLE"></h2>
+    <div data-bind="foreach: favorites, css: {viewAll: favoritesViewAll}, visible: !noFavorites()" class="widgets">
+        <div class="widget favorite new" data-bind="click:function() { $parent.goEdit($data); }">
+            <div>
+                <div class="title" data-bind="css: $parent.getIconClass($data)">
+                    <h3 data-bind="text: label"></h3>
+                    <div class="createdBy" data-bind="text: $parent.getCreatedByLabel($data)"></div>
+                </div>
+                <div><label data-i18n="DESCRIPTION_LABEL"></label><span data-bind="text: description"></span></div>
+                <div><label data-i18n="TAGS_LABEL"></label><span data-bind="foreach: attachedTagNames"><a href="#tag" data-bind="text: $data"></a> </span></div>
+                <!--<a data-bind="click: function() { $parent.getOne($data) }">Get One</a> | <a data-bind="click: function() { $parent.update($data) }">Update</a> |
+                <a data-bind="click: function() { $parent.remove($data) }">Remove</a> | <a data-bind="click: function() { $parent.create($data) }">Create</a>-->
+                <div class="newFlag"><div data-i18n="NEW_LABEL"></div></div>
+                <div class="favoriteFlag"></div>
+            </div>
+        </div>
+    </div>
+    <div class="noContent" data-i18n="NO_ITEMS_FOUND"  data-bind="visible: noFavorites"></div>
+</div>
+
+
+<div class="resultsBlock recent">
+    <a class="viewMore" data-bind="click: function() {showListView(sortings.RECENT);},
+                                   text: viewMoreLabel"></a>
+    <h2 data-i18n="RECENT_TITLE"></h2>
+    <div data-bind="foreach: mostRecent, css: {viewAll: recentViewAll}, visible: !noMostRecent()" class="widgets">
+        <div class="widget new" data-bind="click:function() { $parent.goEdit($data); }">
+            <div>
+                <div class="title" data-bind="css: $parent.getIconClass($data)">
+                    <h3 data-bind="text: label"></h3>
+                    <div class="createdBy" data-bind="text: $parent.getCreatedByLabel($data)"></div>
+                </div>
+                <div><label data-i18n="DESCRIPTION_LABEL"></label><span data-bind="text: description"></span></div>
+                <div><label data-i18n="TAGS_LABEL"></label><span data-bind="foreach: attachedTagNames"><a href="#tag" data-bind="text: $data"></a> </span></div>
+                <div class="newFlag"><div data-i18n="NEW_LABEL"></div></div>
+                <div class="favoriteFlag"></div>
+            </div>
+        </div>
+    </div>
+    <div class="noContent" data-i18n="NO_ITEMS_FOUND" data-bind="visible: noMostRecent"></div><!---->
+</div>
+
+<div class="resultsBlock mostPopular">
+    <h2 data-i18n="MORE_POPULAR_TITLE"></h2>
+    <div class="noContent" data-i18n="NO_ITEMS_FOUND" data-bind="visible: noPatterns"></div>
+</div>

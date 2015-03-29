@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<configurations xmlns="http://xmlns.oracle.com/uix/config">
+  <application-configuration debug="false">
+    <default-expression-language>el</default-expression-language>
+  </application-configuration>
+
+  <default-configuration>
+    <!-- Uncomment the following line to configure UIX to use a specific
+         look and feel such as "swan", "blaf", or "minimal" -->
+
+    <look-and-feel>swan</look-and-feel>
+
+    <!-- If you are having problems with tabs and buttons not showing proper
+         Chinese, Japanese, Korean, or other non-Latin language characters,
+         you can disable dynamic image generation for OHW's UI. Note that this
+         will affect all languages and will slightly degrade the appearance
+         of buttons and tabs. To do so, uncomment the line below.
+         (Note that another way to resolve this issue is to configure OHW
+         to have proper fonts available on the server. See the release notes
+         for details.) -->
+         
+    <!-- <headless>true</headless> -->
+
+  </default-configuration>
+</configurations>

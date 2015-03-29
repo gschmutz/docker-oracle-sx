@@ -1,0 +1,551 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Functions>
+	<SingleRowFunction>
+		<Function>
+			<name>concat</name>
+			<args>2</args>
+			<syntax><![CDATA[CONCAT( char1, char2 ), CONCAT( byte1, byte2 )]]></syntax>
+			<purpose><![CDATA[CONCAT returns char1 concatenated with char2 as a char[] or byte1 concatenated with byte2 as a byte[]. The char returned is in the same character set as char1. Its datatype depends on the datatypes of the arguments.]]></purpose>
+		</Function>
+		<Function>
+			<name>hextoraw</name>
+			<args>1</args>
+			<syntax><![CDATA[HEXTORAW( char )]]></syntax>
+			<purpose><![CDATA[HEXTORAW converts char containing hexadecimal digits in the CHAR character set to a raw value.]]></purpose>
+		</Function>
+		<Function>
+			<name>length</name>
+			<args>1</args>
+			<syntax><![CDATA[LENGTH( byte expr ), LENGTH( char expr )]]></syntax>
+		</Function>
+		<Function>
+			<name>lk</name>
+			<args>2</args>
+			<syntax><![CDATA[LK( char1, char2 )]]></syntax>
+		</Function>
+		<Function>
+			<name>nvl</name>
+			<args>1</args>
+			<syntax><![CDATA[NVL( bigint1, bigint2 ), NVL( byte1, byte2 ), NVL( float1, float2 ), NVL( char1, char2 ), NVL( int1, int2 ), NVL( interval1, interval2 ), NVL( timestamp1, timestamp2 )]]></syntax>
+		</Function>
+		<Function>
+			<name>prev</name>
+			<args>2</args>
+			<syntax><![CDATA[PREV( identifier1, identifier2 ), PREV( identifier1, identifier2, const_int1, const_int2)]]></syntax>
+		</Function>
+		<Function>
+			<name>rawtohex</name>
+			<args>1</args>
+			<syntax><![CDATA[RAWTOHEX( byte )]]></syntax>
+		</Function>
+		<Function>
+			<name>systimestamp</name>
+			<args>0</args>
+			<syntax><![CDATA[SYSTIMESTAMP()]]></syntax>
+		</Function>
+		<Function>
+			<name>to_bigint</name>
+			<args>1</args>
+			<syntax><![CDATA[TO_BIGINT( integer expr )]]></syntax>
+		</Function>
+		<Function>
+			<name>to_float</name>
+			<args>1</args>
+			<syntax><![CDATA[TO_FLOAT( bigint expr ), TO_FLOAT( integer expr)]]></syntax>
+		</Function>
+		<Function>
+			<name>to_timestamp</name>
+			<args>1</args>
+			<syntax><![CDATA[TO_TIMESTAMP( char ), TO_TIMESTAMP( char1, char2)]]></syntax>
+		</Function>
+		<Function>
+			<name>xmlcomment</name>
+			<args>1</args>
+		</Function>
+		<Function>
+			<name>xmlconcat</name>
+			<args>1</args>
+		</Function>
+		<Function>
+			<name>xmlexists</name>
+			<args>1</args>
+		</Function>
+		<Function>
+			<name>xmlquery</name>
+			<args>1</args>
+		</Function>
+	</SingleRowFunction>
+	<AggregationFunction>
+		<Function>
+			<name>AVG</name>
+			<args>1</args>
+			<syntax><![CDATA[AVG( bigint expr ), AVG( float expr ), AVG( integer expr ) ]]></syntax>
+		</Function>
+		<Function>
+			<name>COUNT</name>
+			<args>1</args>
+			<syntax><![CDATA[COUNT( bigint expr ), COUNT( byte expr ), COUNT( char expr ), COUNT( float expr ), COUNT( integer expr ), COUNT( interval expr ), COUNT( timestamp expr )]]></syntax>
+		</Function>
+		<Function>
+			<name>FIRST</name>
+			<args>2</args>
+			<syntax><![CDATA[FIRST( identifier1, identifier2 ) ]]></syntax>
+		</Function>
+		<Function>
+			<name>LAST</name>
+			<args>2</args>
+			<syntax><![CDATA[LAST( identityfier1, identifier2 ) ]]></syntax>
+		</Function>
+		<Function>
+			<name>MAX</name>
+			<args>1</args>
+			<syntax><![CDATA[MAX( bigint expr ), MAX( byte expr ), MAX( char expr ), MAX( float expr ), MAX( integer expr ), MAX( interval expr ), MAX( timestamp expr )]]></syntax>
+		</Function>
+		<Function>
+			<name>MIN</name>
+			<args>1</args>
+			<syntax><![CDATA[MIN( bigint expr ), MIN( byte expr ), MIN( char expr ), MIN( float expr ), MIN( integer expr ), MIN( interval expr ), MIN( timestamp expr )]]></syntax>
+		</Function>
+		<Function>
+			<name>SUM</name>
+			<args>1</args>
+			<syntax><![CDATA[SUM( bigint expr ), SUM( float expr ), SUM( integer expr ) ]]></syntax>
+		</Function>
+		<Function>
+			<name>XMLAGG</name>
+			<args>1</args>
+			<syntax><![CDATA[XMLAGG( arith_expr ), XMLAGG( arith_expr order_by_clause) ]]></syntax>
+		</Function>
+	</AggregationFunction>
+	
+	<ColtFunction>
+		<Function>
+			<name>beta</name>
+			<args>2</args>
+			<syntax><![CDATA[BETA( double1, double2 )]]></syntax>
+			<purpose><![CDATA[BETA is based on cern.jet.stat.Gamma. It returns the beta function of the input arguments as a double.]]></purpose>
+		</Function>
+		<Function>
+			<name>beta1</name>
+			<args>3</args>
+			<syntax><![CDATA[BETA1( double1, double2, double3 )]]></syntax>
+		</Function>
+		<Function>
+			<name>betacompleted</name>
+			<args>3</args>
+			<syntax><![CDATA[BETACOMPLEMENTED( double1, double2 )]]></syntax>
+		</Function>
+		<Function>
+			<name>binomial</name>
+			<args>2</args>
+			<syntax><![CDATA[BINOMIAL( double1, bigint2 )]]></syntax>
+		</Function>
+		<Function>
+			<name>binomial1</name>
+			<args>2</args>
+			<syntax><![CDATA[BINOMIAL1( long1, long2 )]]></syntax>
+		</Function>
+		<Function>
+			<name>binomial2</name>
+			<args>3</args>
+			<syntax><![CDATA[BINOMIAL2( integer1, integer2, double3 )]]></syntax>
+		</Function>
+		<Function>
+			<name>binomialcomplemented</name>
+			<args>3</args>
+			<syntax><![CDATA[BINOMIALCOMPLEMENTED( integer1, integer2, double3 )]]></syntax>
+		</Function>
+		<Function>
+			<name>bitmaskwithbitssetfromto</name>
+			<args>2</args>
+			<syntax><![CDATA[BITMASKWITHBITSSETFROMTO( integer1, integer2 )]]></syntax>
+		</Function>
+		<Function>
+			<name>ceil</name>
+			<args>1</args>
+			<syntax><![CDATA[CEIL( double )]]></syntax>
+		</Function>
+		<Function>
+			<name>chisquare</name>
+			<args>2</args>
+			<syntax><![CDATA[CHISQUARE( double1, double2 )]]></syntax>
+		</Function>
+		<Function>
+			<name>chisquarecomplemented</name>
+			<args>2</args>
+			<syntax><![CDATA[CHISQUARECOMPLEMENTED( float1, float2 )]]></syntax>
+		</Function>
+		<Function>
+			<name>errorfunction</name>
+			<args>1</args>
+			<syntax><![CDATA[ERRORFUNCTION( double )]]></syntax>
+		</Function>
+		<Function>
+			<name>errorfunctioncomplemented</name>
+			<args>1</args>
+		</Function>
+		<Function>
+			<name>factorial</name>
+			<args>1</args>
+		</Function>
+		<Function>
+			<name>floor</name>
+			<args>1</args>
+		</Function>
+		<Function>
+			<name>gamma</name>
+			<args>1</args>
+		</Function>
+		<Function>
+			<name>gamma1</name>
+			<args>3</args>
+		</Function>
+		<Function>
+			<name>gammacomplemented</name>
+			<args>3</args>
+		</Function>
+		<Function>
+			<name>getseedatrowcolumn</name>
+			<args>2</args>
+		</Function>
+		<Function>
+			<name>hash</name>
+			<args>1</args>
+		</Function>
+		<Function>
+			<name>hash1</name>
+			<args>1</args>
+		</Function>
+		<Function>
+			<name>hash2</name>
+			<args>1</args>
+		</Function>
+		<Function>
+			<name>hash3</name>
+			<args>1</args>
+		</Function>
+		<Function>
+			<name>i0</name>
+			<args>1</args>
+		</Function>
+		<Function>
+			<name>i0e</name>
+			<args>1</args>
+		</Function>
+		<Function>
+			<name>i1</name>
+			<args>1</args>
+		</Function>
+		<Function>
+			<name>i1e</name>
+			<args>1</args>
+		</Function>
+		<Function>
+			<name>incompletebeta</name>
+			<args>3</args>
+		</Function>
+		<Function>
+			<name>incompletegamma</name>
+			<args>2</args>
+		</Function>
+		<Function>
+			<name>incompletegammacomplement</name>
+			<args>2</args>
+		</Function>
+		<Function>
+			<name>j0</name>
+			<args>1</args>
+		</Function>
+		<Function>
+			<name>j1</name>
+			<args>1</args>
+		</Function>
+		<Function>
+			<name>jn</name>
+			<args>1</args>
+		</Function>
+		<Function>
+			<name>k0</name>
+			<args>1</args>
+		</Function>
+		<Function>
+			<name>k0e</name>
+			<args>1</args>
+		</Function>
+		<Function>
+			<name>k1</name>
+			<args>1</args>
+		</Function>
+		<Function>
+			<name>k1e</name>
+			<args>1</args>
+		</Function>
+		<Function>
+			<name>kn</name>
+			<args>2</args>
+		</Function>
+		<Function>
+			<name>leastsignificantbit</name>
+			<args>1</args>
+		</Function>
+		<Function>
+			<name>log</name>
+			<args>2</args>
+		</Function>
+		<Function>
+			<name>log10</name>
+			<args>1</args>
+		</Function>
+		<Function>
+			<name>log2</name>
+			<args>1</args>
+		</Function>
+		<Function>
+			<name>logfactorial</name>
+			<args>1</args>
+		</Function>
+		<Function>
+			<name>loggamma</name>
+			<args>1</args>
+		</Function>
+		<Function>
+			<name>longfactorial</name>
+			<args>1</args>
+		</Function>
+		<Function>
+			<name>mostsignificantbit</name>
+			<args>1</args>
+		</Function>
+		<Function>
+			<name>negativebinomial</name>
+			<args>3</args>
+		</Function>
+		<Function>
+			<name>negativebinomialcomplemented</name>
+			<args>3</args>
+		</Function>
+		<Function>
+			<name>normal</name>
+			<args>1</args>
+		</Function>
+		<Function>
+			<name>normal1</name>
+			<args>3</args>
+		</Function>
+		<Function>
+			<name>normalinverse</name>
+			<args>1</args>
+		</Function>
+		<Function>
+			<name>poisson</name>
+			<args>2</args>
+		</Function>
+		<Function>
+			<name>poissoncomplemented</name>
+			<args>2</args>
+		</Function>
+		<Function>
+			<name>stirlingcorrection</name>
+			<args>1</args>
+		</Function>
+		<Function>
+			<name>studentt</name>
+			<args>2</args>
+		</Function>
+		<Function>
+			<name>studenttinverse</name>
+			<args>2</args>
+		</Function>
+		<Function>
+			<name>y0</name>
+			<args>1</args>
+		</Function>
+		<Function>
+			<name>y1</name>
+			<args>1</args>
+		</Function>
+		<Function>
+			<name>yn</name>
+			<args>2</args>
+		</Function>
+	</ColtFunction>
+	
+	<MathFunction>
+		<Function>
+			<name>abs</name>
+			<args>1</args>
+			<syntax><![CDATA[ABS( integer )]]></syntax>
+			<purpose><![CDATA[ABS returns the absolute value of the input integer argument as an integer.]]></purpose>
+		</Function>
+		<Function>
+			<name>abs1</name>
+			<args>1</args>
+			<syntax><![CDATA[ABS1( long )]]></syntax>
+		</Function>
+		<Function>
+			<name>abs2</name>
+			<args>1</args>
+			<syntax><![CDATA[ABS2( float )]]></syntax>
+		</Function>
+		<Function>
+			<name>abs3</name>
+			<args>1</args>
+			<syntax><![CDATA[ABS3( double )]]></syntax>
+		</Function>
+		<Function>
+			<name>acos</name>
+			<args>1</args>
+			<syntax><![CDATA[ACOS( double )]]></syntax>
+		</Function>
+		<Function>
+			<name>asin</name>
+			<args>1</args>
+			<syntax><![CDATA[ASIN( double )]]></syntax>
+		</Function>
+		<Function>
+			<name>atan</name>
+			<args>1</args>
+			<syntax><![CDATA[ATAN( double )]]></syntax>
+		</Function>
+		<Function>
+			<name>atan2</name>
+			<args>2</args>
+			<syntax><![CDATA[ASIN( double1, double2 )]]></syntax>
+		</Function>
+		<Function>
+			<name>cbrt</name>
+			<args>1</args>
+			<syntax><![CDATA[CBRT( double )]]></syntax>
+		</Function>
+		<Function>
+			<name>ceil1</name>
+			<args>1</args>
+			<syntax><![CDATA[CEIL1( double )]]></syntax>
+		</Function>
+		<Function>
+			<name>cos</name>
+			<args>1</args>
+			<syntax><![CDATA[COS( double )]]></syntax>
+		</Function>
+		<Function>
+			<name>cosh</name>
+			<args>1</args>
+			<syntax><![CDATA[COSH( double )]]></syntax>
+		</Function>
+		<Function>
+			<name>exp</name>
+			<args>1</args>
+			<syntax><![CDATA[EXP( double )]]></syntax>
+		</Function>
+		<Function>
+			<name>expm1</name>
+			<args>1</args>
+			<syntax><![CDATA[EXPM1( double )]]></syntax>
+		</Function>
+		<Function>
+			<name>floor1</name>
+			<args>1</args>
+			<syntax><![CDATA[FLOOR1( double )]]></syntax>
+		</Function>
+		<Function>
+			<name>hypot</name>
+			<args>2</args>
+			<syntax><![CDATA[HYPOT( double1, double2 )]]></syntax>
+		</Function>
+		<Function>
+			<name>ieeeremainder</name>
+			<args>2</args>
+			<syntax><![CDATA[IEEEREMAINDER( double1, double2 )]]></syntax>
+		</Function>
+		<Function>
+			<name>log1</name>
+			<args>1</args>
+			<syntax><![CDATA[LOG1( double )]]></syntax>
+		</Function>
+		<Function>
+			<name>log101</name>
+			<args>1</args>
+			<syntax><![CDATA[LOG101( double )]]></syntax>
+		</Function>
+		<Function>
+			<name>log1p</name>
+			<args>1</args>
+			<syntax><![CDATA[LOG1P( double )]]></syntax>
+		</Function>
+		<Function>
+			<name>pow</name>
+			<args>2</args>
+			<syntax><![CDATA[POW( double )]]></syntax>
+		</Function>
+		<Function>
+			<name>rint</name>
+			<args>1</args>
+			<syntax><![CDATA[RINT( double )]]></syntax>
+		</Function>
+		<Function>
+			<name>round</name>
+			<args>1</args>
+			<syntax><![CDATA[ROUND( float )]]></syntax>
+		</Function>
+		<Function>
+			<name>round1</name>
+			<args>1</args>
+			<syntax><![CDATA[ROUND1( float )]]></syntax>
+		</Function>
+		<Function>
+			<name>signum</name>
+			<args>1</args>
+			<syntax><![CDATA[SIGNUM( double )]]></syntax>
+		</Function>
+		<Function>
+			<name>signum1</name>
+			<args>1</args>
+			<syntax><![CDATA[SIGNUM1( float )]]></syntax>
+		</Function>
+		<Function>
+			<name>sin</name>
+			<args>1</args>
+			<syntax><![CDATA[SIN( double )]]></syntax>
+		</Function>
+		<Function>
+			<name>sinh</name>
+			<args>1</args>
+			<syntax><![CDATA[SINH( double )]]></syntax>
+		</Function>
+		<Function>
+			<name>sqrt</name>
+			<args>1</args>
+			<syntax><![CDATA[SQRT( double )]]></syntax>
+		</Function>
+		<Function>
+			<name>tan</name>
+			<args>1</args>
+			<syntax><![CDATA[TAN( double )]]></syntax>
+		</Function>
+		<Function>
+			<name>tanh</name>
+			<args>1</args>
+			<syntax><![CDATA[TANH( double )]]></syntax>
+		</Function>
+		<Function>
+			<name>todegrees</name>
+			<args>1</args>
+			<syntax><![CDATA[TODEGREES( double )]]></syntax>
+		</Function>
+		<Function>
+			<name>toradians</name>
+			<args>1</args>
+			<syntax><![CDATA[TORADIANS( double )]]></syntax>
+		</Function>
+		<Function>
+			<name>ulp</name>
+			<args>1</args>
+			<syntax><![CDATA[ULP( double )]]></syntax>
+		</Function>
+		<Function>
+			<name>ulp1</name>
+			<args>1</args>
+			<syntax><![CDATA[ULP1( float )]]></syntax>
+		</Function>
+	</MathFunction>
+</Functions>

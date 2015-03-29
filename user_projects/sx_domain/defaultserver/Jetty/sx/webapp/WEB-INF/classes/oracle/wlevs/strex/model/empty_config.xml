@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wlevs:config xmlns:wlevs="http://www.bea.com/ns/wlevs/config/application"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xmlns:jc="http://www.oracle.com/ns/ocep/config/jdbc"
+              xsi:schemaLocation="
+        http://www.oracle.com/ns/ocep/config/jdbc
+        http://www.oracle.com/ns/ocep/config/jdbc/ocep_jdbc_context.xsd">
+</wlevs:config>

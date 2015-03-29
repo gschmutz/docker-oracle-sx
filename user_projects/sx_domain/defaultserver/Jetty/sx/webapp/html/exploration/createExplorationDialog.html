@@ -1,0 +1,92 @@
+<div id="createExplorationDialogContent"
+     data-bind="
+     ojComponent:{
+     component: 'ojDialog',
+     title: getTranslated('oep.exploration.createExplorationDialog.createExplorationDialogTitle'),
+     initialVisibility: 'hide',
+     rootAttributes: {
+     'class': 'createExplorationDialogContent'
+       }
+     }
+     ">
+
+    <div class="oj-dialog-body">
+        <table>
+            <tr class="">
+                <td class="keyColumn">
+                    <label class="oj-label">
+                        <span class="oj-label-required-icon oj-widget-icon"
+                              data-i18n="{attr: {title: '*oep.field.REQUIRED'}}"></span>
+                        <span data-i18n="Name"></span>
+                    </label>
+                </td>
+                <td class="valueColumn">
+                    <input class="oj-inputtext oj-inputtext-input validate[required]"
+                           type="text"
+                           data-bind="value: displayName"
+                           data-i18n="{attr: {placeholder: 'NamePlaceholder'}}"/>
+                </td>
+            </tr>
+
+            <tr class="">
+                <td class="keyColumn">
+                    <label class="oj-label" data-i18n="Description"></label>
+                </td>
+                <td class="valueColumn">
+                    <textarea
+                            class="oj-textarea oj-textarea-input validate[maxSize[512]]"
+                            data-bind="value: description"
+                            data-i18n="{attr: {placeholder: 'DescriptionPlaceholder'}}"></textarea>
+                </td>
+            </tr>
+
+            <tr class="">
+                <td class="keyColumn">
+                    <label class="oj-label" data-i18n="Tags"></label>
+                </td>
+                <td class="valueColumn">
+                    <input id="createExplorationDialogTags" class=""/>
+                </td>
+            </tr>
+
+            <tr class="">
+                <td class="keyColumn">
+                    <label class="oj-label">
+                        <span class="oj-label-required-icon oj-widget-icon"
+                              data-i18n="{attr: {title: '*oep.field.REQUIRED'}}"></span>
+                        <span data-i18n="Source"></span>
+                    </label>
+                </td>
+                <td class="valueColumn">
+                    <input id="createExplorationDialogSource" class=""/>
+                </td>
+            </tr>
+
+        </table>
+    </div>
+
+    <div class="oj-dialog-footer">
+
+        <button type="button" id="createExplorationDialogCancelButton"
+                data-bind="
+                ojComponent: {component: 'ojButton',
+                label: getTranslated('oep.exploration.createExplorationDialog.Cancel')
+                     },
+                 click: cancelCreateExplorationButtonClick
+                ">
+        </button>
+
+        <button type="button" id="createExplorationDialogCreateButton"
+                data-bind="ojComponent: {
+                    component: 'ojButton',
+                    label: getTranslated('oep.exploration.createExplorationDialog.Create') ,
+                    disabled: isCreateExplorationButtonDisabled
+                },
+                 click: createExplorationButtonClick
+                ">
+        </button>
+
+    </div>
+
+
+</div>

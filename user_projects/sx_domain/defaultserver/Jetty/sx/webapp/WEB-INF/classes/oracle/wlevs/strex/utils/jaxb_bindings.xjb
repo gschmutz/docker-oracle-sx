@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (c) 2008, 2014, Oracle and/or its affiliates.
+  ~ All rights reserved.
+  -->
+
+<jaxb:bindings xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+               jaxb:version="2.0"
+               xmlns:xjc= "http://java.sun.com/xml/ns/jaxb/xjc"
+               jaxb:extensionBindingPrefixes="xjc">
+  <jaxb:globalBindings>
+    <xjc:simple/>
+  </jaxb:globalBindings>
+</jaxb:bindings>

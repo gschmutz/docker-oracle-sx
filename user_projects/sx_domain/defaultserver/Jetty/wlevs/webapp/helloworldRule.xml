@@ -1,0 +1,9 @@
+<?xml version="1.0"?
+<Operator ID="1" type="Output">
+<inputs><input>0</input></inputs>
+<cql-property>CREATE QUERY helloworldRule AS 
+         select * from helloworldInputChannel [Now] 
+      </cql-property>
+<output-type>query</output-type>
+<output-name>helloworldRule</output-name>
+</Operator>

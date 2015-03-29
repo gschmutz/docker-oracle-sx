@@ -1,0 +1,24 @@
+<div id="notifications" class="notifications" data-bind="foreach: messages">
+    <div data-bind="attr: {id: messageId, class: 'notification'}">
+        <div>
+            <div>
+                <div data-bind="attr: {class: 'notification-content ' + type()}">
+                    <div class="notification-progress"data-bind="visible: progress"></div>
+                    <div class="message-message">
+                        <div>
+                            <div class="message-icon">
+                                <span data-bind="attr: {class: 'message-icon ' + type()}"></span>
+                            </div>
+                            <div class="message-text" data-bind="text: text"></div>
+                            <div class="message-tools">
+                                <a href="javascript:;" class="message-tool message-icon close" data-bind="click: remove"></a>
+                                <a href="javascript:;" class="message-tool" data-i18n="notification.CANCEL_LABEL" data-bind="visible: doCancel, click: doCancel"></a>
+                                <a href="javascript:;" class="message-tool" data-i18n="notification.DETAILS_LABEL" data-bind="visible: doDetails, click: doDetails"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

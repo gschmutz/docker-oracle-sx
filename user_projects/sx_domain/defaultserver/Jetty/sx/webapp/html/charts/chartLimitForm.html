@@ -1,0 +1,13 @@
+<div class="limit inline">
+        <!-- ko foreach: limitUnitOptions -->
+            <span data-bind="text: label,
+                             click: function() {$parent.limitUnit(id)},
+                             css: {checked : $parent.limitUnit() === id},
+                             attr: {id: id}">
+            </span>
+        <!-- /ko -->
+     <input type="number" min="0" class="oj-inputtext-input"
+           data-bind='value: limitValue,
+                      valueUpdate: "afterkeydown"
+           '/>
+</div>

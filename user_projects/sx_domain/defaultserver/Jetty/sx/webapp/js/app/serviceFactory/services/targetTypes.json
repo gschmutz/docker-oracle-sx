@@ -1,0 +1,29 @@
+{"success": true,
+    "errorCode": "",
+    "message": "",
+    "data": [{
+            "name": "EDN",
+            "displayName": "EDN type",
+            "windowable": true,
+            "parameters": [{
+                    "name": "URL",
+                    "type": "URL",
+                    "validator": "",
+                    "description": "URL to SOA Suite",
+                    "required": true
+                }, {
+                    "name": "userName",
+                    "type": "STRING",
+                    "validator": "",
+                    "description": "User name",
+                    "required": true
+                }, {
+                    "name": "password",
+                    "type": "STRING",
+                    "validator": "password",
+                    "description": "Password",
+                    "required": true
+                }],
+            "description": "This type provides events from EDN"
+        }
+    ]}

@@ -1,0 +1,113 @@
+<div id="exportContent" data-bind="if:exploration()!=null, visible: exploration()!=null">
+
+
+    <div id="exportMenuPanel" class="oj-dialog-header oj-helper-clearfix">
+
+        <div>
+
+            <a href="javascript:void(0)"
+               data-i18n="exportButton"
+               class="exportButton"
+               id="exportButton"
+               data-bind=" click: exportButtonClick"></a>
+
+            <a href="javascript:void(0)"
+               data-i18n="exportHelpButton"
+               class="exportHelpButton"
+               id="exportHelpButton"
+               data-bind=" click: exportHelpButtonClick"></a>
+
+            <a href="javascript:void(0)"
+               data-i18n="exportCancelButton"
+               class="exportCancelButton"
+               id="exportCancelButton"
+               data-bind=" click: closeExportDialog"></a>
+
+
+            <h3 class="exportHeader oj-dialog-title" data-bind="">
+                <span data-i18n="exportHeader"></span>
+                <span data-bind="text: exploration().displayName"></span>
+            </h3>
+
+            <div class="clearBoth"/>
+        </div>
+    </div>
+
+    <div id="exportList">
+        <span class="header oj-collapsible-header" data-i18n="exportList.header">
+        </span>
+
+        <div class=" exportTableContainer">
+            <table class=" exportDependenciesTable ">
+                <thead class="oj-table-header">
+                <tr class="oj-table-header-row">
+                    <th class="keyColumn oj-table-column-header-cell">
+                        <div class="oj-table-column-header">
+                            <div class="oj-table-column-header-text" data-i18n="exportList.resource">
+                            </div>
+                        </div>
+                    </th>
+                    <th class="keyColumn oj-table-column-header-cell">
+                        <div class="oj-table-column-header">
+                            <div class="oj-table-column-header-text">
+                                <label class="oj-label" data-i18n="exportList.type"> </label>
+                            </div>
+                        </div>
+                    </th>
+                </tr>
+                </thead>
+                <tbody class="oj-table-body">
+
+                <!-- ko foreach: exportDependencies -->
+                <tr class="oj-table-body-row oj-table-hgrid-lines">
+                    <td class="oj-table-data-cell oj-table-vgrid-lines">
+                        <span  data-bind="text: $data.label"></span>
+
+                    </td>
+                    <td class="oj-table-data-cell oj-table-vgrid-lines">
+                        <span class="grey" data-bind="text: $data.typeLabel, css: $data.type"></span>
+
+                    </td>
+                </tr>
+                <!-- /ko -->
+
+                </tbody>
+
+            </table>
+        </div>
+
+    </div>
+
+    <div id="advanchedOptionsAccordion" data-bind="ojComponent: {component: 'ojCollapsible', expanded:false}">
+        <span class="header" data-i18n="advanchedOptions.header">
+        </span>
+
+        <div id="advanchedOptions">
+            <table>
+                <tr class="">
+                    <td class="keyColumn">
+                        <label class="oj-label"
+                               data-i18n="{text: 'advanchedOptions.uniqueId',  attr: {title: 'advanchedOptions.uniqueIdTooltip'}}"> </label>
+                    </td>
+                    <td class="valueColumn">
+                        <input class="oj-inputtext-input" type="text" data-bind="value: uniqueIdEditor"/>
+                    </td>
+                </tr>
+
+                <tr class="">
+                    <td class="keyColumn">
+                        <label class="oj-label"
+                               data-i18n="{text: 'advanchedOptions.bundleName',  attr: {title: 'advanchedOptions.bundleNameTooltip'}}"> </label>
+                    </td>
+                    <td class="valueColumn">
+                        <input class="oj-inputtext-input" type="text" data-bind="value: bundleNameEditor"/>
+                    </td>
+                </tr>
+
+
+            </table>
+        </div>
+    </div>
+
+
+</div>

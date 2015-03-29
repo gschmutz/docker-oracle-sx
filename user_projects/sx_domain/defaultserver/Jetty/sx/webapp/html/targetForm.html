@@ -1,0 +1,184 @@
+<div id="target-dialog">
+    <div class="top-header">
+        <a id="target-dialog-cancel" href="javascript:;" class="top-header-link"
+           data-i18n="targetDialog.CANCEL_LABEL"data-bind="
+                click: onCancel
+           "></a>
+        <a id="target-dialog-stream" href="javascript:;" class="top-header-link right-link"
+           data-i18n="targetDialog.STREAM_LABEL" data-bind="
+                click: onSave,
+                css: {disabled: !streamEnabled()}
+           "></a>
+        <div class="top-header-title" data-i18n="targetDialog.DIALOG_TITLE"></div>
+    </div>
+    <div class="target-dialog-content">
+
+        <form id="target-form-step-1" class="target-form validated-form">
+
+            <div class="oj-form oj-md-odd-cols-3 oj-md-labels-inline">
+                <div class="oj-row">
+                    <div class="oj-col">
+                        <label class="oj-label" for="target-type">
+                            <span
+                                    data-i18n="{attr: {title: '*oep.field.REQUIRED'}}"></span><span
+                                data-i18n="targetDialog.TARGET_TYPE_LABEL"></span>
+                        </label>
+                    </div>
+                    <div class="oj-col">
+                        <select id="target-type" name="target-type"
+                                class="oj-select oj-inputtext oj-inputtext-input validate[requiredit ]"
+                                data-bind="
+                                    event: {change: onTargetTypeChange},
+                                    optionsCaption: __('TARGET_TYPE_CAPTION'),
+                                    options: availableTargetTypes,
+                                    optionsText: 'displayName',
+                                    optionsValue: 'name',
+                                    value: selectedTargetTypeName
+                                ">
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="oj-form oj-md-odd-cols-3 oj-md-labels-inline" data-bind="foreach: targetParameters">
+                <div class="oj-row">
+                    <div class="oj-col">
+                        <label class="oj-label" data-bind="attr: {for: 'target-dialog-' + name}">
+                            <span class="oj-label-required-icon oj-widget-icon"
+                                  data-i18n="{attr: {title: '*oep.field.REQUIRED'}}"
+                                  data-bind="visible: required"></span><span data-bind="text: displayName"></span>
+                        </label>
+                    </div>
+                    <div class="oj-col">
+                        <!-- ko if: widget === 'input' || widget === 'password' -->
+                        <input data-bind="
+                            event: {change: $parent.onTargetParamChange},
+                            attr: {
+                                type: widget,
+                                id: 'target-dialog-' + name,
+                                name: 'target-dialog-' + name,
+                                title: description,
+                                class: cls + ' validate[' + validators + ']'
+                            },
+                            value: value
+                               "/>
+                        <!-- /ko -->
+                        <!-- ko if: widget === 'select' -->
+                        <select
+                                data-bind="
+                                event: {change: $parent.onTargetParamChange},
+                                optionsCaption: '', 
+                                options: options,
+                                optionsText: 'displayName',
+                                optionsValue: 'value',
+                                attr: {
+                                    id: 'target-dialog-' + name,
+                                    name: 'target-dialog-' + name,
+                                    title: description,
+                                    class: cls + ' validate[' + validators + ']'
+                                },
+                                value: value
+                            ">
+                        </select>
+                        <!-- /ko -->
+                        <!-- ko if: widget === 'checkbox' -->
+                        <input data-bind="
+                                attr: {
+                                    type: widget,
+                                    id: 'target-dialog-' + name,
+                                    name: 'target-dialog-' + name,
+                                    title: description,
+                                    class: cls + ' validate[' + validators + ']'
+                                },
+                                checked: value
+                               "/>
+                        <!-- /ko -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="oj-form oj-md-odd-cols-3 oj-md-labels-inline" data-bind="visible: mappingNeeded()">
+                <div class="oj-row">
+                    <div class="oj-col">&nbsp;</div>
+                    <div class="oj-col">
+                        <a id="target-dialog-getevent-types" href="javascript:;"
+                           data-i18n="targetDialog.GET_EVENT_TYPES_LABEL"
+                           data-bind="click: onGetEventTypes"></a>&nbsp;
+                    </div>
+                </div>
+            </div>
+
+        </form>
+
+        <form id="target-form-step-2" class="target-form validated-form" data-bind="visible: mappingNeeded()">
+
+            <div class="oj-form oj-md-odd-cols-3 oj-md-labels-inline" data-bind="visible: showEventTypesLoader() || availableEventTypes().length > 0">
+                <div class="oj-row">
+                    <div class="oj-col">
+                        <label class="oj-label" for="event-type">
+                            <span class="oj-label-required-icon oj-widget-icon"
+                                  data-i18n="{attr: {title: '*oep.field.REQUIRED'}}"></span><span
+                                data-i18n="targetDialog.EVENT_TYPE_SELECT_LABEL"></span>
+                        </label>
+                    </div>
+                    <div class="oj-col">
+                        <select id="event-type" name="event-type"
+                                class="oj-select oj-inputtext oj-inputtext-input validate[required] sx-target-mapping-events-select"
+                                data-bind="
+                                event: {change: onEventTypeChange},
+                                enable: true,
+                                optionsCaption: eventTypesSelectCaption,
+                                options: availableEventTypes,
+                                optionsText: 'name',
+                                optionsValue: 'name',
+                                value: selectedEventTypeName
+                                "></select>
+                        <div class="indicator-busy" data-bind="visible: showEventTypesLoader()"></div>
+                    </div>
+                </div>
+
+                <div class="oj-row">
+                    <div class="oj-col" style="height: 5px;">
+                    </div>
+                    <div class="oj-col">
+                        <table class="oj-table oj-table-element sx-target-mapping-table"
+                               data-bind="visible: selectedEventTypeFields().length > 0">
+                            <thead class="oj-table-header">
+                            <tr class="oj-table-header-row">
+                                <th class="oj-table-column-header-cell">
+                                <span class="sx-target-mapping-table-header-text"
+                                      data-i18n="targetDialog.MAPPING_DESTINATION_PROPERTY_LABEL"></span>
+                                </th>
+                                <th class="oj-table-column-header-cell">
+                                <span class="sx-target-mapping-table-header-text"
+                                      data-i18n="targetDialog.MAPPING_OUTPUT_STREAM_PROPERTY_LABEL"></span>
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody class="oj-table-body">
+                            <!-- ko foreach: selectedEventTypeFields -->
+                            <tr class="oj-table-body-row oj-table-hgrid-lines">
+                                <td class="oj-table-data-cell oj-table-vgrid-lines" data-bind="text: name"></td>
+                                <td class="oj-table-data-cell oj-table-vgrid-lines">
+                                    <select class="oj-select oj-inputtext oj-inputtext-input"
+                                            data-bind="
+                                            event: {change: $root.onMappingParamChange},
+                                            enable: true,
+                                            optionsCaption: $root.__('NO_MAPPING'),
+                                            options: $root.getExplorationEventTypeFields(type),
+                                            optionsText: 'alias',
+                                            optionsValue: 'name',
+                                            value: $root.targetMapping()[name]
+                                "></select>
+                                </td>
+                            </tr>
+                            <!-- /ko -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+    </div>
+</div>

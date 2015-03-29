@@ -1,0 +1,91 @@
+iframe {
+  width: 100%;
+  height: 22em;
+  border: 0;
+}
+
+.object-owner {
+  margin-left:0.8em;
+  font-size: 1.6em;
+  font-family: Tahoma, Arial, sans-serif;
+  color: #252525;
+}
+
+.object-desc {
+  font-size: 0.85em;
+  font-family: Tahoma, Arial, sans-serif;
+  font-weight: bold;
+  color: #AA0000;
+}
+
+.object-spacer {
+  height:1.5px;
+  border-width:0;
+  background: #0572CE;
+  margin-left:1.25em;
+  margin-right:1.0em;
+}
+
+.properties {
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+}
+
+.property {
+  margin-left:1.25em;
+  margin-right:1.0em;
+  margin-top: 0.75em;
+  margin-bottom: 0.25em;
+}
+
+.property-container {
+  width:100%;
+  overflow:auto;
+}
+
+.property-name-and-type {
+  float: left;
+}
+
+.property-name {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1.1em;
+  color: #000000;
+}
+
+.property-type {
+  font-family: Monaco, Courier, monospace;
+  font-size: 0.75em;
+  color: #737373;
+}
+
+.property-values {
+  float: right;
+  font-family: Monaco, Courier, monospace;
+  font-size: 0.85em;
+}
+
+.deprecated, .internal {
+  font-family: Monaco, Courier, monospace;
+  font-size: 0.75em;
+  font-weight: bold;
+  color: #AA0000;
+}
+
+.default-value {
+  font-weight: bold;
+}
+
+.property-desc-container {
+  width:100%;
+  overflow:auto;
+  background: #F9F9F9;
+  border-radius: 0.2em 0.5em 0.5em 0.5em;
+  color: #454545;
+}
+
+.child-properties-container {
+  background: white;
+  border: #DFE4E7 1px solid;
+  border-radius: 0 0 0.5em 0.5em;
+}

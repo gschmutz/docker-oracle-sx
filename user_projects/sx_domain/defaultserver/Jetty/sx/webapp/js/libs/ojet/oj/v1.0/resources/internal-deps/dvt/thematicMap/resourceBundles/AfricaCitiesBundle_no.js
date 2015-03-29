@@ -1,0 +1,1 @@
+var l={"EGY_CAIRO":[null,"Kairo"],"DZA_ALGIERS":[null,"Alger"]};var DvtBaseMapManager=this.DvtBaseMapManager;if (!DvtBaseMapManager) DvtBaseMapManager={};if (!DvtBaseMapManager._UNPROCESSED_MAPS) DvtBaseMapManager._UNPROCESSED_MAPS=[[],[],[]];DvtBaseMapManager._UNPROCESSED_MAPS[2].push(["africa","cities",l]);

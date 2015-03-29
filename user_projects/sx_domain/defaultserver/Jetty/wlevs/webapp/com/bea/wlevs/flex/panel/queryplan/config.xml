@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<config>
+<context-root>http://localhost:9002/wlevs/</context-root>	
+<dump>simple_join_dump.xml</dump>
+</config>

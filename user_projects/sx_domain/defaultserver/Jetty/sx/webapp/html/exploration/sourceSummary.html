@@ -1,0 +1,169 @@
+<div id="sourceSummaryContent" data-bind="if:source()!=null, visible: source()!=null">
+
+
+    <div id="sourceSummaryMenuPanel">
+
+        <div>
+
+            <a href="javascript:void(0)"
+               data-i18n="sourceSummaryDoneButton"
+               class="sourceSummaryDoneButton"
+               id="sourceSummaryDoneButton"
+               data-bind=" click: sourceSummaryDoneButtonClick"></a>
+
+            <a href="javascript:void(0)"
+               data-i18n="sourceSummaryEditButton"
+               class="sourceSummaryEditButton"
+               id="sourceSummaryEditButton"
+               data-bind=" click: sourceSummaryEditButtonClick, visible : isEditEnabled"></a>
+
+            <a href="javascript:void(0)"
+               data-i18n="sourceSummaryHelpButton"
+               class="sourceSummaryHelpButton"
+               id="sourceSummaryHelpButton"
+               data-bind=" click: sourceSummaryHelpButtonClick"></a>
+
+
+            <h3 class="sourceSummaryHeader" data-bind="css: source().color">
+                <span data-i18n="sourceSummaryHeader"></span>
+                <span class="grey" data-bind="text: source().displayName, css: source().sourceType.value"></span>
+            </h3>
+
+            <div class="clearBoth"/>
+        </div>
+    </div>
+
+    <div id="sourceDetailsAccordion">
+        <h3 class="header" data-i18n="sourceDetails.sourceDetailsHeader">
+        </h3>
+
+        <div id="sourceDetails">
+            <table>
+                <tr class="">
+                    <td class="keyColumn">
+                        <label class="oj-label" data-i18n="sourceDetails.displayName"> </label>
+                    </td>
+                    <td class="valueColumn">
+                        <span data-bind="text: source().displayName"></span>
+                    </td>
+                </tr>
+
+                <tr class="">
+                    <td class="keyColumn">
+                        <label class="oj-label" data-i18n="sourceDetails.description"> </label>
+                    </td>
+                    <td class="valueColumn">
+                        <span data-bind="text: source().description"></span>
+                    </td>
+                </tr>
+
+                <tr class="">
+                    <td class="keyColumn">
+                        <label class="oj-label" data-i18n="sourceDetails.createdAt"> </label>
+                    </td>
+                    <td class="valueColumn">
+                        <span data-bind="text: getCreatedAtFormatted()"></span>
+                    </td>
+                </tr>
+
+                <tr class="">
+                    <td class="keyColumn">
+                        <label class="oj-label" data-i18n="sourceDetails.createdBy"> </label>
+                    </td>
+                    <td class="valueColumn">
+                        <span data-bind="text: source().createdBy"></span>
+                    </td>
+                </tr>
+
+                <tr class="">
+                    <td class="keyColumn">
+                        <label class="oj-label" data-i18n="sourceDetails.updatedAt"> </label>
+                    </td>
+                    <td class="valueColumn">
+                        <span data-bind="text: getUpdatedAtFormatted()"></span>
+                    </td>
+                </tr>
+
+                <tr class="">
+                    <td class="keyColumn">
+                        <label class="oj-label" data-i18n="sourceDetails.updatedBy"> </label>
+                    </td>
+                    <td class="valueColumn">
+                        <span data-bind="text: source().updatedBy"></span>
+                    </td>
+                </tr>
+
+                <tr class="">
+                    <td class="keyColumn">
+                        <label class="oj-label" data-i18n="sourceDetails.attachedTagNames"> </label>
+                    </td>
+                    <td class="valueColumn">
+                        <span data-bind="text: source().attachedTagNames.join(',')"></span>
+                    </td>
+                </tr>
+
+                <tr class="">
+                    <td class="keyColumn">
+                        <label class="oj-label" data-i18n="sourceDetails.sourceType"> </label>
+                    </td>
+                    <td class="valueColumn">
+                        <span data-bind="text: source().sourceType.label"></span>
+                    </td>
+                </tr>
+
+
+            </table>
+        </div>
+    </div>
+
+
+    <div id="sourceTypeParametersAccordion">
+
+        <h3 class="header">
+            <span data-i18n="sourceTypeParameters.sourceTypeParametersHeader"></span>
+            <span data-bind="text: source().sourceType.label"></span>
+        </h3>
+
+        <div id="sourceTypeParameters">
+            <table class="">
+                <tbody data-bind="foreach: source().parameters">
+
+                <tr class="">
+                    <td class="keyColumn">
+                        <label class="oj-label" data-bind="text: $data.label"> </label>
+                    </td>
+                    <td class="valueColumn">
+                        <span data-bind="text: $data.value"></span>
+                    </td>
+                </tr>
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+
+
+    <div id="sourceShapeAccordion">
+
+        <h3 class="header" data-i18n="sourceShape.sourceShapeHeader">
+        </h3>
+
+        <div id="sourceShape">
+            <table class="">
+                <tbody data-bind="foreach: source().fields">
+
+                <tr class="">
+                    <td class="keyColumn">
+                        <label class="oj-label" data-bind="text: $data.name"> </label>
+                    </td>
+                    <td class="valueColumn">
+                        <span data-bind="text: $data.type.displayName"></span>
+                    </td>
+                </tr>
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+
+</div>

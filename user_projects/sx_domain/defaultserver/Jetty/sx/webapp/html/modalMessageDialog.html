@@ -1,0 +1,42 @@
+<div id="message-dialog" class="message-dialog" style="display: none;" title=""
+    data-bind="
+        ojComponent: {
+            component: 'ojDialog', 
+            initialVisibility: 'hide',
+            height: height,
+            width: width
+        }
+    ">
+    <div class="oj-dialog-header oj-helper-clearfix" aria-labelledby="message-dialog-title-id">
+        <span id="message-dialog-title-id" class="oj-dialog-title">
+            <span class="message-icon" data-bind="css: type"></span>
+            <span data-bind="html: title"></span>
+        </span> 
+    </div>
+    <div class="oj-dialog-body">
+        <div class="message-dialog-content-wrapper" data-bind="style: {height: contentHeight}">
+            <div class="message-dialog-content">
+                <div class="message-dialog-header">
+                    <span data-bind="html: header"></span>
+                </div>
+                <div class="message-messages" data-bind="foreach: messages">
+                    <div class="message-message">
+                        <span class="message-icon" data-bind="css: type"></span>
+                        <div class="message-text" data-bind="html: text"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="okButton" class="oj-dialog-footer">
+        <button data-bind="
+            ojComponent: {
+                component: 'ojButton', 
+                label: labelOK
+            },
+            click: function() {
+                $('#message-dialog').ojDialog('close');
+            }
+        "> </button>
+    </div>
+</div>

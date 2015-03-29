@@ -1,0 +1,25 @@
+Bundle-Version: ${wlevs.version}
+Bundle-Name: com.bea.wlevs.visualizer.jmxhttpadapter
+Bundle-SymbolicName: com.bea.wlevs.visualizer.jmxhttpadapter
+Export-Package:
+Private-Package:!com.*,!org.*
+Import-Package: com.bea.core.webextensions,\
+ org.apache.commons.logging,\
+ javax.management.openmbean,\
+ javax.swing,\
+ javax.swing.plaf.basic,\
+ org.osgi.framework,\
+ org.osgi.service.http,\
+ org.springframework.osgi.context,\
+ org.springframework.osgi.extensions.annotation,\
+ org.springframework.beans.factory,\
+ com.bea.wlevs.spring.support,\
+ com.bea.httppubsub,\
+ com.bea.wlevs.logging.management,\
+ com.bea.wlevs.management.configuration,\
+ com.bea.wlevs.security.authorize,\
+ com.bea.wlevs.security.management,\
+ com.bea.wlevs.management.dataaggregation,\
+ com.bea.wlevs.management.dataservice,\
+ com.bea.wlevs.management.remote.helper
+DynamicImport-Package: com.bea.common.security.internal.service

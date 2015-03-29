@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+    <persistence-unit name="SXStorage">
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+        <class>oracle.wlevs.strex.persistence.PExplorationEditor</class>
+        <class>oracle.wlevs.strex.persistence.PMetadata</class>
+        <class>oracle.wlevs.strex.persistence.PEntity</class>
+        <class>oracle.wlevs.strex.persistence.PTag</class>
+        <class>oracle.wlevs.strex.persistence.PUser</class>
+        <class>oracle.wlevs.strex.persistence.PExploration</class>
+        <class>oracle.wlevs.strex.persistence.PShape</class>
+        <class>oracle.wlevs.strex.persistence.PPattern</class>
+        <class>oracle.wlevs.strex.persistence.PUserSpecificProperties</class>
+        <class>oracle.wlevs.strex.persistence.PRuntimeInfo</class>
+        <class>oracle.wlevs.strex.persistence.PDisplayInfo</class>
+        <class>oracle.wlevs.strex.persistence.PBaseSource</class>
+        <class>oracle.wlevs.strex.persistence.PTarget</class>
+        <class>oracle.wlevs.strex.persistence.PEventSource</class>
+        <class>oracle.wlevs.strex.persistence.PDataSource</class>
+        <properties>
+            <property name="eclipselink.target-database" value="JavaDB"/>
+            <property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.EmbeddedDriver"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:derby:SXStorage;create=true"/>
+            <property name="eclipselink.ddl-generation" value="create-tables"/>
+        </properties>
+    </persistence-unit>
+</persistence>
+

@@ -1,0 +1,25 @@
+{
+    "name":"EDNTarget",
+    "displayName":"EDN type",
+    "description":"The targets of this type push events to EDN",
+    "parameters":[
+        {
+            "name":"URL",
+            "type":"URL",
+            "description":"URL to SOA Suite",
+            "required":true
+        },
+        {
+            "name":"userName",
+            "type":"string",
+            "description":"User name",
+            "required":true
+        },
+        {
+            "name":"password",
+            "type":"string",
+            "validator":"password",
+            "description":"Password",
+            "required":true
+        }]
+}

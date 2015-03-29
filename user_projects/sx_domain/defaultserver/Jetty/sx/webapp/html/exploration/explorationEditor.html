@@ -1,0 +1,639 @@
+<form id="explorationEditor" data-i18n-ns="exploration">
+    <!-- ko if: (exploration()) -->
+
+    <div id="explorationEditorMenuPanel">
+        <table style="width: 100%;">
+            <tr>
+                <td>
+                    <a href="#catalog" data-bind="
+                            ojComponent: {
+                                component:'ojButton',
+                                icons: {start:' backIcon oj-fwk-icon'},
+                                label: getTranslated('oep.exploration.ExitEditor')
+                    }"></a>
+                </td>
+
+                <td id="explorationEditorMenu" class="right">
+
+                    <div>
+                        <button id="addExplorationTargetBtn" class="target-dialog-control" type="button"
+                                data-bind="
+                       visible: !exploration().actions.isReadMode(),
+                       ojComponent: {
+                            component:'ojButton',
+                            icons: {
+                                start:'sx-icon sx-icon-16 sx-icon-targets'
+                            },
+                            disabled: exploration().isNewExploration() || exploration().actions.isReadMode(),
+                            label: getTranslated('oep.exploration.toolbar.Targets')
+                       }
+                       "/>
+
+
+                        <span role="separator" aria-orientation="vertical" class="oj-toolbar-separator"
+                              data-bind="visible: !exploration().actions.isReadMode()"></span>
+
+
+
+                        <button id="uptakeExplorationBtnInInspectMode" class="uptakeExplorationBtn" type="button"
+                                data-i18n="{attr: {title: 'toolbar.UptakeTitleInInspectMode'}}"
+                                data-bind="
+                       visible: exploration().actions.isReadMode(),
+                       ojComponent: {
+                            component:'ojButton',
+                            icons: {
+                                start:'sx-icon sx-icon-16 sx-icon-inspect-uptake'
+                            },
+                            label: getTranslated('oep.exploration.toolbar.UptakeInInspectMode')
+                       }
+                       "/>
+
+
+                        <button id="actionsBtn"  type="button"
+                                data-bind="
+                        visible: !exploration().actions.isReadMode(),
+                        ojComponent: {
+                            component:'ojButton',
+                            icons: {
+                                start:'sx-icon sx-icon-16 sx-icon-actions'
+                            },
+                            disabled: exploration().isNewExploration(),
+                            label: getTranslated('oep.exploration.toolbar.Actions')
+                       },
+                       click: function(event)
+                             {
+                             exploration().actions.actionsButtonPressed()
+
+                             }
+                       "/>
+
+
+                        <div style="display:none;" id="actionsPopup"
+                             data-bind="ojComponent:{component: 'ojPopup',
+                            tail: 'simple',
+                            'open': exploration().actions.setHelpTopicForActions,
+                            'close': exploration().actions.removeHelpTopicForActions }">
+
+                            <div class="actionButtonContainer">
+
+                                <button type="button" id="publishExplorationBtn" class="actionButton"  type="button"
+                                        data-i18n="{attr: {title: 'toolbar.PublishTitle'}}"
+                                        data-bind="
+                           ojComponent: {
+                                component:'ojButton',
+                                icons: {
+                                    start:'sx-icon sx-icon-publish'
+                                },
+                                disabled: exploration().isNewExploration() || exploration().actions.isReadMode()
+                            },
+                            css: {
+                            publishingConflictHappens : exploration().actions.publishingConflict,
+                             publishButtonPressed : exploration().actions.publishButtonPressed()
+                            }
+                           "/>
+
+                            <span class="actionButtonTitle"
+                                  data-i18n="{text: 'toolbar.Publish'}"></span>
+
+                            </div>
+
+
+                            <div class="actionButtonContainer">
+                                <button type="button" id="unpublishExplorationBtn" class="actionButton"  type="button"
+                                        data-i18n="{attr: {title: 'toolbar.UnpublishTitle'}}"
+                                        data-bind="
+                           ojComponent: {
+                                component:'ojButton',
+                                icons: {
+                                    start:'sx-icon sx-icon-unpublish'
+                                },
+                                disabled: exploration().isNewExploration() || !exploration().actions.published()
+                            }
+                           "/>
+                            <span class="actionButtonTitle"
+                                  data-i18n="{text: 'toolbar.Unpublish'}"></span>
+
+                            </div>
+
+                            <!--make inspect mode buttons invisible because QA doesn't have time to test it-->
+                            <div class="actionButtonContainer"
+                                 data-bind="visible: false">
+                                <button type="button" class="inspectExplorationBtn actionButton"  type="button"
+                                        data-i18n="{attr: {title: 'toolbar.InspectTitle'}}"
+                                        data-bind="
+                           ojComponent: {
+                                component:'ojButton',
+                                icons: {
+                                    start:'sx-icon sx-icon-inspect'
+                                },
+                                disabled: exploration().isNewExploration() || !(exploration().actions.draft() && exploration().actions.published())
+                            }
+                           "/>
+
+                            <span class="actionButtonTitle"
+                                  data-i18n="{text: 'toolbar.Inspect'}"></span>
+                            </div>
+
+
+                            <div class="actionButtonContainer">
+                                <button type="button" class="actionButton uptakeExplorationBtn"  type="button"
+                                        data-i18n="{attr: {title: 'toolbar.UptakeTitle'}}"
+                                        data-bind="
+                           ojComponent: {
+                                component:'ojButton',
+                                icons: {
+                                    start:'sx-icon sx-icon-uptake'
+                                },
+                                disabled: exploration().isNewExploration() || !(exploration().actions.draft() && exploration().actions.published())
+                            }
+                           "/>
+                            <span class="actionButtonTitle"
+                                  data-i18n="{text: 'toolbar.Uptake'}"></span>
+                            </div>
+
+
+                            <div class="actionButtonContainer">
+
+                                <button type="button" id="exportExplorationBtn" class="actionButton"  type="button"
+                                        data-i18n="{attr: {title: 'toolbar.ExportTitle'}}"
+                                        data-bind="
+                           ojComponent: {
+                                component:'ojButton',
+                                icons: {
+                                    start:'sx-icon sx-icon-export'
+                                },
+                                disabled: exploration().isNewExploration
+                            }
+                           "/>
+                            <span class="actionButtonTitle"
+                                  data-i18n="{text: 'toolbar.Export'}"></span>
+                            </div>
+
+
+                            <div class="publishingConflictContainer"
+                                 data-bind="visible: exploration().actions.publishingConflict() && exploration().actions.publishButtonPressed()"
+
+                                    >
+
+                                <hr/>
+
+                                <div class="publishingConflictHeader"
+                                     data-i18n="{attr: {title: 'toolbar.publishingConflictTitle'}}">
+
+                                  <span class="publishingConflictHeaderPart1"
+                                        data-i18n="{text: 'toolbar.publishingConflict'}"></span>
+                                  <span class="publishingConflictHeaderPart2"
+                                        data-i18n="{text: 'toolbar.howWouldYouLikeToSolveIt'}"></span>
+
+
+                                </div>
+
+                                <div class="actionButtonContainer">
+                                    <button type="button" id="overwriteExplorationBtn" class="actionButton"  type="button"
+                                            data-i18n="{attr: {title: 'toolbar.OverwriteTitle'}}"
+                                            data-bind="
+                           ojComponent: {
+                                component:'ojButton',
+                                icons: {
+                                    start:'sx-icon sx-icon-overwrite'
+                                },
+                                disabled: exploration().isNewExploration
+                            }
+                           "/>
+                            <span class="actionButtonTitle"
+                                  data-i18n="{text: 'toolbar.Overwrite'}"></span>
+                                </div>
+
+
+                                <div class="actionButtonContainer">
+                                    <button type="button" class="actionButton uptakeExplorationBtn"  type="button"
+                                            data-i18n="{attr: {title: 'toolbar.UptakeTitle'}}"
+                                            data-bind="
+                           ojComponent: {
+                                component:'ojButton',
+                                icons: {
+                                    start:'sx-icon sx-icon-uptake'
+                                },
+                                disabled: exploration().isNewExploration
+                            }
+                           "/>
+                            <span class="actionButtonTitle"
+                                  data-i18n="{text: 'toolbar.Uptake'}"></span>
+                                </div>
+
+                                <div class="actionButtonContainer">
+                                    <button type="button" id="cloneExplorationBtn" class="actionButton"  type="button"
+                                            data-i18n="{attr: {title: 'toolbar.CloneTitle'}}"
+                                            data-bind="
+                           ojComponent: {
+                                component:'ojButton',
+                                icons: {
+                                    start:'sx-icon sx-icon-clone'
+                                },
+                                disabled: exploration().isNewExploration
+                            }
+                           "/>
+                            <span class="actionButtonTitle"
+                                  data-i18n="{text: 'toolbar.Clone'}"></span>
+                                </div>
+
+<!--make inspect mode buttons invisible because QA doesn't have time to test it-->
+                                <div class="actionButtonContainer" data-bind="visible: false">
+                                    <button type="button" class="inspectExplorationBtn actionButton"  type="button"
+                                            data-i18n="{attr: {title: 'toolbar.InspectTitle'}}"
+                                            data-bind="
+                           ojComponent: {
+                                component:'ojButton',
+                                icons: {
+                                    start:'sx-icon sx-icon-inspect'
+                                },
+                                disabled: exploration().isNewExploration
+                            }
+                           "/>
+                            <span class="actionButtonTitle"
+                                  data-i18n="{text: 'toolbar.Inspect'}"></span>
+                                </div>
+
+
+                                <div class="actionButtonContainer" style="display: none">
+                                    <button type="button" id="cancelExplorationBtn" class="actionButton"  type="button"
+                                            data-i18n="{attr: {title: 'toolbar.CancelTitle'}}"
+                                            data-bind="
+                           ojComponent: {
+                                component:'ojButton',
+                                icons: {
+                                    start:'sx-icon sx-icon-cancel'
+                                },
+                                disabled: exploration().isNewExploration
+                            }
+                           "/>
+                            <span class="actionButtonTitle"
+                                  data-i18n="{text: 'toolbar.Cancel'}"></span>
+                                </div>
+
+
+                            </div>
+
+
+                        </div>
+
+                        <span role="separator" aria-orientation="vertical" class="oj-toolbar-separator"
+                              data-bind="visible: !exploration().actions.isReadMode()"></span>
+
+
+                        <input type="button" id="infoExplorationBtn" class="sx-icon sx-icon-16 sx-icon-info"
+                               data-bind="
+                                    visible: !exploration().actions.isReadMode(),
+                                    enable: !exploration().actions.isReadMode()"
+                               data-i18n="{attr: {title: 'toolbar.Info'}}"/>
+
+                        <span role="separator" aria-orientation="vertical" class="oj-toolbar-separator"
+                                data-bind="visible: !exploration().actions.isReadMode()"></span>
+
+                        <input type="button" id="undoExplorationBtn" class="sx-icon sx-icon-16 sx-icon-undo"
+                               data-i18n="{attr: {title: 'toolbar.Undo'}}"
+                               data-bind="
+                                   visible: !exploration().actions.isReadMode(),
+                                   enable: exploration().name() && exploration().actions.canUndo() && !exploration().actions.isReadMode() "/>
+
+                        <input type="button" id="redoExplorationBtn" class="sx-icon sx-icon-16 sx-icon-redo"
+                               data-i18n="{attr: {title: 'toolbar.Redo'}}"
+                               data-bind="
+                                    visible: !exploration().actions.isReadMode(),
+                                    enable: exploration().name() && exploration().actions.canRedo() && !exploration().actions.isReadMode() "/>
+
+
+                        <span role="separator" aria-orientation="vertical" class="oj-toolbar-separator"></span>
+
+                        <input type="button" id="userAssistantBtn" class="sx-icon sx-icon-22 sx-icon-userAssistant"
+                               data-i18n="{attr: {title: 'toolbar.userAssistant'}}"/>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div data-bind="stopBinding: true;">
+        <div id="thing-info-panel-container"></div>
+        <div id="help-banner-panel-container"></div>
+    </div>
+    <!-- ko if: (!exploration().isPatternBasedExploration) -->
+    <div id="windowsDrawer">
+        <div>
+            <div>
+                <input type="button" class="windowsDrawerOpenBtn" href="javascript: void(0)"
+                       data-i18n="{attr: { title: 'window.windowsTitle' }}"
+                       data-bind="attr: { disabled: exploration().sources().length===0 }"/>
+
+                <div id="windowsContainer" class="windowsContainer"></div>
+            </div>
+        </div>
+    </div>
+    <!-- /ko -->
+    <div id="explorationQueryEditor" data-bind="
+                                     css: {isInspectMode: exploration().actions.isReadMode() }">
+
+        <h3>
+            <div id="explorationDisplayName">
+
+                   <span
+                           data-bind="
+                               text: exploration().displayName()
+                            "
+                           ></span>
+
+                   <span data-i18n="{text: 'displayNameHeader.draft'}" ,
+                         class="explorationDisplayNameDraft"
+                         data-bind="
+                               visible: exploration().actions.draft()
+                            "
+                           ></span>
+
+                    <span data-i18n="{text: 'displayNameHeader.published'}" ,
+                          class="explorationDisplayNamePublished"
+                          data-bind="
+                               visible: !exploration().actions.draft()
+                            "
+                            ></span>
+
+            </div>
+        </h3>
+
+        <div id="explorationEditorPanel">
+
+            <div class="settingPanels">
+
+                <!-- ko if: (exploration().isPatternBasedExploration) -->
+                <div id="pattern" tabindex=-1 class="explorationPanel" data-bind=""></div>
+                <!-- /ko -->
+
+                <!-- ko if: (!exploration().isPatternBasedExploration) -->
+
+
+                <div id="sourcesAndCorrelationsContainer">
+                    <div style="display: table-row;">
+
+                        <div id="sources" class="explorationPanel" tabindex=-1
+                             data-bind="css: {unconfiguredMode:  exploration().sources().length==0 && currentEditedRegion()!='Sources',
+                 isInEditMode: currentEditedRegion()=='Sources'}">
+                            <div class="explorationPanelContent">
+                                <table class="sourcesTable">
+                                    <tr>
+                                        <td class="sourcesHeader">
+                                            <h4 class="header"
+                                                data-i18n="{text: 'sources.Sources', attr: {title: 'sources.Title'}}">
+                                            </h4>
+                                        </td>
+                                        <td class="sourcesContainer">
+                                            <input type='hidden' id='sourcesCombobox' class='sourceControl'/>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+
+
+                        <div id="correlations" tabindex=-1 class="explorationPanel"
+                             data-bind="visible: exploration().sources().length>1,
+                         css: {
+                         unconfiguredMode:  exploration().correlations().length==0,
+                         showCorrelationsIfSecondSourceAdded:  exploration().sources().length>1,
+                 isInEditMode:  isCorrelationsInEditMode()||currentEditedRegion()=='Correlations'}">
+                            <div class='explorationPanelContent'>
+
+                                <table class="correlationsTableContainer">
+                                    <tr>
+                                        <td class="correlationsHeader">
+                                            <h4 class="header"
+                                                data-i18n="{text: 'correlations.Correlations', attr: {title: 'correlations.Title'}}"></h4>
+                                        </td>
+                                        <td class="correlationsContainer">
+                                            <div id="correlationsTable"
+                                                 data-bind="visible: exploration().sources().length>1"></div>
+                                        </td>
+                                    </tr>
+                                </table>
+
+                                <div id="correlationsWelcomeBtns"
+                                     data-bind="visible: exploration().sources().length>1,
+                             css: { left: true }">
+                                    <a id="addCorrelationWelcomeBtn"
+                                       class="explorationLink"
+                                       data-i18n="correlations.addCorrelationWelcomeBtn"
+                                       data-bind="style: {
+                           display: exploration().sources().length>1 &&
+                           exploration().correlations().length < exploration().sources().length-1
+                            &&
+                           (exploration().correlations().length==0 || (isCorrelationsInEditMode()||currentEditedRegion()=='Correlations'))
+                           ? 'inline-block': 'none' },
+                               css: {notSingleWelcome: true }">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div id="conditionsAndSummariesContainer">
+                    <div style="display: table-row;">
+
+                        <div id="summaries" tabindex=-1 class="explorationPanel"
+                             data-bind="css: {unconfiguredMode:  exploration().summaries().length==0 && groupBySelectedFieldsCount()==0 && isGroupByInReadMode(),
+                         isInEditMode:  isSummariesInEditMode()|| !isGroupByInReadMode()||currentEditedRegion()=='Summaries' }">
+                            <div class="explorationPanelContent">
+                                <h4 class="header"
+                                    data-i18n="{text: 'summaries.Summaries', attr: {title: 'summaries.Title'}}"></h4>
+
+                                <div id="groupByContainer" class="groupByContainer" data-i18n-ns="summaries.groupBy"
+                                     data-bind="style: { display: exploration().sources().length>0 ? 'inline-block': 'none' }
+                                     ,css: {isInspectMode: exploration().actions.isReadMode() }
+                                     "></div>
+                                <div style="clear: both;"></div>
+
+                                <div id="summariesTable"></div>
+
+                                <div id="summariesWelcomeBtns"
+                                     data-bind="css: { center: exploration().sources().length==0, left: exploration().sources().length>0 }">
+                                    <a id="selectASourceSummaries"
+                                       class="selectASourceWelcomeBtn singleWelcome"
+                                       data-i18n="summaries.selectASourceToAddSummaries"
+                                       data-bind="style: { display: exploration().sources().length==0 ? 'inline-block': 'none' }">
+                                    </a>
+                                    <a id="addSummaryWelcomeBtn" class="explorationLink"
+                                       data-i18n="summaries.addSummaryWelcomeBtn"
+                                       data-bind="style: {
+                                           display:
+                                               exploration().sources().length>0
+                                               &&
+                                               (exploration().summaries().length==0 || (isSummariesInEditMode()||currentEditedRegion()=='Summaries'))
+                                               ? 'inline-block': 'none'
+                                           },
+                                           css: {
+                                               notSingleWelcome: true
+                                            }">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="conditions" tabindex=-1 class="explorationPanel"
+                             data-bind="css: {unconfiguredMode:  exploration().conditions().length==0,
+                         isInEditMode:  isFiltersInEditMode()||currentEditedRegion()=='Filters' }">
+                            <div class="explorationPanelContent">
+                                <h4 class="header"
+                                    data-i18n="{text: 'conditions.CONDITIONS', attr: {title: 'conditions.Title'}}"></h4>
+
+                                <div id="conditionMatching"
+                                     data-bind="style: { display: exploration().conditions().length>0 ? 'inline-block': 'none' }">
+                                </div>
+
+                                <div id="conditionsTable"></div>
+
+                                <div id="conditionsWelcomeBtns"
+                                     data-bind="css: { center: exploration().sources().length==0, left: exploration().sources().length>0 }">
+                                    <a id="selectASourceFilters"
+                                       class="selectASourceWelcomeBtn singleWelcome"
+                                       data-i18n="conditions.SELECT_A_SOURCE_WELCOME_BTN"
+                                       data-bind="style: { display: exploration().sources().length==0 ? 'inline-block': 'none' }">
+                                    </a>
+                                    <a id="addConditionWelcomeBtn" class="explorationLink"
+                                       data-i18n="conditions.ADD_CONDITION_WELCOME_BTN"
+                                       data-bind="style: {
+                                           display:
+                                               exploration().sources().length>0
+                                               &&
+                                               (exploration().conditions().length==0 || (isFiltersInEditMode()||currentEditedRegion()=='Filters'))
+                                               ? 'inline-block': 'none'
+                                           },
+                                           css: {
+                                               notSingleWelcome: true
+                                            }">
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- /ko -->
+            </div>
+            <div class="readModeCover" data-bind="visible: exploration().actions.isReadMode()"></div>
+
+        </div>
+    </div>
+
+    <div id="explorationResultsAccordion">
+        <h3>
+            <div id="explorationResultsMenu" class="explorationTargetMenu"
+                 data-bind="visible: exploration().targets && (exploration().targets.length > 0)">
+                <ul class="results-menu">
+                    <li>
+                        <a href><span data-i18n="Downstream"></span></a>
+                        <ul>
+                            <li><a id="removeTargetBtn" href="javascript:;"
+                                   data-bind="click: exploration().target"><span
+                                    data-i18n="DownstreamDelete"></span></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div data-i18n="Results"></div>
+        </h3>
+
+        <div id="explorationResults">
+            <div id="explorationResultsWelcomeBtns"
+                 data-bind="css: { center: exploration().sources().length==0 }, visible : exploration().sources().length==0 && exploration().fieldsForEventType().length==0">
+                <a id="selectASourceWelcomeBtn3"
+                   class="selectASourceWelcomeBtn singleWelcome"
+                   data-i18n="conditions.SELECT_A_SOURCE_WELCOME_BTN"
+                   data-bind="">
+                </a>
+            </div>
+            <div data-bind="visible : exploration().fieldsForEventType().length" class="resultTableNBtns">
+                <div class="tableMenusPanel resultButtons">
+                    <a href="javascript:  void(0)" data-i18n="btnEventTypeColumns" id="bucket1_btnEventTypeColumns"
+                       class="btnShowColumns explorationLink"
+                       data-bind="visible:!exploration().actions.isReadMode()"></a>
+                    <span class="disabledLink " data-i18n="btnEventTypeColumns"
+                          data-bind="visible:exploration().actions.isReadMode()"></span>
+
+                    <span class="splitter"></span>
+
+                    <a href="javascript:  void(0)" data-i18n="btnShowServerTimestamp"
+                       id="bucket1_btnShowServerTimestamp"
+                       class="btnShowTimestamp explorationLink"></a>
+                </div>
+                <div id="bucket1_TableContainer" class="TableContainer">
+                    <table id="bucket1_Table"></table>
+                </div>
+
+                <div style="clear: both;"></div>
+                <div class="tableMenusPanel sourceLabels"><span id="bucket1_resultSourceLabels"></span></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="explorationChartsAccordion">
+        <h3>
+            <div data-i18n="ChartsResults"></div>
+        </h3>
+        <div id="explorationChartsResults">
+            <div id="explorationChartsWelcomeBtns"
+                 data-bind="css: { center: exploration().sources().length==0 }, visible : exploration().sources().length==0 && exploration().fieldsForEventType().length==0">
+                <a id="selectASourceWelcomeBtn4" class="selectASourceWelcomeBtn singleWelcome"
+                   data-i18n="conditions.SELECT_A_SOURCE_WELCOME_BTN"
+                   data-bind="">
+                </a>
+            </div>
+            <div data-bind="visible : exploration().fieldsForEventType().length">
+                <div id="charts" class="charts-outer-panel" data-i18n-ns="charts">
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="explorationEditorConfirmDialog"
+         data-bind="
+     ojComponent:{
+         component: 'ojDialog',
+         title: getTranslated('oep.exploration.Warning'),
+         initialVisibility: 'hide',
+         rootAttributes: {
+         'class': 'explorationEditorConfirmDialog'
+           }
+     }">
+
+        <div class="oj-dialog-body">
+            <div class="explorationEditorConfirmDialogMessage"></div>
+        </div>
+
+        <div class="oj-dialog-footer">
+            <button type="button" id="explorationEditorConfirmDialogCancelButton"
+                    data-bind="
+                ojComponent: {component: 'ojButton',
+                label: getTranslated('oep.exploration.confirmDialog.Cancel')
+                     }
+                ">
+            </button>
+
+            <button type="button" id="explorationEditorConfirmDialogCreateButton"
+                    data-bind="ojComponent: {
+                    component: 'ojButton',
+                    label: getTranslated('oep.exploration.confirmDialog.Ok')
+                }
+                ">
+            </button>
+        </div>
+
+    </div>
+
+
+    <!--div id="exportContainer" data-i18n-ns="export"></div-->
+
+    <!-- /ko -->
+</form>

@@ -1,0 +1,31 @@
+body { 
+    background-image: url('app/images/tile_proj.png');
+    background-color: #DFDFDF;
+}
+
+#header { 
+    background-color: #dfdfdf; 
+}
+
+.oj-button.oj-default, .oj-button.oj-default, .oj-button.oj-focus-only {
+    border-color: #adb6be;
+}
+.ui-state-active, .ui-widget-content, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, a, input, button, div {
+    border-color: #adb6be;
+}
+
+.oj-inputtext-input, .oj-inputpassword-input, .oj-textarea-input {
+    border-color: #adb6be;
+} 
+
+.search-choose-types button {
+    border-color: #adb6be;
+}
+
+#userPanel #globalNavigationArea .oj-button {
+    border-color: #adb6be;
+}
+
+.explorationPanelDefaultBorder, .explorationPanel, .explorationPanel.unconfiguredMode:hover, .explorationPanel.isInEditMode:hover {
+    border-color: #adb6be;
+}

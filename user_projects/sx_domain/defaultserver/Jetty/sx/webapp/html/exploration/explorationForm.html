@@ -1,0 +1,27 @@
+<form id="explorationForm">
+
+    <label for="name" style="display:block">name:</label>
+    <input type="text" id="name"
+           class=" validate[ required, minSize[3], custom[onlyLetterNumberUnderscoreHyphen], maxSize[15]]" cols="20"
+           data-bind="value: name"/><br/><br/>
+
+
+    <label for="tags" style="display:block">tags:</label>
+    <input type="text" id="tags" cols="20"/><br/>
+
+
+    <label for="description" style="display:block">description:</label>
+    <textarea id="description" class=" validate[maxSize[100]]" rows="4" cols="20"
+              data-bind="value: description"/><br/><br/>
+
+
+    <!--<label for="folder" style="display:block">folder:</label>-->
+    <!--<input type="text" id="folder" placeholder="Autocomplete ..." class=" validate[custom[folder]]" cols="20"-->
+           <!--data-bind="value: folder"/><br/><br/>-->
+
+
+    <!--<label for="sources" style="display:block">sources:</label>-->
+    <!--<select id='sources' multiple/><br/>-->
+
+
+</form>

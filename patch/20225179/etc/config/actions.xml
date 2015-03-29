@@ -1,0 +1,21 @@
+<oneoff_actions>
+    <oracle.oep version="12.1.3.0.0" opt_req="R">
+        <copy name="compDef.xml" path="%ORACLE_HOME%/inventory/Components/oracle.oep/12.1.3.0.0/patches/18611696" file_name="inventory/Components/oracle.oep/12.1.3.0.0/patches/18611696/compDef.xml"/>
+    </oracle.oep>
+    <oracle.oep version="12.1.3.0.0" opt_req="R" symbol="oracle.oep.symbol">
+        <jar name="com.oracle.cep.adapters.edn_12.1.3.0_0.jar" path="%ORACLE_HOME%/%SYMBOL%/modules" class_name="/modules/com.oracle.cep.adapters.edn_12.1.3.0_0.jar/META-INF/MANIFEST.MF"/>
+        <jar name="com.oracle.cep.cartridge.java_12.1.3.0_0.jar" path="%ORACLE_HOME%/%SYMBOL%/modules" class_name="/modules/com.oracle.cep.cartridge.java_12.1.3.0_0.jar/META-INF/MANIFEST.MF"/>
+        <copy name="javax.persistence-2.1.0.jar" path="%ORACLE_HOME%/%SYMBOL%/modules" file_name="modules/javax.persistence-2.1.0.jar"/>
+        <copy name="org.eclipse.persistence.antlr-2.5.2.jar" path="%ORACLE_HOME%/%SYMBOL%/modules" file_name="modules/org.eclipse.persistence.antlr-2.5.2.jar"/>
+        <copy name="jaxb-osgi-2.2.7.jar" path="%ORACLE_HOME%/%SYMBOL%/modules" file_name="modules/jaxb-osgi-2.2.7.jar"/>
+        <copy name="sx-jmx-12.1.3.0_1.jar" path="%ORACLE_HOME%/%SYMBOL%/modules" file_name="modules/sx-jmx-12.1.3.0_1.jar"/>
+        <copy name="org.eclipse.persistence.moxy-2.5.2.jar" path="%ORACLE_HOME%/%SYMBOL%/modules" file_name="modules/org.eclipse.persistence.moxy-2.5.2.jar"/>
+        <copy name="soa-infra-mgmt-osgi-12.1.3.0_1.jar" path="%ORACLE_HOME%/%SYMBOL%/modules" file_name="modules/soa-infra-mgmt-osgi-12.1.3.0_1.jar"/>
+        <copy name="StreameXplorerWar-12.1.3.0_1.war" path="%ORACLE_HOME%/%SYMBOL%/modules" file_name="modules/StreameXplorerWar-12.1.3.0_1.war"/>
+        <copy name="org.eclipse.persistence.jpa.jpql-2.5.2.jar" path="%ORACLE_HOME%/%SYMBOL%/modules" file_name="modules/org.eclipse.persistence.jpa.jpql-2.5.2.jar"/>
+        <copy name="org.eclipse.persistence.core-2.5.2.jar" path="%ORACLE_HOME%/%SYMBOL%/modules" file_name="modules/org.eclipse.persistence.core-2.5.2.jar"/>
+        <copy name="org.eclipse.persistence.jpa-2.5.2.jar" path="%ORACLE_HOME%/%SYMBOL%/modules" file_name="modules/org.eclipse.persistence.jpa-2.5.2.jar"/>
+        <copy name="org.eclipse.persistence.asm-2.5.2.jar" path="%ORACLE_HOME%/%SYMBOL%/modules" file_name="modules/org.eclipse.persistence.asm-2.5.2.jar"/>
+        <copy name="bundleloader.xml" path="%ORACLE_HOME%/%SYMBOL%/features" file_name="features/bundleloader.xml"/>
+    </oracle.oep>
+</oneoff_actions>

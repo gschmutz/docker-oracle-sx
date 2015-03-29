@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>OEP Stream Explorer Login</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!--<link type="text/css" rel="stylesheet" href="css/libs/ojet/dvt/DvtToolkit.css"/>-->
+        <!--link type="text/css" rel="stylesheet" href="css/libs/ojet/oj/v1.0/alta/oj-alta.css"/-->
+        <!--link type="text/css" rel="stylesheet" href="css/app/app.css"/-->
+        <link type="text/css" rel="stylesheet" href="css/login/login.css"/>
+        
+        <script data-main="js/sx.requirejs.login-config" src="js/libs/ojet/require/require.js"></script>
+
+        <!--require.js entry point-->
+    </head>
+    <body data-i18n-ns="oep.login" id="loginPage">
+        <div class="header">
+            <div class="darkLine">
+                <div class="wording">
+                    <h1 class="signInLbl" data-i18n="SIGN_IN_LABEL"></h1>
+                    <h2 class="streamExLbl" data-i18n="STREAM_EX_LABEL"></h2>
+                    <h2 class="tagLine" data-i18n="TAG_LINE"></h2>
+                </div>
+            </div>
+            <div class="lightLine"></div>
+            <div class="logo"></div>
+        </div>
+            <form name="loginForm" action="/sx/login" method="POST">
+                    <table class="form">
+                        <tr>
+                            <td><span class="loginError" data-i18n="{text: 'INVALID_LOGIN_PASSWORD', attr: {'placeholder': 'INVALID_LOGIN_PASSWORD','aria-label': 'INVALID_LOGIN_PASSWORD'}}"></span></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" id="login" name="login" class="field" data-i18n="{attr: {'placeholder': 'LOGIN_LABEL','aria-label': 'ARIA_LOGIN_LABEL'}}" autofocus /></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" id="password" name="password" class="field" data-i18n="{attr: {'placeholder': 'PASSWORD_LABEL','aria-label': 'ARIA_PASSWORD_LABEL'}}" autocomplete="off" /></td>
+                        </tr>
+                        <!--tr>
+                            <td><a href="javascript: void(0)" data-i18n="{text: 'NO_ACCESS_LNK', attr: { title: 'NO_ACCESS_LNK' } }" class="forgotLnk"></a></td>
+                        </tr-->
+                        <tr>
+                            <td><input type="submit" data-i18n="LOGIN_BTN" class="submitBtn"/></td>
+                        </tr>
+                    </table>
+            </form>
+        <div class="footer">
+            <div class="oracleLogo" data-i18n="{attr: {title: 'ORACLE_LOGO'}}"></div>
+        </div>
+           
+    </body>
+</html>

@@ -1,0 +1,266 @@
+<div id="search" data-i18n-ns="search">
+    <div data-bind="stopBinding: true;">
+        <div id="help-banner-panel-container"></div>
+    </div>
+    <div id="search-upper-panel" data-i18n-ns="searchMenu" class="search-panel">
+        <div class="left-block">
+            <div class="search-create-menu">
+                <div class="initially-visible-components">
+                    <label data-i18n="CATALOG"></label>
+                    <button id="createNewItem"></button>
+                </div>
+                <div class="createNewItemMenuContainer">
+                    <ul id="createNewItemMenu">
+                        <li><a id="openCreateExplorationDialog" href="javascript:void(0)" data-i18n="CREATE_EXPLORATION"
+                               data-bind="
+                                            event: {
+                                                mouseover: function() {
+                                                   onItemMouseOver(explorationDescription, explorationDescriptionHeader);
+                                                },
+                                                mouseout: function() {
+                                                    onItemMouseOut();
+                                                }
+                                            }"></a>
+                        </li>
+                        <li><a href="javascript:void(0)" data-i18n="CREATE_SOURCE"
+                               data-bind="click: goCreateStreamSource,
+                                            event: {
+                                                mouseover: function() {
+                                                   onItemMouseOver(sourceDescription, sourceDescriptionHeader);
+                                                },
+                                                mouseout: function() {
+                                                    onItemMouseOut();
+                                                }
+                                            }"></a>
+                        </li>
+                        <li><a href="javascript:void(0)" data-i18n="CREATE_DATA_SOURCE"
+                               data-bind="click: goCreateDataSource,
+                                            event: {
+                                                mouseover: function() {
+                                                   onItemMouseOver(dataSourceDescription, dataSourceDescriptionHeader);
+                                                },
+                                                mouseout: function() {
+                                                    onItemMouseOut();
+                                                }
+                                            }"></a>
+                        </li>
+
+                        <li><a href="javascript:void(0)"
+                               data-bind="click: function(){
+                                                return onClickOpenPatternSubMenu();
+                                            },
+                                            clickBubble: false,
+                                            event: {
+                                                mouseover: function() {
+                                                   onPatternListMouseOver();
+                                                },
+                                                mouseout: function() {
+                                                    onItemMouseOut();
+                                                }
+                                            },
+                                            css: { 'oj-focus1': isPatternListMenuVisible() }
+                                            ">
+
+                            <span class="oj-menu-submenu-icon oj-component-icon"></span>
+                            <span data-i18n="PATTERN_SUBMENU"></span>
+                        </a>
+
+                        </li>
+
+                    </ul>
+
+                    <ul id="itemDescriptionMenu" class="oj-menu"
+                        data-bind="event: {
+                                            mouseover: function() {
+                                                onItemDescriptionMouseOver();
+                                            },
+                                            mouseout: function() {
+                                                onItemDescriptionMouseOut();
+                                            }
+                                        }">
+                        <li class="oj-menu-item">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <div class="itemDescriptionHeaderIcon">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <span class="itemDescriptionHeader"
+                                              data-bind="text: itemDescriptionHeader"></span>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <span class="itemDescriptionLabel" data-bind="text: itemDescriptionLabel"></span>
+                        </li>
+
+<!--                        <div class="learnMore">
+                            <a href="javascript:void(0)" data-i18n="LEARN_MORE"></a>
+                        </div>-->
+                    </ul>
+
+
+                    <ul id="patternListMenu" class="oj-menu"
+                        data-bind="foreach: patterns()">
+
+                        <li class="oj-menu-item">
+                            <a href="javascript:void(0)"
+                               data-bind="text: displayName,
+                                                  click: function() {$parent.goCreatePatternExploration($data)},
+                                                event: {
+                                                    mouseover: function() {
+                                                    $parent.onPatternItemMouseOver($data, $element);
+                                                    },
+                                                    mouseout: function() {
+                                                    $parent.onPatternItemMouseOut($element);
+                                                    }
+                                                }">
+                            </a>
+                        </li>
+
+                    </ul>
+
+
+                    <ul id="patternDescriptionMenu" class="oj-menu"
+                        data-bind="event: {
+                                                mouseover: function() {
+                                                    isPatternListMenuVisible(true);
+                                                    isPatternDescriptionMenuVisible(true);
+                                                },
+                                                mouseout: function() {
+                                                    isPatternDescriptionMenuVisible(false);
+                                                },
+                                               mousedown: function(){
+                                                    onClickForPatternDescription();
+                                               }
+                                       }">
+
+
+                        <li class="oj-menu-item">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <div class="itemDescriptionHeaderIcon">
+                                        </div>
+                                    </td>
+                                    <td>
+                                            <span class="itemDescriptionHeader"
+                                                  data-bind="text: patternDescriptionHeader"></span>
+                                    </td>
+                                </tr>
+                            </table>
+                            <span class="itemDescriptionLabel" data-bind="text: patternDescriptionLabel"></span>
+                        </li>
+
+<!--                        <div class="learnMore">
+                            <a href="javascript:void(0)" data-i18n="LEARN_MORE"></a>
+                        </div>-->
+                    </ul>
+
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="right-block">
+            <div class="search-controls">
+                <div id="search-filters" class="search-filters">
+                    <!-- ko foreach: filters -->
+                    <div class="filter">
+                        <label data-bind="text: $parent.getFilterCriteriaLabel($data)"></label>
+                        <span data-bind="text: $parent.getFilterValueLabel($data)"></span>
+                        <input type="button" class="remove-filter" data-bind="click: $parent.removeFilter">
+                        <!--ko if: $index() != $parent.filters().length - 1--><span>|</span><!--/ko-->
+                    </div>
+                    <!-- /ko -->
+                </div>
+                <!--
+                <div class="search-view-switcher">
+                    <input type="button" class="list-view-icon" data-i18n="{attr:{title: 'LIST_VIEW'}}"
+                           data-bind="css: {chosen: activeViewController() === getListViewController()},
+                                                 click: function(data) {chooseViewController(getListViewController())}">
+
+                    </input>
+                    <input type="button" class="box-view-icon" data-i18n="{attr:{title: 'BOX_VIEW'}}"
+                           data-bind="css: {chosen: activeViewController() === getBoxViewController()},
+                                                 click: function(data) {chooseViewController(getBoxViewController())}">
+
+                    </input>
+                </div>
+                -->
+                <div class="search-sorting" data-i18n="{attr:{title: 'SORTING_TT'}}">
+                    <!--select data-i18n="{attr:{title: 'SORTING_TT'}}"
+                            data-bind="ojComponent: {
+                                                        component: 'ojSelect',
+                                                        value: actualSortingValue
+                                                      }">
+                        < ko foreach: sortingOptions >
+                        <option data-bind="value: sort, text: title"></option>
+                        < /ko >
+                    </select-->
+                    <select class="oj-select oj-inputtext oj-inputtext-input" data-i18n="{attr:{title: 'SORTING_TT'}}"
+                            data-bind="options:sortingOptions,
+                                                        value: actualSortingValue,
+                                                        optionsText: 'title',
+                                                        optionsValue: 'sort'
+                                                      ">
+                    </select>
+
+
+
+                    <!--<input id="search-sorting-input" type="text" class="oj-inputtext-input search-sorting-input"-->
+                           <!--readonly-->
+                           <!--data-bind="-->
+                            <!--event: {change: reloadResults},-->
+                            <!--value: actualSortingTitle-->
+                <!--">-->
+                    <!--<button id="search-sorting-button" class="search-sorting-button"-->
+                            <!--data-bind="ojComponent: {component: 'ojButton',-->
+                                                 <!--display: 'icons',-->
+                                                 <!--icons: { end: 'oj-component-icon oj-button-menu-dropdown-icon' },-->
+                                                 <!--menu: '#search-sorting-menu'}">-->
+                    <!--</button>-->
+                    <!--<ul id="search-sorting-menu" class="search-sorting-menu" style="display:none"-->
+                        <!--data-bind="ojComponent: {component: 'ojMenu', select: sortingItemSelect,-->
+                                             <!--openOptions: { position: { 'my': 'right top', 'at': 'right bottom' } }}">-->
+                        <!--&lt;!&ndash; ko foreach: sortingOptions &ndash;&gt;-->
+                        <!--<li><a href="javascript:void(0)" data-bind="text: title, attr: {value: sort}"></a></li>-->
+                        <!--&lt;!&ndash; /ko &ndash;&gt;-->
+                    <!--</ul>-->
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div id="search-lower-panel" class="search-panel">
+        <div data-i18n-ns="searchMenu" class="left-block">
+            <div id="search-choose-types" class="search-choose-types">
+                <button data-bind="css: {checked: includeExplorations},
+                                   click: selectMenuItem.bind($data, 'includeExplorations')"
+                        data-i18n="{attr:{title: 'EXPLORATIONS_TT'}}">
+                    <label class="option-exploration" data-i18n="EXPLORATIONS"></label>
+                </button>
+                <button data-bind="css: {checked: includeSources},
+                                   click: selectMenuItem.bind($data, 'includeSources')"
+                        data-i18n="{attr:{title: 'SOURCES_TT'}}">
+                    <label class="option-stream" data-i18n="SOURCES"></label>
+                </button>
+                <button data-bind="css: {checked: includeDataSources},
+                                   click: selectMenuItem.bind($data, 'includeDataSources')"
+                        data-i18n="{attr:{title: 'DATA_SOURCES_TT'}}">
+                    <label class="option-data-source" data-i18n="DATA_SOURCES"></label>
+                </button>
+            </div>
+        </div>
+        <div id="search-results" data-i18n-ns="searchResults" class="right-block">
+            <div id="search-views">
+                <!--<div id="search-box-view" class="search-box-view search-view"></div>-->
+                <div id="search-list-view" class="search-list-view search-view"></div>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+<div id="createExplorationDialogContainer" data-i18n-ns="exploration.createExplorationDialog"></div>
+<div id="deleteItemConfirmationDialogContainer" data-i18n-ns="search.deleteItemDialog"></div>

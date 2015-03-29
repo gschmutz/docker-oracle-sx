@@ -1,0 +1,212 @@
+html {
+    font-family: Arial, sans-serif;
+    height: 100%;
+}
+body {
+    height: 100%;
+    min-height: 650px;
+}
+#loginPage { 
+    background-color: #ffffff;
+    margin: 0px;
+    position: relative;
+}
+.header{
+    position: relative;
+}
+
+
+.header .darkLine {
+    background-color: #2a9f8c;
+    height: 249px;
+    position: relative;
+}
+.header .wording {
+    /*width: 528px;
+    padding-left: 382px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 87px;*/
+    
+    position: absolute;
+    bottom: 35px;
+    margin-top: 65px;
+    width: 530px;
+    padding-left: 382px;
+    left: 50%;
+    margin-left: -451px;
+}
+h1 {
+    color: #ffffff;
+    font-size: 22pt; //font-size: 30px;
+    line-height: 22pt;
+    -webkit-margin-before: 0.0em;
+    -webkit-margin-after: 0.0em;
+    margin-bottom: 19px;
+    margin-top: 0px;
+    
+    letter-spacing: 0.01em;
+    font-weight: 300;
+    font-family: Helvetica-Neue Light, Helvetica Neue, Helvetica, Arial, Sans Serif;
+    
+    padding: 0px;
+    
+    border-width: 0px;
+    
+    //display: inline-block;
+}
+
+h2 {
+    color: #000000;
+    font-size: 27pt; //font-size: 36px;
+    line-height: 27pt;
+    -webkit-margin-before: 0.0em;
+    -webkit-margin-after: 0.0em;
+    font-weight: bold;
+    letter-spacing: 0.01em;
+    padding: 0px;
+    
+    //display: inline-block;
+    
+}
+.header .darkLine .streamExLbl {
+    margin-bottom: 19px;
+    margin-top: 0px;
+}
+.header .darkLine .tagLine {
+    font-size: 18pt; //font-size: 24px;
+    line-height: 18pt;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+.header .lightLine {
+    background-color: #c7e4de;
+    height: 55px;
+}
+.header .logo {
+    position: absolute;
+    background-image: url('/sx/css/app/images/se_login_green_324.png');
+    background-repeat: no-repeat;
+    background-position: top left;
+    height: 324px;
+    top: 87px;
+    left: 50%;
+    margin-left: -451px;
+    width: 324px;
+    z-index:1;
+}
+
+    
+.form {
+    margin-right: auto;
+    margin-left: auto; 
+    position: absolute;
+    margin-top: 35px;
+    width: 912px;
+    padding-left: 382px;
+    left: 50%;
+    margin-left: -451px;
+    z-index:2;
+    border-spacing: 0px;
+}
+
+.form .loginError {
+    font-size: 10pt;
+    color: #c70000;
+    visibility: hidden;
+    margin-bottom: 15px;
+    display: block;
+}
+.form .loginError.show {
+    visibility: visible;
+}
+.form input { font-size: 11pt; }
+.form input.field { 
+    padding:6px 5px 5px 5px;
+    color: #4f4f4f; //#858585 - mockup color;
+    width: 312px;
+    //font-size: 12px;
+    font-size: 10pt;
+    border: 1px solid #dfe4e7;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    margin-bottom: 15px;
+    //height: 33px;
+}
+
+.form input.field:focus {
+    color: #000000;
+}
+.form input.submitBtn {
+    
+    background-color: #0572ce;
+    
+    border: 1px solid #0572ce;
+    
+    
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    color: #ffffff;
+    height: 48px;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 44px 0px;
+    cursor: pointer;
+    padding: 0px 20px;
+}
+
+.form input.submitBtn:focus, .form input.submitBtn:active {
+    color: #85bbe7;
+    background-color: #0572ce;
+    border-color: #0572ce;
+}
+
+a, a:link, a:hover, a:visited, a:active { 
+    font-weight: normal; 
+    color: #145c9e;
+    //color: #0572ce; 
+    text-decoration: none; 
+    font-size: 9pt; 
+    -webkit-margin-before: 0.0em;
+    -webkit-margin-after: 0.0em;
+}
+
+a:visited { color: #72007c; }
+
+a:hover, a:active { text-decoration: underline; }
+
+.form a.forgotLnk {
+    margin-top: 44px;
+    font-size: 12px;
+}
+.footer{
+     position: absolute;
+     bottom: 52px;
+     border-bottom: 1px solid #d5d5d7;
+     left: 50%;
+     margin-left: -451px;
+     width: 912px;
+     color: #ff0000;
+     padding-top: 15px;
+     padding-bottom: 15px;
+     text-align: right;
+     
+}
+.footer .oracleLogo {
+    display: inline-block;
+    width: 138px;
+    height: 20px;
+    background-image: url('images/oracle_logo_trade.png');
+    background-repeat: no-repeat;
+    background-align: top left;
+    margin: 0px;
+    padding: 0px;
+}
+
+

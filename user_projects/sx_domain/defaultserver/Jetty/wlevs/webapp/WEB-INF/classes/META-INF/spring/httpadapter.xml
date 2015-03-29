@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:osgi="http://www.springframework.org/schema/osgi"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+  http://www.springframework.org/schema/beans
+  http://www.springframework.org/schema/beans/spring-beans.xsd
+  http://www.springframework.org/schema/osgi
+  http://www.springframework.org/schema/osgi/spring-osgi.xsd">
+   <bean class="com.bea.wlevs.spring.support.ServiceInjectionBeanPostProcessor"/>
+    <bean class="org.springframework.osgi.extensions.annotation.ServiceReferenceInjectionBeanPostProcessor"/>
+
+	<osgi:reference id="pubsubService" interface="com.bea.httppubsub.PubSubServer" filter="(Path=/pubsub)"/>
+    
+    <bean class="com.bea.wlevs.visualizer.VisualizerActivator">
+    	 <property name="webappservice">
+    		<osgi:reference interface="com.bea.core.webextensions.WebAppService"
+                    context-class-loader="service-provider"/>
+    	</property>
+    </bean>
+ 
+</beans>

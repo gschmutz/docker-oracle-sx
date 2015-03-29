@@ -1,0 +1,298 @@
+<Mar 14, 2015 9:24:18 PM CET> <Notice> <LoggingService> <BEA-320400> <The log file /u00/app/oracle/product/oep12c/user_projects/domains/sx_domain/defaultserver/server.log will be rotated. Reopen the log file if tailing has stopped. This can happen on some platforms, such as Windows.> 
+<Mar 14, 2015 9:24:18 PM CET> <Notice> <LoggingService> <BEA-320401> <The log file has been rotated to /u00/app/oracle/product/oep12c/user_projects/domains/sx_domain/defaultserver/server.log00002. Log messages will continue to be logged in /u00/app/oracle/product/oep12c/user_projects/domains/sx_domain/defaultserver/server.log.> 
+<Mar 14, 2015 9:24:51 PM CET> <Notice> <evs4j> <BEA-2049007> <The cluster protocol is disabled> 
+<Mar 14, 2015 9:24:53 PM CET> <Notice> <Spring> <BEA-2047000> <The application context for "com.oracle.cep.cluster.ha.adapter" was started successfully> 
+<Mar 14, 2015 9:24:55 PM CET> <Notice> <BDBProvider> <BEA-2052004> <Created and registered BDBProvider default-provider> 
+<Mar 14, 2015 9:24:56 PM CET> <Notice> <Server> <BEA-2046000> <Server STARTED> 
+<Mar 14, 2015 9:24:56 PM CET> <Notice> <Spring> <BEA-2047000> <The application context for "com.bea.wlevs.adapters.loadgen" was started successfully> 
+<Mar 14, 2015 9:24:56 PM CET> <Notice> <Spring> <BEA-2047000> <The application context for "com.oracle.cep.cartridge.jdbc" was started successfully> 
+<Mar 14, 2015 9:24:57 PM CET> <Notice> <Spring> <BEA-2047000> <The application context for "com.oracle.oep.sx-jmx" was started successfully> 
+<Mar 14, 2015 9:25:00 PM CET> <Notice> <Spring> <BEA-2047000> <The application context for "com.bea.wlevs.dataservices" was started successfully> 
+Mar 14, 2015 9:25:02 PM oracle.wlevs.strex.core.ApplicationMonitor notificationProcessingIteration
+INFO: Check if server started
+Mar 14, 2015 9:25:02 PM oracle.wlevs.strex.core.ApplicationMonitor notificationProcessingIteration
+INFO: Server is started.
+[EL Info]: 2015-03-14 21:25:02.685--ServerSession(417317272)--EclipseLink, version: Eclipse Persistence Services - 2.5.2.v20140319-9ad6abd
+Mar 14, 2015 9:25:02 PM com.sun.jersey.api.core.PackagesResourceConfig init
+INFO: Scanning for root resource and provider classes in the packages:
+  oracle.wlevs.strex
+Mar 14, 2015 9:25:03 PM com.sun.jersey.api.core.ScanningResourceConfig logClasses
+INFO: Root resource classes found:
+  class oracle.wlevs.strex.service.SourceService
+  class oracle.wlevs.strex.service.ExplorationService
+  class oracle.wlevs.strex.service.search.SearchService
+  class oracle.wlevs.strex.service.file.FileService
+  class oracle.wlevs.strex.service.EventTypeService
+  class oracle.wlevs.strex.service.UtilService
+  class oracle.wlevs.strex.service.TargetService
+Mar 14, 2015 9:25:03 PM com.sun.jersey.api.core.ScanningResourceConfig init
+INFO: No provider classes found.
+Mar 14, 2015 9:25:03 PM com.sun.jersey.server.impl.application.WebApplicationImpl _initiate
+INFO: Initiating Jersey application, version 'Jersey: 1.18 11/22/2013 01:21 AM'
+[EL Info]: connection: 2015-03-14 21:25:06.768--ServerSession(417317272)--file:/u00/app/oracle/product/oep12c/user_projects/domains/sx_domain/defaultserver/Jetty/sx/webapp/WEB-INF/classes/_SXStorage login successful
+Mar 14, 2015 9:25:09 PM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 7010ms
+Mar 14, 2015 9:26:02 PM oracle.wlevs.strex.core.SXContext close
+INFO: UtilService.loadProperties - 11ms
+Mar 14, 2015 9:27:09 PM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 1ms
+Mar 14, 2015 9:28:22 PM oracle.wlevs.strex.core.SXContext close
+INFO: UtilService.loadProperties - 1ms
+Mar 14, 2015 9:29:09 PM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 1ms
+Mar 14, 2015 9:29:45 PM oracle.wlevs.strex.core.SXContext close
+INFO: UtilService.loadProperties - 0ms
+Mar 14, 2015 9:29:45 PM oracle.wlevs.strex.core.SXContext close
+INFO: UtilService.getInfo - 9ms
+Mar 14, 2015 9:29:47 PM oracle.wlevs.strex.core.SXContext close
+INFO: UtilService.getTags - 441ms
+Mar 14, 2015 9:29:47 PM oracle.wlevs.strex.core.SXContext close
+INFO: ExplorationService.generateName - 106ms
+Mar 14, 2015 9:29:47 PM oracle.wlevs.strex.core.SXContext close
+INFO: UtilService.getPatternTypes - 7ms
+Mar 14, 2015 9:29:48 PM oracle.wlevs.strex.core.SXContext close
+INFO: SearchService.getList - 142ms
+Mar 14, 2015 9:29:48 PM oracle.wlevs.strex.core.SXContext close
+INFO: SearchService.getList - 146ms
+Mar 14, 2015 9:31:09 PM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 1ms
+Mar 14, 2015 9:31:16 PM oracle.wlevs.strex.core.SXContext close
+INFO: ExplorationService.generateName - 5ms
+Mar 14, 2015 9:31:16 PM oracle.wlevs.strex.core.SXContext close
+INFO: SearchService.getList - 1ms
+Mar 14, 2015 9:31:16 PM oracle.wlevs.strex.core.SXContext close
+INFO: SearchService.getList - 1ms
+Mar 14, 2015 9:33:09 PM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 1ms
+Mar 14, 2015 9:35:09 PM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 1ms
+Mar 14, 2015 9:37:09 PM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 1ms
+Mar 14, 2015 9:39:09 PM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 1ms
+Mar 14, 2015 9:41:10 PM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 0ms
+Mar 14, 2015 9:43:10 PM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 2ms
+Mar 14, 2015 9:45:10 PM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 1ms
+Mar 14, 2015 9:47:10 PM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 1ms
+Mar 14, 2015 9:49:10 PM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 1ms
+Mar 14, 2015 9:51:10 PM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 1ms
+Mar 14, 2015 9:53:10 PM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 2ms
+Mar 14, 2015 9:55:10 PM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 2ms
+Mar 14, 2015 9:57:10 PM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 1ms
+Mar 14, 2015 9:59:10 PM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 1ms
+Mar 14, 2015 10:01:10 PM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 1ms
+Mar 14, 2015 10:03:10 PM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 1ms
+Mar 14, 2015 10:05:11 PM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 2ms
+Mar 14, 2015 10:07:11 PM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 1ms
+Mar 14, 2015 10:09:11 PM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 1ms
+Mar 14, 2015 10:11:11 PM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 1ms
+Mar 14, 2015 10:13:11 PM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 1ms
+Mar 14, 2015 10:15:11 PM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 1ms
+Mar 14, 2015 10:17:11 PM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 1ms
+Mar 14, 2015 10:19:12 PM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 1ms
+Mar 14, 2015 10:21:12 PM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 1ms
+Mar 14, 2015 10:23:12 PM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 1ms
+Mar 14, 2015 10:25:04 PM oracle.wlevs.strex.core.ApplicationMonitor notificationProcessingIteration
+INFO: Check if server started
+Mar 14, 2015 10:25:04 PM oracle.wlevs.strex.core.ApplicationMonitor notificationProcessingIteration
+INFO: Server is started.
+Mar 14, 2015 10:25:12 PM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 1ms
+Mar 14, 2015 10:27:12 PM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 1ms
+Mar 14, 2015 10:29:12 PM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 1ms
+Mar 14, 2015 10:31:12 PM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 1ms
+Mar 14, 2015 10:33:12 PM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 1ms
+Mar 14, 2015 10:35:12 PM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 1ms
+Mar 14, 2015 10:37:12 PM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 1ms
+Mar 14, 2015 10:39:12 PM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 2ms
+Mar 14, 2015 10:41:12 PM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 1ms
+Mar 14, 2015 10:43:12 PM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 1ms
+Mar 14, 2015 10:45:33 PM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 1603ms
+Mar 14, 2015 10:47:33 PM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 1ms
+Mar 14, 2015 10:49:33 PM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 1ms
+Mar 14, 2015 10:51:33 PM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 3ms
+Mar 14, 2015 10:53:33 PM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 1ms
+Mar 14, 2015 10:55:34 PM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 4ms
+Mar 14, 2015 10:57:34 PM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 2ms
+Mar 14, 2015 10:59:34 PM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 1ms
+Mar 14, 2015 11:01:34 PM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 1ms
+Mar 14, 2015 11:03:34 PM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 1ms
+Mar 14, 2015 11:05:34 PM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 1ms
+Mar 14, 2015 11:07:34 PM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 2ms
+Mar 14, 2015 11:09:34 PM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 2ms
+Mar 14, 2015 11:11:34 PM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 2ms
+Mar 14, 2015 11:13:35 PM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 1ms
+Mar 14, 2015 11:15:35 PM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 2ms
+Mar 14, 2015 11:17:35 PM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 1ms
+Mar 14, 2015 11:19:35 PM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 1ms
+Mar 14, 2015 11:21:35 PM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 2ms
+Mar 14, 2015 11:23:35 PM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 1ms
+Mar 14, 2015 11:25:07 PM oracle.wlevs.strex.core.ApplicationMonitor notificationProcessingIteration
+INFO: Check if server started
+Mar 14, 2015 11:25:07 PM oracle.wlevs.strex.core.ApplicationMonitor notificationProcessingIteration
+INFO: Server is started.
+Mar 14, 2015 11:25:35 PM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 1ms
+Mar 14, 2015 11:27:35 PM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 3ms
+Mar 14, 2015 11:29:35 PM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 2ms
+Mar 14, 2015 11:31:35 PM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 1ms
+Mar 14, 2015 11:33:35 PM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 1ms
+Mar 14, 2015 11:35:35 PM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 2ms
+Mar 14, 2015 11:37:35 PM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 1ms
+Mar 14, 2015 11:39:36 PM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 2ms
+Mar 14, 2015 11:41:36 PM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 2ms
+Mar 14, 2015 11:43:36 PM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 1ms
+Mar 14, 2015 11:45:36 PM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 1ms
+Mar 14, 2015 11:47:36 PM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 2ms
+Mar 14, 2015 11:49:36 PM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 1ms
+Mar 14, 2015 11:51:36 PM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 1ms
+Mar 14, 2015 11:53:36 PM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 1ms
+Mar 14, 2015 11:55:36 PM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 2ms
+Mar 14, 2015 11:57:36 PM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 1ms
+Mar 14, 2015 11:59:37 PM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 1ms
+Mar 15, 2015 12:01:37 AM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 3ms
+Mar 15, 2015 12:03:37 AM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 1ms
+Mar 15, 2015 12:05:37 AM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 1ms
+Mar 15, 2015 12:07:37 AM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 1ms
+Mar 15, 2015 12:09:37 AM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 1ms
+Mar 15, 2015 12:11:37 AM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 3ms
+Mar 15, 2015 12:13:37 AM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 2ms
+Mar 15, 2015 12:15:37 AM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 1ms
+Mar 15, 2015 12:17:37 AM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 2ms
+Mar 15, 2015 12:19:37 AM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 2ms
+Mar 15, 2015 12:21:37 AM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 2ms
+Mar 15, 2015 12:23:37 AM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 1ms
+Mar 15, 2015 12:25:10 AM oracle.wlevs.strex.core.ApplicationMonitor notificationProcessingIteration
+INFO: Check if server started
+Mar 15, 2015 12:25:10 AM oracle.wlevs.strex.core.ApplicationMonitor notificationProcessingIteration
+INFO: Server is started.
+Mar 15, 2015 12:25:38 AM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 1ms
+Mar 15, 2015 12:27:38 AM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 1ms
+Mar 15, 2015 12:29:38 AM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 2ms
+Mar 15, 2015 12:31:38 AM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 1ms
+Mar 15, 2015 12:33:38 AM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 1ms
+Mar 15, 2015 12:35:38 AM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 2ms
+Mar 15, 2015 12:37:39 AM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 22ms
+Mar 15, 2015 12:39:39 AM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 1ms
+Mar 15, 2015 12:41:39 AM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 5ms
+Mar 15, 2015 12:43:39 AM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 2ms
+Mar 15, 2015 12:45:39 AM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 10ms
+Mar 15, 2015 12:47:39 AM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 1ms
+Mar 15, 2015 12:49:39 AM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 3ms
+Mar 15, 2015 12:51:39 AM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 2ms
+Mar 15, 2015 12:53:39 AM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 1ms
+Mar 15, 2015 12:55:39 AM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 1ms
+Mar 15, 2015 12:57:40 AM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 6ms
+Mar 15, 2015 12:59:40 AM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 1ms
+Mar 15, 2015 1:01:40 AM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 1ms
+Mar 15, 2015 10:47:12 AM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 5ms
+Mar 15, 2015 10:47:14 AM oracle.wlevs.strex.core.ApplicationMonitor notificationProcessingIteration
+INFO: Check if server started
+Mar 15, 2015 10:47:14 AM oracle.wlevs.strex.core.ApplicationMonitor notificationProcessingIteration
+INFO: Server is started.
+Mar 15, 2015 10:49:12 AM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 1ms
+Mar 15, 2015 10:51:12 AM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 1ms
+Mar 15, 2015 10:53:12 AM oracle.wlevs.strex.core.SXGarbageCollector run
+INFO: Undeploy editors GC task has taken 1ms

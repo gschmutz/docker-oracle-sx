@@ -1,0 +1,1080 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  target.db
+  A catalog of topic IDs and topic headings associated with relative URLs.
+
+ Copyright (c) 2007, 2015, Oracle and/or its affiliates. All rights reserved.
+
+-->
+<div element="book" href="toc.htm" number="" targetptr="">
+  <ttl>Oracle Fusion Middleware Stream Explorer Online Help for Oracle Event Processing</ttl>
+  <xreftext><cite>Oracle Fusion Middleware Stream Explorer Online Help for Oracle Event Processing</cite></xreftext>
+  <div element="chapter" href="f1_oep_sx_home.htm" number="1" targetptr="OEPSH116">
+    <ttl>Stream Explorer Home Page Context Sensitive Help Topics</ttl>
+    <xreftext>&#x201C;Stream Explorer Home Page Context Sensitive Help Topics&#x201D;</xreftext>
+    <div element="sect1" href="cs_pagename1.htm" number="1.1" targetptr="OEPSH117">
+      <ttl>Home Page</ttl>
+      <xreftext>&#x201C;Home Page&#x201D;</xreftext>
+      <obj element="helppara" href="cs_pagename1.htm" number="" targetptr="OEPSH118">
+        <ttl>Distributed Intelligence for&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Distributed Intelligence for&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="cs_pagename1.htm" number="" targetptr="OEPSH119">
+        <ttl>Risk and Fraud&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Risk and Fraud&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="cs_pagename1.htm" number="" targetptr="OEPSH120">
+        <ttl>Transportation and Logistics&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Transportation and Logistics&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="cs_pagename1.htm" number="" targetptr="OEPSH121">
+        <ttl>Telecommunications&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Telecommunications&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="cs_pagename1.htm" number="" targetptr="OEPSH122">
+        <ttl>Catalog&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Catalog&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="bridgehead" href="cs_pagename1.htm" number="" targetptr="OEPSH317">
+        <ttl>Related Topics</ttl>
+        <xreftext>&#x201C;Related Topics&#x201D;</xreftext>
+      </obj>
+    </div>
+    <div element="sect1" href="f1_oep_sx_home001.htm" number="1.2" targetptr="OEPSH124">
+      <ttl>Catalog Page</ttl>
+      <xreftext>&#x201C;Catalog Page&#x201D;</xreftext>
+      <obj element="helppara" href="f1_oep_sx_home001.htm" number="" targetptr="OEPSH125">
+        <ttl>Explorations&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Explorations&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_sx_home001.htm" number="" targetptr="OEPSH126">
+        <ttl>Streams&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Streams&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_sx_home001.htm" number="" targetptr="OEPSH127">
+        <ttl>References&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;References&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_sx_home001.htm" number="" targetptr="OEPSH128">
+        <ttl>Sort By&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Sort By&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_sx_home001.htm" number="" targetptr="OEPSH129">
+        <ttl>Recent&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Recent&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_sx_home001.htm" number="" targetptr="OEPSH130">
+        <ttl>Name&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Name&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_sx_home001.htm" number="" targetptr="OEPSH131">
+        <ttl>Favorite&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Favorite&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="bridgehead" href="f1_oep_sx_home001.htm" number="" targetptr="OEPSH318">
+        <ttl>Related Topics</ttl>
+        <xreftext>&#x201C;Related Topics&#x201D;</xreftext>
+      </obj>
+    </div>
+  </div>
+  <div element="chapter" href="f1_oep_sx_explorations.htm" number="2" targetptr="OEPSH134">
+    <ttl>Stream Explorer Explorations Context Sensitive Help Topics</ttl>
+    <xreftext>&#x201C;Stream Explorer Explorations Context Sensitive Help Topics&#x201D;</xreftext>
+    <div element="sect1" href="f1_sx_create_expl_pg.htm" number="2.1" targetptr="OEPSH135">
+      <ttl>Create Exploration Dialog Window</ttl>
+      <xreftext>&#x201C;Create Exploration Dialog Window&#x201D;</xreftext>
+      <obj element="helppara" href="f1_sx_create_expl_pg.htm" number="" targetptr="OEPSH136">
+        <ttl>Name&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Name&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_sx_create_expl_pg.htm" number="" targetptr="OEPSH137">
+        <ttl>Description&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Description&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_sx_create_expl_pg.htm" number="" targetptr="OEPSH138">
+        <ttl>Tags&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Tags&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_sx_create_expl_pg.htm" number="" targetptr="OEPSH139">
+        <ttl>Source&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Source&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_sx_create_expl_pg.htm" number="" targetptr="OEPSH140">
+        <ttl>Cancel&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Cancel&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_sx_create_expl_pg.htm" number="" targetptr="OEPSH141">
+        <ttl>Create&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Create&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="bridgehead" href="f1_sx_create_expl_pg.htm" number="" targetptr="OEPSH319">
+        <ttl>Related Topics</ttl>
+        <xreftext>&#x201C;Related Topics&#x201D;</xreftext>
+      </obj>
+    </div>
+    <div element="sect1" href="f1_sx_expl_pg.htm" number="2.2" targetptr="OEPSH143">
+      <ttl>Exploration Page</ttl>
+      <xreftext>&#x201C;Exploration Page&#x201D;</xreftext>
+      <obj element="helppara" href="f1_sx_expl_pg.htm" number="" targetptr="OEPSH144">
+        <ttl>Return to Catalog&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Return to Catalog&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_sx_expl_pg.htm" number="" targetptr="OEPSH145">
+        <ttl>Exploration Name&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Exploration Name&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_sx_expl_pg.htm" number="" targetptr="OEPSH146">
+        <ttl>Sources&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Sources&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_sx_expl_pg.htm" number="" targetptr="OEPSH147">
+        <ttl>Summaries&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Summaries&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_sx_expl_pg.htm" number="" targetptr="OEPSH148">
+        <ttl>Click this area&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Click this area&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_sx_expl_pg.htm" number="" targetptr="OEPSH149">
+        <ttl>Add a Summary&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Add a Summary&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_sx_expl_pg.htm" number="" targetptr="OEPSH150">
+        <ttl>Group By&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Group By&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_sx_expl_pg.htm" number="" targetptr="OEPSH151">
+        <ttl>Done&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Done&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_sx_expl_pg.htm" number="" targetptr="OEPSH152">
+        <ttl>Filters&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Filters&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_sx_expl_pg.htm" number="" targetptr="OEPSH153">
+        <ttl>Add a Filter&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Add a Filter&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_sx_expl_pg.htm" number="" targetptr="OEPSH320">
+        <ttl>Match All of&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Match All of&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_sx_expl_pg.htm" number="" targetptr="OEPSH321">
+        <ttl>Match Any of&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Match Any of&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_sx_expl_pg.htm" number="" targetptr="OEPSH154">
+        <ttl>Live Output Stream&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Live Output Stream&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_sx_expl_pg.htm" number="" targetptr="OEPSH155">
+        <ttl>Properties&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Properties&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_sx_expl_pg.htm" number="" targetptr="OEPSH322">
+        <ttl>Click this button&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Click this button&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_sx_expl_pg.htm" number="" targetptr="OEPSH323">
+        <ttl>Close&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Close&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_sx_expl_pg.htm" number="" targetptr="OEPSH156">
+        <ttl>Timestamp&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Timestamp&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_sx_expl_pg.htm" number="" targetptr="OEPSH157">
+        <ttl>Charts&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Charts&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_sx_expl_pg.htm" number="" targetptr="OEPSH158">
+        <ttl>1 Graph&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;1 Graph&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_sx_expl_pg.htm" number="" targetptr="OEPSH159">
+        <ttl>2 Graphs&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;2 Graphs&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_sx_expl_pg.htm" number="" targetptr="OEPSH160">
+        <ttl>3 Graphs&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;3 Graphs&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_sx_expl_pg.htm" number="" targetptr="OEPSH161">
+        <ttl>Flip&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Flip&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_sx_expl_pg.htm" number="" targetptr="OEPSH162">
+        <ttl>Maximize&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Maximize&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_sx_expl_pg.htm" number="" targetptr="OEPSH164">
+        <ttl>Publish&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Publish&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_sx_expl_pg.htm" number="" targetptr="OEPSH165">
+        <ttl>Unpublish&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Unpublish&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_sx_expl_pg.htm" number="" targetptr="OEPSH166">
+        <ttl>Export&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Export&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="bridgehead" href="f1_sx_expl_pg.htm" number="" targetptr="OEPSH324">
+        <ttl>Related Topics</ttl>
+        <xreftext>&#x201C;Related Topics&#x201D;</xreftext>
+      </obj>
+    </div>
+  </div>
+  <div element="chapter" href="f1_oep_sx_streams.htm" number="3" targetptr="OEPSH168">
+    <ttl>Streams Context Sensitive Help Topics</ttl>
+    <xreftext>&#x201C;Streams Context Sensitive Help Topics&#x201D;</xreftext>
+    <div element="sect1" href="cs_pagename1001.htm" number="3.1" targetptr="OEPSH169">
+      <ttl>Stream Dialog</ttl>
+      <xreftext>&#x201C;Stream Dialog&#x201D;</xreftext>
+      <obj element="helppara" href="cs_pagename1001.htm" number="" targetptr="OEPSH170">
+        <ttl>Source Details&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Source Details&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="cs_pagename1001.htm" number="" targetptr="OEPSH171">
+        <ttl>Source Type Parameters&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Source Type Parameters&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="bridgehead" href="cs_pagename1001.htm" number="" targetptr="OEPSH325">
+        <ttl>Related Topics</ttl>
+        <xreftext>&#x201C;Related Topics&#x201D;</xreftext>
+      </obj>
+    </div>
+    <div element="sect1" href="f1_oep_sx_streams001.htm" number="3.2" targetptr="OEPSH172">
+      <ttl>Edit Stream Wizard - Source Details</ttl>
+      <xreftext>&#x201C;Edit Stream Wizard - Source Details&#x201D;</xreftext>
+      <obj element="helppara" href="f1_oep_sx_streams001.htm" number="" targetptr="OEPSH112">
+        <ttl>Name&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Name&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_sx_streams001.htm" number="" targetptr="OEPSH113">
+        <ttl>Description&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Description&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_sx_streams001.htm" number="" targetptr="OEPSH114">
+        <ttl>Tags&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Tags&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="bridgehead" href="f1_oep_sx_streams001.htm" number="" targetptr="OEPSH326">
+        <ttl>Related Topics</ttl>
+        <xreftext>&#x201C;Related Topics&#x201D;</xreftext>
+      </obj>
+    </div>
+    <div element="sect1" href="f1_oep_sx_streams002.htm" number="3.3" targetptr="OEPSH173">
+      <ttl>Edit Stream Wizard - Type Properties</ttl>
+      <xreftext>&#x201C;Edit Stream Wizard - Type Properties&#x201D;</xreftext>
+      <obj element="helppara" href="f1_oep_sx_streams002.htm" number="" targetptr="OEPSH174">
+        <ttl>Back&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Back&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_sx_streams002.htm" number="" targetptr="OEPSH711">
+        <ttl>Source Path&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Source Path&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_sx_streams002.htm" number="" targetptr="OEPSH190">
+        <ttl>Event Interval&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Event Interval&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_sx_streams002.htm" number="" targetptr="OEPSH330">
+        <ttl>Initial Delay&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Initial Delay&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_sx_streams002.htm" number="" targetptr="OEPSH331">
+        <ttl>Type - HTTP&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Type - HTTP&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_sx_streams002.htm" number="" targetptr="OEPSH332">
+        <ttl>Server URL&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Server URL&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_sx_streams002.htm" number="" targetptr="OEPSH333">
+        <ttl>Channel Name&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Channel Name&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_sx_streams002.htm" number="" targetptr="OEPSH334">
+        <ttl>Username&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Username&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_sx_streams002.htm" number="" targetptr="OEPSH335">
+        <ttl>Password&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Password&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_sx_streams002.htm" number="" targetptr="OEPSH336">
+        <ttl>Type - EDN&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Type - EDN&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_sx_streams002.htm" number="" targetptr="OEPSH337">
+        <ttl>URL&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;URL&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_sx_streams002.htm" number="" targetptr="OEPSH338">
+        <ttl>Username&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Username&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_sx_streams002.htm" number="" targetptr="OEPSH339">
+        <ttl>Password&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Password&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_sx_streams002.htm" number="" targetptr="OEPSH340">
+        <ttl>Type - JMS&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Type - JMS&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_sx_streams002.htm" number="" targetptr="OEPSH341">
+        <ttl>URL&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;URL&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_sx_streams002.htm" number="" targetptr="OEPSH342">
+        <ttl>Username&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Username&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_sx_streams002.htm" number="" targetptr="OEPSH343">
+        <ttl>Password&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Password&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_sx_streams002.htm" number="" targetptr="OEPSH344">
+        <ttl>JNDI Name&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;JNDI Name&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_sx_streams002.htm" number="" targetptr="OEPSH345">
+        <ttl>Type - REST&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Type - REST&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_sx_streams002.htm" number="" targetptr="OEPSH346">
+        <ttl>Context Path&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Context Path&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="bridgehead" href="f1_oep_sx_streams002.htm" number="" targetptr="OEPSH327">
+        <ttl>Related Topics</ttl>
+        <xreftext>&#x201C;Related Topics&#x201D;</xreftext>
+      </obj>
+    </div>
+    <div element="sect1" href="f1_oep_sx_streams003.htm" number="3.4" targetptr="OEPSH178">
+      <ttl>Edit Stream Wizard - Shape</ttl>
+      <xreftext>&#x201C;Edit Stream Wizard - Shape&#x201D;</xreftext>
+      <obj element="helppara" href="f1_oep_sx_streams003.htm" number="" targetptr="OEPSH179">
+        <ttl>Name&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Name&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_sx_streams003.htm" number="" targetptr="OEPSH180">
+        <ttl>Manual Mapping&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Manual Mapping&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="bridgehead" href="f1_oep_sx_streams003.htm" number="" targetptr="OEPSH328">
+        <ttl>Related Topics</ttl>
+        <xreftext>&#x201C;Related Topics&#x201D;</xreftext>
+      </obj>
+    </div>
+    <div element="sect1" href="f1_oep_sx_streams004.htm" number="3.5" targetptr="OEPSH182">
+      <ttl>Create Stream Wizard - Source Details</ttl>
+      <xreftext>&#x201C;Create Stream Wizard - Source Details&#x201D;</xreftext>
+      <obj element="helppara" href="f1_oep_sx_streams004.htm" number="" targetptr="OEPSH183">
+        <ttl>Name&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Name&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_sx_streams004.htm" number="" targetptr="OEPSH184">
+        <ttl>Description&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Description&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_sx_streams004.htm" number="" targetptr="OEPSH185">
+        <ttl>Tags&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Tags&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="bridgehead" href="f1_oep_sx_streams004.htm" number="" targetptr="OEPSH329">
+        <ttl>Related Topics</ttl>
+        <xreftext>&#x201C;Related Topics&#x201D;</xreftext>
+      </obj>
+    </div>
+    <div element="sect1" href="f1_oep_sx_streams005.htm" number="3.6" targetptr="OEPSH187">
+      <ttl>Create Stream Wizard - Type Properties</ttl>
+      <xreftext>&#x201C;Create Stream Wizard - Type Properties&#x201D;</xreftext>
+      <obj element="helppara" href="f1_oep_sx_streams005.htm" number="" targetptr="OEPSH188">
+        <ttl>Back&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Back&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_sx_streams005.htm" number="" targetptr="OEPSH189">
+        <ttl>Source Path&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Source Path&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_sx_streams005.htm" number="" targetptr="OEPSH612">
+        <ttl>Event Interval&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Event Interval&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_sx_streams005.htm" number="" targetptr="OEPSH613">
+        <ttl>Initial Delay&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Initial Delay&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_sx_streams005.htm" number="" targetptr="OEPSH614">
+        <ttl>Type - HTTP&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Type - HTTP&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_sx_streams005.htm" number="" targetptr="OEPSH615">
+        <ttl>Server URL&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Server URL&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_sx_streams005.htm" number="" targetptr="OEPSH616">
+        <ttl>Channel Name&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Channel Name&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_sx_streams005.htm" number="" targetptr="OEPSH617">
+        <ttl>Username&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Username&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_sx_streams005.htm" number="" targetptr="OEPSH618">
+        <ttl>Password&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Password&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_sx_streams005.htm" number="" targetptr="OEPSH619">
+        <ttl>Type - EDN&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Type - EDN&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_sx_streams005.htm" number="" targetptr="OEPSH620">
+        <ttl>URL&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;URL&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_sx_streams005.htm" number="" targetptr="OEPSH621">
+        <ttl>Username&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Username&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_sx_streams005.htm" number="" targetptr="OEPSH622">
+        <ttl>Password&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Password&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_sx_streams005.htm" number="" targetptr="OEPSH623">
+        <ttl>Type - JMS&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Type - JMS&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_sx_streams005.htm" number="" targetptr="OEPSH624">
+        <ttl>URL&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;URL&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_sx_streams005.htm" number="" targetptr="OEPSH625">
+        <ttl>Username&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Username&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_sx_streams005.htm" number="" targetptr="OEPSH626">
+        <ttl>Password&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Password&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_sx_streams005.htm" number="" targetptr="OEPSH627">
+        <ttl>JNDI Name&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;JNDI Name&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_sx_streams005.htm" number="" targetptr="OEPSH628">
+        <ttl>Type - REST&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Type - REST&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_sx_streams005.htm" number="" targetptr="OEPSH629">
+        <ttl>Context Path&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Context Path&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="bridgehead" href="f1_oep_sx_streams005.htm" number="" targetptr="OEPSH347">
+        <ttl>Related Topics</ttl>
+        <xreftext>&#x201C;Related Topics&#x201D;</xreftext>
+      </obj>
+    </div>
+    <div element="sect1" href="f1_oep_sx_streams006.htm" number="3.7" targetptr="OEPSH192">
+      <ttl>Create Stream Wizard - Shape</ttl>
+      <xreftext>&#x201C;Create Stream Wizard - Shape&#x201D;</xreftext>
+      <obj element="helppara" href="f1_oep_sx_streams006.htm" number="" targetptr="OEPSH193">
+        <ttl>Name&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Name&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_sx_streams006.htm" number="" targetptr="OEPSH194">
+        <ttl>Manual Mapping&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Manual Mapping&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="bridgehead" href="f1_oep_sx_streams006.htm" number="" targetptr="OEPSH348">
+        <ttl>Related Topics</ttl>
+        <xreftext>&#x201C;Related Topics&#x201D;</xreftext>
+      </obj>
+    </div>
+  </div>
+  <div element="chapter" href="f1_oep_sx_references.htm" number="4" targetptr="OEPSH101">
+    <ttl>References Context Sensitive Help Topics</ttl>
+    <xreftext>&#x201C;References Context Sensitive Help Topics&#x201D;</xreftext>
+    <div element="sect1" href="f1_oep_sx_references001.htm" number="4.1" targetptr="OEPSH196">
+      <ttl>Reference Dialog</ttl>
+      <xreftext>&#x201C;Reference Dialog&#x201D;</xreftext>
+      <obj element="helppara" href="f1_oep_sx_references001.htm" number="" targetptr="OEPSH197">
+        <ttl>Source Details&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Source Details&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_sx_references001.htm" number="" targetptr="OEPSH198">
+        <ttl>Source Type Parameters&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Source Type Parameters&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="bridgehead" href="f1_oep_sx_references001.htm" number="" targetptr="OEPSH349">
+        <ttl>Related Topics</ttl>
+        <xreftext>&#x201C;Related Topics&#x201D;</xreftext>
+      </obj>
+    </div>
+    <div element="sect1" href="f1_oep_sx_references002.htm" number="4.2" targetptr="OEPSH200">
+      <ttl>Edit Reference Wizard - Source Details</ttl>
+      <xreftext>&#x201C;Edit Reference Wizard - Source Details&#x201D;</xreftext>
+      <obj element="helppara" href="f1_oep_sx_references002.htm" number="" targetptr="OEPSH201">
+        <ttl>Name&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Name&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_sx_references002.htm" number="" targetptr="OEPSH202">
+        <ttl>Description&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Description&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_sx_references002.htm" number="" targetptr="OEPSH203">
+        <ttl>Tags&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Tags&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="bridgehead" href="f1_oep_sx_references002.htm" number="" targetptr="OEPSH350">
+        <ttl>Related Topics</ttl>
+        <xreftext>&#x201C;Related Topics&#x201D;</xreftext>
+      </obj>
+    </div>
+    <div element="sect1" href="f1_oep_sx_references003.htm" number="4.3" targetptr="OEPSH205">
+      <ttl>Edit Reference Wizard - Type Properties</ttl>
+      <xreftext>&#x201C;Edit Reference Wizard - Type Properties&#x201D;</xreftext>
+      <obj element="helppara" href="f1_oep_sx_references003.htm" number="" targetptr="OEPSH206">
+        <ttl>Back&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Back&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_sx_references003.htm" number="" targetptr="OEPSH207">
+        <ttl>Data source name&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Data source name&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="bridgehead" href="f1_oep_sx_references003.htm" number="" targetptr="OEPSH351">
+        <ttl>Related Topics</ttl>
+        <xreftext>&#x201C;Related Topics&#x201D;</xreftext>
+      </obj>
+    </div>
+    <div element="sect1" href="f1_oep_sx_references004.htm" number="4.4" targetptr="OEPSH210">
+      <ttl>Edit Reference Wizard - Shape</ttl>
+      <xreftext>&#x201C;Edit Reference Wizard - Shape&#x201D;</xreftext>
+      <obj element="bridgehead" href="f1_oep_sx_references004.htm" number="" targetptr="OEPSH352">
+        <ttl>Related Topics</ttl>
+        <xreftext>&#x201C;Related Topics&#x201D;</xreftext>
+      </obj>
+    </div>
+    <div element="sect1" href="f1_oep_sx_references005.htm" number="4.5" targetptr="OEPSH214">
+      <ttl>Create Reference Wizard - Source Details</ttl>
+      <xreftext>&#x201C;Create Reference Wizard - Source Details&#x201D;</xreftext>
+      <obj element="helppara" href="f1_oep_sx_references005.htm" number="" targetptr="OEPSH215">
+        <ttl>Name&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Name&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_sx_references005.htm" number="" targetptr="OEPSH216">
+        <ttl>Description&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Description&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_sx_references005.htm" number="" targetptr="OEPSH217">
+        <ttl>Tags&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Tags&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="bridgehead" href="f1_oep_sx_references005.htm" number="" targetptr="OEPSH353">
+        <ttl>Related Topics</ttl>
+        <xreftext>&#x201C;Related Topics&#x201D;</xreftext>
+      </obj>
+    </div>
+    <div element="sect1" href="f1_oep_sx_references006.htm" number="4.6" targetptr="OEPSH219">
+      <ttl>Create Reference Wizard - Type Properties</ttl>
+      <xreftext>&#x201C;Create Reference Wizard - Type Properties&#x201D;</xreftext>
+      <obj element="helppara" href="f1_oep_sx_references006.htm" number="" targetptr="OEPSH220">
+        <ttl>Back&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Back&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_sx_references006.htm" number="" targetptr="OEPSH221">
+        <ttl>Data source name&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Data source name&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="bridgehead" href="f1_oep_sx_references006.htm" number="" targetptr="OEPSH354">
+        <ttl>Related Topics</ttl>
+        <xreftext>&#x201C;Related Topics&#x201D;</xreftext>
+      </obj>
+    </div>
+    <div element="sect1" href="f1_oep_sx_references007.htm" number="4.7" targetptr="OEPSH224">
+      <ttl>Create Reference Wizard - Shape</ttl>
+      <xreftext>&#x201C;Create Reference Wizard - Shape&#x201D;</xreftext>
+      <obj element="helppara" href="f1_oep_sx_references007.htm" number="" targetptr="OEPSH225">
+        <ttl>Select Shape&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Select Shape&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_sx_references007.htm" number="" targetptr="OEPSH226">
+        <ttl>Cancel&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Cancel&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="bridgehead" href="f1_oep_sx_references007.htm" number="" targetptr="OEPSH355">
+        <ttl>Related Topics</ttl>
+        <xreftext>&#x201C;Related Topics&#x201D;</xreftext>
+      </obj>
+    </div>
+  </div>
+  <div element="chapter" href="f1_oep_sx_pref.htm" number="5" targetptr="OEPSH228">
+    <ttl>Preferences Context Sensitive Help Topics</ttl>
+    <xreftext>&#x201C;Preferences Context Sensitive Help Topics&#x201D;</xreftext>
+    <div element="sect1" href="f1_oep_sx_pref001.htm" number="5.1" targetptr="OEPSH229">
+      <ttl>Preferences - General Page</ttl>
+      <xreftext>&#x201C;Preferences - General Page&#x201D;</xreftext>
+      <obj element="helppara" href="f1_oep_sx_pref001.htm" number="" targetptr="OEPSH232">
+        <ttl>Restore To Default&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Restore To Default&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="bridgehead" href="f1_oep_sx_pref001.htm" number="" targetptr="OEPSH356">
+        <ttl>Related Topics</ttl>
+        <xreftext>&#x201C;Related Topics&#x201D;</xreftext>
+      </obj>
+    </div>
+    <div element="sect1" href="f1_oep_sx_pref002.htm" number="5.2" targetptr="OEPSH512">
+      <ttl>Preferences - View Mode Page</ttl>
+      <xreftext>&#x201C;Preferences - View Mode Page&#x201D;</xreftext>
+      <obj element="helppara" href="f1_oep_sx_pref002.htm" number="" targetptr="OEPSH513">
+        <ttl>Browser mode&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Browser mode&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_sx_pref002.htm" number="" targetptr="OEPSH514">
+        <ttl>Presentation mode (projector)&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Presentation mode (projector)&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_sx_pref002.htm" number="" targetptr="OEPSH515">
+        <ttl>Restore To Default&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Restore To Default&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="bridgehead" href="f1_oep_sx_pref002.htm" number="" targetptr="OEPSH416">
+        <ttl>Related Topics</ttl>
+        <xreftext>&#x201C;Related Topics&#x201D;</xreftext>
+      </obj>
+    </div>
+    <div element="sect1" href="f1_oep_sx_pref003.htm" number="5.3" targetptr="OEPSH239">
+      <ttl>Preferences - Notifications Page</ttl>
+      <xreftext>&#x201C;Preferences - Notifications Page&#x201D;</xreftext>
+      <obj element="helppara" href="f1_oep_sx_pref003.htm" number="" targetptr="OEPSH240">
+        <ttl>Show Information Notifications&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Show Information Notifications&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_sx_pref003.htm" number="" targetptr="OEPSH241">
+        <ttl>Information Notification duration&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Information Notification duration&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_sx_pref003.htm" number="" targetptr="OEPSH242">
+        <ttl>Restore To Default&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Restore To Default&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="bridgehead" href="f1_oep_sx_pref003.htm" number="" targetptr="OEPSH358">
+        <ttl>Related Topics</ttl>
+        <xreftext>&#x201C;Related Topics&#x201D;</xreftext>
+      </obj>
+    </div>
+    <div element="sect1" href="f1_oep_sx_pref004.htm" number="5.4" targetptr="OEPSH244">
+      <ttl>Preferences - Catalog Page</ttl>
+      <xreftext>&#x201C;Preferences - Catalog Page&#x201D;</xreftext>
+      <obj element="helppara" href="f1_oep_sx_pref004.htm" number="" targetptr="OEPSH245">
+        <ttl>Default Sorting Column&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Default Sorting Column&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_sx_pref004.htm" number="" targetptr="OEPSH246">
+        <ttl>Default Sorting Order&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Default Sorting Order&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_sx_pref004.htm" number="" targetptr="OEPSH247">
+        <ttl>Default Page Size&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Default Page Size&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="bridgehead" href="f1_oep_sx_pref004.htm" number="" targetptr="OEPSH359">
+        <ttl>Related Topics</ttl>
+        <xreftext>&#x201C;Related Topics&#x201D;</xreftext>
+      </obj>
+    </div>
+    <div element="sect1" href="f1_oep_sx_pref005.htm" number="5.5" targetptr="OEPSH417">
+      <ttl>Preferences - Exploration - Live Output Stream Page</ttl>
+      <xreftext>&#x201C;Preferences - Exploration - Live Output Stream Page&#x201D;</xreftext>
+      <obj element="helppara" href="f1_oep_sx_pref005.htm" number="" targetptr="OEPSH418">
+        <ttl>Default Table Size&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Default Table Size&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="bridgehead" href="f1_oep_sx_pref005.htm" number="" targetptr="OEPSH421">
+        <ttl>Related Topics</ttl>
+        <xreftext>&#x201C;Related Topics&#x201D;</xreftext>
+      </obj>
+    </div>
+  </div>
+  <div element="chapter" href="f1_oep_sx_patterns.htm" number="6" targetptr="OEPSH260">
+    <ttl>Patterns Context Sensitive Help Topics</ttl>
+    <xreftext>&#x201C;Patterns Context Sensitive Help Topics&#x201D;</xreftext>
+    <div element="sect1" href="f1_oep_sx_patterns001.htm" number="6.1" targetptr="OEPSH261">
+      <ttl>Create Pattern - Detect Duplicates</ttl>
+      <xreftext>&#x201C;Create Pattern - Detect Duplicates&#x201D;</xreftext>
+      <obj element="helppara" href="f1_oep_sx_patterns001.htm" number="" targetptr="OEPSH262">
+        <ttl>Exploration Name&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Exploration Name&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_sx_patterns001.htm" number="" targetptr="OEPSH263">
+        <ttl>Event Stream&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Event Stream&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_sx_patterns001.htm" number="" targetptr="OEPSH264">
+        <ttl>Duplicate Key&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Duplicate Key&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="bridgehead" href="f1_oep_sx_patterns001.htm" number="" targetptr="OEPSH364">
+        <ttl>Related Topics</ttl>
+        <xreftext>&#x201C;Related Topics&#x201D;</xreftext>
+      </obj>
+    </div>
+    <div element="sect1" href="f1_oep_sx_patterns002.htm" number="6.2" targetptr="OEPSH266">
+      <ttl>Create Pattern - Detect Missing Event</ttl>
+      <xreftext>&#x201C;Create Pattern - Detect Missing Event&#x201D;</xreftext>
+      <obj element="helppara" href="f1_oep_sx_patterns002.htm" number="" targetptr="OEPSH267">
+        <ttl>Exploration Name&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Exploration Name&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_sx_patterns002.htm" number="" targetptr="OEPSH268">
+        <ttl>Input Stream&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Input Stream&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_sx_patterns002.htm" number="" targetptr="OEPSH269">
+        <ttl>Tracking Fields&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Tracking Fields&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="bridgehead" href="f1_oep_sx_patterns002.htm" number="" targetptr="OEPSH365">
+        <ttl>Related Topics</ttl>
+        <xreftext>&#x201C;Related Topics&#x201D;</xreftext>
+      </obj>
+    </div>
+    <div element="sect1" href="f1_oep_sx_patterns003.htm" number="6.3" targetptr="OEPSH271">
+      <ttl>Create Pattern - W</ttl>
+      <xreftext>&#x201C;Create Pattern - W&#x201D;</xreftext>
+      <obj element="helppara" href="f1_oep_sx_patterns003.htm" number="" targetptr="OEPSH272">
+        <ttl>Exploration Name&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Exploration Name&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_sx_patterns003.htm" number="" targetptr="OEPSH273">
+        <ttl>Event stream&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Event stream&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_sx_patterns003.htm" number="" targetptr="OEPSH274">
+        <ttl>Partition key&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Partition key&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="bridgehead" href="f1_oep_sx_patterns003.htm" number="" targetptr="OEPSH366">
+        <ttl>Related Topics</ttl>
+        <xreftext>&#x201C;Related Topics&#x201D;</xreftext>
+      </obj>
+    </div>
+    <div element="sect1" href="f1_oep_sx_patterns004.htm" number="6.4" targetptr="OEPSH276">
+      <ttl>Create Pattern - Inverse W Page</ttl>
+      <xreftext>&#x201C;Create Pattern - Inverse W Page&#x201D;</xreftext>
+      <obj element="helppara" href="f1_oep_sx_patterns004.htm" number="" targetptr="OEPSH277">
+        <ttl>Exploration Name&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Exploration Name&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_sx_patterns004.htm" number="" targetptr="OEPSH278">
+        <ttl>Event stream&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Event stream&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_sx_patterns004.htm" number="" targetptr="OEPSH279">
+        <ttl>Partition key&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Partition key&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="bridgehead" href="f1_oep_sx_patterns004.htm" number="" targetptr="OEPSH367">
+        <ttl>Related Topics</ttl>
+        <xreftext>&#x201C;Related Topics&#x201D;</xreftext>
+      </obj>
+    </div>
+    <div element="sect1" href="f1_oep_sx_patterns005.htm" number="6.5" targetptr="OEPSH281">
+      <ttl>Create Pattern - Top N</ttl>
+      <xreftext>&#x201C;Create Pattern - Top N&#x201D;</xreftext>
+      <obj element="helppara" href="f1_oep_sx_patterns005.htm" number="" targetptr="OEPSH282">
+        <ttl>Exploration Name&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Exploration Name&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_sx_patterns005.htm" number="" targetptr="OEPSH283">
+        <ttl>Event stream&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Event stream&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_sx_patterns005.htm" number="" targetptr="OEPSH284">
+        <ttl>Window range&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Window range&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="bridgehead" href="f1_oep_sx_patterns005.htm" number="" targetptr="OEPSH368">
+        <ttl>Related Topics</ttl>
+        <xreftext>&#x201C;Related Topics&#x201D;</xreftext>
+      </obj>
+    </div>
+    <div element="sect1" href="f1_oep_sx_patterns006.htm" number="6.6" targetptr="OEPSH375">
+      <ttl>Create Pattern - Bottom N</ttl>
+      <xreftext>&#x201C;Create Pattern - Bottom N&#x201D;</xreftext>
+      <obj element="helppara" href="f1_oep_sx_patterns006.htm" number="" targetptr="OEPSH376">
+        <ttl>Exploration Name&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Exploration Name&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_sx_patterns006.htm" number="" targetptr="OEPSH377">
+        <ttl>Event stream&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Event stream&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_sx_patterns006.htm" number="" targetptr="OEPSH378">
+        <ttl>Window range&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Window range&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="bridgehead" href="f1_oep_sx_patterns006.htm" number="" targetptr="OEPSH379">
+        <ttl>Related Topics</ttl>
+        <xreftext>&#x201C;Related Topics&#x201D;</xreftext>
+      </obj>
+    </div>
+    <div element="sect1" href="f1_oep_sx_patterns007.htm" number="6.7" targetptr="OEPSH286">
+      <ttl>Create Pattern - Eliminate Duplicates</ttl>
+      <xreftext>&#x201C;Create Pattern - Eliminate Duplicates&#x201D;</xreftext>
+      <obj element="helppara" href="f1_oep_sx_patterns007.htm" number="" targetptr="OEPSH287">
+        <ttl>Exploration Name&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Exploration Name&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_sx_patterns007.htm" number="" targetptr="OEPSH288">
+        <ttl>Event stream&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Event stream&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_sx_patterns007.htm" number="" targetptr="OEPSH289">
+        <ttl>Duplicate key&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Duplicate key&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="bridgehead" href="f1_oep_sx_patterns007.htm" number="" targetptr="OEPSH369">
+        <ttl>Related Topics</ttl>
+        <xreftext>&#x201C;Related Topics&#x201D;</xreftext>
+      </obj>
+    </div>
+    <div element="sect1" href="f1_oep_sx_patterns008.htm" number="6.8" targetptr="OEPSH291">
+      <ttl>Create Pattern - Fluctuation</ttl>
+      <xreftext>&#x201C;Create Pattern - Fluctuation&#x201D;</xreftext>
+      <obj element="helppara" href="f1_oep_sx_patterns008.htm" number="" targetptr="OEPSH292">
+        <ttl>Exploration Name&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Exploration Name&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_sx_patterns008.htm" number="" targetptr="OEPSH293">
+        <ttl>Event stream&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Event stream&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_sx_patterns008.htm" number="" targetptr="OEPSH294">
+        <ttl>Tracking Fields&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Tracking Fields&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="bridgehead" href="f1_oep_sx_patterns008.htm" number="" targetptr="OEPSH370">
+        <ttl>Related Topics</ttl>
+        <xreftext>&#x201C;Related Topics&#x201D;</xreftext>
+      </obj>
+    </div>
+    <div element="sect1" href="f1_oep_sx_patterns009.htm" number="6.9" targetptr="OEPSH296">
+      <ttl>Create Pattern - Up Trend Pattern</ttl>
+      <xreftext>&#x201C;Create Pattern - Up Trend Pattern&#x201D;</xreftext>
+      <obj element="helppara" href="f1_oep_sx_patterns009.htm" number="" targetptr="OEPSH297">
+        <ttl>Exploration Name&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Exploration Name&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_sx_patterns009.htm" number="" targetptr="OEPSH298">
+        <ttl>Event stream&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Event stream&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_sx_patterns009.htm" number="" targetptr="OEPSH299">
+        <ttl>Tracking Fields&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Tracking Fields&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="bridgehead" href="f1_oep_sx_patterns009.htm" number="" targetptr="OEPSH371">
+        <ttl>Related Topics</ttl>
+        <xreftext>&#x201C;Related Topics&#x201D;</xreftext>
+      </obj>
+    </div>
+    <div element="sect1" href="f1_oep_sx_patterns010.htm" number="6.10" targetptr="OEPSH301">
+      <ttl>Create Pattern - Down Trend</ttl>
+      <xreftext>&#x201C;Create Pattern - Down Trend&#x201D;</xreftext>
+      <obj element="helppara" href="f1_oep_sx_patterns010.htm" number="" targetptr="OEPSH302">
+        <ttl>Exploration Name&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Exploration Name&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_sx_patterns010.htm" number="" targetptr="OEPSH303">
+        <ttl>Event stream&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Event stream&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_sx_patterns010.htm" number="" targetptr="OEPSH304">
+        <ttl>Tracking Fields&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Tracking Fields&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="bridgehead" href="f1_oep_sx_patterns010.htm" number="" targetptr="OEPSH372">
+        <ttl>Related Topics</ttl>
+        <xreftext>&#x201C;Related Topics&#x201D;</xreftext>
+      </obj>
+    </div>
+  </div>
+  <div element="chapter" href="f1_oep_expl_actions.htm" number="7" targetptr="OEPSH306">
+    <ttl>Exploration Actions Context Sensitive Help Topics</ttl>
+    <xreftext>&#x201C;Exploration Actions Context Sensitive Help Topics&#x201D;</xreftext>
+    <div element="sect1" href="cs_pagename1002.htm" number="7.1" targetptr="OEPSH307">
+      <ttl>Configure a Target Dialog</ttl>
+      <xreftext>&#x201C;Configure a Target Dialog&#x201D;</xreftext>
+      <obj element="helppara" href="cs_pagename1002.htm" number="" targetptr="OEPSH308">
+        <ttl>Destination Type&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Destination Type&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="cs_pagename1002.htm" number="" targetptr="OEPSH380">
+        <ttl>CSV File&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;CSV File&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="cs_pagename1002.htm" number="" targetptr="OEPSH309">
+        <ttl>File Name&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;File Name&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="cs_pagename1002.htm" number="" targetptr="OEPSH381">
+        <ttl>Append&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Append&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="cs_pagename1002.htm" number="" targetptr="OEPSH382">
+        <ttl>Server URL&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Server URL&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="cs_pagename1002.htm" number="" targetptr="OEPSH383">
+        <ttl>Channel&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Channel&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="cs_pagename1002.htm" number="" targetptr="OEPSH384">
+        <ttl>Username&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Username&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="cs_pagename1002.htm" number="" targetptr="OEPSH385">
+        <ttl>Password&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Password&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="cs_pagename1002.htm" number="" targetptr="OEPSH386">
+        <ttl>URL&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;URL&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="cs_pagename1002.htm" number="" targetptr="OEPSH387">
+        <ttl>User Name&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;User Name&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="cs_pagename1002.htm" number="" targetptr="OEPSH388">
+        <ttl>Password&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Password&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="cs_pagename1002.htm" number="" targetptr="OEPSH389">
+        <ttl>Get Event Definitions&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Get Event Definitions&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="cs_pagename1002.htm" number="" targetptr="OEPSH390">
+        <ttl>URL&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;URL&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="cs_pagename1002.htm" number="" targetptr="OEPSH391">
+        <ttl>User Name&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;User Name&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="cs_pagename1002.htm" number="" targetptr="OEPSH392">
+        <ttl>Password&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Password&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="cs_pagename1002.htm" number="" targetptr="OEPSH393">
+        <ttl>JNDI name&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;JNDI name&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="cs_pagename1002.htm" number="" targetptr="OEPSH394">
+        <ttl>Target URL&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Target URL&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="bridgehead" href="cs_pagename1002.htm" number="" targetptr="OEPSH373">
+        <ttl>Related Topics</ttl>
+        <xreftext>&#x201C;Related Topics&#x201D;</xreftext>
+      </obj>
+    </div>
+    <div element="sect1" href="f1_oep_expl_actions001.htm" number="7.2" targetptr="OEPSH311">
+      <ttl>Actions</ttl>
+      <xreftext>&#x201C;Actions&#x201D;</xreftext>
+      <obj element="helppara" href="f1_oep_expl_actions001.htm" number="" targetptr="OEPSH395">
+        <ttl>Publish&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Publish&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_expl_actions001.htm" number="" targetptr="OEPSH396">
+        <ttl>Unpublish&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Unpublish&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_expl_actions001.htm" number="" targetptr="OEPSH397">
+        <ttl>Discard&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Discard&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_expl_actions001.htm" number="" targetptr="OEPSH398">
+        <ttl>Export&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Export&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_expl_actions001.htm" number="" targetptr="OEPSH312">
+        <ttl>Export List&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Export List&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_expl_actions001.htm" number="" targetptr="OEPSH313">
+        <ttl>Resource&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Resource&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_expl_actions001.htm" number="" targetptr="OEPSH314">
+        <ttl>Type&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Type&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_expl_actions001.htm" number="" targetptr="OEPSH399">
+        <ttl>Advanced Options&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Advanced Options&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_expl_actions001.htm" number="" targetptr="OEPSH315">
+        <ttl>Bundle Id&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Bundle Id&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_expl_actions001.htm" number="" targetptr="OEPSH316">
+        <ttl>Bundle Name&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Bundle Name&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_expl_actions001.htm" number="" targetptr="OEPSH400">
+        <ttl>Cancel&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Cancel&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_expl_actions001.htm" number="" targetptr="OEPSH401">
+        <ttl>Export&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Export&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="bridgehead" href="f1_oep_expl_actions001.htm" number="" targetptr="OEPSH374">
+        <ttl>Related Topics</ttl>
+        <xreftext>&#x201C;Related Topics&#x201D;</xreftext>
+      </obj>
+    </div>
+    <div element="sect1" href="f1_oep_expl_actions002.htm" number="7.3" targetptr="OEPSH402">
+      <ttl>Export Exploration</ttl>
+      <xreftext>&#x201C;Export Exploration&#x201D;</xreftext>
+      <obj element="helppara" href="f1_oep_expl_actions002.htm" number="" targetptr="OEPSH403">
+        <ttl>Export List&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Export List&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_expl_actions002.htm" number="" targetptr="OEPSH404">
+        <ttl>Resource&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Resource&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_expl_actions002.htm" number="" targetptr="OEPSH405">
+        <ttl>Type&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Type&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_expl_actions002.htm" number="" targetptr="OEPSH406">
+        <ttl>Advanced Options&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Advanced Options&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_expl_actions002.htm" number="" targetptr="OEPSH407">
+        <ttl>Bundle ID&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Bundle ID&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_expl_actions002.htm" number="" targetptr="OEPSH408">
+        <ttl>Bundle Name&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Bundle Name&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_expl_actions002.htm" number="" targetptr="OEPSH409">
+        <ttl>Cancel&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Cancel&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="helppara" href="f1_oep_expl_actions002.htm" number="" targetptr="OEPSH410">
+        <ttl>Export&#x2026;</ttl>
+        <xreftext>the paragraph beginning &#x201C;Export&#x2026;&#x201D;</xreftext>
+      </obj>
+      <obj element="bridgehead" href="f1_oep_expl_actions002.htm" number="" targetptr="OEPSH411">
+        <ttl>Related Topics</ttl>
+        <xreftext>&#x201C;Related Topics&#x201D;</xreftext>
+      </obj>
+    </div>
+  </div>
+</div>

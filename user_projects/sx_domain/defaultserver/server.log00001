@@ -1,0 +1,32 @@
+####<Mar 14, 2015 9:19:11 PM CET> <Error> <SDS> <> <> <Thread-19> <> <> <> <1426364351165> <BEA-1001100> <There was an unexpected throwable from file "OSGI-INF/netio.xml" in bundle "com.bea.core.netio". The exception at depth 0 has message "Address already in use".> 
+####<Mar 14, 2015 9:19:11 PM CET> <Warning> <SDS> <> <> <Thread-19> <> <> <> <1426364351171> <BEA-1001121> <The service with identifier "Netio" in SDS file "OSGI-INF/netio.xml" in bundle "com.bea.core.netio" is going into the ERROR state. The error message from the failed subsystem is "Address already in use"> 
+####<Mar 14, 2015 9:19:11 PM CET> <Error> <SDS> <> <> <Thread-19> <> <> <> <1426364351171> <BEA-1001103> <Service "Netio" from file "OSGI-INF/netio.xml" in bundle "com.bea.core.netio" threw an exception during its initialization call. The exception thrown follows this message.> 
+####<Mar 14, 2015 9:19:11 PM CET> <Error> <SDS> <> <> <Thread-19> <> <> <> <1426364351171> <BEA-1001100> <There was an unexpected throwable from file "OSGI-INF/netio.xml" in bundle "com.bea.core.netio". The exception at depth 0 has message "java.net.BindException: Address already in use".> 
+####<Mar 14, 2015 9:19:11 PM CET> <Error> <SDS> <> <> <Thread-19> <> <> <> <1426364351174> <BEA-1001100> <There was an unexpected throwable from file "OSGI-INF/netio.xml" in bundle "com.bea.core.netio". The exception at depth 1 has message "Address already in use".> 
+####<Mar 14, 2015 9:19:11 PM CET> <Error> <SDS> <> <> <Thread-19> <> <> <> <1426364351334> <BEA-1001100> <There was an unexpected throwable from file "OSGI-INF/netio.xml" in bundle "com.bea.core.netio". The exception at depth 0 has message "Address already in use".> 
+####<Mar 14, 2015 9:19:11 PM CET> <Warning> <SDS> <> <> <Thread-19> <> <> <> <1426364351338> <BEA-1001121> <The service with identifier "Netio" in SDS file "OSGI-INF/netio.xml" in bundle "com.bea.core.netio" is going into the ERROR state. The error message from the failed subsystem is "Address already in use"> 
+####<Mar 14, 2015 9:19:11 PM CET> <Error> <SDS> <> <> <Thread-19> <> <> <> <1426364351338> <BEA-1001103> <Service "Netio" from file "OSGI-INF/netio.xml" in bundle "com.bea.core.netio" threw an exception during its initialization call. The exception thrown follows this message.> 
+####<Mar 14, 2015 9:19:11 PM CET> <Error> <SDS> <> <> <Thread-19> <> <> <> <1426364351338> <BEA-1001100> <There was an unexpected throwable from file "OSGI-INF/netio.xml" in bundle "com.bea.core.netio". The exception at depth 0 has message "java.net.BindException: Address already in use".> 
+####<Mar 14, 2015 9:19:11 PM CET> <Error> <SDS> <> <> <Thread-19> <> <> <> <1426364351341> <BEA-1001100> <There was an unexpected throwable from file "OSGI-INF/netio.xml" in bundle "com.bea.core.netio". The exception at depth 1 has message "Address already in use".> 
+####<Mar 14, 2015 9:20:06 PM CET> <Warning> <FC> <> <> <Start Level Event Dispatcher> <> <> <> <1426364406900> <BEA-1008201> <The following conditions have not cleared in 60 seconds: 
+	1. SDS starting service from bundle "com.bea.core.http.pubsub-frag" and file "OSGI-INF/sds.xml" with service identifier "HTTP PubSub Configuration Based Handler" and instance "pubsub"
+	2. SDS starting service from bundle "com.bea.core.rmi" and file "OSGI-INF/rmi.xml" with service identifier "RMI" and instance "RMI"
+	3. SDS starting service from bundle "com.bea.core.jmx.server" and file "OSGI-INF/JMX.xml" with service identifier "JMX Server" and instance "ConfigurationTypeKey(957774940)"
+	4. SDS starting service from bundle "com.bea.core.jndi.context" and file "OSGI-INF/jndi.xml" with service identifier "Exportable JNDI Context" and instance "exportedJndi"
+	5. SDS starting service from bundle "com.bea.core.jetty" and file "OSGI-INF/jetty.xml" with service identifier "Jetty" and instance "JettyServer"> 
+####<Mar 14, 2015 9:20:10 PM CET> <Warning> <SDS> <> <> <Thread-51> <> <> <> <1426364410672> <BEA-1001102> <A service of type "HTTP PubSub Configuration Based Handler" from file "OSGI-INF/sds.xml" in bundle "com.bea.core.http.pubsub-frag" could not be advertised because all required services are not available. In particular, these are not available: 
+	1. RequiredReferenceImpl((objectClass=org.osgi.service.http.HttpService),1171406401)
+> 
+####<Mar 14, 2015 9:20:10 PM CET> <Warning> <SDS> <> <> <Thread-51> <> <> <> <1426364410673> <BEA-1001102> <A service of type "Exportable JNDI Context" from file "OSGI-INF/jndi.xml" in bundle "com.bea.core.jndi.context" could not be advertised because all required services are not available. In particular, these are not available: 
+	1. RequiredReferenceImpl((&(objectClass=com.bea.core.rmi.RMIServer)(name=RMI)),9205920)
+> 
+####<Mar 14, 2015 9:20:10 PM CET> <Warning> <SDS> <> <> <Thread-51> <> <> <> <1426364410673> <BEA-1001102> <A service of type "JMX Server" from file "OSGI-INF/JMX.xml" in bundle "com.bea.core.jmx.server" could not be advertised because all required services are not available. In particular, these are not available: 
+	1. ProvisionalReferenceImpl(filter="(&(objectClass=com.bea.core.rmi.RMIServer)(name=RMI))")
+> 
+####<Mar 14, 2015 9:20:10 PM CET> <Warning> <SDS> <> <> <Thread-51> <> <> <> <1426364410674> <BEA-1001102> <A service of type "Jetty" from file "OSGI-INF/jetty.xml" in bundle "com.bea.core.jetty" could not be advertised because all required services are not available. In particular, these are not available: 
+	1. ProvisionalReferenceImpl(filter="(&(objectClass=com.bea.core.netio.ServerConnection)(name=sslNetIo))")
+	2. ProvisionalReferenceImpl(filter="(&(objectClass=com.bea.core.netio.ServerConnection)(name=NetIO))")
+> 
+####<Mar 14, 2015 9:20:10 PM CET> <Warning> <SDS> <> <> <Thread-51> <> <> <> <1426364410674> <BEA-1001102> <A service of type "RMI" from file "OSGI-INF/rmi.xml" in bundle "com.bea.core.rmi" could not be advertised because all required services are not available. In particular, these are not available: 
+	1. RequiredReferenceImpl((&(objectClass=org.osgi.service.http.HttpService)(name=JettyServer)),761546958)
+> 

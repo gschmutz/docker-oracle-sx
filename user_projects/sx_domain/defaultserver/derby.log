@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Sat Mar 14 21:25:03 CET 2015:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.11.1.1 - (1616546): instance a816c00e-014c-19f6-2329-000001966cd8 
+on database directory /u00/app/oracle/product/oep12c/user_projects/domains/sx_domain/defaultserver/SXStorage with class loader ContextLoader@null 
+Loaded from file:/u00/app/oracle/product/oep12c/user_projects/domains/sx_domain/defaultserver/Jetty/sx/webapp/WEB-INF/lib/derby-10.11.1.1.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.7.0_75-b13
+user.dir=/u00/app/oracle/product/oep12c/user_projects/domains/sx_domain/defaultserver
+os.name=Linux
+os.arch=amd64
+os.version=2.6.39-400.215.3.el6uek.x86_64
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''

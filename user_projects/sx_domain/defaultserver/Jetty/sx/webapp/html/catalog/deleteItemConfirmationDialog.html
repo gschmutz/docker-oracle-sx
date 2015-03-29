@@ -1,0 +1,40 @@
+<div id="deleteItemConfirmationDialogContent"
+     data-bind="
+     ojComponent:{
+     component: 'ojDialog',
+     title: getTranslated('oep.search.deleteItemDialog.deleteItemDialogTitle'),
+     initialVisibility: 'hide',
+     rootAttributes: {
+     'class': 'deleteItemDialogContent'
+       }
+     }
+     ">
+
+    <div class="oj-dialog-body">
+        <div class="deleteConfirmationMessage"></div>
+    </div>
+
+    <div class="oj-dialog-footer">
+
+        <button type="button" id="deleteItemDialogCancelButton"
+                data-bind="
+                ojComponent: {component: 'ojButton',
+                label: getTranslated('oep.search.deleteItemDialog.Cancel')
+                     },
+                 click: cancelDeleteItem
+                ">
+        </button>
+
+        <button type="button" id="deleteItemDialogCreateButton"
+                data-bind="ojComponent: {
+                    component: 'ojButton',
+                    label: getTranslated('oep.search.deleteItemDialog.Ok')
+                },
+                 click: deleteItem
+                ">
+        </button>
+
+    </div>
+
+
+</div>

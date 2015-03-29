@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<Rule root="7">
+<Operator ID="1" type="Source">
+	<sourceName>S1</sourceName>
+	<sourceType>Stream</sourceType>
+	<cql-property> select * from  S1 </cql-property>
+</Operator><Operator ID="2" type="Window">
+	<cql-property> select * from  S1  [now]</cql-property>
+	<inputs>
+		<input>1</input>
+	</inputs>
+	<type>range</type>
+	<range-params>
+		<timespec>
+		<timevalue>NOW</timevalue>
+		<timeunit>milliseconds</timeunit>
+		</timespec>
+	</range-params>
+</Operator>
+<Operator ID="3" type="Source">
+	<sourcetype>Relation</sourcetype>	<sourceName>stockCache</sourceName>
+	<cql-property> select * from stockCache</cql-property>
+</Operator>
+<Operator type="Join" ID="4">
+	<inputs>
+		<input>3</input>
+		<input>4</input>
+	</inputs>
+	<cql-property>select * from  S1 [now],stockCache</cql-property>
+</Operator>
+
+<Operator type="Filter" ID="5">
+	<inputs>
+		<input>4</input>
+	</inputs>
+	<cql-property>select * from  S1 [now],stockCache WHERE   S1.symbol  =  stockCache.symbol   </cql-property>
+	<predicates>
+			<predicate>  S1.symbol  =  stockCache.symbol  </predicate>
+	</predicates>
+</Operator><Operator ID="6" type="Project">
+	<cql-property> select  S1.symbol , S1.lastPrice , stockCache.description  FROM  S1 [now],stockCache WHERE   S1.symbol  =  stockCache.symbol  </cql-property>	<inputs>
+		<input>5</input>
+	</inputs>
+	<distinct>false</distinct>		<select-list>
+		<select-attr> S1.symbol </select-attr>
+		<select-attr> S1.lastPrice </select-attr>
+		<select-attr> stockCache.description </select-attr>
+	</select-list>
+</Operator>
+<Operator ID="7" type="Output">
+	<inputs>
+		<input>6</input>
+	</inputs>
+	<cql-property>CREATE QUERY q1 AS 
+        SELECT  S1.symbol, S1.lastPrice, stockCache.description
+        FROM    S1 [Now], stockCache
+        WHERE   S1.symbol = stockCache.symbol 
+            </cql-property>
+	<output-type>query</output-type>
+	<output-name>q1</output-name>
+</Operator>
+
+</Rule>

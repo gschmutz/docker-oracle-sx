@@ -1,0 +1,21 @@
+{
+    "name":"DBTable",
+    "displayName":"Database table",
+    "description":"Database table",
+    "windowable":false,
+    "parameters":[
+        {
+            "name":"dataSourceURI",
+            "type":"uri",
+            "description":"Data source URI (jdbc://<datasource name>)",
+            "required":true
+        },
+        {
+            "name":"tableName",
+            "type":"string",
+            "description":"Table or view name",
+            "required":true,
+            "validator":"dinamicList",
+            "dependsOn":["dataSourceURI"]
+        }]
+}

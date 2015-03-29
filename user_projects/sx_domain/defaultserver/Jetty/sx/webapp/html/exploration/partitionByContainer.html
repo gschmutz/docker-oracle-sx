@@ -1,0 +1,40 @@
+<div class="partitionByContent"
+     data-bind="event: { focusout: function(){$data.window.exitPartitionByEditMode($element)} }"
+     >
+
+    <a id="partitionByReadMode" class="partitionByReadMode explorationLink" tabindex=-1
+       data-bind="
+       style: { visible: $data.window.isPartitionByReadMode() },
+       click: function(){$data.window.isPartitionByReadMode(false)},
+       text: $parent.partitionByReadModeText($data)"
+            ></a>
+
+    <div class="partitionByEditor" data-bind="visible:!$data.window.isPartitionByReadMode(), hasFocus:!$data.window.isPartitionByReadMode()" tabindex=-1>
+
+        <div>
+            <h4 data-i18n="partitionByHeader" class="partitionByEditorHeader"></h4>
+
+            <a href="javascript:void(0)" data-i18n="partitionByDoneButton" class="partitionByEditorDoneButton" id="partitionByEditorDoneButton"
+               data-bind=" click: function(){$data.window.isPartitionByReadMode(true)}"
+                    ></a>
+
+            <div class="clearBoth"/>
+        </div>
+
+
+        <div class="explorationCheckboxes" data-bind="foreach: $data.fields">
+            <div class="explorationCheckbox"
+                 data-bind="css:  $data.source.color">
+                <label>
+                    <input class="explorationCheckbox" type="checkbox"
+                           data-bind="checked: $root.isPartitionByFieldSelected($data, $parent), click: function(){return $root.clickPartitionByField($data, $parent)}">
+                    <span data-bind="text: $data.name"></span>
+                </label>
+            </div>
+
+        </div>
+
+    </div>
+
+
+</div>

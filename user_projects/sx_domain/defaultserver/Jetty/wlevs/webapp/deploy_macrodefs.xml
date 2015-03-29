@@ -1,0 +1,864 @@
+<project name="macrodefs.test">
+  
+  <macrodef name="sgltest.drv">
+    <attribute name="test.type"      default="NOT SET"/>
+    <attribute name="test.subtype"   default="NOT SET"/>
+    <attribute name="test.name"      default="NOT SET"/>
+    <attribute name="do.recomptest"  default="true"/>
+    <attribute name="do.qastat"      default="true"/>
+    <attribute name="context.file"   default="ApplicationContext.xml"/>
+    <attribute name="config.file"    default=""/>
+    <attribute name="jvm.maxmem"     default="512m"/>
+    <attribute name="run.opt"        default="NOT SET"/>
+    <attribute name="regress.tla"    default="NOT SET"/>
+    <attribute name="exit.afterrun"  default="true" />
+    <attribute name="config.useDynTuple" default="false"/>
+    <attribute name="config.usePagedTuple" default="false"/>
+    <attribute name="config.usePagedList" default="false"/>
+    <attribute name="config.runtime" default="1000000"/>
+    <attribute name="systemrun.arg" default="duration=1000000"/>
+
+    <!-- multi-threaded test  -->
+    <attribute name="use.threadedScheduler"    default="false"/>
+    <attribute name="num.threads"    default="1"/>
+
+    <!-- spill test  -->
+    <attribute name="spill.policy"   default="queuesrcEvictPolicy"/>
+    <attribute name="spill.mode"     default="1"/>
+    <attribute name="spill.runtype"  default="2"/>
+    <attribute name="debug.count"    default="0"/>
+
+    <!-- scalibility test -->
+    <attribute name="scale.size"     default="NOT SET"/>
+    <attribute name="scale.rate"     default="NOT SET"/>
+    <attribute name="scale.range"    default="NOT SET"/>
+
+    <!-- linear road test -->
+    <attribute name="inpf.name"      default="NOT SET"/>
+    <attribute name="outf.name"      default="NOT SET"/>
+
+    <!-- logging test -->
+    <attribute name="config.logConfig" default="logConfig"/>
+    <attribute name="logging.name"    default="NOT SET"/>
+    <attribute name="logging.ddl"    default="NOT SET"/>
+
+    <sequential>
+      <!-- CEPServer startup will take care of storage cleanup as per configuration -->
+
+      <!-- recomp tests -->
+      <if>
+        <equals arg1 = "@{do.recomptest}" arg2 = "true" />
+        <then>
+            <if>
+              <equals arg1 = "@{run.opt}" arg2 = "release" />
+              <then>
+                 <recomp.test debug="false" />
+              </then>
+              <else>
+                 <recomp.test/>
+              </else>
+            </if>
+        </then>
+      </if>
+      
+      <!-- generate tests -->
+      <generate.test
+                    test.type = "@{test.type}"
+                    test.subtype = "@{test.type}"
+                    test.name = "@{test.name}"
+                    context.file = "@{context.file}"
+                    config.file = "@{config.file}"
+                    run.opt = "@{run.opt}"
+                    regress.tla = "@{regress.tla}"
+                    exit.afterrun = "@{exit.afterrun}"
+                    config.useDynTuple = "@{config.useDynTuple}"
+                    config.usePagedTuple = "@{config.usePagedTuple}"
+                    config.usePagedList = "@{config.usePagedList}"
+                    config.runtime = "@{config.runtime}"
+                    systemrun.arg = "@{systemrun.arg}"
+                    num.threads = "@{num.threads}"
+                    use.threadedScheduler= "@{use.threadedScheduler}"
+                    spill.policy = "@{spill.policy}"
+                    spill.mode = "@{spill.mode}"
+                    spill.runtype = "@{spill.runtype}"
+                    debug.count = "@{debug.count}"
+                    scale.size = "@{scale.size}"
+                    scale.rate = "@{scale.rate}"
+                    scale.range = "@{scale.range}"
+                    inpf.name = "@{inpf.name}"
+                    outf.name = "@{outf.name}"
+                    config.logConfig = "@{config.logConfig}"
+                    logging.name = "@{logging.name}"
+                    logging.ddl = "@{logging.ddl}" >
+      </generate.test>
+           
+      <!-- clean work logs -->
+      <clean.work.log clean.opt = "work.log"/>
+      <delete file="${work.cep}/cep_0.log"/>
+
+      <!-- run a test -->
+      <run.test 
+        test.type      = "@{test.type}" 
+        test.name      = "@{test.name}" 
+        jvm.maxmem     = "@{jvm.maxmem}"
+        run.opt        = "@{run.opt}" >
+      </run.test>
+      
+     <!-- post process the log file -->
+      <if>
+        <equals arg1 = "@{test.type}" arg2 = "tklog" />
+        <then>
+          <echo message="generating ${work.cep.log}/@{logging.name}.txt" />
+          <exec dir="${test}" executable="${perl}"
+            output="${work.cep}/logfilter.log">
+            <arg value="-I"/>
+            <arg value="${perl.root}/lib"/>
+            <arg value="${test.sosd}/logfilter.pl"/>
+            <arg value="-o"/>
+            <arg value="${work.cep.log}/@{logging.name}.txt"/>
+            <arg value="-f"/>
+            <arg value="${test.config}/ceplogfilter.cmd"/>
+            <arg value="${work.cep}/cep_0.log"/>
+          </exec>
+        </then>
+      </if>
+      <!-- compute diffs and sucs -->
+      <diff.file.set regress.tla ="@{regress.tla}"/>
+      <!-- compute qa stats -->
+      <if>
+        <equals arg1 = "@{do.qastat}" arg2 = "true" />
+        <then>
+          <qa.stat test.type = "@{test.type}" />
+        </then>
+      </if>
+      
+    </sequential>
+  </macrodef>
+
+  <macrodef name="test.drv">
+    <attribute name="test.list"      default="NOT SET"/>
+    <attribute name="test.type"      default="NOT SET"/>
+    <attribute name="test.subtype"   default="NOT SET"/>
+    <attribute name="test.name"      default="NOT SET"/>
+    <attribute name="context.file"   default="ApplicationContext.xml"/>
+    <attribute name="config.file"    default=""/>
+    <attribute name="jvm.maxmem"     default="512m"/>
+    <attribute name="run.opt"        default="NOT SET"/>
+    <attribute name="regress.tla"    default="NOT SET"/>
+    <attribute name="exit.afterrun"  default="true" />
+    <attribute name="config.useDynTuple" default="false"/>
+    <attribute name="config.usePagedTuple" default="false"/>
+    <attribute name="config.usePagedList" default="false"/>
+    <attribute name="config.runtime" default="1000000"/>
+    <attribute name="systemrun.arg" default="duration=1000000"/>
+
+    <!-- multi-threaded test  -->
+    <attribute name="use.threadedScheduler"    default="false"/>
+    <attribute name="num.threads"    default="1"/>
+
+    <!-- spill test  -->
+    <attribute name="spill.policy"   default="queuesrcEvictPolicy"/>
+    <attribute name="spill.mode"     default="1"/>
+    <attribute name="spill.runtype"  default="2"/>
+    <attribute name="debug.count"    default="0"/>
+
+    <!-- scalibility test -->
+    <attribute name="scale.size"     default="NOT SET"/>
+    <attribute name="scale.rate"     default="NOT SET"/>
+    <attribute name="scale.range"    default="NOT SET"/>
+
+    <!-- linear road test -->
+    <attribute name="inpf.name"      default="NOT SET"/>
+    <attribute name="outf.name"      default="NOT SET"/>
+
+    <!-- logging test -->
+    <attribute name="config.logConfig" default="logConfig"/>
+    <attribute name="logging.name"    default="NOT SET"/>
+    <attribute name="logging.ddl"    default="NOT SET"/>
+    
+    <sequential>
+    <!-- recomp tests -->
+    <recomp.test/>
+    <if>
+      <equals arg1 = "${wlevs.runtype}" arg2 = "singlesession" />
+      <then>
+        <!-- generate file list -->
+        <delete file="${work.cep}/@{test.type}.lst" failonerror="false" />
+        <echo message="generating list : ${work.cep}/@{test.type}.lst" />
+        <for list = "@{test.list}" param = "file.name" >
+          <sequential>
+          <generate.test
+                        test.type = "@{test.type}"
+                        test.subtype = "@{test.type}"
+                        test.name = "@{file.name}"
+                        context.file = "@{context.file}"
+                        config.file = "@{config.file}"
+                        run.opt = "@{run.opt}"
+                        regress.tla = "@{regress.tla}"
+                        exit.afterrun = "@{exit.afterrun}"
+                        config.useDynTuple = "@{config.useDynTuple}"
+                        config.usePagedTuple = "@{config.usePagedTuple}"
+                        config.usePagedList = "@{config.usePagedList}"
+                        config.runtime = "@{config.runtime}"
+                        systemrun.arg = "@{systemrun.arg}"
+                        num.threads = "@{num.threads}"
+                        use.threadedScheduler= "@{use.threadedScheduler}"
+                        spill.policy = "@{spill.policy}"
+                        spill.mode = "@{spill.mode}"
+                        spill.runtype = "@{spill.runtype}"
+                        debug.count = "@{debug.count}"
+                        scale.size = "@{scale.size}"
+                        scale.rate = "@{scale.rate}"
+                        scale.range = "@{scale.range}"
+                        inpf.name = "@{inpf.name}"
+                        outf.name = "@{outf.name}"
+                        config.logConfig = "@{config.logConfig}"
+                        logging.name = "@{logging.name}"
+                        logging.ddl = "@{logging.ddl}" >
+          </generate.test>
+            <concat destfile="${work.cep}/@{test.type}.lst" append="yes" fixlastline="yes">${work.cep}/@{file.name}</concat>
+          </sequential>
+         </for>
+    
+        <!-- run tests -->
+        <if>
+          <equals arg1 = "${use.jrocket}" arg2 = "true" />
+          <then>
+            <runcqlxs.wlevs listfile="${work.cep}/@{test.type}.lst" jvm="jrocket" />
+          </then>
+          <else>
+            <runcqlxs.wlevs listfile="${work.cep}/@{test.type}.lst" jvm="default" />
+          </else>
+        </if>
+  
+        <!-- compute diffs and sucs -->
+        <diff.file.set regress.tla ="@{regress.tla}"/>
+      </then>
+      <else>
+          <for list = "@{test.list}" param = "file.name" >
+            <sequential>
+               <sgltest.drv
+                    do.recomptest = "false"
+                    do.qastat = "false"
+                    test.type = "@{test.type}"
+                    test.subtype = "@{test.type}"
+                    test.name = "@{file.name}"
+                    exit.afterrun = "@{exit.afterrun}"
+                    context.file = "@{context.file}"
+                    config.file = "@{config.file}"
+                    jvm.maxmem = "@{jvm.maxmem}"
+                    run.opt = "@{run.opt}"
+                    regress.tla = "@{regress.tla}"
+                    config.useDynTuple = "@{config.useDynTuple}"
+                    config.usePagedTuple = "@{config.usePagedTuple}"
+                    config.usePagedList = "@{config.usePagedList}"
+                    config.runtime = "@{config.runtime}"
+                    systemrun.arg = "@{systemrun.arg}"
+                    num.threads = "@{num.threads}"
+                    use.threadedScheduler= "@{use.threadedScheduler}"
+                    spill.policy = "@{spill.policy}"
+                    spill.mode = "@{spill.mode}"
+                    spill.runtype = "@{spill.runtype}"
+                    debug.count = "@{debug.count}"
+                    scale.size = "@{scale.size}"
+                    scale.rate = "@{scale.rate}"
+                    scale.range = "@{scale.range}"
+                    inpf.name = "@{inpf.name}"
+                    outf.name = "@{outf.name}"
+                    config.logConfig = "@{config.logConfig}"
+                    logging.name = "@{logging.name}"
+                    logging.ddl = "@{logging.ddl}" >
+               </sgltest.drv>
+      
+              <!-- compute diffs and sucs -->
+              <diff.file.set regress.tla ="@{regress.tla}"/>
+             </sequential>
+           </for>
+        </else>
+     </if>
+     <!-- compute qa stats -->
+     <qa.stat test.type = "@{test.type}" />
+   </sequential>
+  </macrodef>
+
+  <macrodef name="generate.test">
+    <attribute name="test.type"      default="NOT SET"/>
+    <attribute name="test.subtype"   default="NOT SET"/>
+    <attribute name="test.name"      default="NOT SET"/>
+    <attribute name="context.file"   default="ApplicationContext.xml"/>
+    <attribute name="config.file"    default=""/>
+    <attribute name="run.opt"        default="NOT SET"/>
+    <attribute name="regress.tla"    default="NOT SET"/>
+    <attribute name="exit.afterrun"  default="true" />
+    <attribute name="config.useDynTuple" default="false"/>
+    <attribute name="config.usePagedTuple" default="false"/>
+    <attribute name="config.usePagedList" default="false"/>
+    <attribute name="config.runtime" default="1000000"/>
+    <attribute name="systemrun.arg" default="duration=1000000"/>
+    
+    <!-- multi-threaded test  -->
+    <attribute name="use.threadedScheduler"    default="false"/>
+    <attribute name="num.threads"    default="1"/>
+
+    <!-- spill test  -->
+    <attribute name="spill.policy"   default="queuesrcEvictPolicy"/>
+    <attribute name="spill.mode"     default="1"/>
+    <attribute name="spill.runtype"  default="2"/>
+    <attribute name="debug.count"    default="0"/>
+
+    <!-- scalibility test -->
+    <attribute name="scale.size"     default="NOT SET"/>
+    <attribute name="scale.rate"     default="NOT SET"/>
+    <attribute name="scale.range"    default="NOT SET"/>
+
+    <!-- linear road test -->
+    <attribute name="inpf.name"      default="NOT SET"/>
+    <attribute name="outf.name"      default="NOT SET"/>
+
+    <!-- logging test -->
+    <attribute name="config.logConfig" default="logConfig"/>
+    <attribute name="logging.name"    default="NOT SET"/>
+    <attribute name="logging.ddl"    default="NOT SET"/>
+
+    <sequential>
+      <echo message= "generating @{test.name}"/>
+      <if>
+        <equals arg1 = "${lrbkit}" arg2 = "true" />
+        <then>
+          <!-- LRBKIT is using push source and java destination
+               so, it need special treament here -->
+          <filter token ="SOURCE" value="${lrbkit.source}" />
+          <filter token ="DEST1" value="${lrbkit.dest1}" />
+          <filter token ="DEST2" value="${lrbkit.dest2}" /> 
+          <filter token ="DEST3" value="${lrbkit.dest3}" />
+        </then>
+        <else>
+          <filter token ="SOURCE"        
+            value= "&quot;&lt;EndPointReference&gt;&lt;Address&gt;file://@ADE_VIEW_ROOT@/pcbpel/cep/test/data/@{inpf.name}&lt;/Address&gt;&lt;/EndPointReference&gt;&quot;" />
+          <filter token ="DEST1"        
+            value= "file://@T_WORK@/cep/log/@{outf.name}.txt"/>
+          <filter token ="DEST2"        
+            value= "file://@T_WORK@/cep/log/@{outf.name}_1.txt"/>
+          <filter token ="DEST3"        
+            value= "file://@T_WORK@/cep/log/@{outf.name}_2.txt"/>
+        </else>
+      </if>
+      <filter token ="ADE_VIEW_ROOT" value ="${ade.view.root}"/>
+      <filter token ="T_WORK"        value ="${work}"/>
+      <filter token ="HOST"          value="${host.name}" />
+      <filter token ="EXIT_AFTERRUN"          value="@{exit.afterrun}" />
+      <filter token ="EVICT_POLICY"   value ="@{spill.policy}"/>
+      <filter token ="EVICT_POLICY_DEBUG_COUNT"   value ="@{debug.count}"/>
+      <filter token ="EVICT_POLICY_MODE"   value ="@{spill.mode}"/>
+      <filter token ="EVICT_POLICY_RUNTYPE"   value ="@{spill.runtype}"/>
+      <filter token ="SCHED_RUN_TIME"   value ="@{config.runtime}"/>
+      <filter token ="NUM_THREADS"   value ="@{num.threads}"/>
+      <filter token ="USE_THREADED_SCHEDULER"   value ="@{use.threadedScheduler}"/>
+      <filter token ="NUM_MSGS"       value="@{scale.size}"/>
+      <filter token ="MSGS_PER_SEC"   value="@{scale.rate}"/>
+      <filter token ="RANGE"          value="@{scale.range}"/>
+      <filter token ="DATAFILE" value="@{inpf.name}"/>
+      <filter token ="OUTPUTFILE" value="@{outf.name}"/>
+      <filter token ="DURATION"      value="@{systemrun.arg}"/>
+      <filter token ="USE_PAGED_TUPLE"      value="@{config.usePagedTuple}"/>
+      <filter token ="USE_PAGED_LIST"      value="@{config.usePagedList}"/>
+      <filter token ="LOG_CONFIG"      value="@{config.logConfig}"/>
+      <filter token ="USE_DYNAMIC_TUPLE"      value="@{config.useDynTuple}"/>
+      <filter token ="CQLX_FILE"      value="@{config.file},${work.cep}/@{test.name}"/>
+      <if>
+        <equals arg1 = "@{test.subtype}" arg2 = "0" />
+        <then>
+          <filter token ="LOG_DDL0" value="@{logging.ddl}"/>
+          <filter token ="LOG_DDL1" value=""/>
+          <filter token ="LOG_DDL2" value=""/>
+        </then>
+        <elseif>
+          <equals arg1 = "@{test.subtype}" arg2 = "1" />
+          <then>
+            <filter token ="LOG_DDL1" value="@{logging.ddl}"/>
+            <filter token ="LOG_DDL0" value=""/>
+            <filter token ="LOG_DDL2" value=""/>
+          </then>
+        </elseif>
+        <else>
+          <filter token ="LOG_DDL2" value="@{logging.ddl}"/>
+          <filter token ="LOG_DDL0" value=""/>
+          <filter token ="LOG_DDL1" value=""/>
+        </else>
+      </if>
+      
+      <echo message= "generating test = ${work.cep}/@{test.name}"/>
+      <copy file ="${test.sql}/@{test.name}"
+        tofile="${work.cep}/@{test.name}" filtering="true" overwrite="true">
+      </copy> 
+      <echo message= "generating context from ${test.config}/@{context.file}"/>
+      <copy file ="${test.config}/@{context.file}"
+        tofile ="${work.cep}/ApplicationContext.xml" filtering ="true" 
+          overwrite ="true"> 
+      </copy> 
+    </sequential>
+  </macrodef>
+
+  <!-- clean.test target -->
+  <macrodef name="clean.test">
+    <attribute name="test.type" default="NOT SET"/>
+    <sequential>
+      <if>
+          <equals arg1 = "@{test.type}" arg2 = "tkspill" />
+          <then>
+            <delete dir="${dbs.data.dir}" failonerror="false"/>
+            <delete dir="${dbs.dir}"      failonerror="false"/>
+            <mkdir  dir="${dbs.dir}"/>
+            <mkdir  dir="${dbs.data.dir}"/>
+          </then>
+        <else>
+          <!-- check work directory  -->
+          <available file="${work}"  type ="dir" property = "direxists"/>
+            <echo message ="work dir exist : ${direxists}"/>
+          <fail unless ="direxists" message="work dir doesn't exist"/> 
+
+          <!-- clear all old test results and re-create cep dir -->
+          <delete dir="${work.cep}" failonerror="false"/>
+          <mkdir  dir="${work.cep}"/>
+          <delete dir="${work.cep.log}" failonerror="false"/>
+          <mkdir  dir="${work.cep.log}"/>
+          <mkdir  dir="${work.soainfra}"/>
+          <mkdir  dir="${work.emma}"/>
+          <mkdir  dir="${work.emma}/coverage"/>
+          <mkdir  dir="${dbs.dir}"/>
+          <mkdir  dir="${dbs.data.dir}"/>
+          <delete file="${cep.dir}/coverage.ec" failonerror="false"/>
+        </else>
+      </if>
+    </sequential>
+  </macrodef>
+
+  <macrodef name="gen.config">
+                <attribute name="config.file" default="NOT SET"/>
+    <sequential>
+      <filter token="ADE_VIEW_ROOT" value="${ade.view.root}"/>
+      <filter token="T_WORK" value="${work}"/>
+      <copy file="@{config.file}"
+        todir="${work.cep}" filtering="true" overwrite="true">
+      </copy>
+    </sequential>
+  </macrodef>
+
+  <macrodef name="recomp.test">
+    <attribute name="debug" default="true"/>
+    <sequential>
+      <!-- copy resources -->
+      <mkdir dir="${work.cep}" />
+      <copy todir="${work.cep}"  overwrite="true">
+          <fileset dir="${cep.dir}/resources">
+          </fileset>
+      </copy>
+      <!-- Compile the test java files -->
+      <javac srcdir="${test.src}" destdir="${work.cep}" 
+        includes="Tk*.java,RuntimeMBeanTest.java,CSFBGenTest.java,CSFBVerify.java,oracle/**" 
+        excludes="oc4j/**,TkOC4J*.java,TkOOW*.java" debug="@{debug}" source="1.5">
+        <classpath>
+          <path refid="cep.classpath"/>
+        </classpath>
+      </javac>
+      <jar destfile="${work.cep}/cep-test.jar"
+        basedir="${work.cep}"
+        includes="Tk*.class,oracle/cep/test/**" />
+    </sequential>
+  </macrodef>
+
+  <macrodef name="run.test">
+    <attribute name="test.type"      default="NOT SET"/>
+    <attribute name="test.name"      default="NOT SET"/>
+    <attribute name="config.file"    default="NOT SET"/>
+    <attribute name="bootstrap.conf" default="NOT SET"/>
+    <attribute name="jvm.maxmem"     default="512m"/>
+    <attribute name="run.opt"        default="NOT SET"/>
+ 
+    <sequential> 
+      <if>
+        <equals arg1 = "${wlevs.env}" arg2 = "wlevs" />
+        <then>
+          <echo message= "running @{test.type} : @{test.name} in wlevs"/>
+          <if>
+            <equals arg1 = "${use.jrocket}" arg2 = "true" />
+            <then>
+                <exec executable="/bin/sh"  vmlauncher="false">
+                  <arg value="${cep.dir}/utl/cqlxwlevs.sh" />
+                  <arg value="file" />
+                  <arg value="${work.cep}/@{test.name}" />
+                </exec>
+            </then>
+            <else>
+                <exec executable="/bin/sh"  vmlauncher="false">
+                  <arg value="${cep.dir}/utl/cqlxwlevs.sh" />
+                  <arg value="${work.cep}/@{test.name}" />
+                  <arg value="jvm" />
+                  <arg value="default" />
+                </exec>
+            </else>
+          </if>
+        </then>
+        <else>
+          <echo message= "running @{test.type} : @{test.name}"/>
+          <if>
+            <equals arg1 = "@{run.opt}" arg2 = "release" />
+            <then>
+              <runserver jvm.maxmem="@{jvm.maxmem}" assertion="false" /> 
+            </then>
+            <elseif>
+              <equals arg1 = "@{run.opt}" arg2 = "ojdl" />
+              <then>
+                <runserver jvm.maxmem="@{jvm.maxmem}" 
+                  jvmarg="-Djava.util.logging.config.class=oracle.core.ojdl.logging.LoggingConfiguration" />
+              </then>
+            </elseif>
+            <else> 
+                <if>
+                  <equals arg1="@{test.type}" arg2="tkmats" />
+                  <then>
+                      <!-- tkmats should use default jvm -->
+                      <runserver jvm.maxmem="@{jvm.maxmem}" use.defaultjvm="true" />
+                  </then>
+                  <else>
+                     <runserver jvm.maxmem="@{jvm.maxmem}"  /> 
+                  </else>
+                </if>   
+            </else>
+          </if> 
+        </else>
+      </if>  
+    </sequential>
+  </macrodef>
+
+  <!-- Run junit tests -->
+  <macrodef name="junit.test.drv">
+    <attribute name="junit.name"      default="NOT SET"/>
+    <attribute name="junit.test.name" default="NOT SET"/>
+    <attribute name="jvm.maxmem"     default="512m"/>
+
+    <sequential>
+    <!-- recomp tests -->
+    <recomp.test/>
+
+    <!-- clean work logs -->
+    <clean.work.log clean.opt = "work.log"/>
+
+    <echo message="running junit tests"/>
+    <junit fork="on" maxmemory="@{jvm.maxmem}" printsummary="yes" filtertrace="off">
+      <test name="@{junit.test.name}" todir="${work.cep}" />
+      <formatter type="plain" usefile="true" extension=".log" />
+      <classpath>
+        <path refid="cep.classpath"/>
+      </classpath>
+      <jvmarg value="-XX:+UseParallelGC"/>
+      <jvmarg value="-Xnoincgc"/>
+      <sysproperty key="twork" value="${work}" />
+      <sysproperty key="ade.view.root"     value="${ade.view.root}" />
+      <sysproperty key="test.inputFolder"  value="${test.data}" />
+      <sysproperty key="test.outputFolder" value="${work.cep.log}" />
+    </junit>
+
+    <exec dir="${test}" executable="${perl}"
+      output="${work.cep}/outunit_${regress.tla}.txt">
+      <arg value="-I"/>
+      <arg value="${perl.root}/lib"/>
+      <arg value="${test.sosd}/junit_parser.pl"/>
+      <arg value="@{junit.test.name}"/>
+      <arg value="@{junit.name}"/>
+      <arg value="${work.cep}"/>
+      <arg value="${work.cep}"/>
+    </exec>
+    <!-- compute qa stats --> 
+    <qa.stat test.type = "@{junit.name}" />
+    </sequential>
+  </macrodef>
+
+  <macrodef name="clean.work.log">
+                <attribute name="clean.opt" default="NOT SET"/>
+    <sequential>
+      <if>
+        <equals arg1 = "@{clean.opt}" arg2 = "work.log" />
+        <then>
+          <delete includeemptydirs="true">
+            <fileset dir="${work.cep.log}" includes="**/*.txt"/>
+          </delete>
+          <delete includeemptydirs="true">
+            <fileset dir="${dbs.dir}" includes="**/*.jdb,**/*.lck" />
+          </delete>
+        </then>
+        <else>
+          <delete includeemptydirs="true">
+            <fileset dir="${work.cep.log}" includes="**/*.txt"/>
+          </delete>
+        </else>
+      </if>
+    </sequential>
+  </macrodef>
+
+  <macrodef name="diff.file.set" >
+                <attribute name="regress.tla" default="NOT SET"/>
+    <sequential>
+      <echo message="regress.tla in diff.file.set is  @{regress.tla}" />
+      <exec executable="/bin/sh"  vmlauncher="false">
+        <arg value="${build.dir.target}/compute_results.sh" />
+        <arg value="@{regress.tla}" />
+      </exec>
+    </sequential>
+  </macrodef>
+
+  <macrodef name="add.db.tables">
+    <sequential>
+      <echo message="adding tables to db." />
+      <exec executable="/bin/sh" vmlauncher="false" output="${work.cep}/adddbtable.log" >
+        <arg value="${build.dir.target}/deploy_dbtables.sh" />
+      </exec>
+      <echo message="output log is ${work.cep}/addtable.log" />
+    </sequential>
+  </macrodef>
+
+  <macrodef name="qa.stat" >
+    <attribute name="test.type" default="NOT SET"/>
+    <sequential>
+      <fileset dir="${work.cep}" id="suc.files">
+        <include name="*.suc"/>
+      </fileset>
+      <fileset dir="${work.cep}" id="dif.files">
+        <include name="*.dif"/>
+      </fileset>
+
+      <pathconvert pathsep="" refid="suc.files" 
+        setonempty="true" property="test.suc.files">
+        <mergemapper to="a"/>
+      </pathconvert>
+
+      <pathconvert pathsep="" refid="dif.files" 
+        setonempty="true" property="test.dif.files">
+        <mergemapper to="b"/>
+      </pathconvert>
+
+      <length property="count.suc.files" string="${test.suc.files}"/>
+      <length property="count.dif.files" string="${test.dif.files}"/>
+
+      <if>
+        <equals arg1="@{test.type}" arg2="tkmats" />
+        <then>
+          <if>
+            <equals arg1="${count.dif.files}" arg2="0" />
+            <then>
+              <echo file = "${work.soainfra}/cep.suc" >${count.suc.files} </echo>
+            </then>
+            <else>
+              <echo file = "${work.soainfra}/cep.dif" >${count.dif.files} </echo>
+            </else>
+          </if>
+        </then>
+        <else>
+          <echo>sucs  = ${count.suc.files}</echo>
+          <echo>diffs = ${count.dif.files}</echo>
+        </else>
+      </if>
+    </sequential>
+  </macrodef>
+
+  <macrodef name="trace.test">
+    <attribute name="area"      default="NOT SET"/>
+    <attribute name="event"      default="NOT SET"/>
+    <attribute name="level"    default="NOT SET"/>
+      <sequential>
+          <echo message="running trace test for @{area} @{event} @{level}" />
+          <sgltest.drv
+            test.type      = "tklog"
+            test.subtype   = "1"
+            test.name      = "tklog.cqlx"
+            config.logConfig = "LogConfig2"
+            debug.count    = "1000"
+            run.opt        = "log"
+            logging.name   = "tktrace_@{area}"
+            logging.ddl = "alter system enable logging @{area} event @{event} level @{level}"
+            regress.tla    = "" >
+          </sgltest.drv>
+      </sequential>
+  </macrodef>
+
+  <macrodef name="trace.test1">
+    <attribute name="area"      default="NOT SET"/>
+    <attribute name="event"      default="NOT SET"/>
+    <attribute name="level"    default="NOT SET"/>
+      <sequential>
+          <echo message="running trace test for @{area} @{event} @{level}" />
+          <sgltest.drv
+            test.type      = "tklog"
+            test.subtype   = "0"
+            test.name      = "tklog.cqlx"
+            config.logConfig = "LogConfig2"
+            debug.count    = "1000"
+            run.opt        = "log"
+            logging.name   = "tktrace_@{area}"
+            logging.ddl = "alter system enable logging @{area} event @{event} level @{level}"
+            regress.tla    = "" >
+          </sgltest.drv>
+      </sequential>
+  </macrodef>
+
+  <macrodef name="dump.test">
+    <attribute name="area"      default="NOT SET"/>
+    <attribute name="level"    default="NOT SET"/>
+      <sequential>
+          <echo message="running dump test for @{area} @{level}" />
+          <sgltest.drv
+            test.type      = "tklog"
+            test.subtype   = "2"
+            test.name      = "tklog.cqlx"
+            config.logConfig = "LogConfig2"
+            debug.count    = "100"
+            run.opt        = "log"
+            logging.name   = "tkdump_@{area}"
+            logging.ddl = "alter system dump logging @{area} level @{level}"
+            regress.tla    = "" >
+          </sgltest.drv>
+      </sequential>
+  </macrodef>
+
+  <macrodef name="runclass">
+      <attribute name="classname"  default="NOT SET"/>
+      <attribute name="sleep"      default="10"/>
+      <attribute name="assertion"  default="true"/>
+      <attribute name="arg1"           default="" />
+      <attribute name="arg2"           default="" />
+      <attribute name="arg3"           default="" />
+      <attribute name="arg4"           default="" />
+      <attribute name="arg5"           default="" />
+      
+      <sequential>
+        <sleep seconds="@{sleep}"/>
+        <echo message="Running @{classname}"/>
+        <java fork="true" classname="@{classname}" jvm="${test.jvm}">
+          <classpath>
+            <path refid="cep.classpath"/>
+          </classpath>
+          <arg value="@{arg1}"/>
+          <arg value="@{arg2}"/>
+          <arg value="@{arg3}"/>
+          <arg value="@{arg4}"/>
+          <arg value="@{arg5}"/>
+          <assertions enableSystemAssertions="@{assertion}" />
+        </java>
+        <echo message="Done @{classname}"/>
+        <sleep seconds="@{sleep}"/>
+      </sequential>
+  </macrodef>
+
+<!-- for remote monitoring
+ use jmxarg="-Dcom.sun.management.jmxremote.port=9009"
+ service url for jconsole will  be:
+  service:jmx:rmi:///jndi/rmi://localhost:9009/jmxrmi
+-->
+  <macrodef name="runserver">
+    <attribute name="debugproperty"  default="true"/>
+    <attribute name="classname"      default="oracle.cep.server.CEPServer"/>
+    <attribute name="assertion"      default="true"/>
+    <attribute name="jvm.maxmem"     default="512m"/>
+    <attribute name="jmxarg"         default="-Dcom.sun.management.jmxremote"/>
+    <attribute name="jvmarg"         default="-showversion" />
+    <attribute name="arg1"           default="" />
+    <attribute name="arg2"           default="" />
+    <attribute name="arg3"           default="" />
+    <attribute name="timeout"        default="1800000" />
+    <attribute name="use.defaultjvm" default="false" />
+    
+    <sequential>
+    <echo message="running @{classname} maxmemory=@{jvm.maxmem}  assert=@{assertion}"  />
+    
+    <if>
+      <equals arg1 = "@{use.defaultjvm}" arg2 = "true" />
+      <then>
+         <!-- this is only for tkmats -->
+          <java fork="true" maxmemory="@{jvm.maxmem}" classname="@{classname}">            
+            <classpath>               
+               <path refid="cep.classpath"/>
+            </classpath>             
+            <jvmarg value="-showversion"/>
+            <jvmarg value="-server"/>
+            <jvmarg value="-Xms@{jvm.maxmem}"/>
+            <jvmarg value="-XX:+HeapDumpOnOutOfMemoryError"/>             
+            <jvmarg value="-XX:+UseParallelGC"/>
+            <jvmarg value="-Xnoincgc"/>
+            <sysproperty key="twork" value="${work}" />
+            <sysproperty key="ade.view.root"     value="${ade.view.root}" />
+            <sysproperty key="DEBUG" value="@{debugproperty}" />
+            <jvmarg value="-Dcom.sun.management.jmxremote"/>
+            <arg value="file:${work.cep}/ApplicationContext.xml"/>
+            <arg value="@{arg1}"/>
+            <arg value="@{arg2}"/>
+            <arg value="@{arg3}"/>
+            <assertions enableSystemAssertions="@{assertion}" />
+         </java>
+      </then>
+      <else>
+        <!--
+          note that all jvm related property has already been set from use.jrocket in
+          tkclean target in deploy_test.xml
+          any additional jvmarguments should be set in tksetup.jvm target in
+          deploy_test.xml
+        -->
+         <java fork="true" maxmemory="@{jvm.maxmem}" classname="@{classname}"
+               jvm="${test.jvm}"
+              timeout="@{timeout}" >
+              <classpath>
+                <path refid="cep.classpath"/>
+              </classpath>
+              <sysproperty key="twork" value="${work}" />
+              <sysproperty key="ade.view.root"     value="${ade.view.root}" />
+              <sysproperty key="DEBUG" value="@{debugproperty}" />
+              <jvmarg value="-Xms@{jvm.maxmem}"/>
+              <jvmarg value="${jvmarg.remotedebug}" />
+              <jvmarg value="${jvmarg.heapdumpoom}" />
+              <jvmarg value="${jvmarg.gc1}" />
+              <jvmarg value="${jvmarg.gc2}" />
+              <jvmarg value="${jvmarg.type}" />
+              <jvmarg value="@{jmxarg}"/>
+              <jvmarg value="@{jvmarg}"/>
+    
+              <arg value="file:${work.cep}/ApplicationContext.xml"/>
+              <arg value="@{arg1}"/>
+              <arg value="@{arg2}"/>
+              <arg value="@{arg3}"/>
+              <assertions enableSystemAssertions="@{assertion}" />
+          </java>
+        </else>
+      </if>
+    </sequential>          
+  </macrodef>
+
+  <macrodef name="runcqlxs.wlevs">
+    <attribute name="listfile"  default="NOT SET"/>
+    <attribute name="jvm"        default="NOT SET"/>
+    
+    <sequential>
+      <echo message="running list : @{listfile}" />
+      <if>
+        <equals arg1 = "${wlevs.runcleanup}" arg2 = "true" />
+        <then>
+            <exec executable="/bin/sh"  vmlauncher="false">
+              <arg value="${cep.dir}/utl/cqlxwlevs.sh" />
+              <arg value="listfile" />
+              <arg value="@{listfile}" />
+              <arg value="jvm" />
+              <arg value="@{jvm}" />
+            </exec>
+        </then>
+        <else>
+            <exec executable="/bin/sh"  vmlauncher="false">
+              <arg value="${cep.dir}/utl/cqlxwlevs.sh" />
+              <arg value="listfile_noclean" />
+              <arg value="@{listfile}" />
+              <arg value="jvm" />
+              <arg value="@{jvm}" />
+            </exec>
+        </else>
+      </if>
+    </sequential>
+  </macrodef>
+</project>
+

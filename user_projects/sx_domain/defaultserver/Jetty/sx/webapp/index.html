@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>OEP Stream Explorer</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--<link type="text/css" rel="stylesheet" href="css/libs/ojet/dvt/DvtToolkit.css"/>-->
+    <link type="text/css" rel="stylesheet" href="css/pageIsLoading.css"/>
+    <link type="text/css" rel="stylesheet" href="css/libs/ojet/oj/v1.0/alta/oj-alta.css"/>
+    <link type="image/x-icon" rel="icon" href="css/app/images/favicon.png"/>
+    <link type="text/css" rel="stylesheet" href="css/libs/jquery/jqueryui.css"/>
+    <link type="text/css" rel="stylesheet" href="css/libs/jquery/validationEngine.jquery.css"/>
+    <link type="text/css" rel="stylesheet" href="css/libs/jquery/jqplot/jquery.jqplot.css"/>
+    <link type="text/css" rel="stylesheet" href="css/libs/jquery/select2/select2.css"/>
+    <link type="text/css" rel="stylesheet" href="css/libs/jquery/tag-it/jquery.tagit.css"/>
+    <link type="text/css" rel="stylesheet" href="css/libs/jquery/dtpicker/jquery.simple-dtpicker.css"/>
+    <link type="text/css" rel="stylesheet" href="css/libs/jquery/jquery.dataTables.css"/>
+    <link type="text/css" rel="stylesheet" href="css/app/app.css"/>
+
+    <!--require.js entry point-->
+    <script data-main="js/sx.requirejs.config" src="js/libs/ojet/require/require.js"></script>
+</head>
+<body data-i18n-ns="oep">
+<div id="PageLoadIndicator"></div>
+<div id="globalBody" class="row">
+    <div id="before-notifications"></div>
+    <!-- static header : brand, username, navigation panel -->
+    <div id="header" class="" data-i18n-ns="mainLayout.header">
+        <div id="headerContent">
+            <div id="brandingLayout">
+                <a class="brandingContent" href="javascript:void(0)" tabindex="-1">
+                    <img alt="Oracle" src="css/app/images/oracle_logo_lrg.png"/>
+                    <span class="brandTitle" data-i18n="BRAND_TITLE"></span>
+                </a>
+
+                <div id="userPanel">
+
+                    <div id='userMenuContainer'
+                         data-bind="ojComponent: {component:'ojToolbar'}, css:'oj-button-half-chrome'"
+                         data-i18n-ns="userMenu">
+
+                        <button id="helpMenuButton"
+                                data-bind="
+                        ojComponent: {
+                            component: 'ojButton',
+                            label:  getTranslated('oep.mainLayout.header.userMenu.HELP'),
+                            menu: '#helpMenu'
+                                   }">
+                        </button>
+
+                        <ul id="helpMenu" style="display:none"
+                            data-bind="ojComponent: {
+                                component: 'ojMenu' ,
+                                select: helpMenuItemSelect
+                            }">
+
+                            <li>
+                                <a id="helpInMainMenuButton" href="javascript:void(0)"
+                                   data-i18n="helpMenu.OnlineHelp"></a>
+                            </li>
+                            <li>
+                                <a id="userAssistantMenu" href="javascript:void(0)"
+                                   data-i18n="helpMenu.ShowUserAssistance"></a>
+                            </li>
+                        </ul>
+
+                        <span role="separator" aria-orientation="vertical" class="oj-toolbar-separator"></span>
+
+                        <button id="userMenuButton"
+                                data-bind="
+                        ojComponent: {
+                            component: 'ojButton',
+                            label: userInfo.userName,
+                            menu: '#userMenu'
+                                   }">
+                        </button>
+                        <ul id="userMenu" style="display:none"
+                            data-bind="ojComponent: {
+                                    component: 'ojMenu',
+                                    select: userMenuItemSelect
+                                    }">
+                            <li class="preferences">
+                                <a id="openPreferencesButton" href="javascript:void(0)" data-i18n="PREFERENCES"></a>
+                            </li>
+                            <li class="about">
+                                <a id="openAboutButton" href="javascript:void(0)" data-i18n="ABOUT"></a>
+                            </li>
+                            <li class="signOut">
+                                <a id="logout" href="logout" data-i18n="SIGN_OUT"></a>
+                            </li>
+
+                        </ul>
+
+                        <span role="separator" aria-orientation="vertical" class="oj-toolbar-separator"></span>
+
+                        <div id="statusIndicator" data-i18n="{attr: {title: 'STATUS_INDICATOR'}}"></div>
+                    </div>
+
+
+                    <div id='globalNavigationArea'>
+                        <span id="currentPageNavigationButtons" role="group"
+                              data-bind="ojComponent: {component: 'ojButtonset', focusManagement: 'oneTabstop', optionChange:handleSxPageChange}"
+                              class="oj-appheader-nav">
+
+
+                       <label data-bind="attr: {for: 'catalogNavButton'}"
+                              data-i18n="{attr: {title: 'catalogNavButton'}}"></label>
+                        <input id="catalogNavButton" type="radio" name="navButtons"
+                               data-bind="value: 'catalog', attr: {id: 'catalogNavButton'},
+                                          ojComponent: {
+                                          component: 'ojButton',
+                                          icons: {start:' navigationCatalogIcon oj-fwk-icon'},
+                                          label: getTranslated('oep.globalNavigationArea.CATALOG')
+                                          }"/>
+
+                            <label data-bind="attr: {for: 'homeNavButton'}"
+                                   data-i18n="{attr: {title: 'homeNavButton'}}"></label>
+                        <input id="homeNavButton" type="radio" name="navButtons"
+                               data-bind="value: 'home', attr: {id: 'homeNavButton'},
+                                          ojComponent: {
+                                            component: 'ojButton',
+                                            icons: {start:'navigationHomeIcon oj-fwk-icon'},
+                                            label: getTranslated('oep.globalNavigationArea.HOME')
+                                          }"/>
+
+
+
+
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+    <!--END of static header : brand, username, navigation panel -->
+
+    <!-- content of the page. will be changed dynamically -->
+    <section id="mainContent" class="row mainContent"></section>
+    <!-- END of content -->
+    <div id="preferencesContainer" data-i18n-ns="preferencesContainer">
+        <div id="preferencesLayout"></div>
+    </div>
+    <div id="aboutContainer" data-i18n-ns="aboutContainer">
+        <div id="aboutLayout"></div>
+    </div>
+    <div id="sourceSummaryContainer" data-i18n-ns="exploration.sourceSummary"></div>
+
+    <!-- static footer buffer to make a sticky footer -->
+    <div id="footerBuffer" class="clear"></div>
+
+    <!--END of static footer buffer to make a sticky footer -->
+</div>
+
+<!-- static footer : copyright -->
+<div id="footer" class="row" data-i18n-ns="mainLayout.footer">
+    <div id="footerContent" class="">
+        <span data-i18n="COPYRIGHT"></span>
+    </div>
+</div>
+<!-- END of static footer : copyright -->
+</body>
+</html>

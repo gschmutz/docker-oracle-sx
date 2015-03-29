@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<stringsubs-definition name="WebLogic Event Server Domain Configuration Wizard" version="1.0.0.0" xmlns="http://www.bea.com/ns/cie/64/stringsubs">
+
+  <component id="wlevs_domain_wizard">
+    <group-ref name="domain_win_scripts"/>
+    <group-ref name="domain_unix_scripts"/>
+    <group-ref name="domain_data"/>
+  </component>
+
+  <group id="domain_win_scripts">
+    <file-entry name="$USER_DOMAIN_DIR$$/$$SERVER_NAME$$/$*.cmd"/>
+    <change-pair-ref name="BEA_HOME"/>
+    <change-pair-ref name="JAVA_HOME"/>
+    <change-pair-ref name="JAVA_VENDOR"/>
+    <change-pair-ref name="SERVER_NAME"/>
+    <change-pair-ref name="WLEVS_HOME"/>
+    <change-pair-ref name="USER_INSTALL_DIR"/>
+    <change-pair-ref name="USER_DOMAIN_DIR"/>
+    <change-pair-ref name="WLEVS_DOMAIN_HOME"/>
+    <change-pair-ref name="JDBC_DRIVER_FILE"/>
+    <change-pair-ref name="BOOT_USERNAME"/>
+    <change-pair-ref name="BOOT_PASSWORD"/>
+    <change-pair-ref name="NETIO_PORT"/>
+    <change-pair-ref name="JMX_REGISTRY_PORT"/>
+
+  </group>
+
+  <group id="domain_unix_scripts" mode="forward">
+    <file-entry name="$USER_DOMAIN_DIR$$/$$SERVER_NAME$$/$*.sh"/>
+    <change-pair-ref name="BEA_HOME"/>
+    <change-pair-ref name="JAVA_HOME"/>
+    <change-pair-ref name="JAVA_VENDOR"/>
+    <change-pair-ref name="SERVER_NAME"/>
+    <change-pair-ref name="WLEVS_HOME"/>
+    <change-pair-ref name="USER_INSTALL_DIR"/>
+    <change-pair-ref name="USER_DOMAIN_DIR"/>
+    <change-pair-ref name="WLEVS_DOMAIN_HOME"/>
+    <change-pair-ref name="JDBC_DRIVER_FILE"/>
+    <change-pair-ref name="BOOT_USERNAME"/>
+    <change-pair-ref name="BOOT_PASSWORD"/>
+    <change-pair-ref name="NETIO_PORT"/>
+    <change-pair-ref name="JMX_REGISTRY_PORT"/>
+  </group>
+
+  <group id="domain_data">
+    <file-entry name="$USER_DOMAIN_DIR$$/$$SERVER_NAME$$/$config$/$atnstore.txt"/>
+    <file-entry name="$USER_DOMAIN_DIR$$/$$SERVER_NAME$$/$config$/$security-config.xml"/>
+    
+    <change-pair-ref name="BEA_HOME"/>
+    <change-pair-ref name="JAVA_HOME"/>
+    <change-pair-ref name="JAVA_VENDOR"/>
+    <change-pair-ref name="SERVER_NAME"/>
+    <change-pair-ref name="WLEVS_HOME"/>
+    <change-pair-ref name="USER_INSTALL_DIR"/>
+    <change-pair-ref name="USER_DOMAIN_DIR"/>
+    <change-pair-ref name="WLEVS_DOMAIN_HOME"/>
+    <change-pair-ref name="JDBC_DRIVER_FILE"/>
+    <change-pair-ref name="BOOT_USERNAME"/>
+    <change-pair-ref name="BOOT_PASSWORD"/>
+  </group>
+
+  <change-pair id="BEA_HOME" before="@BEA_HOME" after="$BEA_HOME$"/>
+  <change-pair id="SERVER_NAME" before="@SERVER_NAME" after="$SERVER_NAME$"/>
+  <change-pair id="JAVA_HOME" before="@JAVA_HOME" after="$JAVA_HOME$"/>
+  <change-pair id="JAVA_VENDOR" before="@JAVA_VENDOR" after="$JAVA_VENDOR$"/>
+  <change-pair id="WLEVS_HOME" before="@WLEVS_HOME" after="$USER_INSTALL_DIR$"/>
+  <change-pair id="USER_INSTALL_DIR" before="@USER_INSTALL_DIR" after="$USER_INSTALL_DIR$"/>
+  <change-pair id="USER_DOMAIN_DIR" before="@USER_DOMAIN_DIR" after="$USER_DOMAIN_DIR$"/>
+  <change-pair id="WLEVS_DOMAIN_HOME" before="@WLEVS_DOMAIN_HOME" after="$USER_DOMAIN_DIR$"/>
+  <change-pair id="JDBC_DRIVER_FILE" before="@JDBC_DRIVER_FILE" after="$JDBC_DRIVER_FILE$"/>
+  <change-pair id="BOOT_USERNAME" before="@BOOT_USERNAME" after="$BOOT_USERNAME$"/>
+  <change-pair id="BOOT_PASSWORD" before="@BOOT_PASSWORD" after="$BOOT_PASSWORD$"/>
+  <change-pair id="NETIO_PORT" before="@NETIO_PORT" after="$NETIO_PORT$"/>
+  <change-pair id="JMX_REGISTRY_PORT" before="@JMX_REGISTRY_PORT" after="$JMX_REGISTRY_PORT$"/>
+
+</stringsubs-definition>

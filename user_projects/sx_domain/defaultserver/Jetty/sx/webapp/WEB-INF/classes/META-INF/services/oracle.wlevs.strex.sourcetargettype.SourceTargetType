@@ -1,0 +1,32 @@
+# exploration
+oracle.wlevs.strex.sourcetargettype.ExplorationSourceType
+
+# stream types
+oracle.wlevs.strex.sourcetargettype.csv.CSVSourceType
+oracle.wlevs.strex.sourcetargettype.http.HttpPubSubSourceType
+oracle.wlevs.strex.sourcetargettype.edn.EDNSourceType
+oracle.wlevs.strex.sourcetargettype.jms.JMSSourceType
+oracle.wlevs.strex.sourcetargettype.rest.RESTSourceType
+
+# data source types
+oracle.wlevs.strex.sourcetargettype.db.DBTableSourceType
+
+# patterns
+oracle.wlevs.strex.sourcetargettype.pattern.TopNPattern
+oracle.wlevs.strex.sourcetargettype.pattern.BottomNPattern
+oracle.wlevs.strex.sourcetargettype.pattern.UpTrendPattern
+oracle.wlevs.strex.sourcetargettype.pattern.DownTrendPattern
+oracle.wlevs.strex.sourcetargettype.pattern.FluctuationPattern
+oracle.wlevs.strex.sourcetargettype.pattern.EliminateDuplicatesPattern
+oracle.wlevs.strex.sourcetargettype.pattern.DetectDuplicatesPattern
+oracle.wlevs.strex.sourcetargettype.pattern.MissingEventPattern
+oracle.wlevs.strex.sourcetargettype.pattern.WPattern
+oracle.wlevs.strex.sourcetargettype.pattern.InverseWPattern
+
+# targets
+oracle.wlevs.strex.sourcetargettype.csv.CSVTargetType
+oracle.wlevs.strex.sourcetargettype.http.HttpPubSubTargetType
+oracle.wlevs.strex.sourcetargettype.edn.EDNTargetType
+oracle.wlevs.strex.sourcetargettype.jms.JMSTargetType
+oracle.wlevs.strex.sourcetargettype.rest.RESTTargetType
+#oracle.wlevs.strex.sourcetargettype.demo.BAMTargetType

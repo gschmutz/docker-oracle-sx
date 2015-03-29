@@ -1,0 +1,699 @@
+<?xml version='1.0' encoding='utf-8'?>
+<map version="1.0">
+  <mapID target="titlehelp.htm" url="titlehelp.htm" />
+  <!-- "Oracle Fusion Middleware Stream Explorer Online Help for Oracle Event Processing 12c (12.1.3.0)"-->
+  <mapID target="OEPSH116" url="f1_oep_sx_home.htm#OEPSH116" />
+  <!-- "Stream Explorer Home Page Context Sensitive Help Topics"-->
+  <mapID target="f1_oep_sx_home.htm" url="f1_oep_sx_home.htm" />
+  <!-- "Stream Explorer Home Page Context Sensitive Help Topics"-->
+  <mapID target="f1_sx_home_pg" url="cs_pagename1.htm#f1_sx_home_pg" />
+  <!-- "Home Page"-->
+  <mapID target="OEPSH117" url="cs_pagename1.htm#OEPSH117" />
+  <!-- "Home Page"-->
+  <mapID target="cs_pagename1.htm-CHDHEAIB" url="cs_pagename1.htm#CHDHEAIB" />
+  <!-- "Home Page"-->
+  <mapID target="OEPSH118" url="cs_pagename1.htm#OEPSH118" />
+  <!-- "Home Page"-->
+  <mapID target="OEPSH119" url="cs_pagename1.htm#OEPSH119" />
+  <!-- "Home Page"-->
+  <mapID target="OEPSH120" url="cs_pagename1.htm#OEPSH120" />
+  <!-- "Home Page"-->
+  <mapID target="OEPSH121" url="cs_pagename1.htm#OEPSH121" />
+  <!-- "Home Page"-->
+  <mapID target="OEPSH122" url="cs_pagename1.htm#OEPSH122" />
+  <!-- "Home Page"-->
+  <mapID target="OEPSH317" url="cs_pagename1.htm#OEPSH317" />
+  <!-- "Related Topics"-->
+  <mapID target="f1_sx_catalog_page" url="f1_oep_sx_home001.htm#f1_sx_catalog_page" />
+  <!-- "Home Page"-->
+  <mapID target="OEPSH124" url="f1_oep_sx_home001.htm#OEPSH124" />
+  <!-- "Home Page"-->
+  <mapID target="f1_oep_sx_home001.htm-sthref3" url="f1_oep_sx_home001.htm#sthref3" />
+  <!-- "Home Page"-->
+  <mapID target="OEPSH125" url="f1_oep_sx_home001.htm#OEPSH125" />
+  <!-- "Home Page"-->
+  <mapID target="OEPSH126" url="f1_oep_sx_home001.htm#OEPSH126" />
+  <!-- "Home Page"-->
+  <mapID target="OEPSH127" url="f1_oep_sx_home001.htm#OEPSH127" />
+  <!-- "Home Page"-->
+  <mapID target="OEPSH128" url="f1_oep_sx_home001.htm#OEPSH128" />
+  <!-- "Home Page"-->
+  <mapID target="OEPSH129" url="f1_oep_sx_home001.htm#OEPSH129" />
+  <!-- "Home Page"-->
+  <mapID target="OEPSH130" url="f1_oep_sx_home001.htm#OEPSH130" />
+  <!-- "Home Page"-->
+  <mapID target="OEPSH131" url="f1_oep_sx_home001.htm#OEPSH131" />
+  <!-- "Home Page"-->
+  <mapID target="OEPSH318" url="f1_oep_sx_home001.htm#OEPSH318" />
+  <!-- "Related Topics"-->
+  <mapID target="OEPSH134" url="f1_oep_sx_explorations.htm#OEPSH134" />
+  <!-- "Stream Explorer Explorations Context Sensitive Help Topics"-->
+  <mapID target="f1_oep_sx_explorations.htm" url="f1_oep_sx_explorations.htm" />
+  <!-- "Stream Explorer Explorations Context Sensitive Help Topics"-->
+  <mapID target="f1_sx_create_expl_pg" url="f1_sx_create_expl_pg.htm#f1_sx_create_expl_pg" />
+  <!-- "Stream Explorer Explorations Context Sensitive Help Topics"-->
+  <mapID target="OEPSH135" url="f1_sx_create_expl_pg.htm#OEPSH135" />
+  <!-- "Stream Explorer Explorations Context Sensitive Help Topics"-->
+  <mapID target="f1_sx_create_expl_pg.htm-sthref5" url="f1_sx_create_expl_pg.htm#sthref5" />
+  <!-- "Stream Explorer Explorations Context Sensitive Help Topics"-->
+  <mapID target="OEPSH136" url="f1_sx_create_expl_pg.htm#OEPSH136" />
+  <!-- "Stream Explorer Explorations Context Sensitive Help Topics"-->
+  <mapID target="OEPSH137" url="f1_sx_create_expl_pg.htm#OEPSH137" />
+  <!-- "Stream Explorer Explorations Context Sensitive Help Topics"-->
+  <mapID target="OEPSH138" url="f1_sx_create_expl_pg.htm#OEPSH138" />
+  <!-- "Stream Explorer Explorations Context Sensitive Help Topics"-->
+  <mapID target="OEPSH139" url="f1_sx_create_expl_pg.htm#OEPSH139" />
+  <!-- "Stream Explorer Explorations Context Sensitive Help Topics"-->
+  <mapID target="OEPSH140" url="f1_sx_create_expl_pg.htm#OEPSH140" />
+  <!-- "Stream Explorer Explorations Context Sensitive Help Topics"-->
+  <mapID target="OEPSH141" url="f1_sx_create_expl_pg.htm#OEPSH141" />
+  <!-- "Stream Explorer Explorations Context Sensitive Help Topics"-->
+  <mapID target="OEPSH319" url="f1_sx_create_expl_pg.htm#OEPSH319" />
+  <!-- "Related Topics"-->
+  <mapID target="f1_sx_expl_pg" url="f1_sx_expl_pg.htm#f1_sx_expl_pg" />
+  <!-- "Create Exploration Dialog Window"-->
+  <mapID target="OEPSH143" url="f1_sx_expl_pg.htm#OEPSH143" />
+  <!-- "Create Exploration Dialog Window"-->
+  <mapID target="f1_sx_expl_pg.htm-sthref6" url="f1_sx_expl_pg.htm#sthref6" />
+  <!-- "Create Exploration Dialog Window"-->
+  <mapID target="OEPSH144" url="f1_sx_expl_pg.htm#OEPSH144" />
+  <!-- "Create Exploration Dialog Window"-->
+  <mapID target="OEPSH145" url="f1_sx_expl_pg.htm#OEPSH145" />
+  <!-- "Create Exploration Dialog Window"-->
+  <mapID target="OEPSH146" url="f1_sx_expl_pg.htm#OEPSH146" />
+  <!-- "Create Exploration Dialog Window"-->
+  <mapID target="OEPSH147" url="f1_sx_expl_pg.htm#OEPSH147" />
+  <!-- "Create Exploration Dialog Window"-->
+  <mapID target="OEPSH148" url="f1_sx_expl_pg.htm#OEPSH148" />
+  <!-- "Create Exploration Dialog Window"-->
+  <mapID target="OEPSH149" url="f1_sx_expl_pg.htm#OEPSH149" />
+  <!-- "Create Exploration Dialog Window"-->
+  <mapID target="OEPSH150" url="f1_sx_expl_pg.htm#OEPSH150" />
+  <!-- "Create Exploration Dialog Window"-->
+  <mapID target="OEPSH151" url="f1_sx_expl_pg.htm#OEPSH151" />
+  <!-- "Create Exploration Dialog Window"-->
+  <mapID target="OEPSH152" url="f1_sx_expl_pg.htm#OEPSH152" />
+  <!-- "Create Exploration Dialog Window"-->
+  <mapID target="OEPSH153" url="f1_sx_expl_pg.htm#OEPSH153" />
+  <!-- "Create Exploration Dialog Window"-->
+  <mapID target="OEPSH320" url="f1_sx_expl_pg.htm#OEPSH320" />
+  <!-- "Create Exploration Dialog Window"-->
+  <mapID target="OEPSH321" url="f1_sx_expl_pg.htm#OEPSH321" />
+  <!-- "Create Exploration Dialog Window"-->
+  <mapID target="OEPSH154" url="f1_sx_expl_pg.htm#OEPSH154" />
+  <!-- "Create Exploration Dialog Window"-->
+  <mapID target="OEPSH155" url="f1_sx_expl_pg.htm#OEPSH155" />
+  <!-- "Create Exploration Dialog Window"-->
+  <mapID target="OEPSH322" url="f1_sx_expl_pg.htm#OEPSH322" />
+  <!-- "Create Exploration Dialog Window"-->
+  <mapID target="OEPSH323" url="f1_sx_expl_pg.htm#OEPSH323" />
+  <!-- "Create Exploration Dialog Window"-->
+  <mapID target="OEPSH156" url="f1_sx_expl_pg.htm#OEPSH156" />
+  <!-- "Create Exploration Dialog Window"-->
+  <mapID target="OEPSH157" url="f1_sx_expl_pg.htm#OEPSH157" />
+  <!-- "Create Exploration Dialog Window"-->
+  <mapID target="OEPSH158" url="f1_sx_expl_pg.htm#OEPSH158" />
+  <!-- "Create Exploration Dialog Window"-->
+  <mapID target="OEPSH159" url="f1_sx_expl_pg.htm#OEPSH159" />
+  <!-- "Create Exploration Dialog Window"-->
+  <mapID target="OEPSH160" url="f1_sx_expl_pg.htm#OEPSH160" />
+  <!-- "Create Exploration Dialog Window"-->
+  <mapID target="OEPSH161" url="f1_sx_expl_pg.htm#OEPSH161" />
+  <!-- "Create Exploration Dialog Window"-->
+  <mapID target="OEPSH162" url="f1_sx_expl_pg.htm#OEPSH162" />
+  <!-- "Create Exploration Dialog Window"-->
+  <mapID target="OEPSH164" url="f1_sx_expl_pg.htm#OEPSH164" />
+  <!-- "Create Exploration Dialog Window"-->
+  <mapID target="OEPSH165" url="f1_sx_expl_pg.htm#OEPSH165" />
+  <!-- "Create Exploration Dialog Window"-->
+  <mapID target="OEPSH166" url="f1_sx_expl_pg.htm#OEPSH166" />
+  <!-- "Create Exploration Dialog Window"-->
+  <mapID target="OEPSH324" url="f1_sx_expl_pg.htm#OEPSH324" />
+  <!-- "Related Topics"-->
+  <mapID target="standalone_cs" url="f1_oep_sx_streams.htm#standalone_cs" />
+  <!-- "Streams Context Sensitive Help Topics"-->
+  <mapID target="OEPSH168" url="f1_oep_sx_streams.htm#OEPSH168" />
+  <!-- "Streams Context Sensitive Help Topics"-->
+  <mapID target="f1_oep_sx_streams.htm" url="f1_oep_sx_streams.htm" />
+  <!-- "Streams Context Sensitive Help Topics"-->
+  <mapID target="f1_sx_stream_pg" url="cs_pagename1001.htm#f1_sx_stream_pg" />
+  <!-- "Streams Context Sensitive Help Topics"-->
+  <mapID target="OEPSH169" url="cs_pagename1001.htm#OEPSH169" />
+  <!-- "Streams Context Sensitive Help Topics"-->
+  <mapID target="cs_pagename1001.htm-sthref8" url="cs_pagename1001.htm#sthref8" />
+  <!-- "Streams Context Sensitive Help Topics"-->
+  <mapID target="OEPSH170" url="cs_pagename1001.htm#OEPSH170" />
+  <!-- "Streams Context Sensitive Help Topics"-->
+  <mapID target="OEPSH171" url="cs_pagename1001.htm#OEPSH171" />
+  <!-- "Streams Context Sensitive Help Topics"-->
+  <mapID target="OEPSH325" url="cs_pagename1001.htm#OEPSH325" />
+  <!-- "Related Topics"-->
+  <mapID target="f1_sx_editsrc_srcdetails_dialog" url="f1_oep_sx_streams001.htm#f1_sx_editsrc_srcdetails_dialog" />
+  <!-- "Stream Dialog"-->
+  <mapID target="OEPSH172" url="f1_oep_sx_streams001.htm#OEPSH172" />
+  <!-- "Stream Dialog"-->
+  <mapID target="f1_oep_sx_streams001.htm-sthref9" url="f1_oep_sx_streams001.htm#sthref9" />
+  <!-- "Stream Dialog"-->
+  <mapID target="OEPSH112" url="f1_oep_sx_streams001.htm#OEPSH112" />
+  <!-- "Stream Dialog"-->
+  <mapID target="OEPSH113" url="f1_oep_sx_streams001.htm#OEPSH113" />
+  <!-- "Stream Dialog"-->
+  <mapID target="OEPSH114" url="f1_oep_sx_streams001.htm#OEPSH114" />
+  <!-- "Stream Dialog"-->
+  <mapID target="OEPSH326" url="f1_oep_sx_streams001.htm#OEPSH326" />
+  <!-- "Related Topics"-->
+  <mapID target="f1_sx_editsrc_typeprop_dialog" url="f1_oep_sx_streams002.htm#f1_sx_editsrc_typeprop_dialog" />
+  <!-- "Edit Stream Wizard - Source Details"-->
+  <mapID target="OEPSH173" url="f1_oep_sx_streams002.htm#OEPSH173" />
+  <!-- "Edit Stream Wizard - Source Details"-->
+  <mapID target="f1_oep_sx_streams002.htm-sthref10" url="f1_oep_sx_streams002.htm#sthref10" />
+  <!-- "Edit Stream Wizard - Source Details"-->
+  <mapID target="OEPSH174" url="f1_oep_sx_streams002.htm#OEPSH174" />
+  <!-- "Edit Stream Wizard - Source Details"-->
+  <mapID target="OEPSH711" url="f1_oep_sx_streams002.htm#OEPSH711" />
+  <!-- "Edit Stream Wizard - Source Details"-->
+  <mapID target="OEPSH190" url="f1_oep_sx_streams002.htm#OEPSH190" />
+  <!-- "Edit Stream Wizard - Source Details"-->
+  <mapID target="OEPSH330" url="f1_oep_sx_streams002.htm#OEPSH330" />
+  <!-- "Edit Stream Wizard - Source Details"-->
+  <mapID target="OEPSH331" url="f1_oep_sx_streams002.htm#OEPSH331" />
+  <!-- "Edit Stream Wizard - Source Details"-->
+  <mapID target="OEPSH332" url="f1_oep_sx_streams002.htm#OEPSH332" />
+  <!-- "Edit Stream Wizard - Source Details"-->
+  <mapID target="OEPSH333" url="f1_oep_sx_streams002.htm#OEPSH333" />
+  <!-- "Edit Stream Wizard - Source Details"-->
+  <mapID target="OEPSH334" url="f1_oep_sx_streams002.htm#OEPSH334" />
+  <!-- "Edit Stream Wizard - Source Details"-->
+  <mapID target="OEPSH335" url="f1_oep_sx_streams002.htm#OEPSH335" />
+  <!-- "Edit Stream Wizard - Source Details"-->
+  <mapID target="OEPSH336" url="f1_oep_sx_streams002.htm#OEPSH336" />
+  <!-- "Edit Stream Wizard - Source Details"-->
+  <mapID target="OEPSH337" url="f1_oep_sx_streams002.htm#OEPSH337" />
+  <!-- "Edit Stream Wizard - Source Details"-->
+  <mapID target="OEPSH338" url="f1_oep_sx_streams002.htm#OEPSH338" />
+  <!-- "Edit Stream Wizard - Source Details"-->
+  <mapID target="OEPSH339" url="f1_oep_sx_streams002.htm#OEPSH339" />
+  <!-- "Edit Stream Wizard - Source Details"-->
+  <mapID target="OEPSH340" url="f1_oep_sx_streams002.htm#OEPSH340" />
+  <!-- "Edit Stream Wizard - Source Details"-->
+  <mapID target="OEPSH341" url="f1_oep_sx_streams002.htm#OEPSH341" />
+  <!-- "Edit Stream Wizard - Source Details"-->
+  <mapID target="OEPSH342" url="f1_oep_sx_streams002.htm#OEPSH342" />
+  <!-- "Edit Stream Wizard - Source Details"-->
+  <mapID target="OEPSH343" url="f1_oep_sx_streams002.htm#OEPSH343" />
+  <!-- "Edit Stream Wizard - Source Details"-->
+  <mapID target="OEPSH344" url="f1_oep_sx_streams002.htm#OEPSH344" />
+  <!-- "Edit Stream Wizard - Source Details"-->
+  <mapID target="OEPSH345" url="f1_oep_sx_streams002.htm#OEPSH345" />
+  <!-- "Edit Stream Wizard - Source Details"-->
+  <mapID target="OEPSH346" url="f1_oep_sx_streams002.htm#OEPSH346" />
+  <!-- "Edit Stream Wizard - Source Details"-->
+  <mapID target="OEPSH327" url="f1_oep_sx_streams002.htm#OEPSH327" />
+  <!-- "Related Topics"-->
+  <mapID target="f1_sx_editsrc_shape_dialog" url="f1_oep_sx_streams003.htm#f1_sx_editsrc_shape_dialog" />
+  <!-- "Edit Stream Wizard - Type Properties"-->
+  <mapID target="OEPSH178" url="f1_oep_sx_streams003.htm#OEPSH178" />
+  <!-- "Edit Stream Wizard - Type Properties"-->
+  <mapID target="f1_oep_sx_streams003.htm-sthref11" url="f1_oep_sx_streams003.htm#sthref11" />
+  <!-- "Edit Stream Wizard - Type Properties"-->
+  <mapID target="OEPSH179" url="f1_oep_sx_streams003.htm#OEPSH179" />
+  <!-- "Edit Stream Wizard - Type Properties"-->
+  <mapID target="OEPSH180" url="f1_oep_sx_streams003.htm#OEPSH180" />
+  <!-- "Edit Stream Wizard - Type Properties"-->
+  <mapID target="OEPSH328" url="f1_oep_sx_streams003.htm#OEPSH328" />
+  <!-- "Related Topics"-->
+  <mapID target="f1_sx_create_stream_srcdtls" url="f1_oep_sx_streams004.htm#f1_sx_create_stream_srcdtls" />
+  <!-- "Edit Stream Wizard - Shape"-->
+  <mapID target="OEPSH182" url="f1_oep_sx_streams004.htm#OEPSH182" />
+  <!-- "Edit Stream Wizard - Shape"-->
+  <mapID target="f1_oep_sx_streams004.htm-sthref12" url="f1_oep_sx_streams004.htm#sthref12" />
+  <!-- "Edit Stream Wizard - Shape"-->
+  <mapID target="OEPSH183" url="f1_oep_sx_streams004.htm#OEPSH183" />
+  <!-- "Edit Stream Wizard - Shape"-->
+  <mapID target="OEPSH184" url="f1_oep_sx_streams004.htm#OEPSH184" />
+  <!-- "Edit Stream Wizard - Shape"-->
+  <mapID target="OEPSH185" url="f1_oep_sx_streams004.htm#OEPSH185" />
+  <!-- "Edit Stream Wizard - Shape"-->
+  <mapID target="OEPSH329" url="f1_oep_sx_streams004.htm#OEPSH329" />
+  <!-- "Related Topics"-->
+  <mapID target="f1_sx_create_stream_typeprop" url="f1_oep_sx_streams005.htm#f1_sx_create_stream_typeprop" />
+  <!-- "Create Stream Wizard - Source Details"-->
+  <mapID target="OEPSH187" url="f1_oep_sx_streams005.htm#OEPSH187" />
+  <!-- "Create Stream Wizard - Source Details"-->
+  <mapID target="f1_oep_sx_streams005.htm-sthref13" url="f1_oep_sx_streams005.htm#sthref13" />
+  <!-- "Create Stream Wizard - Source Details"-->
+  <mapID target="OEPSH188" url="f1_oep_sx_streams005.htm#OEPSH188" />
+  <!-- "Create Stream Wizard - Source Details"-->
+  <mapID target="OEPSH189" url="f1_oep_sx_streams005.htm#OEPSH189" />
+  <!-- "Create Stream Wizard - Source Details"-->
+  <mapID target="OEPSH612" url="f1_oep_sx_streams005.htm#OEPSH612" />
+  <!-- "Create Stream Wizard - Source Details"-->
+  <mapID target="OEPSH613" url="f1_oep_sx_streams005.htm#OEPSH613" />
+  <!-- "Create Stream Wizard - Source Details"-->
+  <mapID target="OEPSH614" url="f1_oep_sx_streams005.htm#OEPSH614" />
+  <!-- "Create Stream Wizard - Source Details"-->
+  <mapID target="OEPSH615" url="f1_oep_sx_streams005.htm#OEPSH615" />
+  <!-- "Create Stream Wizard - Source Details"-->
+  <mapID target="OEPSH616" url="f1_oep_sx_streams005.htm#OEPSH616" />
+  <!-- "Create Stream Wizard - Source Details"-->
+  <mapID target="OEPSH617" url="f1_oep_sx_streams005.htm#OEPSH617" />
+  <!-- "Create Stream Wizard - Source Details"-->
+  <mapID target="OEPSH618" url="f1_oep_sx_streams005.htm#OEPSH618" />
+  <!-- "Create Stream Wizard - Source Details"-->
+  <mapID target="OEPSH619" url="f1_oep_sx_streams005.htm#OEPSH619" />
+  <!-- "Create Stream Wizard - Source Details"-->
+  <mapID target="OEPSH620" url="f1_oep_sx_streams005.htm#OEPSH620" />
+  <!-- "Create Stream Wizard - Source Details"-->
+  <mapID target="OEPSH621" url="f1_oep_sx_streams005.htm#OEPSH621" />
+  <!-- "Create Stream Wizard - Source Details"-->
+  <mapID target="OEPSH622" url="f1_oep_sx_streams005.htm#OEPSH622" />
+  <!-- "Create Stream Wizard - Source Details"-->
+  <mapID target="OEPSH623" url="f1_oep_sx_streams005.htm#OEPSH623" />
+  <!-- "Create Stream Wizard - Source Details"-->
+  <mapID target="OEPSH624" url="f1_oep_sx_streams005.htm#OEPSH624" />
+  <!-- "Create Stream Wizard - Source Details"-->
+  <mapID target="OEPSH625" url="f1_oep_sx_streams005.htm#OEPSH625" />
+  <!-- "Create Stream Wizard - Source Details"-->
+  <mapID target="OEPSH626" url="f1_oep_sx_streams005.htm#OEPSH626" />
+  <!-- "Create Stream Wizard - Source Details"-->
+  <mapID target="OEPSH627" url="f1_oep_sx_streams005.htm#OEPSH627" />
+  <!-- "Create Stream Wizard - Source Details"-->
+  <mapID target="OEPSH628" url="f1_oep_sx_streams005.htm#OEPSH628" />
+  <!-- "Create Stream Wizard - Source Details"-->
+  <mapID target="OEPSH629" url="f1_oep_sx_streams005.htm#OEPSH629" />
+  <!-- "Create Stream Wizard - Source Details"-->
+  <mapID target="OEPSH347" url="f1_oep_sx_streams005.htm#OEPSH347" />
+  <!-- "Related Topics"-->
+  <mapID target="f1_sx_create_stream_shape" url="f1_oep_sx_streams006.htm#f1_sx_create_stream_shape" />
+  <!-- "Create Stream Wizard - Type Properties"-->
+  <mapID target="OEPSH192" url="f1_oep_sx_streams006.htm#OEPSH192" />
+  <!-- "Create Stream Wizard - Type Properties"-->
+  <mapID target="f1_oep_sx_streams006.htm-sthref14" url="f1_oep_sx_streams006.htm#sthref14" />
+  <!-- "Create Stream Wizard - Type Properties"-->
+  <mapID target="OEPSH193" url="f1_oep_sx_streams006.htm#OEPSH193" />
+  <!-- "Create Stream Wizard - Type Properties"-->
+  <mapID target="OEPSH194" url="f1_oep_sx_streams006.htm#OEPSH194" />
+  <!-- "Create Stream Wizard - Type Properties"-->
+  <mapID target="OEPSH348" url="f1_oep_sx_streams006.htm#OEPSH348" />
+  <!-- "Related Topics"-->
+  <mapID target="OEPSH101" url="f1_oep_sx_references.htm#OEPSH101" />
+  <!-- "References Context Sensitive Help Topics"-->
+  <mapID target="f1_oep_sx_references.htm" url="f1_oep_sx_references.htm" />
+  <!-- "References Context Sensitive Help Topics"-->
+  <mapID target="f1_sx_ref_pg" url="f1_oep_sx_references001.htm#f1_sx_ref_pg" />
+  <!-- "References Context Sensitive Help Topics"-->
+  <mapID target="OEPSH196" url="f1_oep_sx_references001.htm#OEPSH196" />
+  <!-- "References Context Sensitive Help Topics"-->
+  <mapID target="f1_oep_sx_references001.htm-sthref16" url="f1_oep_sx_references001.htm#sthref16" />
+  <!-- "References Context Sensitive Help Topics"-->
+  <mapID target="OEPSH197" url="f1_oep_sx_references001.htm#OEPSH197" />
+  <!-- "References Context Sensitive Help Topics"-->
+  <mapID target="OEPSH198" url="f1_oep_sx_references001.htm#OEPSH198" />
+  <!-- "References Context Sensitive Help Topics"-->
+  <mapID target="OEPSH349" url="f1_oep_sx_references001.htm#OEPSH349" />
+  <!-- "Related Topics"-->
+  <mapID target="f1_sx_editref_srcdetails_dialog" url="f1_oep_sx_references002.htm#f1_sx_editref_srcdetails_dialog" />
+  <!-- "Reference Dialog"-->
+  <mapID target="OEPSH200" url="f1_oep_sx_references002.htm#OEPSH200" />
+  <!-- "Reference Dialog"-->
+  <mapID target="f1_oep_sx_references002.htm-sthref17" url="f1_oep_sx_references002.htm#sthref17" />
+  <!-- "Reference Dialog"-->
+  <mapID target="OEPSH201" url="f1_oep_sx_references002.htm#OEPSH201" />
+  <!-- "Reference Dialog"-->
+  <mapID target="OEPSH202" url="f1_oep_sx_references002.htm#OEPSH202" />
+  <!-- "Reference Dialog"-->
+  <mapID target="OEPSH203" url="f1_oep_sx_references002.htm#OEPSH203" />
+  <!-- "Reference Dialog"-->
+  <mapID target="OEPSH350" url="f1_oep_sx_references002.htm#OEPSH350" />
+  <!-- "Related Topics"-->
+  <mapID target="f1_sx_editref_typeprop_dialog" url="f1_oep_sx_references003.htm#f1_sx_editref_typeprop_dialog" />
+  <!-- "Edit Reference Wizard - Source Details"-->
+  <mapID target="OEPSH205" url="f1_oep_sx_references003.htm#OEPSH205" />
+  <!-- "Edit Reference Wizard - Source Details"-->
+  <mapID target="f1_oep_sx_references003.htm-sthref18" url="f1_oep_sx_references003.htm#sthref18" />
+  <!-- "Edit Reference Wizard - Source Details"-->
+  <mapID target="OEPSH206" url="f1_oep_sx_references003.htm#OEPSH206" />
+  <!-- "Edit Reference Wizard - Source Details"-->
+  <mapID target="OEPSH207" url="f1_oep_sx_references003.htm#OEPSH207" />
+  <!-- "Edit Reference Wizard - Source Details"-->
+  <mapID target="OEPSH351" url="f1_oep_sx_references003.htm#OEPSH351" />
+  <!-- "Related Topics"-->
+  <mapID target="f1_sx_editref_shape_dialog" url="f1_oep_sx_references004.htm#f1_sx_editref_shape_dialog" />
+  <!-- "Edit Reference Wizard - Type Properties"-->
+  <mapID target="OEPSH210" url="f1_oep_sx_references004.htm#OEPSH210" />
+  <!-- "Edit Reference Wizard - Type Properties"-->
+  <mapID target="f1_oep_sx_references004.htm-sthref19" url="f1_oep_sx_references004.htm#sthref19" />
+  <!-- "Edit Reference Wizard - Type Properties"-->
+  <mapID target="OEPSH352" url="f1_oep_sx_references004.htm#OEPSH352" />
+  <!-- "Related Topics"-->
+  <mapID target="f1_sx_create_ref_srcdtls" url="f1_oep_sx_references005.htm#f1_sx_create_ref_srcdtls" />
+  <!-- "Edit Reference Wizard - Shape"-->
+  <mapID target="OEPSH214" url="f1_oep_sx_references005.htm#OEPSH214" />
+  <!-- "Edit Reference Wizard - Shape"-->
+  <mapID target="f1_oep_sx_references005.htm-sthref20" url="f1_oep_sx_references005.htm#sthref20" />
+  <!-- "Edit Reference Wizard - Shape"-->
+  <mapID target="OEPSH215" url="f1_oep_sx_references005.htm#OEPSH215" />
+  <!-- "Edit Reference Wizard - Shape"-->
+  <mapID target="OEPSH216" url="f1_oep_sx_references005.htm#OEPSH216" />
+  <!-- "Edit Reference Wizard - Shape"-->
+  <mapID target="OEPSH217" url="f1_oep_sx_references005.htm#OEPSH217" />
+  <!-- "Edit Reference Wizard - Shape"-->
+  <mapID target="OEPSH353" url="f1_oep_sx_references005.htm#OEPSH353" />
+  <!-- "Related Topics"-->
+  <mapID target="f1_sx_create_ref_typeprop" url="f1_oep_sx_references006.htm#f1_sx_create_ref_typeprop" />
+  <!-- "Create Reference Wizard - Source Details"-->
+  <mapID target="OEPSH219" url="f1_oep_sx_references006.htm#OEPSH219" />
+  <!-- "Create Reference Wizard - Source Details"-->
+  <mapID target="f1_oep_sx_references006.htm-sthref21" url="f1_oep_sx_references006.htm#sthref21" />
+  <!-- "Create Reference Wizard - Source Details"-->
+  <mapID target="OEPSH220" url="f1_oep_sx_references006.htm#OEPSH220" />
+  <!-- "Create Reference Wizard - Source Details"-->
+  <mapID target="OEPSH221" url="f1_oep_sx_references006.htm#OEPSH221" />
+  <!-- "Create Reference Wizard - Source Details"-->
+  <mapID target="OEPSH354" url="f1_oep_sx_references006.htm#OEPSH354" />
+  <!-- "Related Topics"-->
+  <mapID target="f1_sx_create_ref_shape" url="f1_oep_sx_references007.htm#f1_sx_create_ref_shape" />
+  <!-- "Create Reference Wizard - Type Properties"-->
+  <mapID target="OEPSH224" url="f1_oep_sx_references007.htm#OEPSH224" />
+  <!-- "Create Reference Wizard - Type Properties"-->
+  <mapID target="f1_oep_sx_references007.htm-sthref22" url="f1_oep_sx_references007.htm#sthref22" />
+  <!-- "Create Reference Wizard - Type Properties"-->
+  <mapID target="OEPSH225" url="f1_oep_sx_references007.htm#OEPSH225" />
+  <!-- "Create Reference Wizard - Type Properties"-->
+  <mapID target="OEPSH226" url="f1_oep_sx_references007.htm#OEPSH226" />
+  <!-- "Create Reference Wizard - Type Properties"-->
+  <mapID target="OEPSH355" url="f1_oep_sx_references007.htm#OEPSH355" />
+  <!-- "Related Topics"-->
+  <mapID target="OEPSH228" url="f1_oep_sx_pref.htm#OEPSH228" />
+  <!-- "Preferences Context Sensitive Help Topics"-->
+  <mapID target="f1_oep_sx_pref.htm" url="f1_oep_sx_pref.htm" />
+  <!-- "Preferences Context Sensitive Help Topics"-->
+  <mapID target="f1_sx_pref_gen_pg" url="f1_oep_sx_pref001.htm#f1_sx_pref_gen_pg" />
+  <!-- "Preferences Context Sensitive Help Topics"-->
+  <mapID target="OEPSH229" url="f1_oep_sx_pref001.htm#OEPSH229" />
+  <!-- "Preferences Context Sensitive Help Topics"-->
+  <mapID target="f1_oep_sx_pref001.htm-sthref24" url="f1_oep_sx_pref001.htm#sthref24" />
+  <!-- "Preferences Context Sensitive Help Topics"-->
+  <mapID target="OEPSH232" url="f1_oep_sx_pref001.htm#OEPSH232" />
+  <!-- "Preferences Context Sensitive Help Topics"-->
+  <mapID target="OEPSH356" url="f1_oep_sx_pref001.htm#OEPSH356" />
+  <!-- "Related Topics"-->
+  <mapID target="f1_sx_pref_viewmode_pg" url="f1_oep_sx_pref002.htm#f1_sx_pref_viewmode_pg" />
+  <!-- "Preferences - General Page"-->
+  <mapID target="OEPSH512" url="f1_oep_sx_pref002.htm#OEPSH512" />
+  <!-- "Preferences - General Page"-->
+  <mapID target="f1_oep_sx_pref002.htm-sthref25" url="f1_oep_sx_pref002.htm#sthref25" />
+  <!-- "Preferences - General Page"-->
+  <mapID target="OEPSH513" url="f1_oep_sx_pref002.htm#OEPSH513" />
+  <!-- "Preferences - General Page"-->
+  <mapID target="OEPSH514" url="f1_oep_sx_pref002.htm#OEPSH514" />
+  <!-- "Preferences - General Page"-->
+  <mapID target="OEPSH515" url="f1_oep_sx_pref002.htm#OEPSH515" />
+  <!-- "Preferences - General Page"-->
+  <mapID target="OEPSH416" url="f1_oep_sx_pref002.htm#OEPSH416" />
+  <!-- "Related Topics"-->
+  <mapID target="f1_sx_pref_noti_pg" url="f1_oep_sx_pref003.htm#f1_sx_pref_noti_pg" />
+  <!-- "Preferences - View Mode Page"-->
+  <mapID target="OEPSH239" url="f1_oep_sx_pref003.htm#OEPSH239" />
+  <!-- "Preferences - View Mode Page"-->
+  <mapID target="f1_oep_sx_pref003.htm-sthref26" url="f1_oep_sx_pref003.htm#sthref26" />
+  <!-- "Preferences - View Mode Page"-->
+  <mapID target="OEPSH240" url="f1_oep_sx_pref003.htm#OEPSH240" />
+  <!-- "Preferences - View Mode Page"-->
+  <mapID target="OEPSH241" url="f1_oep_sx_pref003.htm#OEPSH241" />
+  <!-- "Preferences - View Mode Page"-->
+  <mapID target="OEPSH242" url="f1_oep_sx_pref003.htm#OEPSH242" />
+  <!-- "Preferences - View Mode Page"-->
+  <mapID target="OEPSH358" url="f1_oep_sx_pref003.htm#OEPSH358" />
+  <!-- "Related Topics"-->
+  <mapID target="f1_sx_pref_cat_pg" url="f1_oep_sx_pref004.htm#f1_sx_pref_cat_pg" />
+  <!-- "Preferences - Notifications Page"-->
+  <mapID target="OEPSH244" url="f1_oep_sx_pref004.htm#OEPSH244" />
+  <!-- "Preferences - Notifications Page"-->
+  <mapID target="f1_oep_sx_pref004.htm-sthref27" url="f1_oep_sx_pref004.htm#sthref27" />
+  <!-- "Preferences - Notifications Page"-->
+  <mapID target="OEPSH245" url="f1_oep_sx_pref004.htm#OEPSH245" />
+  <!-- "Preferences - Notifications Page"-->
+  <mapID target="OEPSH246" url="f1_oep_sx_pref004.htm#OEPSH246" />
+  <!-- "Preferences - Notifications Page"-->
+  <mapID target="OEPSH247" url="f1_oep_sx_pref004.htm#OEPSH247" />
+  <!-- "Preferences - Notifications Page"-->
+  <mapID target="OEPSH359" url="f1_oep_sx_pref004.htm#OEPSH359" />
+  <!-- "Related Topics"-->
+  <mapID target="f1_sx_pref_expl_livopstr_pg" url="f1_oep_sx_pref005.htm#f1_sx_pref_expl_livopstr_pg" />
+  <!-- "Preferences - Catalog Page"-->
+  <mapID target="OEPSH417" url="f1_oep_sx_pref005.htm#OEPSH417" />
+  <!-- "Preferences - Catalog Page"-->
+  <mapID target="f1_oep_sx_pref005.htm-sthref28" url="f1_oep_sx_pref005.htm#sthref28" />
+  <!-- "Preferences - Catalog Page"-->
+  <mapID target="OEPSH418" url="f1_oep_sx_pref005.htm#OEPSH418" />
+  <!-- "Preferences - Catalog Page"-->
+  <mapID target="OEPSH421" url="f1_oep_sx_pref005.htm#OEPSH421" />
+  <!-- "Related Topics"-->
+  <mapID target="OEPSH260" url="f1_oep_sx_patterns.htm#OEPSH260" />
+  <!-- "Patterns Context Sensitive Help Topics"-->
+  <mapID target="f1_oep_sx_patterns.htm" url="f1_oep_sx_patterns.htm" />
+  <!-- "Patterns Context Sensitive Help Topics"-->
+  <mapID target="f1_sx_create_patt_det_dup_pg" url="f1_oep_sx_patterns001.htm#f1_sx_create_patt_det_dup_pg" />
+  <!-- "Patterns Context Sensitive Help Topics"-->
+  <mapID target="OEPSH261" url="f1_oep_sx_patterns001.htm#OEPSH261" />
+  <!-- "Patterns Context Sensitive Help Topics"-->
+  <mapID target="f1_oep_sx_patterns001.htm-sthref30" url="f1_oep_sx_patterns001.htm#sthref30" />
+  <!-- "Patterns Context Sensitive Help Topics"-->
+  <mapID target="OEPSH262" url="f1_oep_sx_patterns001.htm#OEPSH262" />
+  <!-- "Patterns Context Sensitive Help Topics"-->
+  <mapID target="OEPSH263" url="f1_oep_sx_patterns001.htm#OEPSH263" />
+  <!-- "Patterns Context Sensitive Help Topics"-->
+  <mapID target="OEPSH264" url="f1_oep_sx_patterns001.htm#OEPSH264" />
+  <!-- "Patterns Context Sensitive Help Topics"-->
+  <mapID target="OEPSH364" url="f1_oep_sx_patterns001.htm#OEPSH364" />
+  <!-- "Related Topics"-->
+  <mapID target="f1_sx_create_patt_det_mis_pg" url="f1_oep_sx_patterns002.htm#f1_sx_create_patt_det_mis_pg" />
+  <!-- "Create Pattern - Detect Duplicates"-->
+  <mapID target="OEPSH266" url="f1_oep_sx_patterns002.htm#OEPSH266" />
+  <!-- "Create Pattern - Detect Duplicates"-->
+  <mapID target="f1_oep_sx_patterns002.htm-sthref31" url="f1_oep_sx_patterns002.htm#sthref31" />
+  <!-- "Create Pattern - Detect Duplicates"-->
+  <mapID target="OEPSH267" url="f1_oep_sx_patterns002.htm#OEPSH267" />
+  <!-- "Create Pattern - Detect Duplicates"-->
+  <mapID target="OEPSH268" url="f1_oep_sx_patterns002.htm#OEPSH268" />
+  <!-- "Create Pattern - Detect Duplicates"-->
+  <mapID target="OEPSH269" url="f1_oep_sx_patterns002.htm#OEPSH269" />
+  <!-- "Create Pattern - Detect Duplicates"-->
+  <mapID target="OEPSH365" url="f1_oep_sx_patterns002.htm#OEPSH365" />
+  <!-- "Related Topics"-->
+  <mapID target="f1_sx_create_patt_w_pg" url="f1_oep_sx_patterns003.htm#f1_sx_create_patt_w_pg" />
+  <!-- "Create Pattern - Detect Missing Event"-->
+  <mapID target="OEPSH271" url="f1_oep_sx_patterns003.htm#OEPSH271" />
+  <!-- "Create Pattern - Detect Missing Event"-->
+  <mapID target="f1_oep_sx_patterns003.htm-sthref32" url="f1_oep_sx_patterns003.htm#sthref32" />
+  <!-- "Create Pattern - Detect Missing Event"-->
+  <mapID target="OEPSH272" url="f1_oep_sx_patterns003.htm#OEPSH272" />
+  <!-- "Create Pattern - Detect Missing Event"-->
+  <mapID target="OEPSH273" url="f1_oep_sx_patterns003.htm#OEPSH273" />
+  <!-- "Create Pattern - Detect Missing Event"-->
+  <mapID target="OEPSH274" url="f1_oep_sx_patterns003.htm#OEPSH274" />
+  <!-- "Create Pattern - Detect Missing Event"-->
+  <mapID target="OEPSH366" url="f1_oep_sx_patterns003.htm#OEPSH366" />
+  <!-- "Related Topics"-->
+  <mapID target="f1_sx_create_patt_inv_w_pg" url="f1_oep_sx_patterns004.htm#f1_sx_create_patt_inv_w_pg" />
+  <!-- "Create Pattern - W"-->
+  <mapID target="OEPSH276" url="f1_oep_sx_patterns004.htm#OEPSH276" />
+  <!-- "Create Pattern - W"-->
+  <mapID target="f1_oep_sx_patterns004.htm-sthref33" url="f1_oep_sx_patterns004.htm#sthref33" />
+  <!-- "Create Pattern - W"-->
+  <mapID target="OEPSH277" url="f1_oep_sx_patterns004.htm#OEPSH277" />
+  <!-- "Create Pattern - W"-->
+  <mapID target="OEPSH278" url="f1_oep_sx_patterns004.htm#OEPSH278" />
+  <!-- "Create Pattern - W"-->
+  <mapID target="OEPSH279" url="f1_oep_sx_patterns004.htm#OEPSH279" />
+  <!-- "Create Pattern - W"-->
+  <mapID target="OEPSH367" url="f1_oep_sx_patterns004.htm#OEPSH367" />
+  <!-- "Related Topics"-->
+  <mapID target="f1_sx_create_patt_topn_pg" url="f1_oep_sx_patterns005.htm#f1_sx_create_patt_topn_pg" />
+  <!-- "Create Pattern - Inverse W Page"-->
+  <mapID target="OEPSH281" url="f1_oep_sx_patterns005.htm#OEPSH281" />
+  <!-- "Create Pattern - Inverse W Page"-->
+  <mapID target="f1_oep_sx_patterns005.htm-sthref34" url="f1_oep_sx_patterns005.htm#sthref34" />
+  <!-- "Create Pattern - Inverse W Page"-->
+  <mapID target="OEPSH282" url="f1_oep_sx_patterns005.htm#OEPSH282" />
+  <!-- "Create Pattern - Inverse W Page"-->
+  <mapID target="OEPSH283" url="f1_oep_sx_patterns005.htm#OEPSH283" />
+  <!-- "Create Pattern - Inverse W Page"-->
+  <mapID target="OEPSH284" url="f1_oep_sx_patterns005.htm#OEPSH284" />
+  <!-- "Create Pattern - Inverse W Page"-->
+  <mapID target="OEPSH368" url="f1_oep_sx_patterns005.htm#OEPSH368" />
+  <!-- "Related Topics"-->
+  <mapID target="f1_sx_create_patt_bottomn_pg" url="f1_oep_sx_patterns006.htm#f1_sx_create_patt_bottomn_pg" />
+  <!-- "Create Pattern - Top N"-->
+  <mapID target="OEPSH375" url="f1_oep_sx_patterns006.htm#OEPSH375" />
+  <!-- "Create Pattern - Top N"-->
+  <mapID target="f1_oep_sx_patterns006.htm-sthref35" url="f1_oep_sx_patterns006.htm#sthref35" />
+  <!-- "Create Pattern - Top N"-->
+  <mapID target="OEPSH376" url="f1_oep_sx_patterns006.htm#OEPSH376" />
+  <!-- "Create Pattern - Top N"-->
+  <mapID target="OEPSH377" url="f1_oep_sx_patterns006.htm#OEPSH377" />
+  <!-- "Create Pattern - Top N"-->
+  <mapID target="OEPSH378" url="f1_oep_sx_patterns006.htm#OEPSH378" />
+  <!-- "Create Pattern - Top N"-->
+  <mapID target="OEPSH379" url="f1_oep_sx_patterns006.htm#OEPSH379" />
+  <!-- "Related Topics"-->
+  <mapID target="f1_sx_create_patt_eli_dup_pg" url="f1_oep_sx_patterns007.htm#f1_sx_create_patt_eli_dup_pg" />
+  <!-- "Create Pattern - Bottom N"-->
+  <mapID target="OEPSH286" url="f1_oep_sx_patterns007.htm#OEPSH286" />
+  <!-- "Create Pattern - Bottom N"-->
+  <mapID target="f1_oep_sx_patterns007.htm-sthref36" url="f1_oep_sx_patterns007.htm#sthref36" />
+  <!-- "Create Pattern - Bottom N"-->
+  <mapID target="OEPSH287" url="f1_oep_sx_patterns007.htm#OEPSH287" />
+  <!-- "Create Pattern - Bottom N"-->
+  <mapID target="OEPSH288" url="f1_oep_sx_patterns007.htm#OEPSH288" />
+  <!-- "Create Pattern - Bottom N"-->
+  <mapID target="OEPSH289" url="f1_oep_sx_patterns007.htm#OEPSH289" />
+  <!-- "Create Pattern - Bottom N"-->
+  <mapID target="OEPSH369" url="f1_oep_sx_patterns007.htm#OEPSH369" />
+  <!-- "Related Topics"-->
+  <mapID target="f1_sx_create_patt_fluct_pg" url="f1_oep_sx_patterns008.htm#f1_sx_create_patt_fluct_pg" />
+  <!-- "Create Pattern - Eliminate Duplicates"-->
+  <mapID target="OEPSH291" url="f1_oep_sx_patterns008.htm#OEPSH291" />
+  <!-- "Create Pattern - Eliminate Duplicates"-->
+  <mapID target="f1_oep_sx_patterns008.htm-sthref37" url="f1_oep_sx_patterns008.htm#sthref37" />
+  <!-- "Create Pattern - Eliminate Duplicates"-->
+  <mapID target="OEPSH292" url="f1_oep_sx_patterns008.htm#OEPSH292" />
+  <!-- "Create Pattern - Eliminate Duplicates"-->
+  <mapID target="OEPSH293" url="f1_oep_sx_patterns008.htm#OEPSH293" />
+  <!-- "Create Pattern - Eliminate Duplicates"-->
+  <mapID target="OEPSH294" url="f1_oep_sx_patterns008.htm#OEPSH294" />
+  <!-- "Create Pattern - Eliminate Duplicates"-->
+  <mapID target="OEPSH370" url="f1_oep_sx_patterns008.htm#OEPSH370" />
+  <!-- "Related Topics"-->
+  <mapID target="f1_sx_create_patt_uptrend_pg" url="f1_oep_sx_patterns009.htm#f1_sx_create_patt_uptrend_pg" />
+  <!-- "Create Pattern - Fluctuation"-->
+  <mapID target="OEPSH296" url="f1_oep_sx_patterns009.htm#OEPSH296" />
+  <!-- "Create Pattern - Fluctuation"-->
+  <mapID target="f1_oep_sx_patterns009.htm-sthref38" url="f1_oep_sx_patterns009.htm#sthref38" />
+  <!-- "Create Pattern - Fluctuation"-->
+  <mapID target="OEPSH297" url="f1_oep_sx_patterns009.htm#OEPSH297" />
+  <!-- "Create Pattern - Fluctuation"-->
+  <mapID target="OEPSH298" url="f1_oep_sx_patterns009.htm#OEPSH298" />
+  <!-- "Create Pattern - Fluctuation"-->
+  <mapID target="OEPSH299" url="f1_oep_sx_patterns009.htm#OEPSH299" />
+  <!-- "Create Pattern - Fluctuation"-->
+  <mapID target="OEPSH371" url="f1_oep_sx_patterns009.htm#OEPSH371" />
+  <!-- "Related Topics"-->
+  <mapID target="f1_sx_create_patt_dwntrend_pg" url="f1_oep_sx_patterns010.htm#f1_sx_create_patt_dwntrend_pg" />
+  <!-- "Create Pattern - Up Trend Pattern"-->
+  <mapID target="OEPSH301" url="f1_oep_sx_patterns010.htm#OEPSH301" />
+  <!-- "Create Pattern - Up Trend Pattern"-->
+  <mapID target="f1_oep_sx_patterns010.htm-sthref39" url="f1_oep_sx_patterns010.htm#sthref39" />
+  <!-- "Create Pattern - Up Trend Pattern"-->
+  <mapID target="OEPSH302" url="f1_oep_sx_patterns010.htm#OEPSH302" />
+  <!-- "Create Pattern - Up Trend Pattern"-->
+  <mapID target="OEPSH303" url="f1_oep_sx_patterns010.htm#OEPSH303" />
+  <!-- "Create Pattern - Up Trend Pattern"-->
+  <mapID target="OEPSH304" url="f1_oep_sx_patterns010.htm#OEPSH304" />
+  <!-- "Create Pattern - Up Trend Pattern"-->
+  <mapID target="OEPSH372" url="f1_oep_sx_patterns010.htm#OEPSH372" />
+  <!-- "Related Topics"-->
+  <mapID target="OEPSH306" url="f1_oep_expl_actions.htm#OEPSH306" />
+  <!-- "Exploration Actions Context Sensitive Help Topics"-->
+  <mapID target="f1_oep_expl_actions.htm" url="f1_oep_expl_actions.htm" />
+  <!-- "Exploration Actions Context Sensitive Help Topics"-->
+  <mapID target="f1_sx_configure_target" url="cs_pagename1002.htm#f1_sx_configure_target" />
+  <!-- "Exploration Actions Context Sensitive Help Topics"-->
+  <mapID target="OEPSH307" url="cs_pagename1002.htm#OEPSH307" />
+  <!-- "Exploration Actions Context Sensitive Help Topics"-->
+  <mapID target="cs_pagename1002.htm-sthref41" url="cs_pagename1002.htm#sthref41" />
+  <!-- "Exploration Actions Context Sensitive Help Topics"-->
+  <mapID target="OEPSH308" url="cs_pagename1002.htm#OEPSH308" />
+  <!-- "Exploration Actions Context Sensitive Help Topics"-->
+  <mapID target="OEPSH380" url="cs_pagename1002.htm#OEPSH380" />
+  <!-- "Exploration Actions Context Sensitive Help Topics"-->
+  <mapID target="OEPSH309" url="cs_pagename1002.htm#OEPSH309" />
+  <!-- "Exploration Actions Context Sensitive Help Topics"-->
+  <mapID target="OEPSH381" url="cs_pagename1002.htm#OEPSH381" />
+  <!-- "Exploration Actions Context Sensitive Help Topics"-->
+  <mapID target="OEPSH382" url="cs_pagename1002.htm#OEPSH382" />
+  <!-- "Exploration Actions Context Sensitive Help Topics"-->
+  <mapID target="OEPSH383" url="cs_pagename1002.htm#OEPSH383" />
+  <!-- "Exploration Actions Context Sensitive Help Topics"-->
+  <mapID target="OEPSH384" url="cs_pagename1002.htm#OEPSH384" />
+  <!-- "Exploration Actions Context Sensitive Help Topics"-->
+  <mapID target="OEPSH385" url="cs_pagename1002.htm#OEPSH385" />
+  <!-- "Exploration Actions Context Sensitive Help Topics"-->
+  <mapID target="OEPSH386" url="cs_pagename1002.htm#OEPSH386" />
+  <!-- "Exploration Actions Context Sensitive Help Topics"-->
+  <mapID target="OEPSH387" url="cs_pagename1002.htm#OEPSH387" />
+  <!-- "Exploration Actions Context Sensitive Help Topics"-->
+  <mapID target="OEPSH388" url="cs_pagename1002.htm#OEPSH388" />
+  <!-- "Exploration Actions Context Sensitive Help Topics"-->
+  <mapID target="OEPSH389" url="cs_pagename1002.htm#OEPSH389" />
+  <!-- "Exploration Actions Context Sensitive Help Topics"-->
+  <mapID target="OEPSH390" url="cs_pagename1002.htm#OEPSH390" />
+  <!-- "Exploration Actions Context Sensitive Help Topics"-->
+  <mapID target="OEPSH391" url="cs_pagename1002.htm#OEPSH391" />
+  <!-- "Exploration Actions Context Sensitive Help Topics"-->
+  <mapID target="OEPSH392" url="cs_pagename1002.htm#OEPSH392" />
+  <!-- "Exploration Actions Context Sensitive Help Topics"-->
+  <mapID target="OEPSH393" url="cs_pagename1002.htm#OEPSH393" />
+  <!-- "Exploration Actions Context Sensitive Help Topics"-->
+  <mapID target="OEPSH394" url="cs_pagename1002.htm#OEPSH394" />
+  <!-- "Exploration Actions Context Sensitive Help Topics"-->
+  <mapID target="OEPSH373" url="cs_pagename1002.htm#OEPSH373" />
+  <!-- "Related Topics"-->
+  <mapID target="f1_sx_expl__actions_pg" url="f1_oep_expl_actions001.htm#f1_sx_expl__actions_pg" />
+  <!-- "Configure a Target Dialog"-->
+  <mapID target="OEPSH311" url="f1_oep_expl_actions001.htm#OEPSH311" />
+  <!-- "Configure a Target Dialog"-->
+  <mapID target="f1_oep_expl_actions001.htm-sthref42" url="f1_oep_expl_actions001.htm#sthref42" />
+  <!-- "Configure a Target Dialog"-->
+  <mapID target="OEPSH395" url="f1_oep_expl_actions001.htm#OEPSH395" />
+  <!-- "Configure a Target Dialog"-->
+  <mapID target="OEPSH396" url="f1_oep_expl_actions001.htm#OEPSH396" />
+  <!-- "Configure a Target Dialog"-->
+  <mapID target="OEPSH397" url="f1_oep_expl_actions001.htm#OEPSH397" />
+  <!-- "Configure a Target Dialog"-->
+  <mapID target="OEPSH398" url="f1_oep_expl_actions001.htm#OEPSH398" />
+  <!-- "Configure a Target Dialog"-->
+  <mapID target="OEPSH312" url="f1_oep_expl_actions001.htm#OEPSH312" />
+  <!-- "Configure a Target Dialog"-->
+  <mapID target="OEPSH313" url="f1_oep_expl_actions001.htm#OEPSH313" />
+  <!-- "Configure a Target Dialog"-->
+  <mapID target="OEPSH314" url="f1_oep_expl_actions001.htm#OEPSH314" />
+  <!-- "Configure a Target Dialog"-->
+  <mapID target="OEPSH399" url="f1_oep_expl_actions001.htm#OEPSH399" />
+  <!-- "Configure a Target Dialog"-->
+  <mapID target="OEPSH315" url="f1_oep_expl_actions001.htm#OEPSH315" />
+  <!-- "Configure a Target Dialog"-->
+  <mapID target="OEPSH316" url="f1_oep_expl_actions001.htm#OEPSH316" />
+  <!-- "Configure a Target Dialog"-->
+  <mapID target="OEPSH400" url="f1_oep_expl_actions001.htm#OEPSH400" />
+  <!-- "Configure a Target Dialog"-->
+  <mapID target="OEPSH401" url="f1_oep_expl_actions001.htm#OEPSH401" />
+  <!-- "Configure a Target Dialog"-->
+  <mapID target="OEPSH374" url="f1_oep_expl_actions001.htm#OEPSH374" />
+  <!-- "Related Topics"-->
+  <mapID target="f1_sx_export_expl_dialog" url="f1_oep_expl_actions002.htm#f1_sx_export_expl_dialog" />
+  <!-- "Actions"-->
+  <mapID target="OEPSH402" url="f1_oep_expl_actions002.htm#OEPSH402" />
+  <!-- "Actions"-->
+  <mapID target="f1_oep_expl_actions002.htm-sthref43" url="f1_oep_expl_actions002.htm#sthref43" />
+  <!-- "Actions"-->
+  <mapID target="OEPSH403" url="f1_oep_expl_actions002.htm#OEPSH403" />
+  <!-- "Actions"-->
+  <mapID target="OEPSH404" url="f1_oep_expl_actions002.htm#OEPSH404" />
+  <!-- "Actions"-->
+  <mapID target="OEPSH405" url="f1_oep_expl_actions002.htm#OEPSH405" />
+  <!-- "Actions"-->
+  <mapID target="OEPSH406" url="f1_oep_expl_actions002.htm#OEPSH406" />
+  <!-- "Actions"-->
+  <mapID target="OEPSH407" url="f1_oep_expl_actions002.htm#OEPSH407" />
+  <!-- "Actions"-->
+  <mapID target="OEPSH408" url="f1_oep_expl_actions002.htm#OEPSH408" />
+  <!-- "Actions"-->
+  <mapID target="OEPSH409" url="f1_oep_expl_actions002.htm#OEPSH409" />
+  <!-- "Actions"-->
+  <mapID target="OEPSH410" url="f1_oep_expl_actions002.htm#OEPSH410" />
+  <!-- "Actions"-->
+  <mapID target="OEPSH411" url="f1_oep_expl_actions002.htm#OEPSH411" />
+  <!-- "Related Topics"-->
+</map>

@@ -1,0 +1,437 @@
+<div id="source-dialog" data-i18n-ns="sourceDialog">
+    <div class="oj-dialog-body">
+    <div class="source-dialog-top-nav">
+        <div>
+            <div>
+                <button id="source-dialog-back-button" data-bind="click: backStep"></button>
+            </div>
+            <div class="train-3-steps">
+                <div class="train-3-steps-image-wrapper">
+                    <div data-bind="attr: {class: 'train-3-steps-image-' + step()}"></div>
+                </div>
+                <div data-bind="css: {
+                    'train-3-steps-label': true,
+                    'active': step() === 1,
+                    'passed': step() > 1
+                }" data-i18n="TRAIN_STEP_1_LABEL"></div>
+                <div data-bind="css: {
+                    'train-3-steps-label': true,
+                    'active': step() === 2,
+                    'passed': step() > 2
+                }" data-i18n="TRAIN_STEP_2_LABEL"></div>
+                <div data-bind="css: {
+                    'train-3-steps-label': true,
+                    'active': step() === 3
+                }" data-i18n="TRAIN_STEP_3_LABEL"></div>
+            </div>
+            <div>
+                <button id="source-dialog-next-button" data-bind="click: nextStep"></button>
+            </div>
+        </div>
+    </div>
+
+    <form id="source-form-step-1" class="source-step source-form validated-form" data-bind="visible: step() === 1">
+        <div class="oj-form oj-md-odd-cols-2 oj-md-labels-inline">
+            <div class="oj-row">  
+                <div class="oj-col">
+                    <label class="oj-label" for="source-name">
+                        <span class="oj-label-required-icon oj-widget-icon" 
+                              data-i18n="{attr: {title: '*oep.field.REQUIRED'}}"></span><span 
+                              data-i18n="NAME_LABEL"></span>
+                    </label>
+                </div>
+                <div class="oj-col">
+                    <input class="oj-inputtext oj-inputtext-input validate[required]" 
+                           id="source-name" name="source-name" type="text" 
+                           data-bind="
+                            event: {change: onFieldChange},
+                            value: item().displayName
+                           ">
+                </div>
+            </div>
+
+            <div class="oj-row">
+                <div class="oj-col">
+                    <label class="oj-label" data-i18n="DESCRIPTION_LABEL"></label>
+                </div>
+                <div class="oj-col">
+                    <textarea id="source-description" name="source-description" class="oj-textarea oj-textarea-input validate[maxSize[512]]"
+                              data-bind="
+                            event: {change: onFieldChange},
+                            value: item().description
+                              "></textarea>
+                </div>
+            </div>
+
+            <div class="oj-row"> 
+                <div class="oj-col">
+                    <label class="oj-label" data-i18n="TAGS_LABEL"></label>
+                </div>
+                <div class="oj-col">
+                    <ul id="source-tags" class="as-input"></ul>
+                </div>
+            </div>
+
+            <div class="oj-row"> 
+                <div class="oj-col">
+                    <label class="oj-label" for="source-type">
+                        <span class="oj-label-required-icon oj-widget-icon" 
+                              data-i18n="{attr: {title: '*oep.field.REQUIRED'}}"></span><span 
+                              data-i18n="SOURCE_TYPE_LABEL"></span>
+                    </label>
+                </div>
+                <div class="oj-col">
+                    <select id="source-type" name="source-type" 
+                            class="oj-select oj-inputtext oj-inputtext-input validate[required]"
+                            data-bind="
+                            css: { 'oj-disabled': !isNew()},
+                            event: {change: onSourceTypeChange},
+                            optionsCaption: __('SOURCE_TYPE_CAPTION'), 
+                            options: sourceTypes, 
+                            optionsText: 'displayName', 
+                            optionsValue: 'name', 
+                            value: item().typeName,
+                            disable: !isNew() 
+                            ">
+                    </select>
+                    <!--<b role="presentation" class="oj-component-icon oj-clickable-icon oj-select-open-icon"></b>-->
+                    
+                </div>
+            </div>
+            <div class="oj-row" data-bind="visible: isCreateExplorationCheckBoxVisible()">
+                <div class="oj-col">
+                    &nbsp;
+                </div>
+                <div class="oj-col">
+                    <input class="oj-checkbox" 
+                           id="source-open-exploration" name="source-open-exploration" type="checkbox" 
+                           data-bind="checked: toOpenExploration">
+                    <label data-i18n="CREATE_EXPLORATION_LABEL" for="source-open-exploration"></label>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <form id="source-form-step-2" class="source-step source-form validated-form" data-bind="visible: step() === 2">
+        <div class="step-title">
+            <span data-i18n="SOURCE_TYPE_TITLE"></span>:
+            <span data-bind="text: sourceTypeSelected().displayName, attr: {title: sourceTypeSelected().description}"></span>
+        </div>
+        <div class="oj-form oj-md-odd-cols-3 oj-md-labels-inline" data-bind="foreach: sourceParameters">
+            <div class="oj-row"> 
+                <div class="oj-col">
+                    <label class="oj-label" data-bind="attr: {for: 'source-dialog-' + name}">
+                        <span class="oj-label-required-icon oj-widget-icon" 
+                              data-i18n="{attr: {title: '*oep.field.REQUIRED'}}"
+                              data-bind="visible: required"></span><span data-bind="text: displayName"></span>
+                    </label>
+                </div>
+                <div class="oj-col">
+                    
+                    <!-- ko if: widget === 'input' || ((widget === 'password') && ($parent.isNew() || $parent.sourceTypeChanged())) -->
+                    <input data-bind="
+                        event: {change: $parent.onFieldChange},
+                        attr: {
+                            type: widget,
+                            id: 'source-dialog-' + name,
+                            name: 'source-dialog-' + name,
+                            title: description,
+                            class: cls + ' validate[' + validators + ']'
+                        },
+                        value: value
+                           "/>
+                    <!-- /ko -->
+                    
+                    <!-- ko if: (widget === 'password') && (!$parent.isNew()) && (!$parent.sourceTypeChanged())  -->
+                    <div class="changePassword">
+                        
+                        <a href="javascript: void(0)" data-bind="visible: !changeMode(),
+                                event: {
+                                    click: goChangePassword,
+                                }" data-i18n="CHANGE_PASSWORD">
+                        </a>
+                        <div style="display: none;" class="passwordChangeMode" data-bind="visible: changeMode">
+                            <input data-bind="event: {
+                                    change: changePassword
+                                },
+                                attr: {
+                                    type: widget,
+                                    id: 'source-dialog-' + name,
+                                    name: 'source-dialog-' + name,
+                                    title: description,
+                                    class: cls + ' validate[' + validators + ']'
+                                }" /> 
+                            
+                            <a href="javascript: void(0)" data-bind="event: {
+                                    click: cancelChangePassword
+                                }," data-i18n="CANCEL_CHANGE_PASSWORD">
+                            </a>
+                        </div>
+                    </div>
+                    <!-- /ko -->
+
+                    
+                    <!-- ko if: widget === 'select' -->
+                    <select
+                        data-bind="
+                                    event: {change: $parent.onFieldChange},
+                                    optionsCaption: '', 
+                                    options: options,
+                                    optionsText: 'displayName',
+                                    optionsValue: 'value',
+                                    attr: {
+                                        id: 'source-dialog-' + name,
+                                        name: 'source-dialog-' + name,
+                                        title: description,
+                                        class: cls + ' validate[' + validators + ']'
+                                    },
+                                    value: value
+                        ">
+                    </select>
+                    <!-- /ko -->
+
+                    <!-- ko if: widget === 'selectRemote' -->
+                    <select
+                        data-bind="
+                                    event: {change: $parent.onFieldChange},
+                                    optionsCaption: caption, 
+                                    options: options,
+                                    optionsText: 'displayName',
+                                    optionsValue: 'value',
+                                    attr: {
+                                        id: 'source-dialog-' + name,
+                                        name: 'source-dialog-' + name,
+                                        title: description,
+                                        class: cls + ' validate[' + validators + ']'
+                                    },
+                                    value: value
+                        ">
+                    </select>
+                    <div class="indicator-busy" data-bind="visible: showLoader()"></div>
+                    <!-- /ko -->
+                    
+                    <!-- ko if: widget === 'checkbox' -->
+                    <input data-bind="
+                            event: {change: $parent.onFieldChange},
+                            attr: {
+                                type: widget,
+                                id: 'target-dialog-' + name,
+                                name: 'target-dialog-' + name,
+                                title: description,
+                                class: cls + ' validate[' + validators + ']'
+                            },
+                            checked: value
+                           "/>
+                    <!-- /ko -->
+                    
+                    <!-- ko if: widget === 'file' -->
+                    <div class="upload-field">
+
+                        <label class="file-upload oj-button"
+                               data-bind="css: { 'oj-disabled': value().type === 'url'},
+                               attr: { id: mode.upload.visualCtrlName },
+                               event: {
+                                    click: mode.onChange
+                               }
+                               ">
+                            <span>
+                                Upload file
+                            </span>
+                            <input data-bind="
+                                    event: {change: mode.upload.onChange,
+                                        focus: mode.upload.onFocus,
+                                        blur: mode.upload.onBlur
+                                    },
+                                    enable: mode.isUpload,
+                                    attr: {
+                                        type: widget,
+                                        id: mode.upload.inputFileName,
+                                        name: mode.upload.inputFileName,
+                                        title: description,
+                                        class: cls + ' validate[' + validators + ']'
+                                    }
+                                   " />
+                            <input data-bind="attr: { 
+                                        name: mode.upload.valueCtrlName,
+                                        type: 'text', 
+                                        'data-errormessage-value-missing': requiredFileMessage,
+                                    },
+                                    value: value().fileServerName
+                                   " />
+                        </label>
+
+
+                        <span class="file-upload-status oj-legend" data-bind="text: value().fileDisplayName"></span>
+                        <span class="message-icon error file-upload-error" data-bind="text: mode.upload.error"></span>
+                        <div data-bind="attr: {
+                                            id: 'source-dialog-' + name + '-url-label'
+                                        },
+                                        event: {
+                                            click: mode.onChange
+                                        },
+                             ">
+                            <input data-bind="
+                                        event: {change: mode.url.onChange,
+                                            focus: mode.url.onFocus,
+                                            blur: mode.url.onBlur
+                                        },
+                                        enable: mode.isUrl,
+                                        attr: {
+                                            type: 'text',
+                                            id: mode.url.visualCtrlName,
+                                            name: mode.url.visualCtrlName,
+                                            title: description,
+                                            class: cls + ' validate[' + validators + ']',
+                                            'data-errormessage-value-missing': requiredFileMessage,
+                                            'data-validation-placeholder': urlDefaultCaption,
+                                        },
+                                        css: { 'oj-disabled': value().type !== 'url',
+                                            'file-upload-url': true
+                                        },
+                                        value: (mode.isUrl() ? (value().fileServerName || urlDefaultCaption) : urlDefaultCaption)
+                                   ">
+                        </div>
+                        <span class="message-icon error file-upload-error" data-bind="text: mode.url.error"></span>
+                    </div>
+                    <!-- /ko -->
+                    
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <div id="source-form-step-3" class="source-step" data-bind="visible: step() === 3">
+        <div class="step-title"><span data-i18n="SOURCE_TYPE_TITLE"></span>: <span data-bind="
+            text: sourceTypeSelected().displayName, 
+            attr: {title: sourceTypeSelected().description}
+                                                                                                "></span></div>
+        <div class="step-subtitle">
+            <span data-bind="
+                text: sourceTypeSelected().displayName, 
+                attr: {title: sourceTypeSelected().description}
+                  "></span> <span data-i18n="EVENT_TYPE_TITLE"></span>
+        </div>
+
+        <form id="source-form-step-3-manual" class="oj-form oj-md-odd-cols-3 oj-md-labels-inline source-form validated-form" data-bind="
+                visible: isManualAvailable
+              ">
+            <div class="oj-row"> 
+                <div class="oj-col">
+                    <label class="oj-label">
+                        <span data-i18n="EVENT_TYPE_NAME_LABEL"></span>
+                    </label>
+                </div>
+                <div class="oj-col">
+                    <input class="oj-inputtext oj-inputtext-input" type="text" name="source-dialog-manual-event-type-name" data-bind="
+                        enable: isManualEventType(),
+                        value: manualEventType().name, 
+                        attr: {title: manualEventType().description}
+                           "/>
+                </div>
+            </div>
+            <div class="oj-row">
+                <div class="oj-col">
+                    <label class="oj-label" style="text-align: left;">
+                        <input type="radio" class="oj-radio" name="source-dialog-event-type-mode" value="manual" data-bind="
+                            click: oneEventTypeModeClick,
+                            checked: eventTypeMode
+                               "/><span data-i18n="EVENT_TYPE_MANUAL_LABEL"></span>
+                    </label>
+                </div>
+                <div class="oj-col">
+                    <div class="oj-form oj-md-odd-cols-5 oj-md-labels-inline manual-event-type-form" data-bind="foreach: manualEventTypeFields">
+                        <div class="oj-row"> 
+                            <div class="oj-col key-value-key">
+                                <input type="text" data-bind="
+                                    enable: $parent.isManualEventType(),
+                                    event: {change: $parent.onManualEventTypeFieldChange},
+                                    attr: {name: 'key-value-key-' + $index()},
+                                    css: {
+                                        'oj-inputtext': true,
+                                        'oj-inputtext-input': true,
+                                        'validate[required,custom[sqlalias]]': true,
+                                        'oj-disabled': !$parent.isManualEventType()
+                                    },
+                                    value: name
+                                       "/>
+                            </div>
+                            <div class="oj-col key-value-value">
+                                <select class="oj-select validate[required]"
+                                        data-bind="
+                                            enable: $parent.isManualEventType(),
+                                            attr: {name: 'key-value-value-' + $index()},
+                                            options: $parent.eventTypeFieldTypes,
+                                            optionsText: 'displayName', 
+                                            optionsValue: 'name', 
+                                            css: {
+                                                'oj-inputtext': true,
+                                                'oj-inputtext-input': true,
+                                                'validate[required]': true,
+                                                'oj-disabled': !$parent.isManualEventType()
+                                            },
+                                            value: value
+                                        ">
+                                </select>
+                                <a href="javascript:void(0);" data-bind="
+                                        css: {
+                                            'control-icon': true,
+                                            'control-icon-remove': true,
+                                            'disabled': !$parent.isManualEventType()
+                                        },
+                                        event: {click: function(data, event) { 
+                                            $parent.removeManualEventTypeField(data, event, $index());
+                                        }}
+                                   "></a>
+                                <a href="javascript:void(0);" data-bind="
+                                        css: {
+                                            'control-icon': true,
+                                            'control-icon-add': true,
+                                            'disabled': !$parent.isManualEventType()
+                                        },
+                                        event: {click: $parent.addManualEventTypeField}
+                                   "></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <form id="source-form-step-3-select" class="oj-form oj-md-odd-cols-3 oj-md-labels-inline source-form validated-form">
+            <div class="oj-row">
+                <div class="oj-col">
+                    <label class="oj-label" style="text-align: left;">
+                        <input type="radio" class="oj-radio" name="source-dialog-event-type-mode" value="select" data-bind="
+                            click: oneEventTypeModeClick,
+                            checked: eventTypeMode,
+                            visible: enableSelectEventTypeMode
+                               "/><span data-i18n="EVENT_TYPE_SELECT_LABEL"></span>
+                    </label>
+                </div>
+                <div class="oj-col shapeSelect">
+                    <select id="event-type" name="event-type" class="oj-select oj-inputtext oj-inputtext-input validate[required]" data-bind="
+                        enable: !isManualEventType(),
+                        event: {change: onEventTypeChange},
+                        optionsCaption: eventTypesSelectCaption, 
+                        options: eventTypes, 
+                        optionsText: 'name', 
+                        optionsValue: 'name', 
+                        value: selectedEventTypeName
+                            "></select>
+                    <div class="indicator-busy" data-bind="visible: showEventTypesLoader()"></div>
+                </div>
+            </div>
+        </form>
+    </div>
+    </div>
+    <div class="oj-dialog-footer">
+        
+        <button id="source-dialog-cancel-button" data-bind="ojComponent: {component: 'ojButton', 
+                                                label: __('CANCEL_LABEL'),
+                                                click: cancel }"></button>
+        <button id="source-dialog-save-button" data-bind="ojComponent: {component: 'ojButton', 
+                                                label: __('CREATE_LABEL'),
+                                                click: save
+                                            }"></button>
+    </div>
+</div>

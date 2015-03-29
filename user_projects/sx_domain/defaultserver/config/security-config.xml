@@ -1,0 +1,11 @@
+<config>
+  <css-realm>
+    <name>my-realm</name>
+    <css-configuration-file>config/security.xml</css-configuration-file>
+    <css-key-file>config/security-key.dat</css-key-file>
+  </css-realm>
+  <msa-security>
+    <boot-user-name-encrypted>{AES}+8UfR7jrUfn18ma6DQRr3Q==</boot-user-name-encrypted>
+    <password>{AES}tShWda06/1GxF8eK2LPsnA==</password>
+  </msa-security>
+</config>

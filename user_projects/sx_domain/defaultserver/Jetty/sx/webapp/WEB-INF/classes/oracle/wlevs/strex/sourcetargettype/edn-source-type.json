@@ -1,0 +1,26 @@
+{
+    "name":"EDN",
+    "displayName":"EDN type",
+    "description":"The sources of this type provide events from EDN",
+    "windowable":true,
+    "parameters":[
+        {
+            "name":"URL",
+            "type":"URL",
+            "description":"URL to SOA Suite",
+            "required":true
+        },
+        {
+            "name":"userName",
+            "type":"string",
+            "description":"User name",
+            "required":true
+        },
+        {
+            "name":"password",
+            "type":"string",
+            "validator":"password",
+            "description":"Password",
+            "required":true
+        }]
+}

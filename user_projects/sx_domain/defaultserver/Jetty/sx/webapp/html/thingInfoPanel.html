@@ -1,0 +1,100 @@
+<div id="thing-info-panel">
+    <div>
+        <div class="oj-row">
+
+            <div class="oj-col thing-info-block-1">
+                <div data-bind="visible: !editMode()">
+                    <div class="thing-info-subblock">
+                        <p><span data-i18n="*oep.thingInfoPanel.UPDATED_AT_LABEL"></span>: <span
+                                data-bind="html: updatedAt()"></span></p>
+
+                        <p><span data-i18n="*oep.thingInfoPanel.UPDATED_BY_LABEL"></span>: <span
+                                data-bind="html: updatedBy()"></span></p>
+                    </div>
+                    <div class="thing-info-subblock">
+                        <p><span data-i18n="*oep.thingInfoPanel.CREATED_AT_LABEL"></span>: <span
+                                data-bind="html: convertToDate(thing().createdAt)"></span></p>
+
+                        <p><span data-i18n="*oep.thingInfoPanel.CREATED_BY_LABEL"></span>: <span
+                                data-bind="html: thing().createdBy"></span></p>
+                    </div>
+                </div>
+                <div data-bind="visible: editMode">
+                    <h2 data-i18n="*oep.thingInfoPanel.UPDATE_INFO_TITLE"></h2>
+                </div>
+            </div>
+
+            <div class="oj-col thing-info-block-2">
+                <div data-bind="visible: editMode">
+                    <div class="thing-info-subblock">
+                        <p data-i18n="*oep.thingInfoPanel.UPDATE_INFO_DESCRIPTION"></p>
+                    </div>
+
+                    <form id="thing-info-panel-form" class="thing-info-panel-form validated-form">
+                        <table>
+                            <tr class="">
+                                <td class="keyColumn">
+                                    <label class="oj-label" for="thing-info-name">
+                                        <span class="oj-label-required-icon oj-widget-icon"
+                                              data-i18n="{attr: {title: '*oep.field.REQUIRED'}}"></span><span
+                                            data-i18n="*oep.thingInfoPanel.NAME_LABEL"></span>
+                                    </label>
+                                </td>
+                                <td class="valueColumn">
+                                    <input class="oj-inputtext oj-inputtext-input validate[required]"
+                                           id="thing-info-name" name="thing-info--name" type="text"
+                                           data-bind="event: {change: onFieldChange}, value: displayNameEditor">
+                                </td>
+                            </tr>
+
+                            <tr class="">
+                                <td class="keyColumn">
+                                    <label class="oj-label" data-i18n="*oep.thingInfoPanel.DESCRIPTION_LABEL"></label>
+                                </td>
+                                <td class="valueColumn">
+                                    <textarea id="thing-info-description" name="thing-info-description"
+                                              class="oj-textarea oj-textarea-input validate[maxSize[512]]"
+                                              data-bind="event: {change: onFieldChange}, value: changes.description"></textarea>
+                                </td>
+                            </tr>
+
+                            <tr class="">
+                                <td class="keyColumn">
+                                    <label class="oj-label" data-i18n="*oep.thingInfoPanel.TAGS_LABEL"></label>
+                                </td>
+                                <td class="valueColumn">
+                                    <ul id="thing-info-tags" class="as-input"></ul>
+                                </td>
+                            </tr>
+
+                        </table>
+                    </form>
+                </div>
+                <div data-bind="visible: !editMode()">
+                    <h2 data-bind="html: changes.displayName"></h2>
+
+                    <div class="thing-info-subblock">
+                        <p data-bind="visible: !changes.description()"
+                           data-i18n="*oep.thingInfoPanel.DESCRIPTION_EMPTY_TEXT"></p>
+
+                        <p data-bind="visible: changes.description(), html: changes.description"></p>
+                    </div>
+                    <div class="thing-info-subblock" data-bind="visible: changes.attachedTagNames().length > 0">
+                        <p><span data-i18n="*oep.thingInfoPanel.TAGS_LABEL"></span>: <span
+                                data-bind="html: changes.attachedTagNames"></span></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="oj-col thing-info-block-3">
+                <div data-bind="visible: !editMode()">
+                    <button type="button" id="info-panel-update-button"></button>
+                </div>
+                <div data-bind="visible: editMode">
+                    <button type="button" id="info-panel-done-button"></button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

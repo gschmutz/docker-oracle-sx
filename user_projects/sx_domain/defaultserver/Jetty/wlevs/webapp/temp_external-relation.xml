@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<Rule root="6">
+	<select-block>
+		<Operator ID="6" type="Output">	
+			<inputs>
+				<input>5</input>
+			</inputs>				
+		</Operator>		
+		<Operator ID="5" type="Select">
+			<inputs>
+				<input>4</input>
+			</inputs>
+		</Operator>
+	</select-block>
+	<where-block>
+		<Operator ID="4" type="Join">
+			<inputs>
+				<input>1</input>
+				<input>3</input>
+			</inputs>
+		</Operator>
+	</where-block>
+
+	<from-block>
+		<Operator ID="1" type="Cache-Table">
+		</Operator>
+		<Operator ID="2" type="SSource">
+		</Operator>
+		
+		<Operator ID="3" type="Window">	
+			<inputs>
+				<input>2</input>
+			</inputs>
+		</Operator>
+	</from-block>
+</Rule>

@@ -1,0 +1,56 @@
+Manifest-Version: 1.0
+Export-Package: oracle.wlevs.strex;uses:="org.osgi.framework,org.sprin
+ gframework.osgi.context,org.apache.commons.logging,com.bea.httppubsub
+ ,com.bea.core.webextensions,org.springframework.beans.factory";versio
+ n="12.1.3.0_1",oracle.wlevs.strex.eventtype;version="12.1.3.0_1",orac
+ le.wlevs.strex.exploration;uses:="oracle.wlevs.strex.utils,oracle.wle
+ vs.strex.model,oracle.wlevs.strex.eventtype,oracle.wlevs.strex.source
+ target";version="12.1.3.0_1",oracle.wlevs.strex.model;uses:="oracle.w
+ levs.strex.model.security,oracle.wlevs.strex.model.jar,oracle.wlevs.s
+ trex.jmx";version="12.1.3.0_1",oracle.wlevs.strex.model.cql;uses:="co
+ m.bea.wlevs.management.dataaggregation,oracle.wlevs.strex.model,oracl
+ e.wlevs.strex.exploration";version="12.1.3.0_1",oracle.wlevs.strex.mo
+ del.jar;version="12.1.3.0_1",oracle.wlevs.strex.model.security;uses:=
+ "oracle.wlevs.strex.model,oracle.wlevs.strex.jmx,com.bea.wlevs.securi
+ ty.management,oracle.wlevs.strex.utils";version="12.1.3.0_1",oracle.w
+ levs.strex.model.security.errorhandler;uses:="org.apache.commons.logg
+ ing";version="12.1.3.0_1",oracle.wlevs.strex.service;uses:="oracle.wl
+ evs.strex.eventtype,oracle.wlevs.strex.model,oracle.wlevs.strex.explo
+ ration,oracle.wlevs.strex.sourcetargettype,oracle.wlevs.strex.sourcet
+ arget,oracle.wlevs.strex.jmx,com.bea.wlevs.security.management,oracle
+ .wlevs.strex.utils";version="12.1.3.0_1",oracle.wlevs.strex.sourcetar
+ get;uses:="oracle.wlevs.strex.eventtype,oracle.wlevs.strex.exploratio
+ n";version="12.1.3.0_1",oracle.wlevs.strex.sourcetargettype;uses:="or
+ acle.wlevs.strex.sourcetarget,oracle.wlevs.strex.model,oracle.wlevs.s
+ trex.eventtype,oracle.wlevs.strex.exploration,oracle.wlevs.strex.mode
+ l.jar";version="12.1.3.0_1",oracle.wlevs.strex.sourcetargettype.edn;u
+ ses:="oracle.wlevs.strex.model.jar,oracle.wlevs.strex.utils,oracle.wl
+ evs.strex.eventtype,oracle.wlevs.strex.sourcetargettype,oracle.wlevs.
+ strex.sourcetarget,oracle.wlevs.strex.model,org.apache.commons.lang,c
+ om.bea.wlevs.management.configuration";version="12.1.3.0_1",oracle.wl
+ evs.strex.utils;uses:="com.oracle.schemas.events.edl,org.apache.commo
+ ns.lang,com.bea.wlevs.management.configuration,oracle.wlevs.strex.mod
+ el,oracle.wlevs.strex.eventtype";version="12.1.3.0_1"
+Built-By: vbychkov
+Tool: Bnd-1.50.0
+Bundle-Name: OEP Stream eXplorer War (ADE Side)
+Created-By: Apache Maven Bundle Plugin
+Web-ContextPath: sx
+Meta-Persistence: META-INF/persistence.xml
+Build-Jdk: 1.7.0_51
+Bundle-Version: 12.1.3.0_1
+Bnd-LastModified: 1424865310532
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: StreameXplorerWar
+Import-Package: com.bea.core.webextensions,com.bea.httppubsub,com.bea.
+ wlevs.logging.management,com.bea.wlevs.management.configuration,com.b
+ ea.wlevs.management.dataaggregation,com.bea.wlevs.management.dataserv
+ ice,com.bea.wlevs.management.remote.helper,com.bea.wlevs.security.aut
+ horize,com.bea.wlevs.security.management,com.bea.wlevs.spring.support
+ ,com.oracle.schemas.events.edl,javax.management.openmbean,javax.swing
+ ,javax.swing.plaf.basic,oracle.wlevs.strex.jmx,org.apache.commons.lan
+ g,org.apache.commons.logging,org.osgi.framework,org.osgi.service.http
+ ,org.springframework.beans.factory,org.springframework.osgi.context,o
+ rg.springframework.osgi.extensions.annotation
+Archiver-Version: Plexus Archiver
+

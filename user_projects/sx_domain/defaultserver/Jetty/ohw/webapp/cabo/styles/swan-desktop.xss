@@ -1,0 +1,1536 @@
+<?xml version="1.0"?>
+
+<!-- 
+  The swan-desktop.xss style sheet defines the styles that are 
+  specific to the desktop implementation of the Swan 
+  Look And Feel.  The styles defined here are automatically layered
+  on top of the styles defined by oracle-desktop.xss and base-desktop.xss.  As 
+  such, this style sheet should only contain new Swan-specific styles that are 
+  not defined by base/oracle-desktop.xss, or swan-specific overrides of styles
+  that are defined by base/oracle-desktop.xss.
+-->
+
+<styleSheetDocument xmlns="http://xmlns.oracle.com/uix/style"
+                    version="2.0">
+
+<!-- The base style sheet for the Browser Look And Feel -->
+<styleSheet>
+
+  <!-- 
+     Global Color Styles:  swan-desktop inherits most of the named
+     color styles from oracle-desktop, but needs to override some of
+     the styles to change the color ramps.
+  -->
+  <style name="DarkForeground">
+    <property name="color">#4673A6</property>
+  </style>
+
+  <style name="DarkBackground">
+    <property name="background-color">#a3c2df</property>
+  </style>
+
+  <style name="DarkAccentBackground">
+    <property name="background-color">#cfe0f1</property>
+  </style>
+
+  <style name="MediumAccentBackground">
+    <property name="background-color">#e7eff8</property>
+  </style>
+
+  <style name="LightAccentBackground">  
+    <property name="background-color">#eaeff5</property>
+  </style>
+
+  <!-- Text styles -->
+  <style name="DatePickerFont">
+    <includeStyle name="DefaultFont"/>
+    <includeStyle name="TextForeground"/>
+  </style>
+	  
+  <style name="MenuFont">
+    <includeStyle name="DefaultFontFamily"/>
+    <property name="text-align">center</property>
+    <property name="font-weight">bold</property>
+    <property name="text-decoration">none</property>
+    <includeStyle name="NowrapWhiteSpace"/> 
+  </style>
+
+  <style name="StrongFont">
+    <property name="font-family">Arial,Helvetica,Geneva,sans-serif</property>
+    <includeStyle name="DefaultFont"/>
+  </style>
+
+  <style name="StrongBoldFont">
+    <includeStyle name="StrongFont"/>
+    <property name="font-weight">bold</property>
+  </style>
+
+  <style name="TextForeground">
+    <property name="color">#3c3c3c</property>
+  </style>
+
+  <style name="SelectedTextForeground">
+    <includeStyle name="StrongBoldFont"/>
+    <property name="color">#48648c</property>
+  </style>
+
+  <style name="ErrorTextForeground">
+    <property name="color">#c81c24</property>
+  </style>
+
+  <style name="InfoTextForeground">
+    <property name="color">#3a5a87</property>
+  </style>
+
+  <!-- Link colors -->
+  <style name="LinkForeground">
+    <includeStyle name="DefaultFont"/>
+    <property name="color">#2b6287</property>
+  </style>
+
+  <style name="ActiveLinkForeground">
+    <includeStyle name="LinkForeground"/>
+  </style>
+
+  <style name="VisitedLinkForeground">
+    <includeStyle name="LinkForeground"/>
+  </style>
+
+  <style name="DisabledLinkForeground">
+    <includeStyle name="LinkForeground"/>
+  </style>
+
+  <!-- sideBar/sideNav named styles -->
+  <style name="SideBarForeground">
+    <property name="color">#013d74</property>
+  </style>
+
+  <style selector="A.OraLinkText">
+    <includeStyle name="LinkForeground"/>
+    <property name="text-decoration">underline</property>
+  </style>
+
+  <style selector=".OraLinkText A:link">
+    <includeStyle name="LinkForeground"/>
+    <property name="text-decoration">underline</property>
+  </style>
+
+  <style selector=".OraLinkText A:hover">
+    <includeStyle name="LinkForeground"/>
+    <property name="text-decoration">underline</property>
+  </style>
+
+  <style selector=".OraLinkText A:visited">
+    <includeStyle name="LinkForeground"/>
+    <property name="text-decoration">underline</property>
+  </style>
+
+  
+  
+  <style name="InstructionText">
+    <property name="color">#3a5a87</property>
+  </style>
+  
+  <style selector=".OraInstructionText">
+    <includeStyle name="DefaultFont" /> 
+    <includeStyle name="TextForeground" /> 
+    <includeStyle name="InstructionText" /> 
+  </style>
+    <!-- Styles for bulleted list -->
+  <style selector=".OraBulletedList UL">
+    <property name="margin-top"></property>
+    <property name="margin-bottom"></property>
+    <property name="margin">4px 0px 4px 8px</property>
+    <property name="padding-left">8px</property>
+  </style>
+
+  <!-- Create a client-side button style for those who are unable to
+       use Server-side image generation.
+       Differences in look & feel between server-side generated buttons
+       and client HTML buttons are expected because the client
+       may not have the server font, and the font size may translate into
+       different dimensions. 
+  -->
+  <style selector=".OraButtonText">
+    <includeStyle name="ButtonServerText" />
+  </style>
+  
+  <!--
+    Body Styles
+  -->
+
+  <style selector=".OraBody">
+    <includeStyle name="TextBackground"/>
+    <includeStyle name="DefaultFontFamily"/>
+    <property name="margin">0</property>
+    <property name="padding">0</property>
+  </style>
+
+  <!-- 
+    Branding Styles
+  -->
+
+  <style selector=".p_OraProductBrandingCompactText">
+    <property name="font-family">Arial</property>
+    <property name="font-weight">bold</property>
+    <property name="font-size">13pt</property>
+    <property name="color">#f7f4ef</property>
+    <property name="padding">0px</property>
+    <property name="margin">0px</property>
+  </style>
+
+  <style selector=".p_InContextBrandingText">
+    <includeStyle name="DefaultFont"/>
+    <property name="color">#ffffff</property>
+  </style> 
+
+
+  <!-- 
+    Breadcrumb Styles
+  -->
+
+  <style name="BreadCrumbs">
+    <property name="padding-left">5px</property>
+    <includeStyle name="StrongFont"/>
+    <includeStyle name="LightAccentBackground"/>
+    <property name="color">#2b6287</property>
+    <property name="text-decoration">none</property>
+  </style>
+
+  <style selector=".OraBreadCrumbs">
+    <includeStyle name="BreadCrumbs"/>
+  </style>
+
+  <style selector=".OraBreadCrumbs A">
+    <includeStyle name="BreadCrumbs"/>
+  </style>
+  
+  <style selector=".OraBreadCrumbs A:link">
+    <includeStyle name="BreadCrumbs"/>
+  </style>
+  
+  <style selector=".OraBreadCrumbs A:visited">
+    <includeStyle name="BreadCrumbs"/>
+  </style>
+
+  <style selector=".OraBreadCrumbs A:hover">
+    <includeStyle name="BreadCrumbs"/>
+    <property name="text-decoration">underline</property>
+  </style>
+
+  <style selector=".OraBreadCrumbsSelected">
+    <includeStyle name="BreadCrumbs"/>
+  </style>
+
+  <style selector=".OraBreadCrumbsSelected A">
+    <includeStyle name="BreadCrumbs"/>
+  </style>
+  
+  <style selector=".OraBreadCrumbsSelected A:link">
+    <includeStyle name="BreadCrumbs"/>
+  </style>
+  
+  <style selector=".OraBreadCrumbsSelected A:visited">
+    <includeStyle name="BreadCrumbs"/>
+  </style>
+  
+  <style selector=".OraBreadCrumbsSelected A:hover">
+    <includeStyle name="BreadCrumbs"/>
+    <property name="text-decoration">underline</property>
+  </style>
+
+  <!-- 
+    ContentContainer Styles
+  -->   
+
+  <style selector=".OraContentContainerHeader">    
+    <includeStyle selector=".OraHeaderSubSub"/>
+    <property name="font-family">Tahoma</property>
+    <property name="color">#343434</property>
+    <property name="border-bottom">0px</property>
+    <property name="background-repeat">repeat-x</property>
+    <property name="background-color">#87b4d9</property>
+  </style>
+
+  <style name="OraContentContainerBG">
+    <property name="background-color">#d9e5ef</property>
+  </style>
+
+  <style selector=".OraContentContainerBody">
+    <property name="border">1px solid #a3bed8</property>    
+    <property name="border-top-width">0px</property>
+    <property name="font-size">x-small</property>
+    <property name="padding-left">8px</property>
+    <property name="padding-right">8px</property>
+  </style>
+  
+  <style selector=".OraContentContainerBody A">
+    <property name="color">#146d90</property>
+  </style>
+
+  <style selector=".OraContentContainerBody .OraStyledList li a">
+    <includeStyle name="OraContentContainerBG"/>
+  </style>
+
+  <style selector=".OraContentContainerMedium .OraContentContainerBody">    
+    <includeStyle name="OraContentContainerBG"/>
+  </style>
+
+  <style selector=".OraContentContainerContentLight .OraContentContainerBody">    
+    <includeStyle name="OraContentContainerBG"/>
+  </style>
+
+  <style selector=".p_SwaContentContainerMargin">
+    <property name="margin-left">8px</property>
+    <property name="margin-right">8px</property>  
+  </style>
+
+  <!--
+    DatePicker Styles
+  -->
+
+  <style selector=".OraCalendarHeader" resetProperties="true">
+    <includeStyle name="DatePickerFont"/>
+    <property name="background-color">#e6eff8</property>
+    <property name="border-bottom-style">solid</property>
+    <property name="border-bottom-color">#ffffff</property>
+    <property name="border-bottom-width">1</property>
+    <property name="line-height">1.5</property>
+    <property name="text-align">center</property>
+  </style>
+
+  <style selector=".OraCalendarContent" resetProperties="true">
+    <includeStyle name="DatePickerFont"/>
+    <property name="color">#7e8694</property>
+    <property name="background-color">#f2f2f5</property>
+    <property name="border-style">solid</property>
+    <property name="border-color">#a5a9b6</property>
+    <property name="border-width">1</property>
+    <property name="padding">2px</property>
+    <property name="line-height">1.5</property>
+    <property name="text-align">center</property>
+  </style>
+
+  <style selector=".OraCalendarSelected" resetProperties="true">
+    <includeStyle name="DatePickerFont"/>
+    <property name="font-weight">bold</property>
+    <property name="background-color">#e6eff8</property>
+    <property name="padding">2px</property>
+  </style>
+
+  <style selector=".OraCalendarContent A" resetProperties="true">
+    <includeStyle name="DatePickerFont"/>
+    <property name="background-color">#f2f2f5</property>
+    <property name="padding">2px</property>
+    <property name="line-height">1.5</property>
+    <property name="text-decoration">none</property>
+  </style>
+
+  <!-- Now, define the inline calendar styles -->
+
+  <style selector=".OraInlineCalendarHeader">
+    <includeStyle name="DatePickerFont"/>
+    <property name="background-color">#cfe0f1</property>
+    <property name="border-bottom-style">solid</property>
+    <property name="border-bottom-color">#ffffff</property>
+    <property name="border-bottom-width">1</property>
+  </style>
+
+  <style selector=".OraInlineCalendarHeader TH">
+    <includeStyle selector=".OraInlineCalendarHeader"/>
+    <property name="font-weight">normal</property>
+  </style>
+
+  <style selector=".OraInlineCalendarContent">
+    <includeStyle name="DatePickerFont"/>
+    <property name="background-color">#f2f2f5</property>
+    <property name="border-style">solid</property>
+    <property name="border-color">#a5a9b6</property>
+    <property name="border-width">1</property>
+    <property name="padding">2px</property>
+    <property name="line-height">1.5</property>
+  </style>
+
+  <style selector=".OraInlineCalendarDisabled">
+    <property name="color">#7e8694</property>
+  </style>
+
+  <style selector=".OraInlineCalendarContent A">
+    <includeStyle name="DatePickerFont"/>
+    <property name="background-color">#f2f2f5</property>
+    <property name="padding">2px</property>
+    <property name="line-height">1.5</property>
+    <property name="text-decoration">none</property>
+  </style>
+  
+  <style selector=".OraInlineCalendarTitle">
+    <property name="font-weight">normal</property>
+  </style>
+  <!--
+    Footer Styles 
+  -->
+
+  <style selector=".FooterBottomBackground">
+    <property name="background-repeat">repeat-x</property>
+    <property name="background-color">#1963a9</property>
+  </style>
+
+  <style name="FooterMessage">
+    <property name="font-family">Arial</property>
+    <includeStyle name="DefaultFont"/>
+    <property name="color">#fdf5de</property>
+  </style>
+
+  <style name="CopyrightMessage">
+    <property name="font-family">Arial</property>
+    <property name="font-size">7.5pt</property>
+    <property name="color">#ffffff</property>
+    <property name="text-decoration">none</property>
+  </style>
+
+  <style selector=".OraCopyright">
+    <includeStyle name="CopyrightMessage"/>
+  </style>
+
+  <style selector=".OraCopyright A:link">
+    <includeStyle name="CopyrightMessage"/>
+  </style>
+
+  <style selector=".OraCopyright A:visited">
+    <includeStyle name="CopyrightMessage"/>
+  </style>
+
+  <style selector=".OraCopyright A:hover">
+    <includeStyle name="CopyrightMessage"/>
+  </style>
+
+  <style selector=".OraPrivacy">
+    <includeStyle name="FooterMessage"/>
+    <property name="text-decoration">none</property>
+  </style>
+
+  <style selector=".OraPrivacy A:link">
+    <includeStyle name="FooterMessage"/>
+    <property name="text-decoration">none</property>
+  </style>
+
+  <style selector=".OraPrivacy A:visited">
+    <includeStyle name="FooterMessage"/>
+    <property name="text-decoration">none</property>
+  </style>
+
+  <style selector=".OraPrivacy A:hover">
+    <includeStyle name="FooterMessage"/>
+    <property name="text-decoration">underline</property>
+  </style>
+
+  <style selector=".OraAbout">
+    <includeStyle name="FooterMessage"/>
+    <property name="text-decoration">none</property>
+  </style>
+
+  <style selector=".OraAboutLov">
+    <includeStyle selector=".OraAbout"/>
+    <property name="background-repeat">repeat-x</property>
+  </style>
+  
+  <style selector=".OraAbout A:link">
+    <includeStyle name="FooterMessage"/>
+    <property name="text-decoration">none</property>
+  </style>
+
+  <style selector=".OraAbout A:visited">
+    <includeStyle name="FooterMessage"/>
+    <property name="text-decoration">none</property>
+  </style>
+
+  <style selector=".OraAbout A:hover">
+    <includeStyle name="FooterMessage"/>
+    <property name="text-decoration">underline</property>
+  </style>
+
+  <!--
+    GlobalButton Styles
+  -->
+
+  <style name="GlobalButtonText">
+    <property name="padding">5px</property>
+  </style>
+
+  <style name="GlobalButton">
+    <includeStyle name="StrongFont"/>
+    <property name="color">#ffffff</property>
+    <property name="text-decoration">none</property>
+  </style>
+
+  <style selector=".OraGlobalButtonText">
+    <includeStyle name="GlobalButton"/>
+  </style>
+
+  <style selector="A:hover.OraGlobalButtonText">
+    <includeStyle name="GlobalButton"/>
+    <property name="text-decoration">underline</property>
+    <property name="margin-bottom">1px</property>
+  </style>
+
+  <style selector=".OraGlobalButtonTextSelected">
+    <includeStyle name="GlobalButton"/>
+    <property name="font-weight">bold</property>
+  </style>
+
+  <style selector=".OraGlobalButtonTextDisabled">
+    <includeStyle name="GlobalButton"/>
+    <property name="color">#acb2bd</property>
+  </style>
+
+  <!--
+    GlobalHeader Styles
+  -->
+
+  <style selector=".p_OraSandGradient">
+    <property name="background-repeat">no-repeat</property>
+    <property name="background-color">#1358a8</property>
+  </style>
+
+  <style selector=".OraGlobalHeaderTitle">
+    <property name="background-color">#ffffff</property>
+    <includeStyle name="DefaultBoldFont"/>
+    <includeStyle name="PageStampColor"/>
+  </style>
+
+  <style selector=".OraGlobalHeaderEmpty">
+    <property name="background-repeat">repeat-x</property>
+    <property name="height">5px</property>
+  </style>
+
+  <style name="Tab2Font">
+    <includeStyle name="DefaultBoldFont"/>
+    <property name="text-decoration">none</property>
+    <property name="vertical-align">middle</property>
+    <property name="margin">0px 8px</property>
+    <includeStyle name="NowrapWhiteSpace"/>
+  </style>
+
+  <style name="Tab2On">
+    <includeStyle name="Tab2Font"/>
+    <property name="color">#013d74</property>
+  </style>
+
+  <style name="Tab2Off">
+    <includeStyle name="Tab2Font"/>
+    <property name="color">#0a3a66</property>
+    <property name="font-weight">normal</property>
+  </style>
+
+  <style selector=".OraGlobalHeader,.OraGlobalHeaderBody">
+    <includeStyle name="Tab2Off"/>
+  </style>
+
+  <style selector=".OraGlobalHeaderEnabled A:link">
+    <includeStyle name="Tab2Off"/>
+  </style>
+
+  <style selector=".OraGlobalHeaderEnabled A:visited">
+    <includeStyle name="Tab2Off"/>
+  </style>
+
+  <style selector=".OraGlobalHeaderEnabled A:hover">
+    <includeStyle name="Tab2Off"/>
+    <property name="text-decoration">underline</property>
+  </style>
+
+  <style selector=".OraGlobalHeaderSelected">
+    <includeStyle name="Tab2On"/>
+  </style>
+
+  <style selector=".OraGlobalHeaderSelected A:link">
+    <includeStyle name="Tab2On"/>
+   </style>
+
+  <style selector=".OraGlobalHeaderSelected A:visited">
+    <includeStyle name="Tab2On"/>
+  </style>
+
+  <style selector=".OraGlobalHeaderSelected A:hover">
+    <includeStyle name="Tab2On"/>
+    <property name="text-decoration">underline</property>
+  </style>
+
+  <style selector=".OraGlobalHeaderSeparator">
+    <includeStyle name="DefaultFont"/>
+    <includeStyle name="LightForeground"/>
+    <property name="font-weight">bold</property>
+    <property name="padding">0px</property>
+  </style>  
+
+  <style name="SideBar">
+    <includeStyle name="DefaultBoldFont"/>
+    <property name="text-decoration">none</property>
+  </style>
+
+  <style name="SideBarOn">
+    <includeStyle name="SideBar"/>
+    <includeStyle name="DarkBackground"/>
+    <includeStyle name="SideBarForeground"/>    
+  </style>
+
+  <style name="SideBarOff">
+    <includeStyle name="SideBar"/>
+    <property name="background-color">#ccd7e0</property>
+    <property name="color">#6e758a</property>
+  </style>
+
+  
+  <style selector=".OraSideBar .OraStyledList li a">
+    <property name="line-height">20px</property>
+    <property name="text-decoration">none</property>
+    <includeStyle name="SideBarForeground"/>    
+  </style>
+  
+  <style selector=".OraSideBar .OraStyledList li a:hover">    
+    <property name="text-decoration">underline</property>
+  </style>
+  
+  <style selector=".OraSideBarBody">
+    <property name="background-color">#ccd7e0</property>        
+  </style>
+  <style selector=".OraSideBarBody .OraLink">
+    <property name="line-height">14px</property>
+    <property name="text-decoration">none</property>
+    <property name="color">#294369</property>
+  </style>
+  
+  <style selector=".OraSideBarBody .OraNav3 .OraLink">
+   <includeStyle name="SideBarForeground"/>
+   <property name="line-height">14px</property>
+   <property name="font-weight">normal</property>   
+  </style>
+  
+  <style selector=".OraSideBarBody .OraNav3 a:visited">
+   <includeStyle name="SideBarForeground"/>
+   <property name="line-height">14px</property>
+   <property name="font-weight">normal</property>
+  </style>
+  
+  <style selector=".OraSideBarBody .OraNav3 a:hover">
+     <includeStyle name="SideBarForeground"/>
+     <property name="line-height">14px</property>
+     <property name="font-weight">normal</property>
+     <property name="text-decoration">underline</property>
+   </style>
+ 
+   <style selector=".OraSideBarBody .p_OraSelected *">
+     <includeStyle name="SideBarForeground"/>
+   </style>
+    
+   <style selector=".OraSideBarBody a:hover">    
+    <property name="text-decoration">underline</property>
+  </style>
+
+  <style selector=".OraSideBarBody .OraListItem">
+    <property name="margin-top">4px</property>
+    <property name="margin-bottom">4px</property>
+  </style>    
+    
+  <!-- Swan begin sidebar rules --> 
+
+  <style selector=".OraSideBar .OraNav3Enabled">
+     <property name="background-color">#ccd7e0</property>
+  </style>
+
+  <!-- Swan end sidebar rules --> 
+
+  <style selector=".OraNav3 A:link">
+    <includeStyle name="SideBarOff"/>
+  </style>
+
+  <style selector=".OraNav3">
+    <includeStyle name="SideBarOff"/>
+  </style>
+
+  <style selector=".OraNav3 A:visited">
+    <includeStyle name="SideBarOff"/>
+  </style>
+  
+  <style selector=".OraNav3 A:hover">
+    <includeStyle name="SideBarOff"/>
+  </style>
+  
+  <style selector=".OraNav3Selected">
+    <includeStyle name="SideBarOn"/>
+  </style>
+  
+  <style selector=".OraNav3Selected A:link">
+    <includeStyle name="SideBarOn"/>
+  </style>
+  
+  <style selector=".OraNav3Selected A:visited">
+    <includeStyle name="SideBarOn"/>
+  </style>
+  
+  <style selector=".OraNav3Selected A:hover">
+    <includeStyle name="SideBarOn"/>
+  </style>
+
+  <style name="list">
+    <property name="list-style-position">inside</property>
+    <property name="padding">0px 0px 0px 4px</property>
+    <property name="margin">0px</property>    
+  </style>
+
+  <style name="nestedList">
+    <property name="padding">0pt 0pt 0pt 10pt</property>
+  </style>
+ 
+  <!--these were disabled in oracle-desktop.xss-->
+  <style selector=".OraStyledList">
+    <includeStyle name="list"/>
+  </style>  
+  
+  <style selector=".OraStyledList .OraStyledList">
+    <includeStyle name="nestedList"/>
+  </style>
+  
+  <!--
+    Header Styles
+  -->
+
+  <style name="HeaderText">
+    <includeStyle name="DefaultBoldFont"/>
+    <property name="vertical-align">middle</property>
+    <property name="margin-bottom">0px</property>
+    <includeStyle name="TextForeground"/>
+  </style>
+  
+  <style name="HeaderPadding">
+    <property name="padding">0px 0px 0px 8px</property>
+  </style>
+  
+  <style selector=".OraHeaderLink">
+    <includeStyle name="LinkForeground"/>
+    <property name="color">#003075</property>
+    <property name="text-decoration">underline</property>
+  </style>
+  
+  <style selector=".OraHeader">
+    <property name="color">#3a5a87</property>
+    <includeStyle name="HeaderText"/>
+    <property name="font-family">Arial</property>
+    <property name="border-bottom">1px solid #3a5a87</property>
+  </style>
+ 
+  <!-- SWAN begin header related rules -->
+  <style selector=".OraContentContainerBody .OraLightHeaderSubSub">
+    <property name="background-image">none</property>
+    <property name="padding-left">0px</property>
+    <property name="border">0px</property>
+  </style>
+
+  <style selector=".OraHeaderContent .OraHeaderContent">
+    <includeStyle name="LightAccentBackground"/>
+    <property name="padding-top">8px</property>
+    <property name="padding-bottom">8px</property>
+  </style>
+
+  <style selector=".OraHeaderContentPadding">
+    <property name="padding-left">8px</property>
+    <property name="padding-right">8px</property>
+  </style>
+
+  <style selector=".OraHeaderContent .p_OraSpacingHeader">
+     <property name="background-color">white</property>
+  </style>
+
+  <style selector=".OraSideBar .OraHeaderContent">
+     <property name="background-color">#ccd7e0</property>
+  </style>
+
+  <style selector=".OraSideBar .OraHeaderContent .p_OraSpacingHeader">
+     <property name="background-color">#ccd7e0</property>
+  </style>
+
+  <style selector=".OraMessageBox .OraHeaderContent .p_OraSpacingHeader">
+    <includeStyle name="LightAccentBackground"/>  
+  </style>
+
+  <style selector=".OraSubTabLayoutBody .p_OraSpacingHeader">
+     <property name="margin-top">0px</property>
+  </style>
+  
+  <!-- SWAN end header related rules -->
+
+   <style selector=".OraHeaderSub">
+    <includeStyle name="HeaderText"/>
+    <includeStyle name="HeaderPadding"/>
+    <property name="margin-top">1px</property>
+    <property name="border-bottom">0px</property>
+  </style>
+  
+  <style selector=".OraHeaderBar">
+    <property name="background-repeat">repeat-x</property>
+    <property name="background-color">#84b2de</property>
+    <property name="border-style">solid</property>
+    <property name="border-width">1px 1px 1px 1px</property>
+    <property name="border-color">#a3bed8</property>
+  </style>
+
+  <style selector=".OraHeaderBarText">
+    <property name="color">#343434</property> 
+    <includeStyle name="HeaderText" /> 
+    <includeStyle name="HeaderPadding" />
+    <property name="margin-top">1px</property>
+  </style>
+
+   <style selector=".OraHeaderSubSub">
+    <includeStyle name="HeaderText"/>
+    <property name="padding">0px</property>
+    <property name="border-bottom">1px solid #99bedc</property>    
+   </style>
+
+  <style selector=".OraErrorText">
+    <includeStyle name="DefaultFont"/>
+    <includeStyle name="ErrorTextForeground"/>
+  </style>
+
+  <!-- mbuk end swan rules -->
+
+  <style selector=".OraErrorHeader">
+    <includeStyle selector=".OraHeader"/>
+    <property name="border-bottom">0px</property>
+    <includeStyle name="ErrorTextForeground"/>
+  </style>
+
+  <style selector=".OraInfoHeader">
+    <includeStyle selector=".OraHeader"/>
+    <property name="border-bottom">0px</property>
+    <includeStyle name="InfoTextForeground"/>
+  </style>
+
+  <style selector=".OraLightHeaderSub">
+    <includeStyle selector=".OraHeaderSub"/>
+    <includeStyle name="MediumFont"/>
+  </style>
+
+  <style selector=".OraLightHeaderSubSub">
+    <includeStyle selector=".OraHeaderSubSub"/>
+    <includeStyle name="SmallFont"/>
+  </style>
+
+  <!-- 
+    MessageBox Styles
+  -->
+
+  <style selector=".OraMessageBox">
+    <property name="background-color">#d9e5ef</property> 
+    <property name="margin-top">10px</property>
+  </style>
+
+  <style selector=".p_OraMessageBoxMessage">
+    <property name="margin-left">4px</property>
+    <includeStyle name="TextForeground" />
+    <includeStyle name="DefaultFont"/>
+  </style>
+
+  <style selector=".OraMessageBoxBody">
+    <property name="background-color">#d9e5ef</property>
+  </style>
+
+  <style selector=".OraMessageBoxList">
+    <includeStyle name="DefaultFont"/>
+    <includeStyle name="DarkForeground"/>
+    <includeStyle name="TextForeground"/>
+    <property name="margin-bottom">0px</property>
+    <property name="margin-top">5px</property>
+    <property name="margin-left">4px</property>
+    <property name="padding-left">20px</property>
+  </style>
+
+  <!-- 
+    Navbar styles
+  -->
+  
+  <style selector=".OraNavBarActiveLink">
+    <property name="color">#2b6287</property>
+    <includeStyle name="DefaultFont"/>
+  </style>
+
+  <style selector=".OraNavBarInactiveLink">
+    <includeStyle name="DefaultFont"/>
+    <property name="color">#7e8694</property>
+  </style>
+
+  <style selector=".OraNavBarViewOnly">
+    <includeStyle name="DefaultFont"/>
+    <includeStyle name="TextForeground"/>
+  </style>
+
+
+  
+  <!--
+    PageLayout Styles
+  -->
+  <style name="PageLayoutBleedOffset">
+    <property name="margin-right">0px</property>
+    <property name="width">100%</property>
+  </style>
+
+  <style selector=".OraPageLayout">
+    <property name="background-color">white</property>
+  </style>
+
+  <!--
+    SubTabBar Styles
+  -->
+
+  <style name="SubTabFont">
+    <includeStyle name="DefaultFont"/>
+    <property name="text-align">center</property>
+    <property name="font-weight">bold</property>
+    <property name="text-decoration">none</property>
+    <!--
+    <property name="text-transform">capitalize</property>
+    -->
+    <includeStyle name="NowrapWhiteSpace"/>
+  </style>
+
+  <style selector=".OraSubTabLayoutBody">
+    <property name="padding-top"/>
+    <property name="padding-bottom">10px</property>
+    <includeStyle name="LightAccentBackground"/>
+  </style>
+
+
+  <style selector=".OraSubTabBar">
+    <includeStyle name="SubTabFont"/>
+  </style>
+
+  <style selector=".OraSubTabBarCellPadding">
+    <property name="padding">0px 0px 0px 0px</property>
+  </style>
+
+  
+  <style selector=".OraSubTabBarEnabled">
+    <property name="background-repeat">repeat-x</property>
+  </style>
+
+  <style selector=".OraSubTabBarEnabled A">
+    <includeStyle name="SubTabFont"/>
+    <property name="color">#3e5576</property>
+  </style>
+
+  <style selector=".OraSubTabBarDisabled A">
+    <includeStyle name="SubTabFont"/>
+    <property name="color">#8b96a3</property>
+  </style>
+
+  <style selector=".OraSubTabBarSelected A">
+    <includeStyle name="SubTabFont"/>
+    <includeStyle name="TextForeground"/>
+  </style>
+  
+  <style selector=".OraSubTabHeaderEmpty">
+    <property name="background-repeat">repeat-x</property>
+    <property name="height">5px</property>
+  </style>
+  <!--
+    TabBar Styles
+  -->
+
+  <style selector=".OraTabBarEnabled">
+    <includeStyle name="MenuFont"/>
+    <property name="color">#4f6070</property>
+    <property name="background-repeat">repeat-x</property>
+  </style>
+
+  <style selector=".OraTabBarSelected">
+    <includeStyle name="MenuFont"/>
+    <property name="color">#234a82</property>
+    <property name="background-repeat">repeat-x</property>
+  </style>
+
+  <style selector=".OraTabBarEnabled A">
+    <includeStyle name="MenuFont"/>
+    <property name="color">#4f6070</property>
+  </style>
+
+    <style selector=".OraTabBarDisabled A">
+    <includeStyle name="MenuFont"/>
+    <property name="color">#999999</property>
+  </style>
+
+  <style selector=".OraTabBarSelected A">
+    <includeStyle name="MenuFont"/>
+    <property name="color">#234a82</property>
+  </style>
+
+  <!-- 
+    Table Styles
+  -->
+
+  <!-- base-desktop uses VeryDarkAccentBorder. We want DarkAccentBorder. -->
+  <style name="TableCellDataBorderColor">    
+    <property name="border-color">#c9cbd3</property>
+  </style>  
+
+  <!-- base-desktop uses VeryDarkAccentBorder. We want LightAccentBorder. -->
+  <style name="TableCellHeaderBorderColor">    
+    <includeStyle name="TableCellDataBorderColor"/>
+  </style>
+
+  <!-- Not defined by base-desktop.xss, maybe should be? -->
+<!--  
+  <style selector=".OraTableColumnFooter .OraPromptText">
+    <includeStyle selector=".OraTableColumnFooter"/>
+  </style>
+-->
+
+  <!-- SWAN -->
+  <style selector=".OraTableAddTotal">
+    <includeStyle name="DefaultBoldFont"/>
+    <includeStyle name="StartTextAlign"/>
+    <includeStyle name="DarkForeground"/>
+    <property name="background-color">#edf6ff</property>
+  </style>
+
+  <style selector=".OraTableColumnHeader">
+    <includeStyle name="DefaultBoldFont"/>
+    <includeStyle name="DarkAccentBackground"/>
+    <includeStyle name="TextForeground"/>
+    <includeStyle name="TableCellHeaderBorderColor"/>
+  </style>
+
+  <style selector=".OraTableColumnHeaderIconButton">
+    <includeStyle selector=".OraTableColumnHeader"/>
+    <includeStyle name="CenterTextAlign"/>
+  </style>
+
+  <style selector=".OraTableRowHeader">
+     <includeStyle selector=".OraTableColumnHeader"/>
+     <includeStyle name="EndTextAlign"/>
+     <property name="vertical-align">middle</property>
+  </style>
+
+  <style selector=".OraTableColumnFooter">
+    <includeStyle name="DefaultBoldFont"/>
+    <includeStyle name="TableControlBarBackgroundColor"/>
+    <includeStyle name="TableCellHeaderBorderColor"/>
+  </style>
+
+  <style selector=".OraTableHeaderLink">
+    <includeStyle selector=".OraTableColumnHeader"/>
+  </style>
+
+  <style selector=".OraTableSortableHeaderLink">
+    <includeStyle selector=".OraTableColumnHeader"/>
+    <property name="text-decoration">none</property>
+    <property name="color">#3c3c3c</property>
+  </style>
+
+  <style selector=".OraSortableHeaderSortIcon">
+    <includeStyle name="SmallFont"/>
+    <includeStyle name="DarkForeground"/>
+    <property name="text-decoration">none</property>
+  </style>
+
+  <style selector=".OraTableCellText">
+    <includeStyle name="DefaultFont"/>
+    <property name="background-color">#f2f2f5</property>
+    <includeStyle name="TableCellDataBorderColor"/>
+  </style>
+
+  <style selector=".OraTableCellText a:link">
+    <includeStyle selector=".OraTableCellText"/>
+    <property name="color">#2d7698</property>
+  </style>
+
+  <style selector=".OraTableCellText a:visited">
+    <includeStyle selector=".OraTableCellText"/>
+    <property name="color">#2d7698</property>
+  </style>
+
+  <style selector=".OraTableCellText a:hover">
+    <includeStyle selector=".OraTableCellText"/>
+    <property name="color">#2d7698</property>
+  </style>
+
+  <style selector=".OraTableCellNumber">
+    <includeStyle selector=".OraTableCellText"/>
+  </style>
+  
+
+  <style selector=".OraTableContent">
+    <property name="border-style">solid</property>
+    <property name="border-width">1px</property>
+    <property name="border-collapse">collapse</property>
+    <includeStyle name="TableCellDataBorderColor"/>
+  </style>
+
+  <style selector=".OraTableCellIconButton">
+    <property name="background-color">#f2f2f5</property>
+    <includeStyle name="DefaultFont"/>
+    <includeStyle name="TableCellDataBorderColor"/>
+    <property name="vertical-align">middle</property>
+  </style>
+
+  
+  <!-- Contains top navigation bar -->
+  <style selector=".OraTableControlBarTop">
+    <includeStyle name="TableControlBarBackgroundColor"/>
+    <includeStyle name="TableCellDataBorderColor"/>
+    <property name="padding">1px 2px</property>
+    <includeStyle name="DefaultFont"/>
+  </style>
+
+  <!-- Contains bottom navigation bar -->
+  <style selector=".OraTableControlBarBottom">
+    <includeStyle name="TableControlBarBackgroundColor"/>
+    <includeStyle name="TableCellDataBorderColor"/>
+    <property name="padding">1px 2px</property>
+    <includeStyle name="DefaultFont"/>
+  </style>
+
+  <style selector=".OraSortableHeaderBorder">
+    <property name="border-width">1px</property>
+    <includeStyle name="TableCellHeaderBorderColor"/>
+    <includeStyle name="DefaultFont"/>
+  </style>
+
+  <!-- for totalRow button and text -->
+  <style selector=".OraTableTotal">
+    <property name="background-color">#edf6ff</property>
+    <includeStyle name="TableCellDataBorderColor"/>
+    <includeStyle name="DefaultBoldFont"/>
+    <includeStyle name="TextForeground"/>
+    <property name="padding">1px 2px</property>
+  </style>
+
+  <!-- for cells containing a total -->
+  <style selector=".OraTableTotalNumber">
+    <property name="background-color">#edf6ff</property>
+    <includeStyle name="TableCellDataBorderColor"/>
+    <property name="padding">1px 2px</property>
+    <includeStyle name="DefaultFont"/>
+  </style>
+
+  <!-- for cells containing a total -->
+  <style selector=".OraTableTotalText">
+    <property name="background-color">#edf6ff</property>
+    <includeStyle name="TableCellDataBorderColor"/>
+    <property name="padding">1px 2px</property>
+    <includeStyle name="DefaultFont"/>
+  </style>
+
+  <style selector=".OraTableControlBarText">
+    <includeStyle name="TextForeground"/>
+    <property name="font-weight">bold</property>
+    <includeStyle name="DefaultFont"/>
+  </style>
+
+  <!-- Contains Select All | Select None links -->
+  <style selector=".OraTableSubControlBar">
+    <includeStyle name="TableControlBarBackgroundColor"/>
+  </style>
+  
+  <style selector=".OraTableColumnHeaderNumber">
+    <property name="white-space">normal</property>
+  </style>
+
+  <!-- overriding the base desktop property for swan usage -->
+  <style selector=".OraTableSortableColumnHeaderNumber">
+    <property name="white-space">normal</property>
+  </style>
+
+  <style name="TableControlBarBackgroundColor">
+    <property name="background-color">#edf6ff</property>
+  </style> 
+  <!--
+    Tip Styles
+  -->
+
+  <style selector=".OraTipLabel">
+    <includeStyle name="DefaultBoldFont"/>
+    <property name="color">#4264a7</property>
+  </style>
+
+  <style selector=".OraTipText">
+    <property name="color">#3a5a87</property>
+    <includeStyle name="DefaultFont"/>
+  </style>
+
+  <style selector=".OraInlineInfoText">
+    <includeStyle name="VerySmallFont"/>
+    <property name="color">#4264a7</property>
+  </style>
+
+  <!--
+    Train Styles
+  -->
+
+  <style selector=".p_SwaOraTrain">
+    <property name="width">100%</property> 
+    <includeStyle name="LightAccentBackground"/>
+  </style>
+
+  <style name="TrainFont">
+    <includeStyle name="DefaultFont"/>
+    <property name="font-family">Arial,Tahoma,Helvetica,Geneva,sans-serif</property>
+  </style> 
+  
+  <style selector=".OraTrainActive">
+    <includeStyle name="TrainFont"/>
+    <property name="font-weight">bold</property>
+    <property name="color">#2e558c</property>
+  </style>
+
+  <style selector=".OraTrainDisabled">
+    <includeStyle name="TrainFont"/>
+    <property name="color">#878f9e</property>
+  </style>
+
+  <!-- Reset foreground for visisted stations: use dark accent -->
+  <style selector=".OraTrainVisited">
+    <includeStyle name="TrainFont"/>
+    <property name="color">#4f6070</property>
+  </style>
+
+  <!-- Reset foreground for visisted links: use link foreground -->
+  <style selector=".OraTrainVisited A">
+    <includeStyle name="TrainFont"/>
+    <property name="color">#4f6070</property>
+  </style>
+
+  <style selector=".OraTrainUnvisited">
+    <includeStyle name="TrainFont"/>
+    <property name="color">#2e558c</property>
+  </style>
+
+  <style selector=".OraTrainUnvisited A">
+    <includeStyle name="TrainFont"/>
+    <property name="color">#2e558c</property>
+  </style>
+  
+  
+ <style selector=".p_SwabuttonEnabled">
+    <property name="border-top">1px solid #a5a9b6</property>
+    <property name="border-left">1px solid #a5a9b6</property>
+    <property name=" border-bottom">1px solid #7b8194</property>
+    <property name="border-right">1px solid #7b8194</property>
+    <property name="background-repeat">repeat-x</property>
+    <property name="background-position">top left</property>
+    <property name="background-color">#c9e5ec</property>
+    <property name="margin">1px</property>
+    <includeStyle name="DefaultFont"/>
+    <property name="color">#586073</property>
+    <property name="text-align">center</property>
+    <property name="font-weight">bold</property>
+    <property name="cursor">pointer</property>
+    <property name="padding-left">8px</property>
+    <property name="padding-right">8px</property>
+    <property name="overflow">visible</property> 
+ </style>
+ 
+ <style selector=".p_SwabuttonDisabled">
+   <includeStyle selector=".p_SwabuttonEnabled"/>
+   <property name="background-color">#ffffff</property>
+   <property name="background-position"/>
+   <property name="color">#a6a6a6</property>
+ </style>
+ 
+ <style selector=".p_OraSideBar">    
+    <property name="background-color">#dbe5ef</property>    
+  </style>
+  
+  <style selector=".p_SwaSideBarBorder">    
+    <property name="background-color">#91b1d3</property>    
+  </style>
+  
+<style name="BlueBackGroundColor">
+ <property name="background-color">#ccd7e0</property>
+</style>
+
+<style selector=".OraSideNav">
+ <includeStyle selector=".OraSideBar"/>
+</style>
+
+<style selector=".OraSideNav .OraNav3Enabled">
+ <includeStyle name="BlueBackGroundColor"/>
+</style>
+
+<style selector=".OraSideNav .OraHeaderContent">
+   <includeStyle name="BlueBackGroundColor"/>
+</style>
+
+<style selector=".OraSideNav .OraHeaderContent .p_OraSpacingHeader">
+   <includeStyle name="BlueBackGroundColor"/>
+</style>
+
+<style selector=".OraSideNav .OraNav3Enabled">
+ <includeStyle name="BlueBackGroundColor"/>
+</style>
+
+<style selector=".OraSideNav div.p_SwaSideDiv">
+ <property name="padding-left">8px</property>
+</style>
+<style selector=".OraSideNav span">
+ <property name="padding-left">8px</property>
+</style>
+
+<style selector=".p_SwaSideDiv span.OraLinkDisabled">
+ <property name="padding-left">0px</property>
+</style>
+
+<style selector=".OraSideBar div.p_SwaSideDiv">
+ <property name="padding-left">8px</property>
+</style>
+<style selector=".OraSideBar span">
+ <property name="padding-left">8px</property>
+</style>
+
+<!-- tree style overrides -->
+<style name="SwanTreeNodeColor">
+  <property name="color">#2b6287</property>
+</style>
+
+<style selector="SPAN.p_OraTreeRow A:link">
+   <includeStyle name="SwanTreeNodeColor"/>
+</style>
+
+ <style selector="SPAN.p_OraTreeRow A:active">
+   <includeProperty name="SwanTreeNodeColor"
+                     propertyName="color"
+                     localPropertyName="background-color"/>
+   <property name="color">#ffffff</property>
+</style>
+
+ <style selector="SPAN.p_OraTreeRow A:visited">
+   <includeStyle name="SwanTreeNodeColor"/>
+ </style>
+ 
+ <style selector="SPAN.p_OraTreeRow .OraLink">
+   <includeStyle name="TextForeground"/>
+ </style>
+
+  <style name="TreeRowSelected">
+    <property name="color">#294369</property>
+    <property name="text-decoration">none</property>
+  </style>
+<!-- tree style overrides -->
+
+<!-- shuttle overrides -->
+  <style selector=".OraShuttleHeader">
+    <includeStyle name="SmallFont"/>
+    <includeStyle name="TextForeground"/>
+    <property name="font-weight">normal</property>
+    <property name="padding">0px 0px 2px 1px</property>
+  </style>
+  
+  <style selector=".OraShuttleOptions">
+    <includeStyle selector=".OraShuttleHeader"/>
+    <property name="padding">0px</property>
+  </style>
+  
+  <style selector=".SwaShuttleLinkText .OraLink">
+    <includeStyle name="DefaultFont"/>
+    <property name="color">#2b6287</property>
+  </style>
+<!-- shuttle overrides -->
+<!-- separator -->
+
+  <style selector=".SwaHorizontalRule">
+    <property name="color">#c8cacd</property>
+  </style>
+  
+<!-- Application switcher overrides -->
+ <style selector=".OraApplicationSwitcherText">
+    <includeStyle name="DefaultFont"/>        
+    <property name="color">#ffffff</property>
+  </style>
+  
+   <style selector=".OraUserInfo">
+    <property name="background-color">#eaeff5</property> 
+  </style>
+  
+  <style selector=".p_OraQuickSearchBox">
+    <property name="background-color">#ccd7e0</property>
+    <property name="border-color">#ccd7e0</property>
+  </style>
+
+<!-- The link color is updated to meet the desired contrast ration -->  
+  <style selector=".p_OraQuickSearchBox .OraLink">   	
+    <property name="color">#2b6092</property>
+  </style> 
+ 
+  <style name="PageStampColor">
+    <property name="color">#4c6d9a</property>
+  </style>
+
+  <style selector=".OraUserInfo .OraPageStampText">
+    <property name="padding-right">8px</property>
+    <includeStyle name="PageStampColor"/>
+  </style>
+
+  <style selector=".OraUserInfo .OraPageStampLabel">  
+    <includeStyle name="PageStampColor"/>
+  </style>
+ 
+  <style selector=".OraLovHeader">
+    <includeStyle name="OraHeader"/>
+    <property name="margin">10px</property>
+  </style>
+
+  <style selector=".OraRequiredIcon">
+    <includeStyle selector=".OraTipText"/>
+    <property name="font-weight">normal</property>  
+  </style>
+  
+  <style selector=".p_OraRequired">
+    <includeStyle selector=".OraTipText"/>
+  </style>
+  
+  <style selector=".p_SwanPageLayout">
+    <property name="padding">0px 10px</property>
+  </style>
+  
+</styleSheet>
+
+
+<styleSheet direction="rtl">
+
+  <style selector=".OraSideNav div">
+    <property name="padding-right">8px</property>
+  </style>
+
+  <style selector=".OraSideNav span">
+    <property name="padding-right">8px</property>
+  </style>
+
+  <style selector=".OraSideBar div">
+    <property name="padding-right">8px</property>
+  </style>
+
+  <style selector=".OraSideBar span">
+    <property name="padding-right">8px</property>
+  </style>
+ 
+  <style name="BreadCrumbs">
+    <property name="padding-left"/>
+    <property name="padding-right">5px</property>
+  </style>
+  
+  <style name="PageLayoutBleedOffset">
+    <property name="margin-right"/>
+    <property name="margin-left">0px</property>
+  </style> 
+  
+  <style selector=".OraUserInfo .OraPageStampText">
+    <property name="padding-left">8px</property>
+    <property name="padding-right"/>
+  </style>
+  
+  <style name="list">
+    <property name="list-style-position">inside</property>
+    <property name="padding">0px 4px 0px 0px</property>
+    <property name="margin">0px</property>    
+  </style>
+  
+  <style name="nestedList">
+    <property name="padding">0pt 10pt 0pt 0pt</property>
+  </style>
+  
+</styleSheet>
+
+<styleSheet platforms="windows" browsers="ie">  
+ 
+  <style name="CopyrightMessage">
+    <property name="font-size">xx-small</property>
+  </style>
+  
+  <style selector=".p_OraProductBrandingCompactText">
+    <includeProperty name="LargeFont" propertyName="font-size"/>
+  </style>
+  
+  <style selector=".p_SwabuttonEnabled">
+    <property name="width">1</property>
+  </style>    
+
+  <style selector=".p_SwanPageLayout">
+    <property name="width">100%</property>
+  </style>
+  
+  <style selector=".OraHeaderContentPadding">
+    <property name="width">100%</property>
+  </style>
+
+</styleSheet>
+
+<styleSheet browsers="ie" versions="4 5" platforms="windows" >
+  <style selector=".OraMessageBoxList" >
+      <property name="text-indent">0px</property>
+  </style>
+
+  <style selector=".p_OraMessageBoxMessage">
+    <property name="margin-left">2px</property>
+  </style>
+  
+  <!-- Added for IE peekaboo bug -->
+  <style selector=".OraHeaderContent">
+    <property name="height">0.01%</property>
+    <property name="width">100%</property>
+  </style>  
+    
+</styleSheet>  
+
+<styleSheet browsers="ie" versions="6" platforms="windows" >
+  <style selector=".OraMessageBoxList">
+    <property name="text-indent">0px</property>
+  </style>
+  
+  <style selector=".p_OraMessageBoxMessage">
+    <property name="margin-left">2px</property>
+  </style>
+  
+    <!-- Added for IE peekaboo bug -->
+  <style selector=".OraHeaderContent">
+    <property name="height">0.01%</property>
+    <property name="width">100%</property>
+  </style>  
+</styleSheet>
+
+<styleSheet browsers="ie" platforms="windows" >
+  <style selector=".OraMessageBoxList">
+    <property name="padding-left">25px</property>
+  </style>  
+</styleSheet>
+
+<styleSheet browsers="gecko">
+  <style selector=".OraRequiredIcon">
+    <property name="font-weight">normal</property>
+  </style>
+  
+  <style selector=".OraGlobalHeaderSelected A:hover">
+    <property name="margin"></property>
+  </style>
+  
+  <style selector=".OraGlobalHeaderEnabled A:hover">
+    <property name="margin"></property>
+  </style>
+  
+  <!-- To fix messageTextInput overflow issue in Firefox 1.5 -->
+  <style selector=".p_SwaContentContainerMargin">
+    <property name="margin-left"></property>
+    <property name="margin-right"></property>
+    <property name="padding-left">8px</property>
+    <property name="padding-right">8px</property>
+  </style>  
+  
+  <style selector=".OraSortableHeaderBorder">
+    <property name="border-width">2px</property> 
+  </style>
+
+  <style name="TableCellDataVerticalAlign">
+    <property name="vertical-align">middle</property>
+  </style>
+
+</styleSheet>
+
+</styleSheetDocument>

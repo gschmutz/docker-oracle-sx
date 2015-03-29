@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<Rule root="4">
+<Operator ID="1" type="Source">
+	<sourceName>S</sourceName>
+	<sourceType>Stream</sourceType>
+	<cql-property> select * from  S </cql-property>
+</Operator><Operator ID="2" type="Pattern">
+	<inputs>
+		<input>1</input>
+	</inputs>
+<cql-property> select * from  S  MATCH_RECOGNIZE( PARTITION BY  symbol  MEASURES  Z.symbol , Z.price ,  count ( A.null ) - count ( B.null )   ALL MATCHES  PATTERN(XA|B|CA|B|CA|B|CA|B|C) SUBSETS  Z(A,B,C)  DEFINE  A AS   A.price  &gt;  prev( A.price )  , B AS   B.price  &lt;  prev( B.price )  , C AS   C.price  =  prev( C.price )  ) AS T</cql-property>	<partition-by-list>
+		<partition-attr> symbol </partition-attr>
+	</partition-by-list>
+	<define-list>
+		<define-attr> A AS   A.price  &gt;  prev( A.price )  </define-attr>
+		<define-attr> B AS   B.price  &lt;  prev( B.price )  </define-attr>
+		<define-attr> C AS   C.price  =  prev( C.price )  </define-attr>
+	</define-list>
+	<pattern-skip> ALL MATCHES </pattern-skip>
+	<measures-list>
+		<measure-attr> Z.symbol </measure-attr>
+		<measure-attr> Z.price </measure-attr>
+		<measure-attr>  count ( A.null ) - count ( B.null )  </measure-attr>
+	</measures-list>
+	<pattern-list>
+	</pattern-list>
+	<subsets>
+		<subset>
+			<subset-name>Z</subset-name>
+			<corr-attr-names>A,B,C			</corr-attr-names>
+		</subset>
+	</subsets>
+
+</Operator><Operator ID="3" type="Project">
+	<cql-property> select  symbol , lastPrice , trendLastPrice  FROM  MATCH_RECOGNIZE( PARTITION BY  symbol  MEASURES  Z.symbol , Z.price ,  count ( A.null ) - count ( B.null )   ALL MATCHES  PATTERN(XA|B|CA|B|CA|B|CA|B|C) SUBSETS  Z(A,B,C)  DEFINE  A AS   A.price  &gt;  prev( A.price )  , B AS   B.price  &lt;  prev( B.price )  , C AS   C.price  =  prev( C.price )  ) AS T</cql-property>	<inputs>
+		<input>2</input>
+	</inputs>
+	<distinct>false</distinct>		<select-list>
+<select-attr> symbol </select-attr><select-attr> lastPrice </select-attr><select-attr> trendLastPrice </select-attr>	</select-list>
+</Operator>
+<Operator ID="4" type="Output">
+	<inputs>
+		<input>3</input>
+	</inputs>
+	<cql-property>select symbol , lastPrice , trendLastPrice from S MATCH_RECOGNIZE ( PARTITION BY symbol MEASURES Z . symbol as symbol , Z . price as lastPrice , count ( A . * ) - count ( B . * ) as trendLastPrice ALL MATCHES PATTERN ( X ( A | B | C ) ( A | B | C ) ( A | B | C ) ( A | B | C ) ) SUBSET Z = ( A , B , C ) DEFINE A AS ( A . price &gt; PREV ( A . price ) ) , B AS ( B . price &lt; PREV ( B . price ) ) , C AS ( C . price = PREV ( C . price ) ) ) as T  </cql-property>
+	<output-type>view</output-type>
+	<output-name>vTrend</output-name>
+</Operator>
+
+</Rule>

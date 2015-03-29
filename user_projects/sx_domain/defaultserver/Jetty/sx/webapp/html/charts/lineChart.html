@@ -1,0 +1,26 @@
+<div class="chart-drawer">
+    <div data-bind="ojComponent: {
+                        component: 'ojChart',
+                        type: 'lineWithArea',
+                        series: yData,
+                        groups: xData,
+                        stack: 'on',
+                        legend: {position: 'bottom'},
+                        hideAndShowBehavior: 'withRescale',
+                        categoryFilter: selectSeries,
+                        timeAxisType: 'enabled',
+                        styleDefaults: {
+                                        lineType: ko.toJS(lineTypeValue),
+                                        groupTooltipType: 'none',
+                                        seriesTooltipType: 'none',
+                                        valueTooltipType: 'auto',
+                                        markerDisplayed: 'on',
+                                        markerSize: 6
+                                        },
+                        xAxis: {min: ko.toJS(xStart),
+                                max: ko.toJS(xEnd),
+                                title: ko.toJS(xLabel)}
+                        },
+                    }" style="width: 100%; height: 100%">
+    </div>
+</div>

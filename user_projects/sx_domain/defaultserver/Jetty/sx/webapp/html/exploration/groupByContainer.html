@@ -1,0 +1,63 @@
+<div id="groupByContent">
+
+    <a id="groupByReadMode" class="groupByReadMode" tabindex=0   data-i18n="{attr: {title: 'Title'}}"
+       data-bind="visible:isGroupByInReadMode() && (!isSummariesInEditMode() && currentEditedRegion()!='Summaries'),
+       event: { keydown: goToEditModeOnKeyPressed, focus: openGroupByEditor},
+       html: readModeText"></a>
+
+    <div class="groupByFocusedReadMode"
+         data-bind="visible:isGroupByInReadMode()&&(isSummariesInEditMode() || currentEditedRegion()=='Summaries')">
+
+        <a id="groupByReadModeFocused" class="groupByReadMode" tabindex=0 data-i18n="{text: 'groupByHeader', attr: {title: 'Title'}}"
+           data-bind="event: { keydown: goToEditModeOnKeyPressed, focus: openGroupByEditor}"></a>
+
+        <!-- ko foreach: fieldsForGroupBy -->
+        <div class="groupByFocusedReadModeField "
+             data-bind="css:  $data.field.source.color, visible: $parent.fieldsForGroupBy().length && $data.selected ">
+
+            <div data-bind="text: $data.field.name"></div>
+
+            <a class="select2-search-choice-close" tabindex="-1"
+               data-bind="click: function(){ return $parent.clickOnGroupByFieldDeleteIcon($data)}"></a>
+        </div>
+        <!-- /ko -->
+
+    </div>
+
+    <div class="groupByEditor"
+         data-bind="visible:!isGroupByInReadMode(), hasFocus:!isGroupByInReadMode(), event: { keydown: keyPressedOnField}"
+         tabindex=-1>
+
+        <div>
+            <h4 data-i18n="groupByHeader" class="groupByEditorHeader"></h4>
+
+            <a href="javascript:void(0)" data-i18n="groupByDoneButton" class="groupByEditorDoneButton"
+               id="groupByEditorDoneButton"
+               data-bind=" click: groupByEditorDoneButtonClick"></a>
+
+            <div class="clearBoth"/>
+        </div>
+
+        <div class="upDownArea" data-bind="visible: activeField()">
+            <input type="button" class="goFirstBtn" data-bind="click: moveFieldTop">
+            <input type="button" class="upBtn" data-bind="click: moveFieldUp">
+            <input type="button" class="downBtn" data-bind="click: moveFieldDown">
+            <input type="button" class="goLastBtn" data-bind="click: moveFieldBottom">
+        </div>
+
+        <div class="explorationCheckboxes" data-bind="sortable:fieldsForGroupByInEditMode">
+
+            <div class="explorationCheckbox " data-i18n="{attr: {title: 'dragAndDropItem'}}"
+                 data-bind="css:  $data.field.source.color, event: { mouseover: $parent.mouseoverField}">
+                <label data-bind="style: {fontWeight: $parent.activeField()===$data ? 'bold' : '' }">
+                    <input class="explorationCheckboxInput" type="checkbox"
+                           data-bind="checked: $parent.isFieldSelected($data), click: function(){ return $parent.clickGroupByCheckBox($data, $element)}">
+                    <span data-bind="text: $data.field.name"></span>
+                </label>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>

@@ -1,0 +1,1 @@
+var l={"EU":["EU","\u30E8\u30FC\u30ED\u30C3\u30D1"]};var DvtBaseMapManager=this.DvtBaseMapManager;if (!DvtBaseMapManager) DvtBaseMapManager={};if (!DvtBaseMapManager._UNPROCESSED_MAPS) DvtBaseMapManager._UNPROCESSED_MAPS=[[],[],[]];DvtBaseMapManager._UNPROCESSED_MAPS[2].push(["europe","continent",l]);

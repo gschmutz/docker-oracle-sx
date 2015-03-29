@@ -1,0 +1,27 @@
+{
+    "name":"CSVFile",
+    "displayName":"CSV File",
+    "description":"CSV File description",
+    "windowable":true,
+    "parameters":[
+        {
+            "name":"eventInterval",
+            "type":"number",
+            "description":"Event interval parameter description",
+            "required":false,
+            "validator":"interval"
+        },
+        {
+            "name":"initialDelay",
+            "type":"number",
+            "description":"Initial delay parameter Description",
+            "required":false,
+            "validator":"interval"
+        },
+        {
+            "name":"sourceURL",
+            "type":"url",
+            "description":"Source URL parameter descroption",
+            "required":true
+        }]
+}

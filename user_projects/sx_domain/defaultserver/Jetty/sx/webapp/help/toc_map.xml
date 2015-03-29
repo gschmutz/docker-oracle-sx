@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='iso-8859-1'?>
+<map version="1.0">
+  <mapID target="closedbook" url="closedbook.png" />
+  <mapID target="library" url="library.png" />
+  <mapID target="librarypage" url="http://docs.oracle.com/cd/LIBID_01/index.htm" wintype="external"/>
+  <mapID target="book1" url="http://www.oracle.com/pls/topic/lookup?ctx=fmw121200&amp;id=DOCID" wintype="external"/>
+  <mapID target="book2" url="http://www.oracle.com/pls/topic/lookup?ctx=fmw121200&amp;id=DOCID" wintype="external"/>
+</map>

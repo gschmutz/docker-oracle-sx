@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:config xmlns:ns2="http://www.bea.com/ns/wlevs/config/application">
+    <processor>
+        <name>MonitorProcessor</name>
+        <rules>
+            <rule id="defaultRule" active="true">select * from DSMonitorEvent retain 1 event where metric &gt; 10000</rule>
+        </rules>
+        <aliases/>
+        <bindings/>
+    </processor>
+</ns2:config>

@@ -1,0 +1,19 @@
+{
+    "name":"CSVFileTarget",
+    "displayName":"CSV File",
+    "description":"CSV File target description",
+    "windowable":true,
+    "parameters":[
+        {
+            "name":"append",
+            "type":"boolean",
+            "description":"If the events should append to the existing file",
+            "required":false
+        },
+        {
+            "name":"fileName",
+            "type":"string",
+            "description":"The path to and name of the file, where events should be put",
+            "required":true
+        }]
+}

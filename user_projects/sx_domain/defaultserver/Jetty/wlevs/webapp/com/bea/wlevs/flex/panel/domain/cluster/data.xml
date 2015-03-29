@@ -1,0 +1,9 @@
+<YearlyData>
+	<Sample time="12:10" usage="80" costs="45" overhead="102" oneTime="23" />
+	<Sample time="12:15" usage="65" costs="42" overhead="87" oneTime="47" />
+	<Sample time="12:20" usage="30" costs="82" overhead="32" oneTime="21" />
+	<Sample time="12:25" usage="45" costs="44"  overhead="68" />
+	<Sample time="12:30" usage="28" costs="44"  overhead="68" />
+	<Sample time="12:30" usage="75" costs="44"  overhead="68" />
+	<Sample time="12:35" usage="90" costs="44"  overhead="68" />
+</YearlyData>

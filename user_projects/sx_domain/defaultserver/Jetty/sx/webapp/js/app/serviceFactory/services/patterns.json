@@ -1,0 +1,91 @@
+{
+    "success": true,
+    "errorCode": "",
+    "message": "",
+    "data": [{
+            "name": "WPattern",
+            "displayName": "W-Pattern",
+            "description": "W pattern is a price pattern, also called Double Bottom. This pattern, when drawn it looks like the W.",
+            "attachedTagNames": ["stock", "price"],
+            "parameters": [{
+                    "name": "stock",
+                    "displayName": "Stock",
+                    "description": "Stock description should be here.",
+                    "type": "string",
+                    "required": true
+                }]
+        }, {
+            "name": "VPattern",
+            "displayName": "V-Pattern",
+            "description": "Find those stocks whose prices have formed a ‘V’-shape. That is, the price has been going down to a local minimum, then rising up to a local maximum which was higher than the starting price.",
+            "attachedTagNames": ["price"],
+            "parameters": [{
+                    "name": "parameter1",
+                    "displayName": "Parameter name 1",
+                    "description": "Parameter 1 description should be here.",
+                    "type": "string",
+                    "required": true
+                }]
+        }, {
+            "name": "FallingWedgePattern",
+            "displayName": "Falling Wedge Pattern",
+            "description": "Find those stocks whose price fluctuates as a series of ‘V’-shape patterns, where in each ‘V’ the range of the fluctuation becomes smaller.",
+            "attachedTagNames": ["falling"],
+            "parameters": [{
+                    "name": "stock",
+                    "displayName": "Stock",
+                    "description": "Stock description should be here.",
+                    "type": "string",
+                    "required": true
+                }]
+        }, {
+            "name": "FallingPattern",
+            "displayName": "Falling Pattern",
+            "description": " Find those stocks whose prices are decreasing.",
+            "attachedTagNames": ["falling"],
+            "parameters": []
+        }, {
+            "name": "ManyParamsPattern",
+            "displayName": "Test Pattern",
+            "description": "Pattern to test patterns with many parameters.",
+            "attachedTagNames": ["kookaburra"],
+            "parameters": [{
+                    "name": "parameter1",
+                    "displayName": "Parameter name 1",
+                    "description": "Parameter 1 description should be here.",
+                    "type": "string",
+                    "required": true
+                }, {
+                    "name": "parameter2",
+                    "displayName": "Parameter name 2",
+                    "description": "Parameter 2 description should be here.",
+                    "type": "number",
+                    "required": true
+                }, {
+                    "name": "parameter3",
+                    "displayName": "Parameter name 3",
+                    "description": "Parameter 3 description should be here.",
+                    "options": [{
+                        "text": "Parameter 3 option 1",
+                        "value": "value1"
+                    }, {
+                        "text": "Parameter 3 option 2",
+                        "value": "value4"
+                    }, {
+                        "text": "Parameter 3 option 3",
+                        "value": "value4"
+                    }, {
+                        "text": "Parameter 3 option 4",
+                        "value": "value4"
+                    }],
+                    "type": "string",
+                    "required": false
+                }, {
+                    "name": "parameter4",
+                    "displayName": "Parameter name 4",
+                    "description": "Parameter 4 description should be here.",
+                    "type": "number",
+                    "required": false
+                }]
+        }]
+}

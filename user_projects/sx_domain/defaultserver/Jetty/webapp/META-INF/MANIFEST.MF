@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.7.0
+Created-By: R27.6.2-20_o-108500-1.6.0_05-20090120-1116-windows-ia32 (B
+ EA Systems, Inc.)
+

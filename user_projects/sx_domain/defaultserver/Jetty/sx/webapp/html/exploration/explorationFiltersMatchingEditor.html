@@ -1,0 +1,32 @@
+<div id="filtersMatchingContent">
+
+    <a id="filtersMatchingReadModeALL" tabindex=-1 class="conditionTextMode"
+       data-i18n="{text: 'conditions.matchAll'}"
+       data-bind="visible:!isFiltersInEditMode()&& exploration().conditionsMatching()=='ALL'
+       ,
+       click: function(ev){
+      $('#conditions').focus();
+       }
+       "></a>
+
+    <a id="filtersMatchingReadModeANY" tabindex=-1 class="conditionTextMode"
+       data-i18n="{text: 'conditions.matchAny'}" style="display: inline-block"
+       data-bind="visible:!isFiltersInEditMode()&& exploration().conditionsMatching()=='ANY'
+       ,
+       click: function(ev){
+$('#conditions').focus();       }
+       "></a>
+
+    <div class="filtersMatchingEditor" tabindex=-1
+         data-bind="visible:isFiltersInEditMode()">
+        <label for="matchAll"  data-i18n="{attr: {title: 'conditions.matchAllTitle'}}">
+            <input id="matchAll" type="radio" class="conditionMatchingInput" value="ALL" checked>
+            <span data-i18n="{text: 'conditions.matchAll'}"></span>
+        </label>
+        <label for="matchAny" data-i18n="{attr: {title: 'conditions.matchAnyTitle'}}">
+            <input id="matchAny" type="radio" class="conditionMatchingInput" value="ANY">
+            <span data-i18n="{text: 'conditions.matchAny'}"></span>
+        </label>
+
+    </div>
+</div>

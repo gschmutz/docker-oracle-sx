@@ -1,0 +1,43 @@
+{
+    "success": true, 
+    "errorCode": "", 
+    "message": "", 
+    "data": [{
+        "name": "OracleStockTick", 
+        "fields": {
+            "timestamp": "java.lang.Long", 
+            "lastPrice": "java.lang.Double", 
+            "sequenceNo": "java.lang.Long", 
+            "symbol": "java.lang.String", 
+            "clientTimestamp": "java.lang.Long"
+        }
+    }, {
+        "name": "OracleL2StockTick", 
+        "fields": {
+            "bidVolume": "[I", 
+            "askVolume": "[I", 
+            "symbol": "java.lang.String", 
+            "bidMM": "[Ljava.lang.String;", 
+            "startTimestamp": "long", 
+            "lastPrice": "double", 
+            "id": "long", 
+            "bidPrice": "[I", 
+            "timestamp": "long", 
+            "clientTimestamp": "long", 
+            "sequenceNo": "long", 
+            "askMM": "[Ljava.lang.String;", 
+            "askPrice": "[I"
+        }
+    }, {
+        "name": "OracleStockTrend", 
+        "fields": {
+            "timestamp": "long", 
+            "symbol": "java.lang.String", 
+            "clientTimestamp": "long", 
+            "percChange": "double", 
+            "lastPrice": "double", 
+            "trendLength": "int", 
+            "sequenceNo": "long"
+        }
+    }]
+}

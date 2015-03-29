@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:osgi="http://www.springframework.org/schema/osgi"
+       xmlns:wlevs="http://www.bea.com/ns/wlevs/spring"
+       xmlns:jdbc="http://www.oracle.com/ns/ocep/jdbc"
+       xmlns:hadoop="http://www.oracle.com/ns/oep/hadoop"
+       xmlns:nosqldb="http://www.oracle.com/ns/oep/nosqldb"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/osgi
+http://www.springframework.org/schema/osgi/spring-osgi.xsd
+http://www.bea.com/ns/wlevs/spring
+http://www.bea.com/ns/wlevs/spring/ocep-epn.xsd
+http://www.oracle.com/ns/ocep/jdbc
+http://www.oracle.com/ns/ocep/jdbc/ocep-jdbc.xsd
+http://www.oracle.com/ns/oep/hadoop
+http://www.oracle.com/ns/oep/hadoop/oep-hadoop.xsd
+http://www.oracle.com/ns/oep/nosqldb
+http://www.oracle.com/ns/oep/nosqldb/oep-nosqldb.xsd">
+
+    
+    <wlevs:processor id="processor"/>
+</beans>
+

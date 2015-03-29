@@ -1,0 +1,86 @@
+<div id="windowsDrawerContent" class="select2-container-multi">
+    <table style="width: 100%;">
+        <tbody data-bind="foreach:sources, afterAdd: onSourceAddRemove">
+        <tr class="windowItem" data-bind="css: $data.color, visible: $data.windowable">
+
+            <!--source Label-->
+            <td>
+                <label class="sourceLabel"
+                       data-bind="text: $data.displayName, css: $data.sourceType.value, attr: { title: $data.displayName }"></label>
+            </td>
+
+            <!--range-->
+            <td>
+                <div>
+                    <label class="windowDelimiter" data-i18n="window.rangeLabel"></label>
+
+                    <!--uncomment and comment next tag, if we need slider again
+                        div class="alta-slider" data-bind="visible: !($data.window.rangeUnit()=='NOW'|| $data.window.rangeUnit()=='UNBOUNDED'),
+                                                attr: {
+                                                    id: 'exploration-source-window-slider-' + $data.name
+                                                }
+                     "></div-->
+                    <input class="windowValue validate[custom[onlyNumberSp]]"
+                           data-bind="value: $data.window.rangeValue,
+                                event: {
+                                    change: $parent.onWindowRangeValueChange
+                                },
+                                visible: !($data.window.rangeUnit()=='NOW'|| $data.window.rangeUnit()=='UNBOUNDED') "/>
+                    <select data-bind="options: $data.isStream() && !$parent.isCorrelationsContainsDBSource() ? $parent.rangeUnitsForStream : $parent.rangeUnitsForDataSource,
+                                        optionsText: 'label', 
+                                        optionsValue: 'value', 
+                                        attr: {
+                                            /*id: 'source-dialog-' + name,
+                                            name: 'source-dialog-' + name,
+                                            title: description,
+                                            class: cls + 'validate[' + validators + ']'
+                                            */
+                                        },
+                                        value: $data.window.rangeUnit,
+                                        event: {
+                                            change: $parent.onWindowRangeUnitChange
+                                        }">
+                    </select>
+                </div>
+            </td>
+
+            <!--slide-->
+            <td>
+                <div data-bind="visible: !($data.window.rangeUnit()=='NOW'|| $data.window.rangeUnit()=='UNBOUNDED') ">
+                    <label class="windowDelimiter" data-i18n="window.slideLabel"></label>
+                    <input class="windowValue validate[custom[onlyNumberSp]]"
+                           data-bind="value: $data.window.slideValue,
+                            event: {
+                                change: $parent.onWindowSlideValueChange
+                            }
+                           "/>
+                    <select data-bind="
+                    options: $data.window.rangeUnit()=='ROWS' ? $parent.slideUnitsForRows : $parent.slideUnitsForRange,
+                                            optionsText: 'label',
+                                            optionsValue: 'value',
+                                            attr: {
+                                                /*id: 'source-dialog-' + name,
+                                                name: 'source-dialog-' + name,
+                                                title: description,
+                                                class: cls + 'validate[' + validators + ']'
+                                                */
+                                            },
+                                            value: $data.window.slideUnit">
+                    </select>
+                </div>
+            </td>
+
+            <!--partition-->
+            <!--td>
+                <div class="windowDelimiter partitionByContainer"
+                     data-i18n-ns="window.partitionBy"
+                     data-bind="style: { display: $data.window.rangeUnit()=='ROWS' ? 'inline-block': 'none' }">
+                </div>
+            </td-->
+
+        </tr>
+        </tbody>
+    </table>
+    <div class="readModeCover" data-bind="visible: isReadMode()"></div>
+
+</div>

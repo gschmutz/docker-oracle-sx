@@ -1,0 +1,1 @@
+var l={"EU":["EU","Europa"],"AF":["AF","\u00C1frica"],"NA":["NA","Norteam\u00E9rica"],"SA":["SA","Sudam\u00E9rica"]};var DvtBaseMapManager=this.DvtBaseMapManager;if (!DvtBaseMapManager) DvtBaseMapManager={};if (!DvtBaseMapManager._UNPROCESSED_MAPS) DvtBaseMapManager._UNPROCESSED_MAPS=[[],[],[]];DvtBaseMapManager._UNPROCESSED_MAPS[2].push(["world","continents",l]);

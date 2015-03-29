@@ -1,0 +1,1 @@
+var l={"COL_BOGOTA":[null,"Bogot\u00E1"],"PRY_ASUNCION":[null,"Asunci\u00F3n"],"BRA_SAO_PAULO":[null,"S\u00E3o Paulo"]};var DvtBaseMapManager=this.DvtBaseMapManager;if (!DvtBaseMapManager) DvtBaseMapManager={};if (!DvtBaseMapManager._UNPROCESSED_MAPS) DvtBaseMapManager._UNPROCESSED_MAPS=[[],[],[]];DvtBaseMapManager._UNPROCESSED_MAPS[2].push(["southAmerica","cities",l]);

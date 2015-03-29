@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='iso-8859-1'?>
+<toc version="1.0">
+   <tocitem target="librarypage" text="Documentation Library" image="library"/>
+   <tocitem target="book1" text="Book Title for DOCID 1" image="closedbook"/>
+   <tocitem target="book2" text="Book Title for DOCID 2" image="closedbook"/>
+</toc>

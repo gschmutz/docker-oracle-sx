@@ -1,0 +1,110 @@
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="history/history.css" />
+<title>Oracle Event Processing Visualizer</title>
+<script src="AC_OETags.js" language="javascript"></script>
+<script src="history/history.js" language="javascript"></script>
+<style>
+body { margin: 0px; overflow:hidden }
+html {visibility:hidden;}
+</style>
+<script language="JavaScript" type="text/javascript">
+if (self==top) {
+    document.documentElement.style.visibility='visible';
+} else {
+    top.location=self.location;
+}
+var requiredMajorVersion = 9;
+var requiredMinorVersion = 0;
+var requiredRevision = 0;
+    function setfocus(appId) {
+       var app = getAppById(appId);
+       window.focus();
+       app.focus();
+    }
+    
+    function getAppById(id) {
+       if (navigator.appName.indexOf ("Microsoft") !=-1) {
+          return window[id];
+       } else {
+          return window.document[id];
+       }
+    }
+
+    function onLoad() {
+      setfocus("Visualizer");
+    }
+</script>
+</head>
+
+<body scroll="no" onLoad="onLoad();">
+<script language="JavaScript" type="text/javascript">
+var hasProductInstall = DetectFlashVer(6, 0, 65);
+
+var hasRequestedVersion = DetectFlashVer(requiredMajorVersion, requiredMinorVersion, requiredRevision);
+
+if ( hasProductInstall && !hasRequestedVersion ) {
+	var MMPlayerType = (isIE == true) ? "ActiveX" : "PlugIn";
+	var MMredirectURL = window.location;
+    document.title = document.title.slice(0, 47) + " - Flash Player Installation";
+    var MMdoctitle = document.title;
+
+	AC_FL_RunContent(
+		"src", "playerProductInstall",
+		"FlashVars", "MMredirectURL="+MMredirectURL+'&MMplayerType='+MMPlayerType+'&MMdoctitle='+MMdoctitle+"",
+		"width", "100%",
+		"height", "100%",
+		"align", "middle",
+		"id", "Visualizer",
+		"quality", "high",
+		"bgcolor", "white",
+		"name", "Visualizer",
+		"allowScriptAccess","sameDomain",
+		"type", "application/x-shockwave-flash",
+		"pluginspage", "http://get.adobe.com/flashplayer"
+	);
+} else if (hasRequestedVersion) {
+	AC_FL_RunContent(
+			"src", "Visualizer",
+			"width", "100%",
+			"height", "100%",
+			"align", "middle",
+			"id", "Visualizer",
+			"quality", "high",
+			"bgcolor", "white",
+			"name", "Visualizer",
+			"allowScriptAccess","sameDomain",
+            "allowFullScreen", "false",
+			"type", "application/x-shockwave-flash",
+			"pluginspage", "http://get.adobe.com/flashplayer"
+	);
+  } else {
+    var alternateContent = 'Welcome to Oracle Event Processing Visualizer! '
+  	+ 'This content requires the Adobe Flash Player, please install it first. '
+   	+ '<a href=http://get.adobe.com/flashplayer/>Get Flash</a>';
+    document.write(alternateContent); 
+  }
+</script>
+<noscript>
+  	<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
+			id="Visualizer" width="100%" height="100%"
+			codebase="http://fpdownload.macromedia.com/get/flashplayer/current/swflash.cab">
+			<param name="movie" value="Visualizer.swf" />
+			<param name="quality" value="high" />
+			<param name="bgcolor" value="white" />
+			<param name="allowScriptAccess" value="sameDomain" />
+			<embed src="Visualizer.swf" quality="high" bgcolor="white"
+				width="100%" height="100%" name="Visualizer" align="middle"
+				play="true"
+				loop="false"
+				quality="high"
+				allowScriptAccess="sameDomain"        
+				allowFullScreen= "false"        
+				type="application/x-shockwave-flash"
+				pluginspage="http://get.adobe.com/flashplayer">
+			</embed>
+	</object>
+</noscript>
+</body>
+</html>

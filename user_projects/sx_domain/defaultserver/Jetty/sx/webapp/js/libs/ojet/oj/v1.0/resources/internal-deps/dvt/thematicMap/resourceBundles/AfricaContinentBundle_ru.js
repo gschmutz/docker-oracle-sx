@@ -1,0 +1,1 @@
+var l={"AF":["\u0410\u0424","\u0410\u0444\u0440\u0438\u043A\u0430"]};var DvtBaseMapManager=this.DvtBaseMapManager;if (!DvtBaseMapManager) DvtBaseMapManager={};if (!DvtBaseMapManager._UNPROCESSED_MAPS) DvtBaseMapManager._UNPROCESSED_MAPS=[[],[],[]];DvtBaseMapManager._UNPROCESSED_MAPS[2].push(["africa","continent",l]);

@@ -1,0 +1,1 @@
+var l={"MN_ST__PAUL":[null,"Saint Paul"],"FL_ST__PETERSBURG":[null,"Petrohrad"],"GA_ATHENS":[null,"At\u00E9ny"]};var DvtBaseMapManager=this.DvtBaseMapManager;if (!DvtBaseMapManager) DvtBaseMapManager={};if (!DvtBaseMapManager._UNPROCESSED_MAPS) DvtBaseMapManager._UNPROCESSED_MAPS=[[],[],[]];DvtBaseMapManager._UNPROCESSED_MAPS[2].push(["usa","cities",l]);

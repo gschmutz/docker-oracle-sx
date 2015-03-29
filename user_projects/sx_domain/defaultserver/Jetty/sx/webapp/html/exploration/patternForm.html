@@ -1,0 +1,108 @@
+<div id="pattern-form" class="pattern" data-i18n-ns="pattern">
+    <div class="pattern-parameters-form oj-form oj-md-odd-cols-2 oj-md-labels-inline"
+         data-bind="foreach: exploration.pattern.parameters">
+        <div class="oj-row">
+            <div class="oj-col">
+                <label class="oj-label" data-bind="attr: {for: 'pattern-parameter-' + name}">
+                    <span class="oj-label-required-icon oj-widget-icon"
+                          data-i18n="{attr: {title: '*oep.field.REQUIRED'}}"
+                          title="Required" data-bind="visible: required"></span>
+                    <span data-bind="text: displayName, attr: {title: description }"></span>
+                </label>
+            </div>
+            <div class="oj-col patternParameterContainer">
+
+                <!-- ko if: $parent.isRangeOrInterval($data) -->
+                <span data-bind="visible: showValue">
+                    <input data-bind="
+                        attr: {
+                            id: 'pattern-parameter-' + name() + '-value'
+                        },
+                        ojComponent: {
+                            component: 'ojInputNumber',
+                            min: 1,
+                            value: valueValue
+                        },
+                        event: {change: $parent.onInputChange}
+                    "/>
+                </span>
+                <select data-bind="
+                        options: options,
+                        optionsText: 'label', 
+                        optionsValue: 'value', 
+                        attr: {
+                            id: 'pattern-parameter-' + name() + '-unit',
+                            name: 'pattern-parameter-' + name() + '-unit',
+                            class: unitCls() + ' validate[' + unitValidator() + ']'
+                        },
+                        value: unitValue,
+                        event: {change: $parent.onRangeOrIntervalHtmlSelectChange}
+
+                    "></select>
+                <!-- /ko -->
+
+                <!-- ko if: widget() === 'input' || widget() === 'password' -->
+                <input data-bind="
+                        type: widget,
+                        attr: {
+                            id: 'pattern-parameter-' + name(),
+                            name: 'pattern-parameter-' + name(),
+                            title: description,
+                            class: cls() + ' validate[' + validator() + ']'
+                        },
+                        value: value,
+                        event: {change: $parent.onInputChange}
+
+                    ">
+                <!-- /ko -->
+
+                <!-- ko if: $parent.isCheckBox($data) -->
+                <input data-bind="
+                        attr: {
+                            type: widget,
+                            id: 'pattern-parameter-' + name(),
+                            name: 'pattern-parameter-' + name(),
+                            title: description,
+                            class: cls() + ' validate[' + validator() + ']'
+                        },
+                        checked: value,
+                        event: {change: $parent.onInputChange}
+
+                    "/>
+                <!-- /ko -->
+
+                <!-- ko if: $parent.isInteger($data) -->
+                <input data-bind="
+                        attr: {
+                            id: 'pattern-parameter-' + name()
+                        },
+                        ojComponent: {
+                            component: 'ojInputNumber',
+                            min: 1,
+                            value: value,
+                            converter: {
+                                type: 'number',
+                                options : {
+                                  maximumFractionDigits: 0
+                                }
+                            }
+                        },
+                        event: {change: $parent.onInputChange}
+
+                    "/>
+                <!-- /ko -->
+
+                <!-- ko if: $parent.isSelect2Component($data) -->
+                <input type='hidden' data-bind="
+                        attr: {
+                            id: 'pattern-parameter-' + name()
+                        }
+                    "/>
+                <!-- /ko -->
+
+            </div>
+        </div>
+    </div>
+</div>
+
+

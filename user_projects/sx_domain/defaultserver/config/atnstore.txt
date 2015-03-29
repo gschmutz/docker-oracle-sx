@@ -1,0 +1,24 @@
+password: {SHA-256}/MOiP8cjLMicfLDyPYd0/vtz19wqsi5qG2uLICtNzJE=
+user: wlevs
+description: 
+
+group: wlevsDeployers
+description: 
+
+group: wlevsAdministrators
+description: 
+member: wlevs
+
+group: wlevsApplicationAdmins
+description: 
+
+group: wlevsBusinessUsers
+description: 
+
+group: wlevsMonitors
+description: 
+
+group: wlevsOperators
+description: 
+
+

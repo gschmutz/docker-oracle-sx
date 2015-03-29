@@ -1,0 +1,13 @@
+Bundle-Version: ${wlevs.version}
+Bundle-Name: com.bea.wlevs.visualizer.help
+Bundle-SymbolicName: com.bea.wlevs.visualizer.help
+Export-Package: com.bea.wlevs*;version=${wlevs.version}
+Import-Package: com.bea.core.webextensions,\
+ com.bea.wlevs.spring.support;version=${wlevs.version},\
+ org.apache.commons.logging,\
+ org.osgi.framework,\
+ org.osgi.service.http,\
+ org.springframework.osgi.context;version=${spring.osgi.version},\
+ org.springframework.osgi.extensions.annotation;version=${spring.osgi.version},\
+ org.springframework.beans.factory;version=${spring.version},\ 
+ *

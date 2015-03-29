@@ -1,0 +1,26 @@
+<div class="plotOnY inline" data-bind="visible: yOptions().length > 1 && isYShown">
+    <button class="yButton"></button>
+    <ul class="yOptions" style="display:none" data-bind="ojComponent: {component: 'ojMenu'}">
+        <!-- ko foreach: yOptions -->
+        <li>
+            <a href="javascript:void(0)">
+                <!-- TODO fix or replace this menu. It does not show checked items correctly -->
+                <input class="oj-checkbox" type="checkbox"
+                       data-bind="attr: {value: $data}, checked: $parent.ySelectedSeriesArray"/>
+                <span class="oj-menu-item" data-bind="text: $data"></span>
+            </a>
+        </li>
+        <!-- /ko -->
+    </ul>
+</div>
+
+<div class="plotOnX inline" data-bind="visible: xOptions().length > 1 && isXShown">
+    <button class="xButton"></button>
+    <ul class="xOptions" data-bind="foreach: xOptions" style="display:none" data-bind="ojComponent: {component: 'ojMenu'}">
+        <li>
+            <a href="javascript:void(0)" data-bind="click: function() {$parent.xSelectedSeries($data);}">
+                <span class="oj-menu-item" data-bind="text: $parent.getLabel($data)"></span>
+            </a>
+        </li>
+    </ul>
+</div>

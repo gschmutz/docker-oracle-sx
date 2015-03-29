@@ -1,0 +1,152 @@
+####<Mar 14, 2015 9:22:41 PM CET> <Notice> <LoggingService> <> <> <Thread-17> <> <> <> <1426364561714> <BEA-320400> <The log file /u00/app/oracle/product/oep12c/user_projects/domains/sx_domain/defaultserver/server.log will be rotated. Reopen the log file if tailing has stopped. This can happen on some platforms, such as Windows.> 
+####<Mar 14, 2015 9:22:41 PM CET> <Notice> <LoggingService> <> <> <Thread-17> <> <> <> <1426364561716> <BEA-320401> <The log file has been rotated to /u00/app/oracle/product/oep12c/user_projects/domains/sx_domain/defaultserver/server.log00001. Log messages will continue to be logged in /u00/app/oracle/product/oep12c/user_projects/domains/sx_domain/defaultserver/server.log.> 
+####<Mar 14, 2015 9:22:42 PM CET> <Error> <SDS> <> <> <Thread-17> <> <> <> <1426364562195> <BEA-1001100> <There was an unexpected throwable from file "OSGI-INF/transactionmanager.xml" in bundle "com.bea.core.transaction.ce". The exception at depth 0 has message "java.net.UnknownHostException: srv12c: srv12c: Name or service not known".> 
+####<Mar 14, 2015 9:22:42 PM CET> <Error> <SDS> <> <> <Thread-17> <> <> <> <1426364562203> <BEA-1001100> <There was an unexpected throwable from file "OSGI-INF/transactionmanager.xml" in bundle "com.bea.core.transaction.ce". The exception at depth 1 has message "srv12c: srv12c: Name or service not known".> 
+####<Mar 14, 2015 9:22:42 PM CET> <Error> <SDS> <> <> <Thread-17> <> <> <> <1426364562206> <BEA-1001100> <There was an unexpected throwable from file "OSGI-INF/transactionmanager.xml" in bundle "com.bea.core.transaction.ce". The exception at depth 2 has message "srv12c: Name or service not known".> 
+####<Mar 14, 2015 9:22:42 PM CET> <Error> <SDS> <> <> <Thread-17> <> <> <> <1426364562209> <BEA-1001103> <Service "Transaction Manager" from file "OSGI-INF/transactionmanager.xml" in bundle "com.bea.core.transaction.ce" threw an exception during its initialization call. The exception thrown follows this message.> 
+####<Mar 14, 2015 9:22:42 PM CET> <Error> <SDS> <> <> <Thread-17> <> <> <> <1426364562210> <BEA-1001100> <There was an unexpected throwable from file "OSGI-INF/transactionmanager.xml" in bundle "com.bea.core.transaction.ce". The exception at depth 0 has message "java.lang.RuntimeException: java.net.UnknownHostException: srv12c: srv12c: Name or service not known".> 
+####<Mar 14, 2015 9:22:42 PM CET> <Error> <SDS> <> <> <Thread-17> <> <> <> <1426364562215> <BEA-1001100> <There was an unexpected throwable from file "OSGI-INF/transactionmanager.xml" in bundle "com.bea.core.transaction.ce". The exception at depth 1 has message "java.net.UnknownHostException: srv12c: srv12c: Name or service not known".> 
+####<Mar 14, 2015 9:22:42 PM CET> <Error> <SDS> <> <> <Thread-17> <> <> <> <1426364562220> <BEA-1001100> <There was an unexpected throwable from file "OSGI-INF/transactionmanager.xml" in bundle "com.bea.core.transaction.ce". The exception at depth 2 has message "srv12c: srv12c: Name or service not known".> 
+####<Mar 14, 2015 9:22:42 PM CET> <Error> <SDS> <> <> <Thread-17> <> <> <> <1426364562224> <BEA-1001100> <There was an unexpected throwable from file "OSGI-INF/transactionmanager.xml" in bundle "com.bea.core.transaction.ce". The exception at depth 3 has message "srv12c: Name or service not known".> 
+####<Mar 14, 2015 9:22:42 PM CET> <Warning> <Jetty> <> <> <Thread-17> <> <> <> <1426364562468> <BEA-000000> <failed NetworkConnector@0.0.0.0:9002
+java.net.UnknownHostException: srv12c: srv12c: Name or service not known
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1473)
+	at com.bea.core.jetty.internal.NetworkConnector.open(NetworkConnector.java:75)
+	at org.mortbay.jetty.AbstractConnector.doStart(AbstractConnector.java:283)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.Server.doStart(Server.java:235)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at com.bea.core.jetty.internal.HttpServiceImpl.startService(HttpServiceImpl.java:227)
+	at com.bea.core.jetty.internal.OsgiHttpServiceImpl.restartHttpService(OsgiHttpServiceImpl.java:295)
+	at com.bea.core.jetty.internal.OsgiHttpServiceImpl.start(OsgiHttpServiceImpl.java:363)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.bea.core.sds.internal.ReflectionHelper.localInvoke(ReflectionHelper.java:299)
+	at com.bea.core.sds.internal.ReflectionHelper.activateManagedObject(ReflectionHelper.java:1684)
+	at com.bea.core.sds.internal.ServiceInstance.activateInstantiation(ServiceInstance.java:1810)
+	at com.bea.core.sds.internal.ServiceInstance.access$4200(ServiceInstance.java:50)
+	at com.bea.core.sds.internal.ServiceInstance$ServiceFactoryImpl.update(ServiceInstance.java:1904)
+	at com.bea.core.sds.internal.ServiceInstance$ServiceFactoryImpl.access$2100(ServiceInstance.java:1847)
+	at com.bea.core.sds.internal.ServiceInstance$Advertiser.activateAdvertise(ServiceInstance.java:1092)
+	at com.bea.core.sds.internal.ServiceInstance$Advertiser.doAdvertise(ServiceInstance.java:1117)
+	at com.bea.core.sds.internal.ServiceInstance$Advertiser.run(ServiceInstance.java:1431)
+	at com.bea.core.sds.internal.SDSWorker.run(SDSWorker.java:125)
+	at java.lang.Thread.run(Thread.java:745)
+Caused By: java.net.UnknownHostException: srv12c: Name or service not known
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$1.lookupAllHostAddr(InetAddress.java:901)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1293)
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1469)
+	at com.bea.core.jetty.internal.NetworkConnector.open(NetworkConnector.java:75)
+	at org.mortbay.jetty.AbstractConnector.doStart(AbstractConnector.java:283)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.Server.doStart(Server.java:235)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at com.bea.core.jetty.internal.HttpServiceImpl.startService(HttpServiceImpl.java:227)
+	at com.bea.core.jetty.internal.OsgiHttpServiceImpl.restartHttpService(OsgiHttpServiceImpl.java:295)
+	at com.bea.core.jetty.internal.OsgiHttpServiceImpl.start(OsgiHttpServiceImpl.java:363)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.bea.core.sds.internal.ReflectionHelper.localInvoke(ReflectionHelper.java:299)
+	at com.bea.core.sds.internal.ReflectionHelper.activateManagedObject(ReflectionHelper.java:1684)
+	at com.bea.core.sds.internal.ServiceInstance.activateInstantiation(ServiceInstance.java:1810)
+	at com.bea.core.sds.internal.ServiceInstance.access$4200(ServiceInstance.java:50)
+	at com.bea.core.sds.internal.ServiceInstance$ServiceFactoryImpl.update(ServiceInstance.java:1904)
+	at com.bea.core.sds.internal.ServiceInstance$ServiceFactoryImpl.access$2100(ServiceInstance.java:1847)
+	at com.bea.core.sds.internal.ServiceInstance$Advertiser.activateAdvertise(ServiceInstance.java:1092)
+	at com.bea.core.sds.internal.ServiceInstance$Advertiser.doAdvertise(ServiceInstance.java:1117)
+	at com.bea.core.sds.internal.ServiceInstance$Advertiser.run(ServiceInstance.java:1431)
+	at com.bea.core.sds.internal.SDSWorker.run(SDSWorker.java:125)
+	at java.lang.Thread.run(Thread.java:745)
+> 
+####<Mar 14, 2015 9:22:42 PM CET> <Warning> <Jetty> <> <> <Thread-17> <> <> <> <1426364562490> <BEA-000000> <failed NetworkConnector@0.0.0.0:9003
+java.net.UnknownHostException: srv12c: srv12c: Name or service not known
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1473)
+	at com.bea.core.jetty.internal.NetworkConnector.open(NetworkConnector.java:75)
+	at org.mortbay.jetty.AbstractConnector.doStart(AbstractConnector.java:283)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.Server.doStart(Server.java:235)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at com.bea.core.jetty.internal.HttpServiceImpl.startService(HttpServiceImpl.java:227)
+	at com.bea.core.jetty.internal.OsgiHttpServiceImpl.restartHttpService(OsgiHttpServiceImpl.java:295)
+	at com.bea.core.jetty.internal.OsgiHttpServiceImpl.start(OsgiHttpServiceImpl.java:363)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.bea.core.sds.internal.ReflectionHelper.localInvoke(ReflectionHelper.java:299)
+	at com.bea.core.sds.internal.ReflectionHelper.activateManagedObject(ReflectionHelper.java:1684)
+	at com.bea.core.sds.internal.ServiceInstance.activateInstantiation(ServiceInstance.java:1810)
+	at com.bea.core.sds.internal.ServiceInstance.access$4200(ServiceInstance.java:50)
+	at com.bea.core.sds.internal.ServiceInstance$ServiceFactoryImpl.update(ServiceInstance.java:1904)
+	at com.bea.core.sds.internal.ServiceInstance$ServiceFactoryImpl.access$2100(ServiceInstance.java:1847)
+	at com.bea.core.sds.internal.ServiceInstance$Advertiser.activateAdvertise(ServiceInstance.java:1092)
+	at com.bea.core.sds.internal.ServiceInstance$Advertiser.doAdvertise(ServiceInstance.java:1117)
+	at com.bea.core.sds.internal.ServiceInstance$Advertiser.run(ServiceInstance.java:1431)
+	at com.bea.core.sds.internal.SDSWorker.run(SDSWorker.java:125)
+	at java.lang.Thread.run(Thread.java:745)
+Caused By: java.net.UnknownHostException: srv12c: Name or service not known
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$1.lookupAllHostAddr(InetAddress.java:901)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1293)
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1469)
+	at com.bea.core.jetty.internal.NetworkConnector.open(NetworkConnector.java:75)
+	at org.mortbay.jetty.AbstractConnector.doStart(AbstractConnector.java:283)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.Server.doStart(Server.java:235)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at com.bea.core.jetty.internal.HttpServiceImpl.startService(HttpServiceImpl.java:227)
+	at com.bea.core.jetty.internal.OsgiHttpServiceImpl.restartHttpService(OsgiHttpServiceImpl.java:295)
+	at com.bea.core.jetty.internal.OsgiHttpServiceImpl.start(OsgiHttpServiceImpl.java:363)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.bea.core.sds.internal.ReflectionHelper.localInvoke(ReflectionHelper.java:299)
+	at com.bea.core.sds.internal.ReflectionHelper.activateManagedObject(ReflectionHelper.java:1684)
+	at com.bea.core.sds.internal.ServiceInstance.activateInstantiation(ServiceInstance.java:1810)
+	at com.bea.core.sds.internal.ServiceInstance.access$4200(ServiceInstance.java:50)
+	at com.bea.core.sds.internal.ServiceInstance$ServiceFactoryImpl.update(ServiceInstance.java:1904)
+	at com.bea.core.sds.internal.ServiceInstance$ServiceFactoryImpl.access$2100(ServiceInstance.java:1847)
+	at com.bea.core.sds.internal.ServiceInstance$Advertiser.activateAdvertise(ServiceInstance.java:1092)
+	at com.bea.core.sds.internal.ServiceInstance$Advertiser.doAdvertise(ServiceInstance.java:1117)
+	at com.bea.core.sds.internal.ServiceInstance$Advertiser.run(ServiceInstance.java:1431)
+	at com.bea.core.sds.internal.SDSWorker.run(SDSWorker.java:125)
+	at java.lang.Thread.run(Thread.java:745)
+> 
+####<Mar 14, 2015 9:22:42 PM CET> <Warning> <Jetty> <> <> <Thread-17> <> <> <> <1426364562491> <BEA-000000> <failed Server@7159cfc
+org.mortbay.util.MultiException[java.net.UnknownHostException: srv12c: srv12c: Name or service not known, java.net.UnknownHostException: srv12c: srv12c: Name or service not known]
+	at org.mortbay.jetty.Server.doStart(Server.java:188)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at com.bea.core.jetty.internal.HttpServiceImpl.startService(HttpServiceImpl.java:227)
+	at com.bea.core.jetty.internal.OsgiHttpServiceImpl.restartHttpService(OsgiHttpServiceImpl.java:295)
+	at com.bea.core.jetty.internal.OsgiHttpServiceImpl.start(OsgiHttpServiceImpl.java:363)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.bea.core.sds.internal.ReflectionHelper.localInvoke(ReflectionHelper.java:299)
+	at com.bea.core.sds.internal.ReflectionHelper.activateManagedObject(ReflectionHelper.java:1684)
+	at com.bea.core.sds.internal.ServiceInstance.activateInstantiation(ServiceInstance.java:1810)
+	at com.bea.core.sds.internal.ServiceInstance.access$4200(ServiceInstance.java:50)
+	at com.bea.core.sds.internal.ServiceInstance$ServiceFactoryImpl.update(ServiceInstance.java:1904)
+	at com.bea.core.sds.internal.ServiceInstance$ServiceFactoryImpl.access$2100(ServiceInstance.java:1847)
+	at com.bea.core.sds.internal.ServiceInstance$Advertiser.activateAdvertise(ServiceInstance.java:1092)
+	at com.bea.core.sds.internal.ServiceInstance$Advertiser.doAdvertise(ServiceInstance.java:1117)
+	at com.bea.core.sds.internal.ServiceInstance$Advertiser.run(ServiceInstance.java:1431)
+	at com.bea.core.sds.internal.SDSWorker.run(SDSWorker.java:125)
+	at java.lang.Thread.run(Thread.java:745)
+> 
+####<Mar 14, 2015 9:22:42 PM CET> <Error> <SDS> <> <> <Thread-17> <> <> <> <1426364562493> <BEA-1001100> <There was an unexpected throwable from file "OSGI-INF/jetty.xml" in bundle "com.bea.core.jetty". The exception at depth 0 has message "org.mortbay.util.MultiException[java.net.UnknownHostException: srv12c: srv12c: Name or service not known, java.net.UnknownHostException: srv12c: srv12c: Name or service not known]".> 
+####<Mar 14, 2015 9:22:42 PM CET> <Error> <SDS> <> <> <Thread-17> <> <> <> <1426364562495> <BEA-1001100> <There was an unexpected throwable from file "OSGI-INF/jetty.xml" in bundle "com.bea.core.jetty". The exception at depth 1 has message "Multiple exceptions".> 
+####<Mar 14, 2015 9:22:42 PM CET> <Warning> <SDS> <> <> <Thread-17> <> <> <> <1426364562507> <BEA-1001121> <The service with identifier "Jetty" in SDS file "OSGI-INF/jetty.xml" in bundle "com.bea.core.jetty" is going into the ERROR state. The error message from the failed subsystem is "Multiple exceptions"> 
+####<Mar 14, 2015 9:22:42 PM CET> <Error> <SDS> <> <> <Thread-17> <> <> <> <1426364562507> <BEA-1001103> <Service "Jetty" from file "OSGI-INF/jetty.xml" in bundle "com.bea.core.jetty" threw an exception during its initialization call. The exception thrown follows this message.> 
+####<Mar 14, 2015 9:22:42 PM CET> <Error> <SDS> <> <> <Thread-17> <> <> <> <1426364562508> <BEA-1001100> <There was an unexpected throwable from file "OSGI-INF/jetty.xml" in bundle "com.bea.core.jetty". The exception at depth 0 has message "com.bea.core.jetty.JettyServerException: org.mortbay.util.MultiException[java.net.UnknownHostException: srv12c: srv12c: Name or service not known, java.net.UnknownHostException: srv12c: srv12c: Name or service not known]".> 
+####<Mar 14, 2015 9:22:42 PM CET> <Error> <SDS> <> <> <Thread-17> <> <> <> <1426364562511> <BEA-1001100> <There was an unexpected throwable from file "OSGI-INF/jetty.xml" in bundle "com.bea.core.jetty". The exception at depth 1 has message "org.mortbay.util.MultiException[java.net.UnknownHostException: srv12c: srv12c: Name or service not known, java.net.UnknownHostException: srv12c: srv12c: Name or service not known]".> 
+####<Mar 14, 2015 9:22:42 PM CET> <Error> <SDS> <> <> <Thread-17> <> <> <> <1426364562531> <BEA-1001100> <There was an unexpected throwable from file "OSGI-INF/jetty.xml" in bundle "com.bea.core.jetty". The exception at depth 2 has message "Multiple exceptions".> 
+####<Mar 14, 2015 9:22:42 PM CET> <Error> <SDS> <> <> <Thread-17> <> <> <> <1426364562546> <BEA-1001100> <There was an unexpected throwable from file "OSGI-INF/jetty.xml" in bundle "com.bea.core.jetty". The exception at depth 0 has message "java.lang.NullPointerException".> 
+####<Mar 14, 2015 9:22:42 PM CET> <Error> <SDS> <> <> <Thread-17> <> <> <> <1426364562548> <BEA-1001100> <There was an unexpected throwable from file "OSGI-INF/jetty.xml" in bundle "com.bea.core.jetty". The exception at depth 1 has message "null".> 

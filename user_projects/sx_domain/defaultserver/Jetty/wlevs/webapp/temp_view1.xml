@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<Rule root="4">
+	<select-block>
+		<Operator ID="4" type="Output">
+			<inputs>
+				<input>3</input>
+			</inputs>
+		</Operator>
+		
+		<Operator ID="3" type="Select">
+			<inputs>
+				<input>2</input>
+			</inputs>
+		</Operator>
+	</select-block>
+
+	<from-block>
+		<Operator ID="2" type="Window">
+			<inputs>
+				<input>1</input>
+			</inputs>
+		</Operator>
+
+		<Operator ID="1" type="SSource">
+			
+		</Operator>
+	</from-block>			
+</Rule>
+
+

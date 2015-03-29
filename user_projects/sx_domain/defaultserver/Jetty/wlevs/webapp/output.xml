@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<Rule root="4">
+<Operator ID="1" type="Source">
+	<sourcetype>Relation</sourcetype>	<sourceName>vTrend</sourceName>
+	<cql-property> select * from vTrend</cql-property>
+</Operator>
+
+<Operator type="Filter" ID="2">
+	<inputs>
+		<input>1</input>
+	</inputs>
+	<cql-property>select * from vTrend WHERE   trendLastPrice  &gt; 2  </cql-property>
+	<predicates>
+		<predicate>
+			<predicate>  trendLastPrice  &gt; 2 </predicate>
+		</predicate>
+	</predicates>
+</Operator><Operator ID="3" type="Project">
+	<cql-property> select  symbol , lastPrice , trendLastPrice  FROM vTrend WHERE   trendLastPrice  &gt; 2 </cql-property>	<inputs>
+		<input>2</input>
+	</inputs>
+	<distinct>false</distinct>		<select-list>
+<select-attr> symbol </select-attr><select-attr> lastPrice </select-attr><select-attr> trendLastPrice </select-attr>	</select-list>
+</Operator>
+<Operator ID="4" type="Output">
+	<inputs>
+		<input>3</input>
+	</inputs>
+	<cql-property>CREATE QUERY trend AS 
+       
+         select symbol, lastPrice, trendLastPrice from vTrend where trendLastPrice &gt; 2
+           
+     </cql-property>
+	<output-type>query</output-type>
+	<output-name>trend</output-name>
+</Operator>
+
+</Rule>

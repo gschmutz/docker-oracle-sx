@@ -1,0 +1,81 @@
+<?xml version = '1.0' encoding = 'windows-1252'?>
+<!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN" "http://java.sun.com/dtd/web-app_2_3.dtd">
+<web-app>
+
+  <display-name>Oracle Help for the Web</display-name>
+  <description>Oracle Help for the Web</description>
+
+  <servlet>
+    <servlet-name>OHW</servlet-name>
+    <servlet-class>oracle.help.web.OHWController</servlet-class>
+
+    <!-- This init param provides the context-relative path to the config file -->    
+    <init-param>
+      <param-name>ohwConfigFileURL</param-name>
+      <param-value>/helpsets/ohwconfig.xml</param-value>
+    </init-param>
+    
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+
+  <servlet>
+    <servlet-name>uix</servlet-name>
+    <servlet-class>oracle.cabo.servlet.UIXServlet</servlet-class>
+    
+    <init-param>
+      <param-name>oracle.cabo.servlet.pageBroker</param-name>
+      <param-value>oracle.help.web.uix.OHWPageBroker</param-value>
+    </init-param>
+    
+    <init-param>
+      <param-name>oracle.cabo.ui.UIExtensions</param-name>
+      <param-value>oracle.help.web.uix.OHWUIExtension</param-value>
+    </init-param>
+    
+    <load-on-startup>1</load-on-startup>   
+  </servlet>
+
+  <servlet>
+    <servlet-name>UIXCacheResourceServlet</servlet-name>
+    <servlet-class>oracle.cabo.ui.UIXCacheResourceServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>UIXCacheResourceServlet</servlet-name>
+    <url-pattern>/cabo/images/cache/*</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>UIXCacheResourceServlet</servlet-name>
+    <url-pattern>/cabo/styles/cache/*</url-pattern>
+  </servlet-mapping>  
+    
+  <servlet-mapping>
+    <servlet-name>uix</servlet-name>
+    <url-pattern>*.uix</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>OHW</servlet-name>
+    <url-pattern>/help</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>OHW</servlet-name>
+    <url-pattern>/help/*</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>uix</servlet-name>
+    <url-pattern>/uix/*</url-pattern>
+  </servlet-mapping>
+  <mime-mapping>
+    <extension>html</extension>
+    <mime-type>text/html</mime-type>
+  </mime-mapping>
+  <mime-mapping>
+    <extension>txt</extension>
+    <mime-type>text/plain</mime-type>
+  </mime-mapping>
+  <mime-mapping>
+    <extension>css</extension>
+    <mime-type>text/css</mime-type>
+  </mime-mapping>
+</web-app>

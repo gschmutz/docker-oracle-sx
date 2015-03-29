@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>yfiles-servlet</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>EPNGraphServlet</display-name>
+    <servlet-name>EPNGraphServlet</servlet-name>
+    <servlet-class>com.bea.wlevs.visualizer.graph.EPNGraphServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EPNGraphServlet</servlet-name>
+    <url-pattern>/EPNGraphServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>EPNGraphSetupServlet</display-name>
+    <servlet-name>EPNGraphSetupServlet</servlet-name>
+    <servlet-class>com.bea.wlevs.visualizer.graph.EPNGraphSetupServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EPNGraphSetupServlet</servlet-name>
+    <url-pattern>/EPNGraphSetupServlet</url-pattern>
+  </servlet-mapping>
+    <servlet>
+      <description>Calculates a layout for a cached graph.</description>
+      <display-name>Layout Servlet</display-name>
+      <servlet-name>LayoutServlet</servlet-name>
+      <servlet-class>com.bea.wlevs.visualizer.graph.LayoutServlet</servlet-class>
+    </servlet>
+	
+	  <servlet-mapping>
+      <servlet-name>LayoutServlet</servlet-name>
+      <url-pattern>/layout</url-pattern>
+    </servlet-mapping>
+
+	<servlet>
+	    <description></description>
+	    <display-name>ClusterGraphServlet</display-name>
+	    <servlet-name>ClusterGraphServlet</servlet-name>
+	    <servlet-class>com.bea.wlevs.visualizer.graph.cluster.ClusterGraphServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	    <servlet-name>ClusterGraphServlet</servlet-name>
+	    <url-pattern>/ClusterGraphServlet</url-pattern>
+	</servlet-mapping>
+  
+    <servlet>
+        <description></description>
+        <display-name>CEPClusterGraphServlet</display-name>
+        <servlet-name>CEPClusterGraphServlet</servlet-name>
+        <servlet-class>com.bea.wlevs.visualizer.graph.cluster.CEPClusterGraphServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CEPClusterGraphServlet</servlet-name>
+        <url-pattern>/CEPClusterGraphServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+      <display-name>LayoutBase Servlet</display-name>
+      <servlet-name>LayoutBaseServlet</servlet-name>
+      <servlet-class>com.bea.wlevs.visualizer.graph.base.LayoutBaseServlet</servlet-class>
+    </servlet>
+    
+      <servlet-mapping>
+      <servlet-name>LayoutBaseServlet</servlet-name>
+      <url-pattern>/layoutbase</url-pattern>
+    </servlet-mapping>
+        
+    <servlet>
+      <display-name>Roundtrip Servlet</display-name>
+      <servlet-name>roundtripServlet</servlet-name>
+      <servlet-class>com.bea.wlevs.visualizer.graph.LayoutRoundtripServlet</servlet-class>
+    </servlet>
+    
+      <servlet-mapping>
+      <servlet-name>roundtripServlet</servlet-name>
+      <url-pattern>/layoutRoundtrip</url-pattern>
+    </servlet-mapping>
+    
+     <servlet>
+      <servlet-name>qcServlet</servlet-name>
+      <servlet-class>com.bea.wlevs.visualizer.graph.QueryConstructorServlet</servlet-class>
+    </servlet>
+    
+      <servlet-mapping>
+      <servlet-name>qcServlet</servlet-name>
+      <url-pattern>/qcServlet</url-pattern>
+    </servlet-mapping>
+    
+   <servlet>
+      <servlet-name>qpServlet</servlet-name>
+      <servlet-class>com.bea.wlevs.visualizer.graph.QueryPlanLayoutServlet</servlet-class>
+    </servlet>
+    
+      <servlet-mapping>
+      <servlet-name>qpServlet</servlet-name>
+      <url-pattern>/qpServlet</url-pattern>
+    </servlet-mapping>
+    
+ 	<servlet>
+      <display-name>HttpAdapter</display-name>
+      <servlet-name>HttpAdapter</servlet-name>
+      <servlet-class>com.bea.wlevs.visualizer.httpadapter.JmxHttpAdapterServlet</servlet-class>
+    </servlet>
+	
+	<servlet-mapping>
+		<servlet-name>HttpAdapter</servlet-name>
+		<url-pattern>/api/rest/*</url-pattern>
+	</servlet-mapping>
+   <!--
+ 	<servlet>
+      <servlet-name>testservlet</servlet-name>
+      <display-name>test</display-name>
+      <servlet-class>com.bea.evs.visualizer.TestServlet</servlet-class>
+    </servlet>
+	
+	<servlet-mapping>
+		<servlet-name>testservlet</servlet-name>
+		<url-pattern>/test</url-pattern>
+	</servlet-mapping>
+    -->
+	<servlet>
+      <display-name>DiagnosticProfileServlet</display-name>
+      <servlet-name>DiagnosticProfileServlet</servlet-name>
+      <servlet-class>com.bea.wlevs.visualizer.diagnostic.DiagnosticProfileServlet</servlet-class>
+    </servlet>
+			
+	<servlet-mapping>
+		<servlet-name>DiagnosticProfileServlet</servlet-name>
+		<url-pattern>/diagProfile</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>FileUploadServlet</servlet-name>
+		<url-pattern>/visualizer/upload</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+      <display-name>FileUploadServlet</display-name>
+      <servlet-name>FileUploadServlet</servlet-name>
+      <servlet-class>com.bea.wlevs.visualizer.file.FileUploadServlet</servlet-class>
+    </servlet>
+	
+	<servlet>
+      <display-name>LoginServlet</display-name>
+      <servlet-name>LoginServlet</servlet-name>
+      <servlet-class>com.bea.wlevs.visualizer.login.LoginServlet</servlet-class>
+    </servlet>
+	
+	<servlet-mapping>
+		<servlet-name>LoginServlet</servlet-name>
+		<url-pattern>/login</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+      <display-name>LogoutServlet</display-name>
+      <servlet-name>LogoutServlet</servlet-name>
+      <servlet-class>com.bea.wlevs.visualizer.login.LogoutServlet</servlet-class>
+    </servlet>
+	
+	<servlet-mapping>
+		<servlet-name>LogoutServlet</servlet-name>
+		<url-pattern>/logout</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+      <display-name>QueryPlanServlet</display-name>
+      <servlet-name>QueryPlanServlet</servlet-name>
+      <servlet-class>com.bea.wlevs.visualizer.queryplan.QueryPlanServlet</servlet-class>
+    </servlet>
+	
+	<servlet-mapping>
+		<servlet-name>QueryPlanServlet</servlet-name>
+		<url-pattern>/queryplan</url-pattern>
+	</servlet-mapping>  
+    
+    <servlet>
+        <description></description>
+        <display-name>cacheServlet</display-name>
+        <servlet-name>cacheServlet</servlet-name>
+        <servlet-class>com.bea.wlevs.visualizer.graph.cluster.CoherenceCacheServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>cacheServlet</servlet-name>
+        <url-pattern>/cachelist</url-pattern>
+    </servlet-mapping>
+    
+     <servlet>
+        <description></description>
+        <display-name>groupHelperServlet</display-name>
+        <servlet-name>groupHelperServlet</servlet-name>
+        <servlet-class>com.bea.wlevs.visualizer.cluster.ClusterHelperServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>groupHelperServlet</servlet-name>
+        <url-pattern>/grouplist</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <description></description>        
+        <servlet-name>attrMonitorServlet</servlet-name>
+        <servlet-class>com.bea.wlevs.visualizer.cluster.ServerMonitoServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>attrMonitorServlet</servlet-name>
+        <url-pattern>/attrMonitor</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+	<servlet-name>defaultoverrider</servlet-name>
+	<servlet-class>org.mortbay.jetty.servlet.DefaultServlet</servlet-class>
+	<init-param>
+	    <param-name>dirAllowed</param-name>
+	    <param-value>false</param-value>
+	</init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet> 
+
+    <servlet-mapping> 
+        <servlet-name>defaultoverrider</servlet-name> 
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+    
+   <servlet>
+   	<servlet-name>sessionIdServlet</servlet-name>
+        <servlet-class>com.bea.wlevs.visualizer.login.SessionIdServlet</servlet-class>
+   </servlet>
+   <servlet-mapping> 
+        <servlet-name>sessionIdServlet</servlet-name> 
+        <url-pattern>/sessionid</url-pattern>
+    </servlet-mapping>
+
+    <filter>
+        <filter-name>headerFilter</filter-name>
+        <filter-class>com.bea.wlevs.visualizer.HttpHeaderFilter</filter-class>    
+    </filter>
+    <filter-mapping>
+           <filter-name>headerFilter</filter-name>
+           <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    
+	<filter>
+		<filter-name>LoginFilter</filter-name>
+        <filter-class>com.bea.wlevs.visualizer.login.LoginFilter</filter-class>
+    </filter>    
+	<filter-mapping>
+		<filter-name>LoginFilter</filter-name>
+        <url-pattern>/api/*</url-pattern>
+		<url-pattern>/diagProfile</url-pattern>
+		<url-pattern>/adapter/*</url-pattern>
+		<url-pattern>/layout</url-pattern>
+		<url-pattern>/EPNGraphSetupServlet</url-pattern>
+		<url-pattern>/EPNGraphServlet</url-pattern>
+		<url-pattern>/visualizer/upload</url-pattern>
+		<url-pattern>/queryplan</url-pattern>
+    </filter-mapping>
+    <filter>
+           <filter-name>ErrorFilter</filter-name>
+           <filter-class>com.bea.wlevs.visualizer.errorhandler.ErrorFilter</filter-class>
+    </filter>
+    
+    <filter-mapping>
+           <filter-name>ErrorFilter</filter-name>
+           <url-pattern>/*</url-pattern>
+    </filter-mapping>	
+</web-app>

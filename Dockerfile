@@ -14,6 +14,8 @@
 #
 # REQUIRED FILES TO BUILD THIS IMAGE
 # ----------------------------------
+# Download the following files and place them into the downloads subfolder
+#
 # (1) ofm_sx_generic_12.1.3.0.0_disk1_1of2.zip
 #     Download the Oracle Stream Explorere Runtime from http://www.oracle.com/technetwork/middleware/complex-event-processing/downloads/index.html
 #
@@ -25,7 +27,7 @@
 #
 # HOW TO BUILD THIS IMAGE
 # -----------------------
-# Put all downloaded files into the stream-explorer sub-directory.
+# Put all downloaded files into the downloads sub-directory.
 # To build the image, run: 
 #      $ docker build -t gschmutz/docker-oracle-sx:12.1.3 . 
 # To start a container, run: 
@@ -58,7 +60,7 @@ RUN yum install -y unzip
 
 # Install and configure Oracle JDK 8u25
 # -------------------------------------
-COPY stream-explorer/$JAVA_RPM /root/
+COPY downloads/$JAVA_RPM /root/
 RUN rpm -i /root/$JAVA_RPM && \ 
     rm /root/$JAVA_RPM
 ENV JAVA_HOME /usr/java/default
@@ -71,7 +73,7 @@ RUN mkdir /u01 && \
     useradd -b /u01 -m -s /bin/bash oracle && \ 
     echo oracle:$ADMIN_PASSWORD | chpasswd
 
-COPY stream-explorer/*.zip /tmp/
+COPY downloads/*.zip /tmp/
 RUN unzip -d /u01/ /tmp/ofm_sx_generic_${SX_VERSION}_disk1_1of2.zip
 RUN unzip -d /u01/ /tmp/ofm_sx_generic_${SX_VERSION}_disk1_2of2.zip
 RUN rm /tmp/ofm_sx_generic*.zip

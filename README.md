@@ -12,60 +12,37 @@ Follow this procedure:
 
         git checkout git@github.com:gschmutz/docker-oracle-sx.git
 
-2. Go to the **stream-explorer** folder
+2. Go to the **downloads** folder
 
         cd docker-oracle-sx/stream-explorer
 
-3. [Download](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) and drop the Oracle JDK 7u75 RPM 64bit file **jdk-7u75-linux-x64.rpm** in the **stream-explorer** folder
+3. [Download](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) and drop the Oracle JDK 7u75 RPM 64bit file **jdk-7u75-linux-x64.rpm** in the **downloads** folder
 
 		Linux x64	120.83 MB  	jdk-7u75-linux-x64.rpm
 
-4. [Download](http://www.oracle.com/technetwork/middleware/complex-event-processing/downloads/index.html) and drop the Stream Explorer 12.1.3 Runtime file **fmw_12.1.3.0.0_oep.jar** in the **stream-explorer** folder
+4. [Download](http://www.oracle.com/technetwork/middleware/complex-event-processing/downloads/index.html) and drop the Stream Explorer 12.1.3 Runtime file **fmw_12.1.3.0.0_oep.jar** in the **downloads** folder
 
 		Stream Explorer 12.1.3 Runtime (439 MB) - ofm_sx_generic_12.1.3.0.0_disk1_1of2.zip
 
-5. [Download](http://www.oracle.com/technetwork/middleware/complex-event-processing/downloads/index.html) and drop the Stream Explorer 12.1.3 User Experience file **fmw_12.1.3.0.0_oep.jar** in the **stream-explorer** folder
+5. [Download](http://www.oracle.com/technetwork/middleware/complex-event-processing/downloads/index.html) and drop the Stream Explorer 12.1.3 User Experience file **fmw_12.1.3.0.0_oep.jar** in the **downloads** folder
 
 		Stream Explorer 12.1.3 User Experience Size (32 MB) - ofm_sx_generic_12.1.3.0.0_disk1_2of2.zip
 
-5. Execute the build script as **root**
+5. Build docker-oracle-sx using the Dockerfile
 
-        $ sudo sh build.sh
+        $ docker build -t gschmutz/docker-oracle-sx:12.1.3 . 
 
-## Booting up Oracle Stream Explorer 12c on Docker
+6. To run an instance of Oracle Stream Explorer
 
-Along with the Dockerfile, two scripts are also provided to help you run either one server (Admin Server) or two or more servers (Node Managers) to allow you to setup a cluster.
+        $ docker run -d -p 9002:9002 gschmutz/docker-oracle-sx:12.1.3
 
- * dockWebLogic.sh
- * dockNodeManager.sh
-
-To boot the WebLogic Admin Server, execute
-
-    dockWebLogic.sh -attach
-
-The argument '-attach' in this script will automatically bind port 7001 to the host. You will then be able to access the Admin Console at http://localhost:7001/console. If you don't use this argument, the script will tell you which IP address this container is running on and present you with the URL to open the Admin Console.
-
-On mac you can use `boot2docker ip` to find out your ip for the weblogic console forwarding address
-
-To boot a Node Manager to be able to setup a cluster, execute
-
-    dockNodeManager.sh
-
-This script will automagically start a Node Manager and add itself to the Admin Server as a new Machine. After this, go to the Admin Console and setup a cluster by creating either a regular one, or a Dynamic Cluster.
-
-## Deploying Java EE Applications
-
-You can use the web-based [Administration Console](http://docs.oracle.com/middleware/1213/core/ASADM/getstart.htm#ASADM10025), the [WebLogic Maven Plugin](http://docs.oracle.com/middleware/1213/wls/WLPRG/maven.htm), the [WebLogic Deployer](http://docs.oracle.com/middleware/1213/wls/DEPGD/deploy.htm), or the [WLST](http://docs.oracle.com/middleware/1213/wls/WLSTG/config_wls.htm#i1027344) (WebLogic Scripting Tool) to deploy applications to the remote servers running on Docker containers.
-
-## Dockerfile Source
-All source is on the [weblogic-docker GitHub repository](https://github.com/weblogic-community/weblogic-docker).
 
 ## Issues
-If you find any issues, please report through the [GitHub Issues page](https://github.com/weblogic-community/weblogic-docker/issues) with label "**Generic**".
+If you find any issues, please report through the [GitHub Issues page](https://github.com/gschmutz/docker-oracle-sx/issues) with label "**Generic**".
 
 ## License
-To download and run WebLogic 12c Distribution regardless of inside or outside a Docker container, and regardless of Generic or Developer distribution, you must agree and accept the [OTN Free Developer License Terms](http://www.oracle.com/technetwork/licenses/wls-dev-license-1703567.html).
+To download and run Oracle Stream Explorer regardless of inside or outside a Docker container, and regardless of Generic or Developer distribution, you must agree and accept the [OTN Free Developer License Terms](http://www.oracle.com/technetwork/licenses/wls-dev-license-1703567.html).
 
 To download and run Oracle JDK regardless of inside or outside a DOcker container, you must agree and accept the [Oracle Binary Code License Agreement for Java SE](http://www.oracle.com/technetwork/java/javase/terms/license/index.html).
 
-All scripts and files hosted in this project and GitHub [weblogic-docker](https://github.com/weblogic-community/weblogic-docker/) repository required to build the Docker images are, unless otherwise noted, released under the Common Development and Distribution License (CDDL) 1.0 and GNU Public License 2.0 licenses.
+All scripts and files hosted in this project and GitHub [docker-oracle-sx](https://github.com/gschmutz/docker-oracle-sx/) repository required to build the Docker images are, unless otherwise noted, released under the Common Development and Distribution License (CDDL) 1.0 and GNU Public License 2.0 licenses.

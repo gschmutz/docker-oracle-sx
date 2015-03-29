@@ -24,7 +24,7 @@
 # -----------------------
 # Put all downloaded files in the same directory as this Dockerfile
 # Run: 
-#      $ sudo docker build -t gschmutz/sx:12.1.3 . 
+#      $ sudo docker build -t gschmutz/docker-oracle-sx:12.1.3 . 
 #
 
 # Pull base image

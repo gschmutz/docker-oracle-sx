@@ -16,15 +16,15 @@ Follow this procedure:
 
         cd docker-oracle-sx/stream-explorer
 
-3. [Download](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) and drop the Oracle JDK 7u75 RPM 64bit file **jdk-7u75-linux-x64.rpm** in this folder
+3. [Download](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) and drop the Oracle JDK 7u75 RPM 64bit file **jdk-7u75-linux-x64.rpm** in the **stream-explorer** folder
 
 		Linux x64	120.83 MB  	jdk-7u75-linux-x64.rpm
 
-4. [Download](http://www.oracle.com/technetwork/middleware/complex-event-processing/downloads/index.html) and drop the Stream Explorer 12.1.3 Runtime file **fmw_12.1.3.0.0_oep.jar** in this folder
+4. [Download](http://www.oracle.com/technetwork/middleware/complex-event-processing/downloads/index.html) and drop the Stream Explorer 12.1.3 Runtime file **fmw_12.1.3.0.0_oep.jar** in the **stream-explorer** folder
 
 		Stream Explorer 12.1.3 Runtime (439 MB) - ofm_sx_generic_12.1.3.0.0_disk1_1of2.zip
 
-5. [Download](http://www.oracle.com/technetwork/middleware/complex-event-processing/downloads/index.html) and drop the Stream Explorer 12.1.3 User Experience file **fmw_12.1.3.0.0_oep.jar** in this folder
+5. [Download](http://www.oracle.com/technetwork/middleware/complex-event-processing/downloads/index.html) and drop the Stream Explorer 12.1.3 User Experience file **fmw_12.1.3.0.0_oep.jar** in the **stream-explorer** folder
 
 		Stream Explorer 12.1.3 User Experience Size (32 MB) - ofm_sx_generic_12.1.3.0.0_disk1_2of2.zip
 

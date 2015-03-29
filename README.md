@@ -41,7 +41,7 @@ Follow this procedure:
 If you find any issues, please report through the [GitHub Issues page](https://github.com/gschmutz/docker-oracle-sx/issues) with label "**Generic**".
 
 ## License
-To download and run Oracle Stream Explorer regardless of inside or outside a Docker container, and regardless of Generic or Developer distribution, you must agree and accept the [OTN Free Developer License Terms](http://www.oracle.com/technetwork/licenses/wls-dev-license-1703567.html).
+To download and run Oracle Stream Explorer regardless of inside or outside a Docker container, and regardless of Generic or Developer distribution, you must agree and accept the [OTN Free Developer License Terms](http://www.oracle.com/technetwork/licenses/standard-license-152015.html).
 
 To download and run Oracle JDK regardless of inside or outside a DOcker container, you must agree and accept the [Oracle Binary Code License Agreement for Java SE](http://www.oracle.com/technetwork/java/javase/terms/license/index.html).
 

@@ -53,7 +53,7 @@ ENV ADMIN_PASSWORD welcome1
 
 # Install unzip
 # -------------
-RUN apt-get install -y unzip
+RUN yum install -y unzip
 
 # Install and configure Oracle JDK 8u25
 # -------------------------------------

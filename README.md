@@ -1,33 +1,32 @@
-# Oracle WebLogic 12c Generic Image
+# Oracle Stream Explorer (12c)
 
-This is a Dockerfile for [Oracle WebLogic 12c](http://www.oracle.com/technetwork/middleware/weblogic/overview/index.html). The purpose of this Docker container is to facilitate the setup of development and integration testing environments for developers.
-
-This image uses the Generic Full Distribution of WebLogic 12c.
+This is a Dockerfile for [Oracle Stream Explorer 12c](http://www.oracle.com/technetwork/middleware/complex-event-processing/documentation/index.html). The purpose of this Docker container is to facilitate the setup of development and integration testing environments for developers.
 
 **IMPORTANT**: Oracle **does not support Docker** in any environment, including but not limited to Development, Integration, and Production environments.
-
-### Generic Full Distribution
-Fore more information on the WebLogic 12c Generic Full Distribution, visit [WebLogic 12.1.3 Documentation](http://docs.oracle.com/middleware/1213/wls/index.html).
 
 ## How to Build
 
 Follow this procedure:
 
-1. Checkout the GitHub weblogic-docker repository
+1. Checkout the GitHub docker-oracle-sx repository
 
-        git checkout git@github.com:weblogic-community/weblogic-docker.git
+        git checkout git@github.com:gschmutz/docker-oracle-sx.git
 
-2. Go to the **weblogic12c-generic** folder
+2. Go to the **stream-explorer** folder
 
-        cd weblogic-docker/weblogic12c-generic
+        cd docker-oracle-sx/stream-explorer
 
-3. [Download](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) and drop the Oracle JDK 8u25 RPM 64bit file **jdk-8u25-linux-x64.rpm** in this folder
+3. [Download](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) and drop the Oracle JDK 7u75 RPM 64bit file **jdk-7u75-linux-x64.rpm** in this folder
 
-		Linux x64	135.6 MB  	jdk-8u25-linux-x64.rpm
+		Linux x64	120.83 MB  	jdk-7u75-linux-x64.rpm
 
-4. [Download](http://www.oracle.com/technetwork/middleware/weblogic/downloads/wls-for-dev-1703574.html) and drop the WebLogic 12c Generic Distribution file **fmw_12.1.3.0.0_wls.jar** in this folder
+4. [Download](http://www.oracle.com/technetwork/middleware/complex-event-processing/downloads/index.html) and drop the Stream Explorer 12.1.3 Runtime file **fmw_12.1.3.0.0_oep.jar** in this folder
 
-		Generic (881 MB) - fmw_12.1.3.0.0_wls.jar
+		Stream Explorer 12.1.3 Runtime (439 MB) - fmw_12.1.3.0.0_oep.jar
+
+5. [Download](http://www.oracle.com/technetwork/middleware/complex-event-processing/downloads/index.html) and drop the Stream Explorer 12.1.3 Runtime file **fmw_12.1.3.0.0_oep.jar** in this folder
+
+		Stream Explorer 12.1.3 Runtime (439 MB) - fmw_12.1.3.0.0_oep.jar
 
 5. Execute the build script as **root**
 

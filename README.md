@@ -22,17 +22,17 @@ Follow this procedure:
 
 4. [Download](http://www.oracle.com/technetwork/middleware/complex-event-processing/downloads/index.html) and drop the Stream Explorer 12.1.3 Runtime file **fmw_12.1.3.0.0_oep.jar** in this folder
 
-		Stream Explorer 12.1.3 Runtime (439 MB) - fmw_12.1.3.0.0_oep.jar
+		Stream Explorer 12.1.3 Runtime (439 MB) - ofm_sx_generic_12.1.3.0.0_disk1_1of2.zip
 
-5. [Download](http://www.oracle.com/technetwork/middleware/complex-event-processing/downloads/index.html) and drop the Stream Explorer 12.1.3 Runtime file **fmw_12.1.3.0.0_oep.jar** in this folder
+5. [Download](http://www.oracle.com/technetwork/middleware/complex-event-processing/downloads/index.html) and drop the Stream Explorer 12.1.3 User Experience file **fmw_12.1.3.0.0_oep.jar** in this folder
 
-		Stream Explorer 12.1.3 Runtime (439 MB) - fmw_12.1.3.0.0_oep.jar
+		Stream Explorer 12.1.3 User Experience Size (32 MB) - ofm_sx_generic_12.1.3.0.0_disk1_2of2.zip
 
 5. Execute the build script as **root**
 
         $ sudo sh build.sh
 
-## Booting up Oracle WebLogic 12c on Docker
+## Booting up Oracle Stream Explorer 12c on Docker
 
 Along with the Dockerfile, two scripts are also provided to help you run either one server (Admin Server) or two or more servers (Node Managers) to allow you to setup a cluster.
 

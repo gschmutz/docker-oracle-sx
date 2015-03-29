@@ -35,10 +35,6 @@ FROM oraclelinux:7.0
 # ----------
 MAINTAINER Guido Schmutz <guido.schmutz@trivadis.com>
 
-# Set Working directory
-# ---------------------
-WORKDIR /u01
-
 # Environment variables required for this build (do NOT change)
 ENV JAVA_RPM jdk-7u75-linux-x64.rpm
 ENV SX_VERSION 12.1.3.0.0

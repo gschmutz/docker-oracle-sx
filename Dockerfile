@@ -67,8 +67,9 @@ RUN mkdir /u01 && \
     echo oracle:$ADMIN_PASSWORD | chpasswd
 
 COPY stream-explorer/*.zip /tmp/
-RUN unzip -uo /tmp/ofm_sx_generic_12.1.3.0.0_disk1_1of2.zip /u01
-RUN unzip -uo /tmp/ofm_sx_generic_12.1.3.0.0_disk1_2of2.zip /u01
+RUN unzip -d /u01/ /tmp/ofm_sx_generic_${SX_VERSION}_disk1_1of2.zip
+RUN unzip -d /u01/ /tmp/ofm_sx_generic_${SX_VERSION}_disk1_2of2.zip
+RUN rm /tmp/ofm_sx_generic*.zip
 
 # Add files required to build this image
 COPY setup/* /u01/

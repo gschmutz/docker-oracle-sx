@@ -14,7 +14,7 @@ Follow this procedure:
 
 2. Go to the **downloads** folder
 
-        cd docker-oracle-sx/stream-explorer
+        cd docker-oracle-sx/downloads
 
 3. [Download](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) and drop the Oracle JDK 7u75 RPM 64bit file **jdk-7u75-linux-x64.rpm** in the **downloads** folder
 

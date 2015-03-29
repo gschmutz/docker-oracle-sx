@@ -20,11 +20,11 @@ Follow this procedure:
 
 		Linux x64	120.83 MB  	jdk-7u75-linux-x64.rpm
 
-4. [Download](http://www.oracle.com/technetwork/middleware/complex-event-processing/downloads/index.html) and drop the Stream Explorer 12.1.3 Runtime file **fmw_12.1.3.0.0_oep.jar** in the **downloads** folder
+4. [Download](http://www.oracle.com/technetwork/middleware/complex-event-processing/downloads/index.html) and drop the Stream Explorer 12.1.3 Runtime file **ofm_sx_generic_12.1.3.0.0_disk1_1of2.zip** in the **downloads** folder
 
 		Stream Explorer 12.1.3 Runtime (439 MB) - ofm_sx_generic_12.1.3.0.0_disk1_1of2.zip
 
-5. [Download](http://www.oracle.com/technetwork/middleware/complex-event-processing/downloads/index.html) and drop the Stream Explorer 12.1.3 User Experience file **fmw_12.1.3.0.0_oep.jar** in the **downloads** folder
+5. [Download](http://www.oracle.com/technetwork/middleware/complex-event-processing/downloads/index.html) and drop the Stream Explorer 12.1.3 User Experience file **ofm_sx_generic_12.1.3.0.0_disk1_2of2.zip** in the **downloads** folder
 
 		Stream Explorer 12.1.3 User Experience Size (32 MB) - ofm_sx_generic_12.1.3.0.0_disk1_2of2.zip
 

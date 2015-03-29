@@ -14,17 +14,22 @@
 #
 # REQUIRED FILES TO BUILD THIS IMAGE
 # ----------------------------------
-# (1) fmw_12.1.3.0.0_oep.jar
-#     Download the Generic installer from http://www.oracle.com/technetwork/middleware/weblogic/downloads/wls-for-dev-1703574.html
+# (1) ofm_sx_generic_12.1.3.0.0_disk1_1of2.zip
+#     Download the Oracle Stream Explorere Runtime from http://www.oracle.com/technetwork/middleware/complex-event-processing/downloads/index.html
 #
-# (2) jdk-7u75-linux-x64.rpm
-#     Download from http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
+# (2) ofm_sx_generic_12.1.3.0.0_disk1_2of2.rpm
+#     Download the Oracle Stream Explorer User Experience from http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
+#
+# (3) jdk-7u75-linux-x64.rpm
+#     Download JDK from http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
 #
 # HOW TO BUILD THIS IMAGE
 # -----------------------
-# Put all downloaded files in the same directory as this Dockerfile
-# Run: 
-#      $ sudo docker build -t gschmutz/docker-oracle-sx:12.1.3 . 
+# Put all downloaded files into the stream-explorer sub-directory.
+# To build the image, run: 
+#      $ docker build -t gschmutz/docker-oracle-sx:12.1.3 . 
+# To start a container, run: 
+#      $ docker run -d -p 9002:9002 gschmutz/docker-oracle-sx:12.1.3 
 #
 
 # Pull base image

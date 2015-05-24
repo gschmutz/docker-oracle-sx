@@ -23,7 +23,7 @@
 #     Download the Oracle Stream Explorer User Experience from http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
 #
 # (3) jdk-7u75-linux-x64.rpm
-#     Download JDK from http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
+#     Download JDK from http://www.oracle.com/technetwork/java/javase/downloads/java-archive-downloads-javase7-521261.html#jdk-7u75-oth-JPR
 #
 # HOW TO BUILD THIS IMAGE
 # -----------------------
